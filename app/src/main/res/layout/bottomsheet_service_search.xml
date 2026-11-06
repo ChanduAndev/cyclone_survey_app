@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_bottom_sheet_rounded">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_toolbar_gradient"
+        android:orientation="horizontal"
+        android:paddingVertical="15dp"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/back_layout_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="3dp"
+            android:src="@drawable/outline_arrow_back_ios_new_24"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/home_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/abeezee"
+            android:text="Search"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/label_search_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search By"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+
+        android:textColor="@color/black"
+        android:gravity="center" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name"
+            android:visibility="gone"
+            android:background="@drawable/radio_button_background"
+            android:textColor="@color/radio_button_text_color"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            />
+
+        <RadioButton
+            android:id="@+id/radioMeterNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Meter No."
+            android:visibility="gone"
+            android:background="@drawable/radio_button_background"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            android:textColor="@color/radio_button_text_color"/>
+
+        <RadioButton
+            android:id="@+id/radioAreaCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Area Code"
+            android:background="@drawable/radio_button_background"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            android:textColor="@color/radio_button_text_color"/>
+
+        <RadioButton
+            android:id="@+id/radioAreaName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Area Name"
+            android:background="@drawable/radio_button_background"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            android:textColor="@color/radio_button_text_color"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/or_label_search_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or Search By"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:gravity="center" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="5dp"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/search_service_number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="6dp"
+            android:background="@drawable/text_border"
+            android:drawableEnd="?android:attr/actionModeWebSearchDrawable"
+            android:hint="Service Number"/>
+
+        <EditText
+            android:id="@+id/search_meter_number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="6dp"
+            android:background="@drawable/text_border"
+            android:drawableEnd="?android:attr/actionModeWebSearchDrawable"
+            android:hint="Meter Number"/>
+
+    </LinearLayout>
+
+
+
+    <EditText
+        android:id="@+id/search_consumer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginVertical="5dp"
+        android:padding="6dp"
+        android:drawableEnd="?android:attr/actionModeWebSearchDrawable"
+        android:background="@drawable/text_border"
+        android:hint="Consumer Name"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/light_gray_clor_1"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+</LinearLayout>

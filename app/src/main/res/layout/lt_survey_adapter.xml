@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/main_layout_33_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="12dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/bg_badge_circle_2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01"
+                android:textSize="16sp"
+                android:id="@+id/dtr_heading"
+                android:textStyle="bold"
+                android:textColor="#3F5EF8" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:text="No of Locations : "
+                android:textAllCaps="false"
+                android:textColor="@color/lightGrey"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/no_locations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:text="0"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:text="DTR Structure Code :"
+                android:textAllCaps="false"
+                android:textColor="@color/lightGrey"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dtr_structure_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:text="0"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:visibility="visible"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:text="DTR Location :"
+                android:textAllCaps="false"
+                android:textColor="@color/lightGrey"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dtr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:text="0"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_5dp"
+                android:fontFamily="@font/inter"
+                android:text="Select LT Circuit :"
+                android:textColor="@color/lightGrey"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/sp_circuit"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/size_5dp"
+                android:background="@drawable/bg_spinner_field" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/edit_survey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/adapter_border"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="8dp"
+                android:text="Edit Location"
+                android:textAllCaps="false"
+                android:textColor="@color/ui_new_color"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/continue_survey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_work_involvements"
+                android:backgroundTint="@color/ui_new_color"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="8dp"
+                android:text="Continue Survey"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

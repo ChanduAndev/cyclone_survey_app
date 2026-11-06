@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/alert_dialog_bg">
+
+    <!-- Card Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog_card"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SS Details"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:paddingBottom="12dp"/>
+
+        <!-- Green Status Box -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_green_box"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_park_solid_check_one" />
+
+            <TextView
+                android:id="@+id/tv_ss_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Malkapuram - 1000302"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Circle -->
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Circle:"
+               android:textColor="#94A3B8"
+               android:textSize="12sp"/>
+
+           <TextView
+               android:id="@+id/tv_circle_value"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Visakhapatnam"
+               android:layout_marginStart="5dp"
+               android:background="@drawable/bg_chip"
+               android:textColor="@color/colorPrimary"
+               android:textStyle="bold"
+               android:textSize="14sp"
+               android:padding="6dp"
+               android:layout_marginBottom="8dp"/>
+       </LinearLayout>
+
+        <!-- Division -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Division:"
+                android:textColor="#94A3B8"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_division_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visakhapatnam Zone-2"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_chip"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+
+        <!-- Section -->
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Section:"
+               android:textColor="#94A3B8"
+               android:textSize="12sp"/>
+
+           <TextView
+               android:id="@+id/tv_section_value"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Malkapuram"
+               android:layout_marginStart="5dp"
+               android:background="@drawable/bg_chip"
+               android:textColor="@color/colorPrimary"
+               android:textSize="14sp"
+               android:padding="6dp"
+               android:textStyle="bold"
+               android:layout_marginBottom="16dp"/>
+       </LinearLayout>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_btn_outline"/>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Confirm"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_btn_filled"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

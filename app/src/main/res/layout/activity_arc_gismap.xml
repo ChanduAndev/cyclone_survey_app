@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ui_new_color"
+    android:fitsSystemWindows="true"
+    tools:context=".module_11KV.ArcGISMapActivity">
+
+    <!-- Toolbar -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- MapView -->
+    <com.esri.arcgisruntime.mapping.view.MapView
+        android:id="@+id/map1"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Footer -->
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- RELOAD BUTTON floating above footer -->
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/reload_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_above="@id/footer"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/curve_border"
+        android:backgroundTint="@color/ui_new_color"
+        android:elevation="8dp"
+        android:paddingHorizontal="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/abeezee"
+            android:gravity="center"
+            android:text="RELOAD LOCATIONS"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DTR16" android:padding="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DTR25" android:padding="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DTR40" android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="DTR63" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DTR100" android:padding="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DTR160" android:padding="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LN63" android:padding="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LC6311" android:padding="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LN11" android:padding="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LCLT3W5W" android:padding="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LNLT3W" android:padding="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LNLT4W" android:padding="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LNLT5W" android:padding="8dp"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

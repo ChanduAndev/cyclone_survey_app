@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    tools:context=".MainActivityUG33KV">
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+
+
+
+        <Button
+            android:id="@+id/btn_transmit"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/round_button"
+            android:text="Transmit Survey Data" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_transmit_incremental_data"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/round_button"
+            android:text="Transmit Incremental Survey Data" />
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/two_sides_rounded_border_up"
+        android:backgroundTint="@color/light_gray_clor_2"
+        android:padding="3dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter"
+            android:text="@string/powerby"
+            android:textColor="@color/ui_black_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apepdcl.gis_survey.estimates.sou.EditBOQDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="5dp">
+
+
+        <RelativeLayout
+            android:id="@+id/back_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_boarder">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                app:tint="@color/new_color" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/close_layout"
+            android:layout_toRightOf="@id/back_layout"
+            android:background="@drawable/btn_rounded_primary"
+            android:backgroundTint="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/home_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/inter"
+                android:paddingTop="5dp"
+                android:text="Edit BoQ Details"
+                android:textColor="@color/white"
+                android:textSize="21sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/close_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_boarder"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_close_24"
+                app:tint="@color/new_color" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/sap_33_material_layout_pole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/adapter_border"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Pole Materials"
+                    android:textColor="@color/redred"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="(Materials Excluding Conductors &amp; Poles)"
+                    android:textColor="@color/new_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/qty_pole"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/uom_pole"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="QTY"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/uom_pole"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="UoM"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/desc_pole"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/qty_pole"
+                        android:fontFamily="@font/inter"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="DESCRIPTION"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/material_rv_33_pole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/material_adapter" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sap_33_material_layout_AB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sap_33_material_layout_pole"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/adapter_border"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_materials_AB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="AB Switch Material"
+                    android:textColor="@color/redred"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/qty_AB"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/uom_AB"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="QTY"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/uom_AB"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="UoM"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/desc_AB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/qty_AB"
+                        android:fontFamily="@font/inter"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="DESCRIPTION"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/material_rv_33_AB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/material_adapter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sap_33_material_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sap_33_material_layout_AB"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/adapter_border"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_materials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Material"
+                    android:textColor="@color/redred"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/qty"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/uom"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="QTY"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/uom"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="UoM"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/qty"
+                        android:fontFamily="@font/inter"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="DESCRIPTION"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/material_rv_33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/material_adapter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sap_33_material_layout_dtr_meter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sap_33_material_layout"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/adapter_border"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_materials_dtr_meter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="DTR Meter Material"
+                    android:textColor="@color/redred"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/qty_dtr_meter"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/uom_dtr_meter"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="QTY"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/uom_dtr_meter"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="UoM"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/des_dtr_meterc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/qty_dtr_meter"
+                        android:fontFamily="@font/inter"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="DESCRIPTION"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/material_rv_33_dtr_meter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/material_adapter" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/btn_update"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sap_33_material_layout_dtr_meter"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_bg_new"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/inter"
+                android:paddingStart="10dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Update BoQ"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:ignore="RtlSymmetry" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <TextView
+        android:id="@+id/tv_error_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Please Transmit the data then update the BoQ"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/loader_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/loader_new"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/loader_new"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="PLEASE WAIT..."
+            android:textColor="@color/red1"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/two_sides_rounded_border_up"
+        android:backgroundTint="@color/light_gray_clor_2"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter"
+            android:text="@string/powerby"
+            android:textColor="@color/ui_black_color"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

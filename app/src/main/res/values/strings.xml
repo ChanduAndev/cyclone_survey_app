@@ -1,0 +1,3354 @@
+<resources>
+    <string name="app_name">Cyclone Survey</string>
+    <string name="login">Login</string>
+    <string name="from_pole">From Pole</string>
+    <string name="to_pole">To Pole</string>
+    <string name="version">Version:1.0</string>
+    <string name="powerby">Powered by APEPDCL v-1.0</string>
+    <string name="logout">Logout</string>
+    <string name="displayVersion">1.0</string>
+    <string name="meter_powerby">Powered by APEPDCL v-1.0</string>
+
+    <string-array name="line_type_rdss_ug_11kv">
+        <item>UnderGround</item>
+    </string-array>
+
+    <string-array name="line_survey_type_33kv_ucg">
+        <item>PROPOSED</item>
+        <item>EXISTING</item>-->
+    </string-array>
+
+    <string-array name="rmu_survey_type_33kv_ucg">
+        <item>PROPOSED</item>
+        <item>EXISTING</item>
+    </string-array>
+
+    <string-array name="eht_ss_name_33kv_ucg">
+        <item>Select</item>
+        <item>132/33 KV ANANDAPURAM</item>
+        <item>132/33 KV COMMON POINT</item>
+        <item>132/33 KV MALKAPURAM</item>
+        <item>132/33 KV NAKKAVANIPALEM</item>
+        <item>132/33 KV NAWAL WHARF</item>
+        <item>132/33 KV PEDAWALTAIR</item>
+        <item>132/33 KV PORT</item>
+        <item>132/33 KV SIMHACHALAM</item>
+        <item>132/33 KV VSEZ</item>
+        <item>220/132/33 KV BRANDIX</item>
+        <item>220/132/33 KV DAIRY FORM</item>
+        <item>220/132/33 KV GAJUWAKA</item>
+        <item>220/132/33 KV GANGAVARAM</item>
+        <item>220/132/33 KV PARAWADA</item>
+        <item>220/132/33 KV PENDURTHY</item>
+    </string-array>
+
+    <string-array name="survey_type_33kv_ucg">
+        <item>EXISTING</item>
+        <item>PROPOSED</item>
+    </string-array>
+
+
+    <string-array name="line_type">
+        <!-- <item>Select</item>-->
+        <item>OverHead</item>
+        <item>UnderGround</item>
+    </string-array>
+
+    <string-array name="voltage_level_new">
+        <item>Select</item>
+        <item>33KV</item>
+        <item>11KV</item>
+        <item>LT</item>
+
+    </string-array>
+
+    <string-array name="ug_pole_config_lt">
+        <item>Select</item>
+        <item>Pole</item>
+        <item>UG Cable Marker</item>
+    </string-array>
+
+
+    <string-array name="meter_survey_type">
+        <!-- <item>Select</item>-->
+        <item>Proposed</item>
+        <item>Existing</item>
+    </string-array>
+
+    <string-array name="is_endpole">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="LT_SURVEY_TYPE">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="is_endpole_pole">
+        <item>No</item>
+        <item>Yes</item>
+
+
+    </string-array>
+
+
+    <string-array name="is_survey_complete">
+        <item>NO</item>
+        <item>YES</item>
+    </string-array>
+    <string-array name="oh_line_config">
+        <item>3-Ph, 5- Wire</item>
+        <item>3-Ph, 4- Wire</item>
+        <item>1-Ph, 3- Wire</item>
+        <item>1-Ph, 2- Wire</item>
+
+
+        <!--   <item>1*16+25sqmm XLPE Cable</item>
+        <item>2*16+25sqmm XLPE Cable</item>
+        <item>3*16+25sqmmXLPE Cable</item>
+        <item>3-ph,3-wire</item>-->
+
+        <!--<item>DTR Pole</item>-->
+    </string-array>
+    <string-array name="oh_is_streetlight">
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+
+    <string-array name="oh_is_streetlight_status">
+        <item>Available</item>
+        <item>Not Available</item>
+        <item>Not Working</item>
+
+    </string-array>
+
+    <string-array name="oh_is_streetlight_source">
+        <item>Select</item>
+        <item>From Same DTR Supply</item>
+        <item>From Other DTR Supply</item>
+
+    </string-array>
+
+    <string-array name="oh_is_other_thanstreetlight">
+
+        <item>No</item>
+        <item>Yes</item>
+
+    </string-array>
+
+    <string-array name="oh_is_other_cables">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="oh_dtr_meter_avilable">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="oh_no_of_meters">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="ug_dtr_meter_avilable">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="ug_no_of_meters">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="oh_pin_point">
+        <item>Pin Point</item>
+        <item>Cut Point</item>
+    </string-array>
+    <string-array name="oh_is_doublefeeding">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="oh_type_of_insulator">
+        <item>LT Pin Insulator</item>
+        <item>LT Shackles with Metal parts</item>
+        <item>LT Shackles with GI wire binding</item>
+    </string-array>
+
+    <string-array name="oh_poletypehite">
+        <item>Select</item>
+        <item>9.5</item>
+
+    </string-array>
+    <string-array name="oh_poletype">
+        <item>Select</item>
+        <item>PSCC</item>
+        <item>SPUN</item>
+        <item>TOWER</item>
+        <item>RAIL</item>
+        <item>RS JOIST</item>
+        <item>Tubular Pole</item>
+    </string-array>
+    <string-array name="oh_strut">
+        <item>Select</item>
+        <item>None</item>
+        <item>STRUT</item>
+        <item>STAY</item>
+        <item>STRUT AND STAY</item>
+    </string-array>
+
+
+    <string-array name="oh_tappingpoint">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="oh_noof_ckts">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="oh_noof_spurlines">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="oh_ismulti_circuit">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="oh_is_multi_circuit_lt">
+        <item>Select</item>
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="oh_noof_circuits">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="oh_same_multi">
+        <item>Multi Voltage</item>
+        <!--<item>Same Voltage</item>-->
+    </string-array>
+    <string-array name="oh_crossing">
+        <item>NO</item>
+        <item>YES</item>
+    </string-array>
+
+    <string-array name="oh_conductorsize">
+        <item>Select</item>
+        <item>55 Sq.mm. AAA</item>
+        <item>34 Sq.mm. AAA</item>
+        <item>100 Sq.mm. AAA</item>
+        <item>Dog-ACSR</item>
+        <item>Weasel ACSR</item>
+        <item>Squirrel ACSR</item>
+        <item>LT AB CABLE 1 X 16 + 25 SQ. MM</item>
+        <item>LT AB Cable 2X16+25 Sq.mm.</item>
+        <item>LT AB Cable 3X16+25 Sq.mm.</item>
+        <item>LT AB CABLE 3 X 70+16+50 SQ. MM</item>
+    </string-array>
+    <string-array name="li_linetype">
+        <item>Select</item>
+        <item>Through Line</item>
+        <item>Spur Line</item>
+    </string-array>
+
+    //ug
+    <string-array name="ug_locationtype">
+        <item>UG Cable Route Marker</item>
+        <item>Pole</item>
+        <item>Service Pillar</item>
+        <item>Feeder Pillar</item>
+        <item>Straight Through Joint chamber</item>
+        <item>Rail way Crsossing</item>
+        <item>Road Crossing</item>
+        <item>Panel Board</item>
+        <item>DTR Pole</item>
+    </string-array>
+
+    <string-array name="ug_servicepiller">
+        <!--<item>Select</item>-->
+        <item>Type-1</item>
+        <item>Type-2</item>
+        <item>Type-3</item>
+        <item>Type-4</item>
+    </string-array>
+
+    <string-array name="ug_poletype">
+        <!--<item>Select</item>-->
+        <item>PSCC</item>
+        <item>SPUN</item>
+        <item>RAIL</item>
+        <item>RS JOIST</item>
+        <item>TOWER</item>
+        <item>Tubular Pole</item>
+    </string-array>
+    <string-array name="ug_polesupport">
+        <!--<item>Select</item>-->
+        <item>None</item>
+        <item>STRUT</item>
+        <item>STAY</item>
+        <item>STRUT AND STAY</item>
+    </string-array>
+
+    <string-array name="ug_feedepiller_outg_circuits">
+        <!--<item>Select</item>-->
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="ug_tapping_point">
+        <!--<item>Select</item>-->
+        <item>No</item>
+        <item>Yes</item>
+
+    </string-array>
+
+    <string-array name="ug_notapping_point">
+        <!--<item>Select</item>-->
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="ug_cablesize">
+        <!--<item>Select</item>-->
+        <item>Single Core 630 Sq.mm cable</item>
+        <item>LT XLPE Cable 3 1/2 Core</item>
+        <item>LT XLPE Cable 2 Core, 16 Sq.mm.</item>
+        <item>LT XLPE Cable 25 Sq.mm.</item>
+        <item>LT XLPE Cable 35 Sq.mm.</item>
+        <item>LT XLPE Cable 50 Sq.mm.</item>
+        <item>LT XLPE Cable 70 Sq.mm.</item>
+        <item>LT XLPE Cable 50 Sq.mm.</item>
+        <item>LT XLPE Cable 70 Sq.mm.</item>
+        <item>LT XLPE Cable 95 Sq.mm.</item>
+        <item>LT XLPE Cable 120 Sq.mm.</item>
+        <item>LT XLPE Cable 185 Sqmm</item>
+        <item>LT XLPE Cable 300 Sqmm</item>
+    </string-array>
+
+    <string-array name="ug_no_cables">
+        <!--<item>Select</item>-->
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="dtr_abswt_type">
+        <!-- <item>Select</item>-->
+        <item>VERTICAL</item>
+        <item>HORIZONTAL</item>
+    </string-array>
+    <string-array name="dtr_abswt">
+        <!-- <item>Select</item>-->
+        <item>YES</item>
+        <item>NO</item>
+    </string-array>
+    <string-array name="dtr_ghfuse">
+        <!-- <item>Select</item>-->
+        <item>YES</item>
+        <item>NO</item>
+    </string-array>
+    <string-array name="dtr_earthpits">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="dtr_earthpitstype">
+        <!-- <item>Select</item>-->
+        <item>CI Pipes</item>
+        <item>GI Pipes</item>
+        <item>CI AND GI Pipes</item>
+    </string-array>
+    <string-array name="dtr_cipipes">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="dtr_gipipes">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="dtr_meter">
+        <item>Select</item>
+        <item>NO</item>
+        <item>YES</item>
+    </string-array>
+
+    <string-array name="type_of_earthing">
+        <item>Flat Earth</item>
+        <item>GI Wire</item>
+    </string-array>
+
+    <string-array name="type_of_neutral_earthing">
+        <item>Flat Earth</item>
+        <item>GI Wire</item>
+    </string-array>
+
+    <string-array name="noofdtr_meters">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="meter_type">
+        <item>DLMS</item>
+        <item>NON DLMS</item>
+    </string-array>
+    <string-array name="dtr_modem">
+        <item>NO</item>
+        <item>YES</item>
+    </string-array>
+    <string-array name="dtr_busbar">
+        <item>Conductor</item>
+        <item>Copper Flexible Jumper</item>
+        <item>Copper</item>
+    </string-array>
+    <string-array name="busbar_conductorsize">
+        <item>34</item>
+        <item>55</item>
+    </string-array>
+    <string-array name="hg_fuseto_dtr">
+        <item>CONDUCTOR</item>
+        <item>COPPER</item>
+    </string-array>
+    <string-array name="dtr_pole">
+        <item>PIN</item>
+        <item>CUT</item>
+    </string-array>
+    <string-array name="noof_ltcircuits">
+        <item>Select</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="pin">
+        <item>POLYMER</item>
+        <item>PORCELAIN</item>
+    </string-array>
+    <string-array name="no_of_pin">
+        <item>3</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="cut">
+        <item>POLYMER</item>
+        <item>PORCELAIN</item>
+    </string-array>
+    <string-array name="lt_fuseset">
+        <item>DISTRIBUTION BOX</item>
+        <item>DISTRIBUTION BOARD</item>
+        <item>LT HG FUSE SET</item>
+        <item>FUSES USING LT PIN INSULATORS</item>
+    </string-array>
+    <string-array name="lt_busbar">
+        <item>CABLE</item>
+        <item>CONDUCTOR</item>
+    </string-array>
+    <string-array name="lt_busbar_cablesize">
+        <item>XLPE-35</item>
+        <item>XLPE-50</item>
+        <item>XLPE-70</item>
+        <item>XLPE-95</item>
+        <item>XLPE-120</item>
+        <item>XLPE-150</item>
+        <item>XLPE-185</item>
+        <item>XLPE-240</item>
+        <item>XLPE-300</item>
+        <item>XLPE-400</item>
+        <item>XLPE-500</item>
+        <item>XLPE-630</item>
+    </string-array>
+    <string-array name="lt_busbar_conductorsize">
+        <item>34</item>
+        <item>55</item>
+    </string-array>
+    <string-array name="dtr_str_type">
+        <item>Select</item>
+        <item>PLINTH</item>
+        <item>SINGLE POLE</item>
+        <item>DOUBLE POLE</item>
+        <item>FOUR POLE</item>
+    </string-array>
+    <string-array name="dtr_pole_support">
+        <!-- <item>Select</item>-->
+        <item>NONE</item>
+        <item>STRUT</item>
+        <item>STAY</item>
+        <item>STRUT AND STAY</item>
+    </string-array>
+    <string-array name="dtr_load">
+        <item>24 HRS SUPPLY</item>
+        <item>DHQ</item>
+        <item>DOMESTIC</item>
+        <item>INDUSTRIAL</item>
+        <item>INDUSTRIAL-DEDICATED</item>
+        <item>INDUSTRIAL-EXPRESS</item>
+        <item>LIFT IRRIGATION</item>
+        <item>MHQ</item>
+        <item>MIXED</item>
+        <item>MIXED INDL</item>
+        <item>PURE AGL</item>
+        <item>REC</item>
+        <item>RURAL</item>
+        <item>RWS</item>
+        <item>SOLAR</item>
+        <item>TOWN</item>
+        <item>WATER WORKS</item>
+    </string-array>
+    <string-array name="dtr_phase">
+        <item>1</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="dtr_capacity1">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>16</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="dtr_capacity3">
+        <item>15</item>
+        <item>16</item>
+        <item>25</item>
+        <item>40</item>
+        <item>50</item>
+        <item>63</item>
+        <item>75</item>
+        <item>100</item>
+        <item>160</item>
+        <item>200</item>
+        <item>250</item>
+        <item>300</item>
+        <item>315</item>
+        <item>400</item>
+        <item>500</item>
+        <item>750</item>
+        <item>1000</item>
+        <item>1500</item>
+    </string-array>
+    <string-array name="dtr_make">
+        <item>ADVANCED TRANSFORMERS</item>
+        <item>AECE</item>
+        <item>ALPHINES</item>
+        <item>AMMANA FABRICATORS</item>
+        <item>ARK</item>
+        <item>AEI</item>
+        <item>APEX ELECTRICALS</item>
+        <item>B SRINIVASA RAO NALGONDA</item>
+        <item>BHAVANI TRANSFORMERS</item>
+        <item>BHOPAL TRANSMISSION  CONTROLS</item>
+        <item>BHARATH ELECTRICALS</item>
+        <item>BRUSH ELECTRICAL ENG ENGLAND</item>
+        <item>BRG ENERGY</item>
+        <item>BSVR, PATANCHERU</item>
+        <item>BLUEMOON</item>
+        <item>BTPL</item>
+        <item>C AND P</item>
+        <item>CEC</item>
+        <item>CROMPTON</item>
+        <item>EAST INDIA UDHYOG</item>
+        <item>EMCO</item>
+        <item>ECE</item>
+        <item>ESSAR TRANSTECH INDUSTRIES,HYD</item>
+        <item>HHE</item>
+        <item>HINDUSTHAN ELECTRICALS</item>
+        <item>HINT TRANSFORMERS</item>
+        <item>HI-POWER ELECTRICALS INDUSTRIE</item>
+        <item>HPE</item>
+        <item>HYDERABAD INSTRUMENT TRANSFORM</item>
+        <item>HPC ELECTRICALS</item>
+        <item>ICSA</item>
+        <item>IMP POWER</item>
+        <item>INCRED INDUSTRIES</item>
+        <item>INDO TECH SWITCHGEAR</item>
+        <item>JE</item>
+        <item>JOHNSON</item>
+        <item>JYOTHI UDYOG LIMITED</item>
+        <item>KANYAKAPARAMESWARI ENGINEERING</item>
+        <item>KISRLOSKAR TRANSFORMERS</item>
+        <item>KAVIKA TRANSFORMERS</item>
+        <item>KTE</item>
+        <item>LAXMI TRANSFORMERS</item>
+        <item>MADHU REFINARY GOOTY</item>
+        <item>MANI POWER</item>
+        <item>MANU POWER EQUIPMENT</item>
+        <item>MARSONS ELECTRICALS INDUSTRIES</item>
+        <item>MUTUAL TRANSFORMERS</item>
+        <item>MRPL</item>
+        <item>MVK TRANSFORMERS</item>
+        <item>NEI</item>
+        <item>NGEF</item>
+        <item>NNP</item>
+        <item>PARAAMOUNT TRANSFORMERS</item>
+        <item>PAVANI POWER PVT. LIMITED</item>
+        <item>PE</item>
+        <item>PEI</item>
+        <item>PRUDHIVI ENTERPRISES</item>
+        <item>RAMA KRISHNA TRANSFORMERS</item>
+        <item>R.K.ELECTRICALS</item>
+        <item>RADHIKA TRANSFORMERS</item>
+        <item>ROHINI ELECTRICALS</item>
+        <item>RAGHAVENDRA</item>
+        <item>RISHU POWERTEK</item>
+        <item>RAYALASEEMA</item>
+        <item>RPE</item>
+        <item>S.V.R   ELECTRICALS</item>
+        <item>SAI RAM</item>
+        <item>SAIBABA FLAME PROOF SWITCH GEA</item>
+        <item>SAKAS INDUSTRIES</item>
+        <item>SCR</item>
+        <item>SDE</item>
+        <item>SHAKTHI TRANSFORMERS</item>
+        <item>SERVOMAX</item>
+        <item>SHYAM</item>
+        <item>SHIRDI SAI ELECTRICALS</item>
+        <item>SILICON TRANSFORMERS</item>
+        <item>SOUTHERN TRANSFORMERS EQUIPMEN</item>
+        <item>SREE VIGANESHWARA ELECTRICALS</item>
+        <item>SRI RAM ELECTRICALS AND ELECTR</item>
+        <item>STAR DELTA TRANSFORMERS</item>
+        <item>STARTEK ELECTRICALS P</item>
+        <item>SWASTIK INDUSTRIES</item>
+        <item>SWASTIK TRANSFORMERS</item>
+        <item>TECHNO ELECTRICS</item>
+        <item>TESLA TRANSFORMERS</item>
+        <item>THOTA COLD</item>
+        <item>TOSHIBA</item>
+        <item>TRANS ALLIEDS</item>
+        <item>TRANSCON INDUSTRIES LTD HYD</item>
+        <item>TRINITY</item>
+        <item>TRANSFORMERS and SWITCHGEAR</item>
+        <item>UE</item>
+        <item>UNITED ELECTRICAL</item>
+        <item>UNIVERSAL ELECTRIC</item>
+        <item>UT</item>
+        <item>VENU GOPAL ELECTRICALS</item>
+        <item>VICTORY ELECTRICALS,HYDERABAD</item>
+        <item>VICTORY ENTERPRISES</item>
+        <item>VICTORY TRANSFORMERS AND SWITC</item>
+        <item>VIJAI ELECTRICALS</item>
+        <item>VIJAY TRANSFORMERS</item>
+        <item>VIJAYA POWER SYSTEMS</item>
+        <item>VIJETHA TRANSFORMERS</item>
+        <item>VINOD VIKRAM</item>
+        <item>VISWANATH TRANSFORMERS PVT LTD</item>
+        <item>VEI</item>
+        <item>WEBERS</item>
+        <item>WEBTECH TRANSFORMERS COMPANY</item>
+    </string-array>
+
+    <string-array name="dd_pole_defects">
+        <item>Select</item>
+        <item>BOTTOM RUSTED</item>
+        <item>DAMAGED</item>
+        <item>LEANED</item>
+        <item>SHORT POLE</item>
+    </string-array>
+
+    <string-array name="dd_conductor">
+        <item>Select</item>
+        <item>CONDUCTOR DAMAGED</item>
+        <item>CABLE DAMAGED</item>
+        <item>BINDING DAMAGED</item>
+        <item>CONDUCTOR HANGING</item>
+    </string-array>
+
+    <string-array name="dd_lt_insulators">
+        <item>Select</item>
+        <item>LT INSULATORS DAMAGED</item>
+        <item>SHACKLES DAMAGED</item>
+        <item>METAL PARTS DAMAGED</item>
+    </string-array>
+
+    <string-array name="dd_cross_arm">
+        <item>Select</item>
+        <item>DAMAGED</item>
+        <item>TILTED</item>
+        <item>BACK CLAMP DAMAGED</item>
+    </string-array>
+
+    <string-array name="dd_strut_pole">
+        <item>Select</item>
+        <item>DAMAGED</item>
+        <item>BOTTOM RUSTED</item>
+        <item>STRUT CLAMPS DAMAGED</item>
+        <item>STRUT CLAMPS NOT AVAILABLE</item>
+        <item>STRUT REQUIRED</item>
+    </string-array>
+
+    <string-array name="dd_stray_wire">
+        <item>Select</item>
+        <item>GUY INSULATOR REQUIRED</item>
+        <item>STAY WIRE SNAPPED</item>
+    </string-array>
+
+    <string-array name="dd_ht_clearance">
+        <item>Select</item>
+        <item>INSUFFICIENT CLEARANCE</item>
+    </string-array>
+
+    <string-array name="dd_loose_span">
+        <item>Select</item>
+        <item>INTERMEDIATE/INLINE POLE REQUIRED</item>
+        <item>RESTRINGING REQUIRED</item>
+    </string-array>
+
+    <!--DTR DEFECTS-->
+    <string-array name="dd_dtr_structure">
+        <item>Select</item>
+        <item>PLINTH DAMAGED</item>
+        <item>PLINTH HEIGHT NOT SUFFICIENT</item>
+    </string-array>
+
+    <string-array name="dd_dtr_fencing">
+        <item>Select</item>
+        <item>FENCING REQUIRED</item>
+    </string-array>
+
+    <string-array name="dd_dtr_ab_switch">
+        <item>Select</item>
+        <item>MOVING CONTACT DAMAGED</item>
+        <item>FIXED CONTACTS DAMAGED</item>
+        <item>TOTAL AB SWITCH DAMAGED</item>
+        <item>AB Switch Mounting Damaged</item>
+    </string-array>
+
+    <string-array name="dd_dtr_lt_fuse_set">
+        <item>Select</item>
+        <item>DISTRIBUTION BOX DAMAGED</item>
+        <item>LT FUSE SET DAMAGED</item>
+        <item>DISTRIBUTION BOARD DAMAGED</item>
+    </string-array>
+
+    <string-array name="dd_dtr_lt_bushings_damaged">
+        <item>Select No of. LT Bushings Damaged</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="dd_dtr_ht_bushings_damaged">
+        <item>Select No of. HT Bushings Damaged</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="dd_dtr_pg_clamp">
+        <item>Select No of. damaged PG Clamps/Lugs</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="dd_dtr_lighetning">
+        <item>Select No of. Damaged Lightening Arrestors</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+    <!--11KV-->
+    <string-array name="ss_name">
+        <item>Select</item>
+        <item>33/11Kv Substation</item>
+    </string-array>
+
+    <string-array name="load_map">
+        <item>Select</item>
+        <item>Through Line</item>
+        <item>Spur Line</item>
+        <item>Intermediate/Inline Pole</item>
+    </string-array>
+
+    <string-array name="Survey_type">
+        <!-- <item>Select</item>-->
+        <item></item>
+        <!--        <item>Select</item>
+        <item>Existing</item>
+        <item>JHC Scheme</item>-->
+        <!--<item>Incremental</item>
+          <item>AB Cable/Covered Conductor</item>-->
+
+    </string-array>
+
+    <string-array name="Survey_type_11kv_oh_rdss">
+        <!-- <item>Select</item>-->
+        <item>Select</item>
+        <item>Existing</item>
+        <item>Proposed</item>
+
+        <!-- <item>Incremental</item>  <item>AB Cable/Covered Conductor</item> -->
+
+    </string-array>
+
+    <string-array name="voltage_leavel_oh">
+        <item>11 KV</item>
+        <item>6.3 KV</item>
+    </string-array>
+
+
+    <string-array name="new_voltage">
+        <item>33KV</item>
+        <item>11KV</item>
+
+    </string-array>
+
+
+    <string-array name="pin_cut_point_estimates">
+        <item>Select</item>
+        <item>PINPOINT</item>
+        <item>CUTPOINT</item>
+    </string-array>
+
+
+    <string-array name="pin_cut_point_asset_new">
+        <item>Select</item>
+        <item>Pinpoint</item>
+        <item>Cutpoint</item>
+    </string-array>
+
+
+    <string-array name="pin_cut_point_estimates_lt">
+        <item>Select</item>
+        <item>PIN POINT</item>
+        <item>CUT POINT</item>
+    </string-array>
+    <string-array name="pin_insulators">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="pin_insulators_count">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="v_cross_arms_estimates">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+    <string-array name="side_arm_33kv_estimates">
+        <item>1</item>
+        <!--        <item>2</item>-->
+        <!--        <item>3</item>-->
+        <!--        <item>4</item>-->
+        <!--        <item>5</item>-->
+    </string-array>
+
+
+    <string-array name="channels_33kv_estimates">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="dedend_pole_estimates">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+
+    <string-array name="sp_bf_sg_estimates">
+        <item>Select</item>
+        <item>Bifurcation</item>
+        <item>Segregation</item>
+    </string-array>
+
+    <string-array name="cut_insulators">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="back_clamps">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+
+    </string-array>
+
+    <string-array name="is_wosurvey_completed">
+        <item>NO</item>
+        <!--<item>YES</item>-->
+    </string-array>
+
+
+    <string-array name="pole_type">
+        <item>Select</item>
+        <item>PSCC</item>
+        <item>SPUN</item>
+        <item>TOWER</item>
+        <item>SS BAY</item>
+        <item>RAIL</item>
+        <item>RS JOIST</item>
+        <item>TUBULAR POLE</item>
+    </string-array>
+
+    <string-array name="pole_height">
+        <item>Select</item>
+        <item>9.1</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="pole_support">
+        <!--<item>Select PoleSupport</item>-->
+        <item>Select</item>
+        <item>NONE</item>
+        <item>STRUT</item>
+        <item>STAY</item>
+        <item>STRUT AND STAY</item>
+    </string-array>
+
+
+    <string-array name="no_of_pole_support">
+        <!--<item>Select PoleSupport</item>-->
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <!--        <item>5</item>-->
+        <!--        <item>6</item>-->
+        <!--        <item>7</item>-->
+        <!--        <item>8</item>-->
+        <!--        <item>9</item>-->
+        <!--        <item>10</item>-->
+
+    </string-array>
+
+
+    <string-array name="no_of_pole_stay_support">
+        <!--<item>Select PoleSupport</item>-->
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <!--        <item>7</item>-->
+        <!--        <item>8</item>-->
+        <!--        <item>9</item>-->
+        <!--        <item>10</item>-->
+
+    </string-array>
+
+    <string-array name="taping_point">
+        <item>Select</item>
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="multi_ckt_req">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="nofof_tappings">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="pinpoint">
+        <!-- <item>Select</item>-->
+        <item>Pinpoint</item>
+        <item>Cutpoint</item>
+    </string-array>
+
+    <string-array name="pole_structure">
+        <item>Single-Pole</item>
+        <item>Double-Pole</item>
+        <item>Triple-Pole</item>
+        <item>Four-Pole</item>
+    </string-array>
+
+    <string-array name="dtr_shifted">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+
+    <string-array name="pole_structure_estimates">
+        <item>Select</item>
+        <item>SINGLE-POLE</item>
+        <item>DOUBLE-POLE</item>
+        <item>FOUR-POLE</item>
+    </string-array>
+
+    <string-array name="multi_circuit">
+        <item>No</item>
+        <item>Yes</item>
+
+    </string-array>
+
+    <string-array name="only_yes">
+        <item>Yes</item>
+    </string-array>
+
+
+    <string-array name="nature_of_service">
+        <item>Select</item>
+        <item>LT Service</item>
+        <item>HT Service</item>
+
+    </string-array>
+
+
+    <string-array name="service_released">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+
+    <string-array name="pole_configuration">
+        <item>Select</item>
+        <item>SS BAY</item>
+        <item>Line-Pole</item>
+        <item>DTR Pole</item>
+        <item>HT Service-Pole</item>
+        <item>AB-Pole</item>
+        <!--        <item>DF</item>-->
+        <!--        <item>Line Capacitor</item>-->
+        <!--        <item>Sectionalizer</item>-->
+        <!--        <item>Auto Reclosure</item>-->
+    </string-array>
+
+    <string-array name="dtr_mounting_11kv">
+        <item>Select</item>
+        <item>Pole Mounted</item>
+        <item>Plinth Mounted</item>
+        <item>Pillar Mounted</item>
+        <item>DP Structure</item>
+
+    </string-array>
+
+    <string-array name="dtr_phase_11kv">
+        <item>Select</item>
+        <item>I</item>
+        <item>III</item>
+    </string-array>
+
+
+    <string-array name="type_of_load_estimates">
+        <item>Select</item>
+        <item>DOMESTIC</item>
+        <item>COMMERCIAL</item>
+        <item>INDUSTRIAL DEDICATED</item>
+    </string-array>
+
+
+    <string-array name="no_lt_circuit">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+
+    </string-array>
+
+
+    <string-array name="dtr_apartment">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+        <!--        <item>25 kVA</item>-->
+    </string-array>
+
+
+    <string-array name="meter_available_estimates">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>Meter not required</item>
+    </string-array>
+
+    <string-array name="dtr_phase1_capacity_11kv">
+        <item>Select</item>
+        <item>16 KVA</item>
+        <item>25 KVA</item>
+    </string-array>
+
+    <string-array name="dtr_phase2_capacity_11kv">
+        <item>Select</item>
+        <!--        <item>16 kVA</item>-->
+        <item>25 kVA</item>
+        <item>40 kVA</item>
+        <item>63 kVA</item>
+        <item>100 kVA</item>
+        <item>160 kVA</item>
+        <item>315 kVA</item>
+        <item>500 kVA</item>
+    </string-array>
+
+
+    <string-array name="pc_line_capacitor">
+        <item>Select</item>
+        <item>Working</item>
+        <item>Not Working</item>
+    </string-array>
+
+    <string-array name="pc_auto_reclosure">
+        <item>Select</item>
+        <item>3 way</item>
+        <item>5 way</item>
+    </string-array>
+
+    <string-array name="oh_no_of_ab_switches">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="is_multicircuit">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="is_multi_circuit_11kv">
+        <item>Select</item>
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+
+    <string-array name="dtr_structure_type_dtr_pole">
+        <item>Select</item>
+        <item>Pole Mounted</item>
+        <item>Plinth Mounted</item>
+        <item>DP Structure</item>
+        <item>Multi DTR Structure</item>
+    </string-array>
+
+
+    <string-array name="oh_is_dtr_avalable">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+
+
+    <string-array name="select_dtr_reason">
+        <item>Select</item>
+        <item>DTR THEFT</item>
+        <item>DTR NOT AVAILABLE ON THE STRUCTURE</item>
+        <item>DTR LOST IN CYCLONE/FLOODS</item>
+        <item>EXTRA STRUCTURE CREATED FOR ENHANCEMENT OF DTR BY MISTAKE </item>
+
+    </string-array>
+
+    <string-array name="phase_dtr_pole">
+        <item>Select</item>
+        <item>I</item>
+        <item>II</item>
+        <item>III</item>
+    </string-array>
+
+    <string-array name="oh_type_of_load">
+        <item>Select</item>
+        <item>Agl</item>
+        <item>Industrial</item>
+        <item>Commercial</item>
+        <item>Domestic</item>
+        <item>Mixed</item>
+    </string-array>
+
+    <string-array name="oh_dtr_location_type">
+        <item>Select</item>
+        <item>Field DTR</item>
+        <item>Apartment</item>
+        <item>Group House</item>
+        <item>Commercial Complex</item>
+    </string-array>
+
+    <string-array name="oh_lt_ckts_avalable">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+
+    <string-array name="oh_of_lt_circuit">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <!--<item>4</item>
+        <item>5</item>
+        <item>6</item>-->
+    </string-array>
+
+    <string-array name="abc_ab_switch_dtr_pole">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="ab_switch_dtr_pole">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="noof_circuit_overhead">
+        <item>Select</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="circuit_type">
+        <!-- <item>Select</item>-->
+        <item>Multi Voltage</item>
+        <!--<item>Same Voltage</item>-->
+    </string-array>
+
+    <string-array name="voltage_leavel_ug_ab">
+        <item>11 KV</item>
+    </string-array>
+
+    <string-array name="noof_circuit">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <!--<item>3</item>
+        <item>4</item>-->
+    </string-array>
+
+    <string-array name="straight_rmu">
+        <item>Select</item><!--None-->
+        <item>UG Cable Route Marker</item>
+        <item>Pole</item>
+        <item>Structure</item>
+        <item>RMU</item>
+        <item>Straight Through Joint</item>
+        <item>Rail way Crsossing</item>
+        <item>Road Crossing</item>
+        <!-- <item>33-11kv SS Bay</item>-->
+        <!--        <item>SS BAY</item>-->
+        <item>AB-Pole</item>
+        <item>DTR</item>
+        <item>HT Service</item>
+        <item>Line Capacitor</item>
+        <item>Sectionalizer</item>
+        <item>Auto Reclosure</item>
+
+        <!--<item>End</item>
+        <item>33/11kv SS Incoming</item>
+        <item>EHT SS Outgoing</item>
+        <item>33-11kv SS Outgoing</item>
+        <item>Cable Path Location</item>-->
+    </string-array>
+
+    <string-array name="ug_line_capacitor">
+        <item>Select</item>
+        <item>Working</item>
+        <item>Not Working</item>
+    </string-array>
+
+    <string-array name="rmu">
+        <item>Select</item>
+        <item>2-Way</item>
+        <item>3-Way</item>
+        <item>5-Way</item>
+    </string-array>
+
+
+    <string-array name="rmu_make">
+        <item>Select</item>
+        <item>CG LUCY SWITCH GEAR LIMITED</item>
+        <item>ESWARI ELECTRICALS PVT LTD</item>
+        <item>SCHNEIDER ELECTRIC INDIA</item>
+        <item>SIEMENS INDIA</item>
+        <item>L &amp; T</item>
+        <item>ABB</item>
+        <item>C &amp; S Electric LTD</item>
+    </string-array>
+
+    <string-array name="undergpole_structure">
+        <item>Single-Pole</item>
+        <item>Double-Pole</item>
+        <item>Triple-Pole</item>
+        <item>Four-Pole</item>
+    </string-array>
+
+    <string-array name="ugpole_type">
+        <item>Select</item>
+        <item>SS BAY</item>
+        <item>PSCC</item>
+        <item>SPUN</item>
+        <item>RAIL</item>
+        <item>RS JOIST</item>
+        <item>TOWER</item>
+        <item>TUBULAR POLE</item>
+        <!--        <item>DTR Pole</item>&lt;!&ndash;//SS Bay&ndash;&gt;-->
+    </string-array>
+    <string-array name="ugpole_support">
+        <!--<item>Select PoleSupport</item>-->
+        <item>None</item>
+        <item>STRUT</item>
+        <item>STAY</item>
+        <item>STRUT and STAY</item>
+    </string-array>
+
+
+    <string-array name="userType">
+        <item>Select</item>
+        <item>APEPDCL</item>
+        <item>AGENCY</item>
+
+    </string-array>
+    <string-array name="arry_dtr_capacity">
+        <item>Select</item>
+        <item>5 KVA</item>
+        <item>10 KVA</item>
+        <item>15 KVA</item>
+        <item>15 KVA 3ph</item>
+        <item>16 KVA</item>
+        <item>16 KVA 3ph</item>
+        <item>25 KVA</item>
+        <item>40 KVA</item>
+        <item>50 KVA</item>
+        <item>63 KVA</item>
+        <item>75 KVA</item>
+        <item>100 KVA</item>
+        <item>160 KVA</item>
+        <item>200 KVA</item>
+        <item>250 KVA</item>
+        <item>315 KVA</item>
+        <item>500 KVA</item>
+    </string-array>
+
+    <string-array name="ug_type_of_load">
+        <item>Select</item>
+        <item>Agl</item>
+        <item>Industrial</item>
+        <item>Commercial</item>
+        <item>Domestic</item>
+        <item>Mixed</item>
+    </string-array>
+
+    <string-array name="ug_dtr_location_type">
+        <item>Select</item>
+        <item>Field DTR</item>
+        <item>Apartment</item>
+        <item>Group House</item>
+        <item>Commercial Complex</item>
+    </string-array>
+
+    <string-array name="ug_lt_ckts_avalable">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="ug_of_lt_circuit">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <!-- <item>7</item>
+         <item>8</item>
+         <item>9</item>
+         <item>10</item>
+         <item>11</item>
+         <item>12</item>-->
+    </string-array>
+
+    <string-array name="abc_line_capacitor">
+        <item>Select</item>
+        <item>Working</item>
+        <item>Not Working</item>
+    </string-array>
+
+    <string-array name="abc_is_endpole">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+
+    <string-array name="pole_type_cyclone">
+        <item>Select</item>
+        <item>Line-Pole</item>
+        <item>AB Pole</item>
+        <item>DTR Pole</item>
+        <item>HT-Service Pole</item>
+    </string-array>
+
+    <string-array name="abc_noof_circuit">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <!--<item>3</item>
+        <item>4</item>-->
+    </string-array>
+
+    <string-array name="abc_type_of_load">
+        <item>Select</item>
+        <item>Agl</item>
+        <item>Industrial</item>
+        <item>Commercial</item>
+        <item>Domestic</item>
+        <item>Mixed</item>
+    </string-array>
+    <string-array name="abc_dtr_location_type">
+        <item>Select</item>
+        <item>Field DTR</item>
+        <item>Apartment</item>
+        <item>Group House</item>
+        <item>Commercial Complex</item>
+    </string-array>
+
+    <string-array name="abc_lt_ckts_avalable">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+
+
+    </string-array>
+
+    <string-array name="abc_location_type">
+        <item>Select</item>
+        <item>UG Cable Route Marker</item>
+        <item>None</item>
+        <item>Pole</item>
+        <item>Structure</item>
+        <item>RMU</item>
+        <item>Straight Through Joint</item>
+        <item>Road Crossing</item>
+        <item>33-11kv SS Bay</item>
+        <item>AB-Pole</item>
+        <item>DTR</item>
+        <item>HT Service</item>
+        <item>Line Capacitor</item>
+        <item>Sectionalizer</item>
+        <item>Auto Reclosure</item>
+    </string-array>
+    <string-array name="abc_type_of_structure">
+        <item>Select</item>
+        <item>Single</item>
+        <item>DP</item>
+        <item>TP</item>
+        <item>4P</item>
+    </string-array>
+
+    <string-array name="abc_spur_line_tapping">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="abc_no_of_spue_line">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="abc_ab_cable_size">
+        <item>Select</item>
+        <item>35 Sq.mm.</item>
+        <item>70 Sq.mm.</item>
+        <item>120 Sq.mm.</item>
+        <item>185 Sqmm</item>
+        <item>300 Sqmm</item>
+    </string-array>
+    <string-array name="abc_no_of_cable">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="abc_straight_rmu">
+        <item>Select</item><!--None-->
+        <item>UG Cable Route Marker</item>
+        <item>Pole</item>
+        <item>Structure</item>
+        <item>RMU</item>
+        <item>Straight Through Joint</item>
+        <item>Road Crossing</item>
+        <item>33-11kv SS Bay</item>
+        <item>AB-Pole</item>
+        <item>DTR</item>
+        <item>HT Service</item>
+        <item>Line Capacitor</item>
+        <item>Sectionalizer</item>
+        <item>Auto Reclosure</item>
+        <!--<item>End</item>-->
+    </string-array>
+    <!--    <item>33/11kv SS Incoming</item>
+        <item>EHT SS Outgoing</item>
+        <item>33-11kv SS Outgoing</item>
+        <item>Cable Path Location</item>-->
+
+    <string-array name="abc_auto_reclosure">
+        <item>Select</item>
+        <item>3 way</item>
+        <item>5 way</item>
+    </string-array>
+
+    <string-array name="abc_rmu">
+        <item>Select</item>
+        <item>3-Way</item>
+        <item>5-Way</item>
+    </string-array>
+
+    <string-array name="abc_pole_structure">
+        <item>Single-Pole</item>
+        <item>Double-Pole</item>
+        <item>Triple-Pole</item>
+        <item>Four-Pole</item>
+    </string-array>
+
+    <string-array name="abc_pole_type">
+        <item>Select</item>
+        <item>SS BAY</item>
+        <item>PSCC</item>
+        <item>SPUN</item>
+        <item>RAIL</item>
+        <item>RS JOIST</item>
+        <item>TOWER</item>
+        <item>TUBULAR POLE</item>
+        <item>DTR Pole</item><!--//SS Bay-->
+    </string-array>
+
+    <string-array name="abc_pole_height">
+        <item>Select</item>
+        <item>9.1</item>
+        <item>12</item>
+    </string-array>
+
+
+    <string-array name="abc_struct_stay">
+        <item>Select</item>
+        <item>None</item>
+        <item>STRUT</item>
+        <item>STAY</item>
+        <item>RS JOIST</item>
+        <item>STRUT AND STAY</item>
+    </string-array>
+
+    <string-array name="abc_pole_support">
+        <!--<item>Select PoleSupport</item>-->
+        <item>None</item>
+        <item>STRUT</item>
+        <item>STAY</item>
+        <item>STRUT AND STAY</item>
+    </string-array>
+
+    <string-array name="abc_dtr_structure_type_dtr_pole">
+        <item>Select</item>
+        <item>Pole Mounted</item>
+        <item>Plinth Mounted</item>
+        <item>DP Structure</item>
+        <item>Multi DTR Structure</item>
+    </string-array>
+
+    <string-array name="abc_phase_dtr_pole">
+        <item>Select</item>
+        <item>I</item>
+        <item>II</item>
+        <item>III</item>
+    </string-array>
+
+    <string-array name="abc_dtr_capacity">
+        <item>Select</item>
+        <item>16 KVA</item>
+        <item>25 KVA</item>
+        <item>40 KVA</item>
+        <item>63 KVA</item>
+        <item>100 KVA</item>
+        <item>160 KVA</item>
+        <item>200 KVA</item>
+        <item>250 KVA</item>
+        <item>315 KVA</item>
+        <item>500 KVA</item>
+        <item>1000 KVA</item>
+    </string-array>
+
+    <string-array name="abc_of_lt_circuit">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+
+    <string-array name="abc_taping_point">
+        <item>Select</item>
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="abc_nofof_tappings">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+
+    <string-array name="abc_cable_size">
+        <item>Select</item>
+        <item>35 Sqmm</item>
+        <item>50 Sqmm</item>
+        <item>70 Sqmm</item>
+        <item>95 Sqmm</item>
+        <item>120 Sqmm</item>
+        <item>185 Sqmm</item>
+        <item>300 Sqmm</item>
+    </string-array>
+
+
+    <!--11KV DEFECTS-->
+    <string-array name="dd_pole_defects_11">
+        <item>Select</item>
+        <item>BOTTOM RUSTED</item>
+        <item>DAMAGED</item>
+        <item>LEANED</item>
+        <item>SHORT POLE</item>
+    </string-array>
+
+    <string-array name="dd_conductor_11">
+        <item>Select</item>
+        <item>CONDUCTOR DAMAGED</item>
+        <item>BINDING DAMAGED</item>
+        <item>JUMPERS DAMAGED</item>
+        <item>RE-STRINGING REQUIRED</item>
+    </string-array>
+
+    <string-array name="dd_ab_switch_11">
+        <item>Select</item>
+        <item>AB SWITCH DAMAGED</item>
+        <item>MOVING CONTACTS DAMAGED</item>
+        <item>FIXED CONTACTS DAMAGED</item>
+    </string-array>
+
+    <string-array name="dd_lt_insulators_11">
+        <item>Select</item>
+        <item>PIN INSULATORS DAMAGED</item>
+        <item>DISC INSULATORS DAMAGED</item>
+    </string-array>
+
+    <string-array name="dd_cross_arm_11">
+        <item>Select</item>
+        <item>V CROSS ARM DAMAGED</item>
+        <item>TAPPING  CROSS ARM DAMAGED</item>
+        <item>CROSS ARM TILTED</item>
+    </string-array>
+
+    <string-array name="dd_top_cleat_11">
+        <item>Select</item>
+        <item>TOP CLEAT DAMAGED</item>
+        <item>TOP CLEAT TILTED</item>
+    </string-array>
+
+    <string-array name="dd_strut_pole_11">
+        <item>Select</item>
+        <item>STRUT POLE DAMAGED</item>
+        <item>STRUT POLE REQUIRED</item>
+    </string-array>
+
+    <string-array name="dd_stray_wire_11">
+        <item>Select</item>
+        <item>STAT WIRE DAMAGED</item>
+        <item>STAY WIRE REQUIRED</item>
+        <item>GUY INSULATOR REQUIRED</item>
+    </string-array>
+
+    <string-array name="dd_ht_clearance_11">
+        <item>Select</item>
+        <item>LOW CLEARANCE BETWEEN 11KV AND 33KV</item>
+        <item>LOW CLEARANCE BETWEEN 11KV AND LT</item>
+    </string-array>
+
+    <string-array name="dd_intermediate_pole_11">
+        <item>Select</item>
+        <item>INLINE POLE REQUIRED</item>
+    </string-array>
+
+    <string-array name="dd_restringing_11">
+        <item>Select</item>
+        <item>RE- STRINGING REQUIRED</item>
+    </string-array>
+
+    <string-array name="dd_tree_clearance_11">
+        <item>Select</item>
+        <item>TREE CLEARANCE REQUIRED</item>
+    </string-array>
+
+
+    <string-array name="dd_crossing_11">
+        <!-- <item>Select</item>-->
+        <item>ROAD CROSSING</item>
+        <item>RIVER CROSSING</item>
+        <item>POND CROSSING</item>
+        <item>NH CROSSING</item>
+        <item>RAILWAY CROSSING</item>
+        <item>HILL CROSSING</item>
+    </string-array>
+
+
+    <string-array name="conductor_size_11">
+        <item>Select</item>
+        <item>100 SQMM-AAA</item>
+        <item>55 SQMM-AAA</item>
+        <item>34 SQMM-AAA</item>
+        <item>COVERED CONDUCTOR 70 SQMM</item>
+        <item>AB CABLE 70 SQMM</item>
+        <item>WEASEL-ACSR</item>
+        <item>SQUIRREL-ACSR</item>
+        <item>DOG-ACSR</item>
+    </string-array>
+
+    <string-array name="oh_no_of_lt_feeders">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="oh_no_of_11_feeders">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="oh_no_of_33_feeders">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!--JHC PHASE 1-->
+    <string-array name="pole_survey_type">
+        <item>Select</item>
+        <item>HC Phase 1</item>-->
+        <item>EXISTING</item>
+        <item>RDSS</item>
+
+    </string-array>
+
+    <!--33 KV-->
+
+    <string-array name="load_map_33_kv">
+        <item>Select</item>
+        <item>Through Line</item>
+        <item>Spur Line</item>
+        <item>Intermediate/Inline Pole</item>
+    </string-array>
+
+    <string-array name="cable_size">
+        <item>Select</item>
+        <item>185 Sqmm</item>
+        <item>300 Sqmm</item>
+        <item>400 Sqmm</item>
+    </string-array>
+
+    <string-array name="conductor_size">
+        <item>Select</item>
+        <item>100 Sqmm-AAA</item>
+        <item>200 Sqmm-AAA</item>
+        <item>Dog ACSR</item>
+    </string-array>
+
+
+    <string-array name="straight_rmu_33kv">
+        <item>None</item>
+        <item>Straight Through Joint</item>
+        <item>RMU</item>
+        <item>Railway Crossing</item>
+        <item>Road Crossing</item>
+        <item>33/11kv SS Incoming</item>
+        <item>EHT SS Outgoing</item>
+        <item>33-11kv SS Outgoing</item>
+        <item>Line AB</item>
+        <item>Pole</item>
+        <item>Cable Path Location</item>
+        <item>Structure</item>
+    </string-array>
+
+    <string-array name="rmu_33kv">
+        <item>Select</item>
+        <item>3-Way</item>
+        <item>5-Way</item>
+    </string-array>
+
+    <string-array name="undergpole_structure_33kv">
+        <item>Single-Pole</item>
+        <item>Double-Pole</item>
+        <item>Triple-Pole</item>
+        <item>Four-Pole</item>
+    </string-array>
+
+    <string-array name="ugpole_type_33kv">
+        <item>Select</item>
+        <item>PSCC</item>
+        <item>SPUN</item>
+        <item>RAIL</item>
+        <item>RS JOIST</item>
+        <item>TOWER</item>
+        <item>TUBULAR POLE</item>
+        <item>SS Bay</item>
+    </string-array>
+
+    <string-array name="pole_height_33kv">
+        <item>Select</item>
+        <item>9.1</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="conductor_size_11kv">
+        <item>Select</item>
+        <item>AAA CONDUCTOR</item>
+        <!--        <item>AB CABLE</item>-->
+        <!--        <item>XLPE CABLE</item>-->
+        <!--        <item>PVC CABLE</item>-->
+        <!--        <item>ACSR CONDUCTOR</item>-->
+
+        <!--        AB CABLES-->
+        <!--        ACSR CONDUCTORS-->
+        <!--        PVC CABLES-->
+        <!--        XLPE CABLES-->
+
+
+    </string-array>
+
+    <string-array name="conductor_size_LT">
+        <item>Select</item>
+        <item>AAA CONDUCTOR</item>
+        <item>AB CABLE</item>
+        <!--<item>ACSR CONDUCTORS</item>-->
+
+        <!--        <item>XLPE CABLE</item>-->
+        <!--        <item>PVC CABLE</item>-->
+        <!--        <item>ACSR CONDUCTOR</item>-->
+
+        <!--        AB CABLES-->
+        <!--        ACSR CONDUCTORS-->
+        <!--        PVC CABLES-->
+        <!--        XLPE CABLES-->
+
+
+    </string-array>
+
+    <string-array name="conductor_size_33kv">
+        <item>Select</item>
+        <item>AAA CONDUCTOR</item>
+        <!--        <item>AB CABLE</item>-->
+        <!--        <item>XLPE CABLE</item>-->
+        <!--        <item>PVC CABLE</item>-->
+        <!--        <item>ACSR CONDUCTOR</item>-->
+
+        <!--        AB CABLES-->
+        <!--        ACSR CONDUCTORS-->
+        <!--        PVC CABLES-->
+        <!--        XLPE CABLES-->
+
+
+    </string-array>
+
+    <string-array name="conductor_size_lt">
+        <item>Select</item>
+        <item>34 SQMM-AAA</item>
+        <item>55 SQMM-AAA</item>
+        <item>100 SQMM-AAA</item>
+        <item>LT 2 core AB Cable</item>
+        <item>LT 3 Core AB Cable</item>
+
+
+    </string-array>
+
+
+    <string-array name="pole_height_11kv">
+        <item>Select</item>
+        <item>9.1</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="service_pole_lt">
+        <item>Select</item>
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="pole_height_lt">
+        <item>Select</item>
+        <item>9.1</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="ugpole_support_33kv">
+        <!--<item>Select PoleSupport</item>-->
+        <item>None</item>
+        <item>STRUT</item>
+        <item>STAY</item>
+        <item>STRUT AND STAY</item>
+    </string-array>
+
+    <string-array name="pole_configuration_33kv">
+        <item>Select</item>
+        <item>Line-Pole</item>
+        <item>33/11kv SS-Bay</item>
+        <item>EHT SS-Bay</item>
+        <item>HT Service-Pole</item>
+        <item>AB-Pole</item>
+        <!--        <item>PTR</item>-->
+        <!-- <item>DP-Pole</item>-->
+    </string-array>
+
+    <string-array name="taping_point_33kv">
+        <item>Select</item>
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="is_multicircuit_33kv">
+        <item>Select</item>
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="circuit_type_33kv">
+        <item>Multi Voltage</item>
+        <!--<item>Select</item>
+        <item>Multi Voltage</item>
+        <item>Same Voltage</item>-->
+    </string-array>
+
+    <string-array name="pole_concrete">
+        <item>Select</item>
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+
+    <!--ESTIMATES APP START-->
+
+    <string-array name="e_survey_type_33">
+        <item>Select</item>
+        <item>NEW 33KV FEEDER</item>
+        <item>TAPPING FROM EXISTING FEEDER</item>
+    </string-array>
+
+    <string-array name="e_survey_type_11">
+        <item>Select</item>
+        <item>NEW 11KV FEEDER</item>
+        <item>TAPPING FROM EXISTING FEEDER</item>
+    </string-array>
+
+    <string-array name="meter_location_survey">
+        <item>ALL METERS AT SAME PREMISES</item>
+        <item>METERS AT DIFFERENT PREMISES</item>
+    </string-array>
+
+    <string-array name="e_survey_type_lt">
+        <item>Select</item>
+        <item>NEW LT LINE</item>
+        <item>TAPPING FROM EXISTING LT CIRCUIT</item>
+    </string-array>
+
+    <string-array name="e_yes_no">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+
+    <string-array name="location_type">
+        <item>Select</item>
+        <item>New Location</item>-->
+        <item>Mapped Location</item>
+    </string-array>
+
+
+    <string-array name="pole_survey_type_estimates">
+        <item>Select</item>
+        <item>PROPOSED</item>-->
+        <item>EXISTING</item>
+
+    </string-array>
+
+    <string-array name="line_type_work_involments">
+        <item>Select</item>
+        <!--<item>PROPOSED</item>&ndash;&gt;-->
+        <item>LINE EXTENSION</item>
+        <item>NEW FEEDER/BAY EXTENSION</item>-->
+
+    </string-array>
+
+    <string-array name="line_type_work_involments_33kv">
+        <item>Select</item>
+        <!--<item>PROPOSED</item>&ndash;&gt;-->
+        <item>LINE EXTENSION</item>
+        <item>NEW FEEDER/BAY EXTENSION AT EHT SS</item>-->
+
+    </string-array>
+
+    <string-array name="no_of_feeders_33kv">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="no_of_feeders_11kv">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="hg_fuse_set">
+        <item>11KV HG FUSE SETS WITH INSULATORS</item>
+        <item>6.3KV S-PH HG FUSE SETS WITH INSULATORS</item>
+    </string-array>
+
+
+    <string-array name="lt_fuse">
+        <item>LT Fuse </item>
+        <item>Distribution Box</item>
+    </string-array>
+
+
+    <string-array name="only_yes_no">
+        <item>Select</item>
+        <item>Proposed</item>
+        <item>Existing</item>
+    </string-array>
+
+    <string-array name="distanceDTR">
+        <item>Select</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+    </string-array>
+
+    <string-array name="dtr_survey_type">
+        <item>Select</item>
+        <item>Existing</item>
+        <item>Proposed</item>
+        <item>Enhancement</item>
+    </string-array>
+
+    <string-array name="dtr_survey_type_estimates">
+        <item>Select</item>
+        <item>Existing</item>
+        <item>Enhancement</item>
+    </string-array>
+
+    <string-array name="no_of_lt_ckts">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+
+    </string-array>
+
+    <string-array name="est_voltage_level">
+        <item>Select</item>
+        <item>33KV</item>
+        <item>11KV</item>
+        <item>LT</item>
+    </string-array>
+
+    <string-array name="est_voltage_level_rdss">
+        <item>Select</item>
+        <item>EHT SS 33KV</item>
+        <item>33/11KV SS</item>
+    </string-array>
+
+    <string-array name="rdss_width">
+        <item>Select</item>
+        <item>0.6</item>
+        <item>1</item>
+    </string-array>
+
+
+    <string-array name="rdss_location_type">
+        <item>Select</item>
+        <item>Trench Marking Point</item>
+        <item>Stright through joint</item>
+        <item>End joint</item>
+        <item>RMU</item>
+        <item>DTR</item>
+        <item>HT Service</item>
+    </string-array>
+
+    <string-array name="rdss_rmu_type">
+        <item>Select</item>
+        <item>33KV 5 Way RMU</item>
+        <item>11KV 3 Way RMU</item>
+        <item>11KV 5 Way RMU</item>
+    </string-array>
+
+
+    <string-array name="rdss_utility_type">
+        <item>Select</item>
+        <item>None</item>
+        <item>Water pipelines</item>
+        <item>Sewage pipelines</item>
+        <item>Gas pipelines</item>
+        <item>Culvert</item>
+        <item>NH crossings</item>
+        <item>Railway crossings</item>
+        <item>Iron ore pipelines</item>
+        <item>Road crossings</item>
+        <item>220kv/132KV cable crossings</item>
+
+    </string-array>
+
+    <string-array name="rdss_dtr_capacity">
+        <item>Select</item>
+        <item>315 KVA</item>
+        <item>500 KVA</item>
+    </string-array>
+
+
+    <string-array name="rdss_depth">
+        <item>Select</item>
+        <item>0.9</item>
+        <item>1</item>
+        <item>1.25</item>
+        <item>1.5</item>
+    </string-array>
+
+    <string-array name="rdss_no_of_cables_33">
+        <item>Select</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="rdss_no_of_cables_11">
+        <item>Select</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="rdss_no_of_cables_lt">
+        <item>Select</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="capacities_lt_ug">
+        <item>Select</item>
+        <item>315 KVA</item>
+        <item>500 KVA</item>
+    </string-array>
+
+    <string-array name="phase_lt_ug">
+        <item>Select</item>
+        <item>III</item>
+    </string-array>
+
+    <string-array name="phase_lt_ug_edit">
+        <item>III</item>
+    </string-array>
+
+    <string-array name="capacities_lt_ug_edit">
+        <item>315 KVA</item>
+        <item>500 KVA</item>
+    </string-array>
+
+
+    <string-array name="cable_size_lt_rdss">
+        <item>150 SQMM </item>
+    </string-array>
+
+
+    <string-array name="conductor_size_rdss_33">
+        <item>400 SQMM </item>
+    </string-array>
+
+    <string-array name="conductor_size_rdss_11">
+        <item>Select</item>
+        <item>180 SQMM</item>
+        <item>300 SQMM</item>
+    </string-array>
+
+    <string-array name="conductor_size_rdss_33_edit">
+        <item>400 SQMM</item>
+    </string-array>
+
+    <string-array name="conductor_size_rdss_11_edit">
+        <item>180 SQMM</item>
+        <item>300 SQMM</item>
+
+    </string-array>
+
+    <string-array name="survey_pole_type">
+        <item>Select</item>
+        <item>New Location</item>
+        <item>Mapped Location</item>
+    </string-array>
+
+    <string-array name="feeder_no_33kv">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+    </string-array>
+
+    <string-array name="feeder_no_33kv_feeder">
+        <item>Select</item>
+        <item>Other than List</item>
+
+    </string-array>
+
+    <string-array name="select_existing_pole">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="no_of_dtr_lt">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="no_of_lt_ckt">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <!--ESTIMATES APP END-->
+
+
+    <!--RDSS APP STARTS-->
+
+    <string-array name="line_Survey_type_rdss_ug_11kv">
+        <!-- <item>Select</item>-->
+        <item>Proposed</item>
+        <item>Existing</item>
+        <!--      <item>Existing</item>
+        <item>Proposed</item>
+        <item>6.3KV to 11KV Convertion</item>-->
+
+        <!-- <item>Incremental</item>  <item>AB Cable/Covered Conductor</item> -->
+
+    </string-array>
+
+    <string-array name="DtrSurvey_type_rdss_ug_11kv">
+        <!-- <item>Select</item>-->
+        <item>Select</item>
+        <item>Existing</item>
+        <item>Proposed</item>
+
+        <!-- <item>Incremental</item>  <item>AB Cable/Covered Conductor</item> -->
+
+    </string-array>
+
+    <string-array name="flxure_type_rdss_ug_11kv">
+        <!-- <item>Select</item>-->
+        <item>Select</item>
+        <item>V CROSS ARM</item>
+        <item>SIDE ARM</item>
+        <item>TAPPING CHANNEL</item>
+
+        <!-- <item>Incremental</item>  <item>AB Cable/Covered Conductor</item> -->
+
+    </string-array>
+
+
+    <string-array name="DTR_Survey_type_rdss_ug_11kv">
+        <item>Select</item>
+        <item>EXISTING</item>
+        <item>PROPOSED</item>
+
+
+    </string-array>
+
+    <string-array name="RMU_Survey_type">
+        <item>Select</item>
+        <item>PROPOSED</item>
+        <item>EXISTING</item>
+
+
+    </string-array>
+
+    <!--Cable Size-->
+    <string-array name="cablesize">
+        <item>300</item>
+        <item>185</item>
+
+    </string-array>
+
+    <string-array name="Select_null">
+        <item></item>
+
+
+    </string-array>
+
+    <string-array name="flxure_type">
+        <!-- <item>Select</item>-->
+        <item>Select</item>
+        <item>V CROSS ARM</item>
+        <item>SIDE ARM</item>
+        <item>TAPPING CHANNEL</item>
+
+        <!-- <item>Incremental</item>  <item>AB Cable/Covered Conductor</item> -->
+
+    </string-array>
+
+
+    <string-array name="DtrSurvey_type">
+        <!-- <item>Select</item>-->
+        <item>Select</item>
+        <item>Existing</item>
+        <item>Proposed</item>
+
+        <!-- <item>Incremental</item>  <item>AB Cable/Covered Conductor</item> -->
+
+    </string-array>
+
+
+    <string-array name="line_Survey_type">
+        <!-- <item>Select</item>-->
+        <item>Select</item>
+        <item>Existing</item>
+        <item>Proposed</item>
+        <item>6.3KV to 11KV Convertion</item>
+
+        <!-- <item>Incremental</item>  <item>AB Cable/Covered Conductor</item> -->
+
+    </string-array>
+
+
+    <!--RDSS APP END-->
+
+    <!--NEW MODIFICATIONS STARTS-->
+
+    <string-array name="sp_bf_sg">
+        <item>Select</item>
+        <item>Bifurcation</item>
+        <item>Segregation</item>
+    </string-array>
+
+    <string-array name="sp_ckt_type">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <!--NEW MODIFICATIONS END-->
+
+
+    <string name="preference_video_bitrate_4000000">Preference video bitrate 4000000</string>
+    <string name="preference_category_video_debugging">Preference category video debugging</string>
+    <string name="preference_camera2_fast_burst">Preference camera2 fast burst</string>
+    <string name="preference_ghost_image_off">Preference ghost image off</string>
+    <string name="preference_zebra_stripes_summary">Preference zebra stripes summary</string>
+    <string name="preference_show_geo_direction_lines_summary">Preference show geo direction lines summary</string>
+    <string name="preference_white_balance_summary">Preference white balance summary</string>
+    <string name="video_may_be_corrupted">Video may be corrupted</string>
+    <string name="bluetooth_current_remote">Bluetooth current remote</string>
+    <string name="preference_hdr_save_expo_summary">Preference hdr save expo summary</string>
+    <string name="array_seekbar_preference_seekbar">Array seekbar preference seekbar</string>
+    <string name="switch_to_external_camera">Switch to external camera</string>
+    <string name="preference_category_online">Preference category online</string>
+    <string name="white_balance_unlocked">White balance unlocked</string>
+    <string name="preference_textstamp_summary">Preference textstamp summary</string>
+    <string name="permission_record_audio_not_available">Permission record audio not available</string>
+    <string name="preference_crop_guide_none">Preference crop guide none</string>
+    <string name="preference_gps_direction_summary">Preference gps direction summary</string>
+    <string name="preference_video_bitrate_2000000">Preference video bitrate 2000000</string>
+    <string name="preference_thumbnail_animation_summary">Preference thumbnail animation summary</string>
+    <string name="preference_burst_mode_3x">Preference burst mode 3x</string>
+    <string name="preference_focus_peaking_color">Preference focus peaking color</string>
+    <string name="photo_mode_standard">Photo mode standard</string>
+    <string name="preference_multi_cam_button_summary">Preference multi cam button summary</string>
+    <string name="preference_show_angle_line_summary">Preference show angle line summary</string>
+    <string name="preference_histogram_intensity">Preference histogram intensity</string>
+    <string name="preference_video_log_medium">Preference video log medium</string>
+    <string name="preference_video_max_duration_summary">Preference video max duration summary</string>
+    <string name="preference_burst_interval_2m">Preference burst interval 2m</string>
+    <string name="preference_burst_mode_50x">Preference burst mode 50x</string>
+    <string name="enter_new_folder">Enter new folder</string>
+    <string name="preference_hdr_contrast_enhancement_summary">Preference hdr contrast enhancement summary</string>
+    <string name="choose_another_folder">Choose another folder</string>
+    <string name="audio_disabled">Audio disabled</string>
+    <string name="white_balance_manual">White balance manual</string>
+    <string name="preference_nr_mode_normal">Preference nr mode normal</string>
+    <string name="preference_video_profile_gamma_2_3">Preference video profile gamma 2 3</string>
+    <string name="preference_show_cycle_flash_summary">Preference show cycle flash summary</string>
+    <string name="previous">Previous</string>
+    <string name="preference_record_audio">Preference record audio</string>
+    <string name="preference_water_type_summary">Preference water type summary</string>
+    <string name="white_balance_fluorescent">White balance fluorescent</string>
+    <string name="failed_to_open_camera_3">Failed to open camera 3</string>
+    <string name="permission_rationale_bluetooth_scan_connect">Permission rationale bluetooth scan connect</string>
+    <string name="preference_burst_interval_1s">Preference burst interval 1s</string>
+    <string name="preference_video_bitrate_summary">Preference video bitrate summary</string>
+    <string name="preference_image_format_summary">Preference image format summary</string>
+    <string name="preference_zebra_stripes_97pc">Preference zebra stripes 97pc</string>
+    <string name="grid">Grid</string>
+    <string name="preference_raw_focus_bracketing_summary">Preference raw focus bracketing summary</string>
+    <string name="preference_burst_mode_5x">Preference burst mode 5x</string>
+    <string name="preference_nr_mode">Preference nr mode</string>
+    <string name="photo_mode_x_bokeh_full">Photo mode x bokeh full</string>
+    <string name="preference_location_enable">Preference location enable</string>
+    <string name="preference_multi_cam_button">Preference multi cam button</string>
+    <string name="camera_id">Camera id</string>
+    <string name="preference_licence_online">Preference licence online</string>
+    <string name="preference_photo_optimise_focus_quality">Preference photo optimise focus quality</string>
+    <string name="preference_burst_interval_0_5s">Preference burst interval 0 5s</string>
+    <string name="scene_mode_action">Scene mode action</string>
+    <string name="preference_video_max_filesize_default">Preference video max filesize default</string>
+    <string name="preference_burst_mode_40x">Preference burst mode 40x</string>
+    <string name="preference_restore_settings">Preference restore settings</string>
+    <string name="no_burst">No burst</string>
+    <string name="photo_mode_dro">Photo mode dro</string>
+    <string name="choose_save_location">Choose save location</string>
+    <string name="on">On</string>
+    <string name="intro_text">Intro text</string>
+    <string name="preference_video_bitrate_7000000">Preference video bitrate 7000000</string>
+    <string name="white_balance_incandescent">White balance incandescent</string>
+    <string name="preference_video_bitrate_150000000">Preference video bitrate 150000000</string>
+    <string name="preference_image_format_jpeg_r">Preference image format jpeg r</string>
+    <string name="raw_info">Raw info</string>
+    <string name="preference_video_bitrate_1000000">Preference video bitrate 1000000</string>
+    <string name="preference_video_restart_max_filesize_summary">Preference video restart max filesize summary</string>
+    <string name="preference_stamp_font_color">Preference stamp font color</string>
+    <string name="permission_rationale_record_audio">Permission rationale record audio</string>
+    <string name="preference_show_auto_level">Preference show auto level</string>
+    <string name="photo_mode_x_night">Photo mode x night</string>
+    <string name="preference_video_output_format">Preference video output format</string>
+    <string name="preference_screen_licences">Preference screen licences</string>
+    <string name="preference_record_audio_src_camcorder">Preference record audio src camcorder</string>
+    <string name="about_available">About available</string>
+    <string name="audio_listener_started">Audio listener started</string>
+    <string name="noise_reduction_mode_off">Noise reduction mode off</string>
+    <string name="lens">Lens</string>
+    <string name="preference_show_face_detection_summary">Preference show face detection summary</string>
+    <string name="preference_audio_noise_control_sensitivity_m2">Preference audio noise control sensitivity m2</string>
+    <string name="slow_motion_enabled">Slow motion enabled</string>
+    <string name="scene_mode_party">Scene mode party</string>
+    <string name="preference_video_rec709">Preference video rec709</string>
+    <string name="preference_video_bitrate_100000000">Preference video bitrate 100000000</string>
+    <string name="preference_audio_control_noise">Preference audio control noise</string>
+    <string name="preference_video_bitrate_15000000">Preference video bitrate 15000000</string>
+    <string name="preference_background_photo_saving_summary">Preference background photo saving summary</string>
+    <string name="preference_image_format_png">Preference image format png</string>
+    <string name="preference_video_bitrate_70000000">Preference video bitrate 70000000</string>
+    <string name="preference_remove_device_exif_keep_datetime">Preference remove device exif keep datetime</string>
+    <string name="preference_video_srgb">Preference video srgb</string>
+    <string name="preference_stamp_fontsize">Preference stamp fontsize</string>
+    <string name="preference_video_bitrate_9000000">Preference video bitrate 9000000</string>
+    <string name="preference_show_angle_summary">Preference show angle summary</string>
+    <string name="switch_to_photo">Switch to photo</string>
+    <string name="preference_category_camera_quality">Preference category camera quality</string>
+    <string name="preference_save_preshots_summary">Preference save preshots summary</string>
+    <string name="preference_stamp">Preference stamp</string>
+    <string name="preference_video_profile_gamma">Preference video profile gamma</string>
+    <string name="duration_unlimited">Duration unlimited</string>
+    <string name="color_effect_whiteboard">Color effect whiteboard</string>
+    <string name="physical_cameras_info">Physical cameras info</string>
+    <string name="preference_histogram_lightness">Preference histogram lightness</string>
+    <string name="preference_remove_device_exif_off">Preference remove device exif off</string>
+    <string name="duration_5m">Duration 5m</string>
+    <string name="preference_histogram_value">Preference histogram value</string>
+    <string name="preference_focus_bracketing_n_images_entries_25">Preference focus bracketing n images entries 25</string>
+    <string name="scan_ble">Scan ble</string>
+    <string name="preference_crop_guide_summary">Preference crop guide summary</string>
+    <string name="preference_location">Preference location</string>
+    <string name="preference_show_battery">Preference show battery</string>
+    <string name="preference_calibrate_level_summary">Preference calibrate level summary</string>
+    <string name="preference_video_log_fine">Preference video log fine</string>
+    <string name="camera_error">Camera error</string>
+    <string name="capturing">Capturing</string>
+    <string name="preference_camera_api_old">Preference camera api old</string>
+    <string name="magnetic_accuracy_info">Magnetic accuracy info</string>
+    <string name="white_balance_auto">White balance auto</string>
+    <string name="preference_hdr_contrast_enhancement_off">Preference hdr contrast enhancement off</string>
+    <string name="preference_video_stabilization">Preference video stabilization</string>
+    <string name="noise_reduction_mode_minimal">Noise reduction mode minimal</string>
+    <string name="white_balance_warm">White balance warm</string>
+    <string name="front_camera">Front camera</string>
+    <string name="stamp_disabled">Stamp disabled</string>
+    <string name="white_balance">White balance</string>
+    <string name="saf_permission_failed_open_image">Saf permission failed open image</string>
+    <string name="no_permission">No permission</string>
+    <string name="preference_video_bitrate_40000000">Preference video bitrate 40000000</string>
+    <string name="focus_bracketing_auto_source_distance">Focus bracketing auto source distance</string>
+    <string name="screen_lock_message_1">Screen lock message 1</string>
+    <string name="preference_restore_settings_summary">Preference restore settings summary</string>
+    <string name="preference_video_profile_gamma_1_9">Preference video profile gamma 1 9</string>
+    <string name="preference_show_video_max_amp">Preference show video max amp</string>
+    <string name="preference_require_location">Preference require location</string>
+    <string name="anti_banding_60hz">Anti banding 60hz</string>
+    <string name="seconds_abbreviation">Seconds abbreviation</string>
+    <string name="preference_location_summary">Preference location summary</string>
+    <string name="preference_video_capture_rate">Preference video capture rate</string>
+    <string name="video_quality">Video quality</string>
+    <string name="photo_mode_x_beauty_full">Photo mode x beauty full</string>
+    <string name="preference_show_textstamp_summary">Preference show textstamp summary</string>
+    <string name="left_of_screen">Left of screen</string>
+    <string name="preference_record_audio_channels">Preference record audio channels</string>
+    <string name="saf_cancelled">Saf cancelled</string>
+    <string name="preference_video_stabilization_summary">Preference video stabilization summary</string>
+    <string name="preference_nr_save_single">Preference nr save single</string>
+    <string name="photo_mode_x_bokeh">Photo mode x bokeh</string>
+    <string name="bluetooth_scan">Bluetooth scan</string>
+    <string name="preference_licence_google_icons_text">Preference licence google icons text</string>
+    <string name="preference_zebra_stripes_100pc">Preference zebra stripes 100pc</string>
+    <string name="preference_stamp_geo_address_both">Preference stamp geo address both</string>
+    <string name="preference_reset_question">Preference reset question</string>
+    <string name="preference_zebra_stripes_98pc">Preference zebra stripes 98pc</string>
+    <string name="permission_rationale_title">Permission rationale title</string>
+    <string name="preference_units_distance_ft">Preference units distance ft</string>
+    <string name="preference_focus_assist_off">Preference focus assist off</string>
+    <string name="preference_burst_mode_30x">Preference burst mode 30x</string>
+    <string name="failed_to_save_photo_raw">Failed to save photo raw</string>
+    <string name="duration_10s">Duration 10s</string>
+    <string name="failed_to_reconnect_camera">Failed to reconnect camera</string>
+    <string name="preference_focus_bracketing_n_images_entries_5">Preference focus bracketing n images entries 5</string>
+    <string name="preference_hdr_tonemapping_clamp">Preference hdr tonemapping clamp</string>
+    <string name="preference_video_log_off">Preference video log off</string>
+    <string name="preference_nr_save_no">Preference nr save no</string>
+    <string name="preference_panorama_save">Preference panorama save</string>
+    <string name="preference_video_output_format_mpeg4_hevc">Preference video output format mpeg4 hevc</string>
+    <string name="hdr_info">Hdr info</string>
+    <string name="not_supported">Not supported</string>
+    <string name="preference_show_toasts">Preference show toasts</string>
+    <string name="preference_focus_bracketing_n_images_entries_3">Preference focus bracketing n images entries 3</string>
+    <string name="auto_level_disable">Auto level disable</string>
+    <string name="preference_resolution">Preference resolution</string>
+    <string name="preference_camera2_fake_flash">Preference camera2 fake flash</string>
+    <string name="mb_abbreviation">Mb abbreviation</string>
+    <string name="preference_front_camera_mirror_summary">Preference front camera mirror summary</string>
+    <string name="preference_save_zulu_time">Preference save zulu time</string>
+    <string name="preference_focus_bracketing_n_images_entries_40">Preference focus bracketing n images entries 40</string>
+    <string name="video">Video</string>
+    <string name="preference_burst_interval_20s">Preference burst interval 20s</string>
+    <string name="preference_crop_guide_1">Preference crop guide 1</string>
+    <string name="flash_torch">Flash torch</string>
+    <string name="duration_9m">Duration 9m</string>
+    <string name="top_of_screen">Top of screen</string>
+    <string name="preference_calibrate_level_calibration_reset">Preference calibrate level calibration reset</string>
+    <string name="preference_reset">Preference reset</string>
+    <string name="preference_licence_open_camera">Preference licence open camera</string>
+    <string name="preference_show_zoom_controls_summary">Preference show zoom controls summary</string>
+    <string name="photo_mode_x_hdr_full">Photo mode x hdr full</string>
+    <string name="preference_lock_orientation_summary">Preference lock orientation summary</string>
+    <string name="feet_abbreviation">Feet abbreviation</string>
+    <string name="preference_video_restart_summary">Preference video restart summary</string>
+    <string name="preference_video_fps_default">Preference video fps default</string>
+    <string name="preference_show_cycle_flash">Preference show cycle flash</string>
+    <string name="scene_mode_candlelight">Scene mode candlelight</string>
+    <string name="preference_video_jtlog2">Preference video jtlog2</string>
+    <string name="preference_video_flash">Preference video flash</string>
+    <string name="preference_video_output_format_webm">Preference video output format webm</string>
+    <string name="preference_video_bitrate_500000">Preference video bitrate 500000</string>
+    <string name="preference_burst_interval_1m">Preference burst interval 1m</string>
+    <string name="duration_2m">Duration 2m</string>
+    <string name="preference_show_time_summary">Preference show time summary</string>
+    <string name="selfie">Selfie</string>
+    <string name="preference_antibanding">Preference antibanding</string>
+    <string name="preference_photo_optimise_focus">Preference photo optimise focus</string>
+    <string name="preference_save_include_milliseconds_summary">Preference save include milliseconds summary</string>
+    <string name="preference_video_log_low">Preference video log low</string>
+    <string name="preference_show_focus_peaking">Preference show focus peaking</string>
+    <string name="start_video">Start video</string>
+    <string name="duration_8m">Duration 8m</string>
+    <string name="preference_immersive_mode_everything">Preference immersive mode everything</string>
+    <string name="preference_zebra_stripes_off">Preference zebra stripes off</string>
+    <string name="preference_focus_bracketing_n_images_entries_30">Preference focus bracketing n images entries 30</string>
+    <string name="auto_stabilise_info">Auto stabilise info</string>
+    <string name="preference_take_photo_border_summary">Preference take photo border summary</string>
+    <string name="photo_mode_standard_full">Photo mode standard full</string>
+    <string name="preference_scene_mode_summary">Preference scene mode summary</string>
+    <string name="preference_screen_gui">Preference screen gui</string>
+    <string name="preference_audio_noise_control_sensitivity_3">Preference audio noise control sensitivity 3</string>
+    <string name="preference_zebra_stripes_70pc">Preference zebra stripes 70pc</string>
+    <string name="photo_mode_panorama">Photo mode panorama</string>
+    <string name="preference_fast_burst_n_images_entries_6">Preference fast burst n images entries 6</string>
+    <string name="preference_focus_peaking_on">Preference focus peaking on</string>
+    <string name="preference_show_zoom_slider_controls">Preference show zoom slider controls</string>
+    <string name="preference_zebra_stripes_99pc">Preference zebra stripes 99pc</string>
+    <string name="preference_water_type">Preference water type</string>
+    <string name="face_detected">Face detected</string>
+    <string name="color_effect_none">Color effect none</string>
+    <string name="preference_photo_optimise_focus_latency">Preference photo optimise focus latency</string>
+    <string name="preference_max_brightness">Preference max brightness</string>
+    <string name="preference_show_zoom_summary">Preference show zoom summary</string>
+    <string name="face_detection_disabled">Face detection disabled</string>
+    <string name="preference_immersive_mode_navigation">Preference immersive mode navigation</string>
+    <string name="preference_hdr_tonemapping_default">Preference hdr tonemapping default</string>
+    <string name="preference_about_summary">Preference about summary</string>
+    <string name="focus_bracketing_source_distance">Focus bracketing source distance</string>
+    <string name="white_balance_locked">White balance locked</string>
+    <string name="preference_licence_online_text">Preference licence online text</string>
+    <string name="preference_save_include_milliseconds">Preference save include milliseconds</string>
+    <string name="preference_record_audio_src_default">Preference record audio src default</string>
+    <string name="preference_focus_bracketing_n_images_entries_15">Preference focus bracketing n images entries 15</string>
+    <string name="preference_focus_bracketing_n_images_entries_8">Preference focus bracketing n images entries 8</string>
+    <string name="duration_25m">Duration 25m</string>
+    <string name="preference_video_bitrate_200000">Preference video bitrate 200000</string>
+    <string name="sorry">Sorry</string>
+    <string name="auto_lens">Auto lens</string>
+    <string name="preference_category_photo_debugging">Preference category photo debugging</string>
+    <string name="preference_show_store_location_summary">Preference show store location summary</string>
+    <string name="preference_video_bitrate_90000000">Preference video bitrate 90000000</string>
+    <string name="preference_exif_copyright">Preference exif copyright</string>
+    <string name="preference_record_audio_src">Preference record audio src</string>
+    <string name="save_settings_failed">Save settings failed</string>
+    <string name="flash_on">Flash on</string>
+    <string name="preference_fast_burst_n_images_entries_2">Preference fast burst n images entries 2</string>
+    <string name="off">Off</string>
+    <string name="preference_burst_mode_2x">Preference burst mode 2x</string>
+    <string name="preference_stamp_style_plain">Preference stamp style plain</string>
+    <string name="preference_shutter_sound">Preference shutter sound</string>
+    <string name="preference_burst_interval_3s">Preference burst interval 3s</string>
+    <string name="preference_crop_guide_1_4">Preference crop guide 1 4</string>
+    <string name="scene_mode_snow">Scene mode snow</string>
+    <string name="video_max_filesize">Video max filesize</string>
+    <string name="preference_video_profile_gamma_2_4">Preference video profile gamma 2 4</string>
+    <string name="preference_screen_photo_settings">Preference screen photo settings</string>
+    <string name="ok">Ok</string>
+    <string name="failed_to_stamp">Failed to stamp</string>
+    <string name="scene_mode_beach">Scene mode beach</string>
+    <string name="preference_video_fps_summary">Preference video fps summary</string>
+    <string name="auto_level_enable">Auto level enable</string>
+    <string name="stamp_disable">Stamp disable</string>
+    <string name="focus_peaking_enable">Focus peaking enable</string>
+    <string name="back_camera">Back camera</string>
+    <string name="error_features_slow_motion">Error features slow motion</string>
+    <string name="appbar_scrolling_view_behavior">Appbar scrolling view behavior</string>
+    <string name="preference_video_gamma">Preference video gamma</string>
+    <string name="preference_video_max_filesize_200mb">Preference video max filesize 200mb</string>
+    <string name="preference_show_geo_direction">Preference show geo direction</string>
+    <string name="preference_video_profile_gamma_2_1">Preference video profile gamma 2 1</string>
+    <string name="open_files_saf_exception_ghost">Open files saf exception ghost</string>
+    <string name="duration_15m">Duration 15m</string>
+    <string name="preference_show_face_detection">Preference show face detection</string>
+    <string name="clear_folder_history_question">Clear folder history question</string>
+    <string name="anti_banding_50hz">Anti banding 50hz</string>
+    <string name="preference_auto_stabilise_summary">Preference auto stabilise summary</string>
+    <string name="whats_new">Whats new</string>
+    <string name="preference_video_bitrate_10000000">Preference video bitrate 10000000</string>
+    <string name="accuracy_unreliable">Accuracy unreliable</string>
+    <string name="audio_control_start">Audio control start</string>
+    <string name="preference_zebra_stripes_foreground_color_summary">Preference zebra stripes foreground color summary</string>
+    <string name="photo_mode_fast_burst">Photo mode fast burst</string>
+    <string name="unknown_device">Unknown device</string>
+    <string name="video_error_unknown">Video error unknown</string>
+    <string name="telephoto">Telephoto</string>
+    <string name="preference_video_log">Preference video log</string>
+    <string name="color_effect_solarize">Color effect solarize</string>
+    <string name="metres_abbreviation">Metres abbreviation</string>
+    <string name="preference_save_settings_filename">Preference save settings filename</string>
+    <string name="preference_exif_artist">Preference exif artist</string>
+    <string name="duration_45m">Duration 45m</string>
+    <string name="preference_touch_capture_summary">Preference touch capture summary</string>
+    <string name="photo_mode_noise_reduction">Photo mode noise reduction</string>
+    <string name="slow_motion_disabled">Slow motion disabled</string>
+    <string name="direction">Direction</string>
+    <string name="preference_focus_bracketing_n_images_entries_12">Preference focus bracketing n images entries 12</string>
+    <string name="preference_zebra_stripes_color_black">Preference zebra stripes color black</string>
+    <string name="preference_video_low_power_check_summary">Preference video low power check summary</string>
+    <string name="preference_enable_remote_summary">Preference enable remote summary</string>
+    <string name="preference_camera2_photo_video_recording">Preference camera2 photo video recording</string>
+    <string name="exposure_locked">Exposure locked</string>
+    <string name="preference_units_distance_summary">Preference units distance summary</string>
+    <string name="preference_crop_guide_1_33">Preference crop guide 1 33</string>
+    <string name="preference_focus_bracketing_n_images_entries_100">Preference focus bracketing n images entries 100</string>
+    <string name="preference_save_location_summary">Preference save location summary</string>
+    <string name="preference_zebra_stripes_90pc">Preference zebra stripes 90pc</string>
+    <string name="error_features_bitrate">Error features bitrate</string>
+    <string name="accuracy_low">Accuracy low</string>
+    <string name="preference_burst_interval_30s">Preference burst interval 30s</string>
+    <string name="about_not_available">About not available</string>
+    <string name="preference_lock_video">Preference lock video</string>
+    <string name="preference_ui_placement_left">Preference ui placement left</string>
+    <string name="fps">Fps</string>
+    <string name="preference_show_whats_new_summary">Preference show whats new summary</string>
+    <string name="preference_audio_noise_control_sensitivity_1">Preference audio noise control sensitivity 1</string>
+    <string name="flash_frontscreen_auto">Flash frontscreen auto</string>
+    <string name="unknown_device_no_permission">Unknown device no permission</string>
+    <string name="accuracy_high">Accuracy high</string>
+    <string name="permission_rationale_location">Permission rationale location</string>
+    <string name="saf_permission_failed">Saf permission failed</string>
+    <string name="preference_exif_copyright_summary">Preference exif copyright summary</string>
+    <string name="preference_auto_stabilise">Preference auto stabilise</string>
+    <string name="pause_video">Pause video</string>
+    <string name="exposure_unlock">Exposure unlock</string>
+    <string name="preference_show_geo_direction_lines">Preference show geo direction lines</string>
+    <string name="stamp_enabled">Stamp enabled</string>
+    <string name="preference_burst_mode_off">Preference burst mode off</string>
+    <string name="ble_not_supported">Ble not supported</string>
+    <string name="preference_focus_bracketing_n_images_entries_2">Preference focus bracketing n images entries 2</string>
+    <string name="cancel">Cancel</string>
+    <string name="preference_show_angle">Preference show angle</string>
+    <string name="scene_mode_landscape">Scene mode landscape</string>
+    <string name="photo_mode_focus_bracketing_full">Photo mode focus bracketing full</string>
+    <string name="preference_privacy_policy">Preference privacy policy</string>
+    <string name="preference_show_exposure_lock_summary">Preference show exposure lock summary</string>
+    <string name="preference_timer_beep">Preference timer beep</string>
+    <string name="preference_histogram_luminance">Preference histogram luminance</string>
+    <string name="preference_privacy_policy_summary">Preference privacy policy summary</string>
+    <string name="duration_11m">Duration 11m</string>
+    <string name="preference_face_detection_summary">Preference face detection summary</string>
+    <string name="preference_raw_yes">Preference raw yes</string>
+    <string name="preference_category_camera_controls">Preference category camera controls</string>
+    <string name="max_filesize">Max filesize</string>
+    <string name="preference_burst_interval_5s">Preference burst interval 5s</string>
+    <string name="angle">Angle</string>
+    <string name="permission_rationale_storage">Permission rationale storage</string>
+    <string name="preference_take_photo_border">Preference take photo border</string>
+    <string name="faces_detected">Faces detected</string>
+    <string name="photo_deleted">Photo deleted</string>
+    <string name="failed_to_open_camera_2">Failed to open camera 2</string>
+    <string name="preference_zebra_stripes_80pc">Preference zebra stripes 80pc</string>
+    <string name="preference_video_flash_summary">Preference video flash summary</string>
+    <string name="preference_show_iso_summary">Preference show iso summary</string>
+    <string name="preference_record_audio_summary">Preference record audio summary</string>
+    <string name="preference_show_focus_peaking_summary">Preference show focus peaking summary</string>
+    <string name="preference_camera_api_summary">Preference camera api summary</string>
+    <string name="preference_grid">Preference grid</string>
+    <string name="preference_focus_assist">Preference focus assist</string>
+    <string name="scene_mode_night">Scene mode night</string>
+    <string name="preference_preview_size">Preference preview size</string>
+    <string name="preference_focus_peaking">Preference focus peaking</string>
+    <string name="preference_select_remote">Preference select remote</string>
+    <string name="iso">Iso</string>
+    <string name="preference_allow_long_press">Preference allow long press</string>
+    <string name="preference_panorama_save_all">Preference panorama save all</string>
+    <string name="preference_volume_keys">Preference volume keys</string>
+    <string name="preference_focus_bracketing_n_images_entries_200">Preference focus bracketing n images entries 200</string>
+    <string name="scene_mode_sports">Scene mode sports</string>
+    <string name="failed_to_process_panorama">Failed to process panorama</string>
+    <string name="preference_timer_speak_summary">Preference timer speak summary</string>
+    <string name="preference_focus_bracketing_n_images_entries_150">Preference focus bracketing n images entries 150</string>
+    <string name="preference_immersive_mode">Preference immersive mode</string>
+    <string name="preference_angle_highlight_color">Preference angle highlight color</string>
+    <string name="preference_startup_focus">Preference startup focus</string>
+    <string name="preference_panorama_save_summary">Preference panorama save summary</string>
+    <string name="preference_category_camera_effects">Preference category camera effects</string>
+    <string name="preference_focus_bracketing_n_images_entries_4">Preference focus bracketing n images entries 4</string>
+    <string name="color_effect_posterize">Color effect posterize</string>
+    <string name="duration_12m">Duration 12m</string>
+    <string name="preference_crop_guide_1_5">Preference crop guide 1 5</string>
+    <string name="preference_show_stamp_summary">Preference show stamp summary</string>
+    <string name="preference_video_bitrate_default">Preference video bitrate default</string>
+    <string name="color_effect_sepia">Color effect sepia</string>
+    <string name="preference_privacy_policy_online">Preference privacy policy online</string>
+    <string name="preference_fast_burst_n_images_entries_8">Preference fast burst n images entries 8</string>
+    <string name="white_balance_shade">White balance shade</string>
+    <string name="preference_focus_peaking_summary">Preference focus peaking summary</string>
+    <string name="preference_timer_speak">Preference timer speak</string>
+    <string name="preference_calibrate_level_calibrated">Preference calibrate level calibrated</string>
+    <string name="stop_video">Stop video</string>
+    <string name="preference_camera2_dummy_capture_hack_summary">Preference camera2 dummy capture hack summary</string>
+    <string name="photo_mode_expo_bracketing">Photo mode expo bracketing</string>
+    <string name="folder_exists">Folder exists</string>
+    <string name="preference_rotate_preview">Preference rotate preview</string>
+    <string name="preference_focus_peaking_color_summary">Preference focus peaking color summary</string>
+    <string name="preference_video_output_format_default">Preference video output format default</string>
+    <string name="preference_burst_interval_2h">Preference burst interval 2h</string>
+    <string name="flash_auto">Flash auto</string>
+    <string name="failed_to_save_photo">Failed to save photo</string>
+    <string name="preference_front_camera_mirror">Preference front camera mirror</string>
+    <string name="preference_units_distance_m">Preference units distance m</string>
+    <string name="ultrawide">Ultrawide</string>
+    <string name="preference_show_geo_direction_summary">Preference show geo direction summary</string>
+    <string name="preference_screen_camera_controls_more">Preference screen camera controls more</string>
+    <string name="preference_screen_settings_manager">Preference screen settings manager</string>
+    <string name="preference_video_max_filesize_500mb">Preference video max filesize 500mb</string>
+    <string name="preference_save_settings_summary">Preference save settings summary</string>
+    <string name="preference_raw_no">Preference raw no</string>
+    <string name="preference_exposure_summary">Preference exposure summary</string>
+    <string name="switch_to_unknown_camera">Switch to unknown camera</string>
+    <string name="preference_record_audio_src_voice_recognition">Preference record audio src voice recognition</string>
+    <string name="preference_nr_mode_low_light">Preference nr mode low light</string>
+    <string name="preference_iso">Preference iso</string>
+    <string name="preference_histogram_summary">Preference histogram summary</string>
+    <string name="preference_crop_guide_2_33">Preference crop guide 2 33</string>
+    <string name="preference_burst_mode_200x">Preference burst mode 200x</string>
+    <string name="preference_show_zoom_slider_controls_summary">Preference show zoom slider controls summary</string>
+    <string name="no_gallery_app">No gallery app</string>
+    <string name="preference_show_iso">Preference show iso</string>
+    <string name="preference_show_auto_level_summary">Preference show auto level summary</string>
+    <string name="preference_zebra_stripes_color_orange">Preference zebra stripes color orange</string>
+    <string name="preference_panorama_crop">Preference panorama crop</string>
+    <string name="preference_show_when_locked">Preference show when locked</string>
+    <string name="preference_screen_processing_settings">Preference screen processing settings</string>
+    <string name="preference_ui_placement_right">Preference ui placement right</string>
+    <string name="preference_angle_highlight_color_summary">Preference angle highlight color summary</string>
+    <string name="action_settings">Action settings</string>
+    <string name="video_pause">Video pause</string>
+    <string name="preference_crop_guide_2_4">Preference crop guide 2 4</string>
+    <string name="photo_mode_x_auto_full">Photo mode x auto full</string>
+    <string name="preference_remote_disconnect_screen_dim_summary">Preference remote disconnect screen dim summary</string>
+    <string name="failed_to_take_picture">Failed to take picture</string>
+    <string name="preference_stamp_dateformat_ddmmyyyy">Preference stamp dateformat ddmmyyyy</string>
+    <string name="permission_location_not_available">Permission location not available</string>
+    <string name="new_folder">New folder</string>
+    <string name="preference_burst_interval_20m">Preference burst interval 20m</string>
+    <string name="preference_crop_guide_2_35">Preference crop guide 2 35</string>
+    <string name="preference_audio_control_none">Preference audio control none</string>
+    <string name="preference_allow_haptic_feedback">Preference allow haptic feedback</string>
+    <string name="preference_stamp_style">Preference stamp style</string>
+    <string name="preference_ghost_image_selected">Preference ghost image selected</string>
+    <string name="preference_video_jtvideo">Preference video jtvideo</string>
+    <string name="preference_focus_bracketing_n_images_entries_6">Preference focus bracketing n images entries 6</string>
+    <string name="preference_save_settings">Preference save settings</string>
+    <string name="preference_show_battery_summary">Preference show battery summary</string>
+    <string name="preference_stamp_summary">Preference stamp summary</string>
+    <string name="focus_mode">Focus mode</string>
+    <string name="preference_show_whats_new">Preference show whats new</string>
+    <string name="flash_red_eye">Flash red eye</string>
+    <string name="high_speed">High speed</string>
+    <string name="preference_burst_mode_unlimited">Preference burst mode unlimited</string>
+    <string name="permission_rationale_camera">Permission rationale camera</string>
+    <string name="preference_save_photo_prefix">Preference save photo prefix</string>
+    <string name="right_of_screen">Right of screen</string>
+    <string name="preference_record_audio_src_mic">Preference record audio src mic</string>
+    <string name="preference_video_profile_gamma_1_6">Preference video profile gamma 1 6</string>
+    <string name="cancelled_focus_bracketing">Cancelled focus bracketing</string>
+    <string name="preference_video_max_filesize">Preference video max filesize</string>
+    <string name="preference_zebra_stripes_color_red">Preference zebra stripes color red</string>
+    <string name="parent_folder">Parent folder</string>
+    <string name="donate">Donate</string>
+    <string name="video_no_free_space">Video no free space</string>
+    <string name="preference_zebra_stripes_color_white">Preference zebra stripes color white</string>
+    <string name="bluetooth_not_supported">Bluetooth not supported</string>
+    <string name="preference_crop_guide">Preference crop guide</string>
+    <string name="preference_scene_mode">Preference scene mode</string>
+    <string name="preference_category_stamp">Preference category stamp</string>
+    <string name="scene_mode">Scene mode</string>
+    <string name="gallery">Gallery</string>
+    <string name="record_video">Record video</string>
+    <string name="preference_audio_noise_control_sensitivity_m1">Preference audio noise control sensitivity m1</string>
+    <string name="preference_show_stamp">Preference show stamp</string>
+    <string name="preference_histogram_off">Preference histogram off</string>
+    <string name="preference_audio_noise_control_sensitivity_2">Preference audio noise control sensitivity 2</string>
+    <string name="noise_reduction_mode_high_quality">Noise reduction mode high quality</string>
+    <string name="photo_mode_hdr">Photo mode hdr</string>
+    <string name="preference_remote_type_kraken">Preference remote type kraken</string>
+    <string name="preference_video_subtitle">Preference video subtitle</string>
+    <string name="photo_mode_expo_bracketing_full">Photo mode expo bracketing full</string>
+    <string name="max_duration">Max duration</string>
+    <string name="preference_focus_bracketing_n_images_entries_20">Preference focus bracketing n images entries 20</string>
+    <string name="photo_mode_x_night_full">Photo mode x night full</string>
+    <string name="preference_free_memory_summary">Preference free memory summary</string>
+    <string name="preference_burst_interval_5m">Preference burst interval 5m</string>
+    <string name="preference_shutter_sound_summary">Preference shutter sound summary</string>
+    <string name="preference_video_log_strong">Preference video log strong</string>
+    <string name="preference_camera2_photo_video_recording_summary">Preference camera2 photo video recording summary</string>
+    <string name="preference_remove_device_exif_on">Preference remove device exif on</string>
+    <string name="video_error_server_died">Video error server died</string>
+    <string name="preference_online_help_summary">Preference online help summary</string>
+    <string name="preference_hdr_tonemapping">Preference hdr tonemapping</string>
+    <string name="preference_stamp_style_summary">Preference stamp style summary</string>
+    <string name="preference_video_restart">Preference video restart</string>
+    <string name="preference_show_camera_id">Preference show camera id</string>
+    <string name="preference_audio_noise_control">Preference audio noise control</string>
+    <string name="open_files_saf_exception_generic">Open files saf exception generic</string>
+    <string name="preference_video_jtlog">Preference video jtlog</string>
+    <string name="preference_record_audio_src_summary">Preference record audio src summary</string>
+    <string name="preference_camera2_dummy_capture_hack">Preference camera2 dummy capture hack</string>
+    <string name="preference_raw">Preference raw</string>
+    <string name="duration_10m">Duration 10m</string>
+    <string name="preference_panorama_crop_summary">Preference panorama crop summary</string>
+    <string name="preference_color_effect_summary">Preference color effect summary</string>
+    <string name="preference_keep_display_on_summary">Preference keep display on summary</string>
+    <string name="preference_zebra_stripes_93pc">Preference zebra stripes 93pc</string>
+    <string name="white_balance_twilight">White balance twilight</string>
+    <string name="preference_focus_assist_4x">Preference focus assist 4x</string>
+    <string name="preference_licence_open_camera_text">Preference licence open camera text</string>
+    <string name="preference_focus_bracketing_n_images_entries_50">Preference focus bracketing n images entries 50</string>
+    <string name="screen_lock_message_2">Screen lock message 2</string>
+    <string name="preference_raw_expo_bracketing">Preference raw expo bracketing</string>
+    <string name="processing">Processing</string>
+    <string name="noise_reduction_mode_fast">Noise reduction mode fast</string>
+    <string name="preference_rotate_preview_summary">Preference rotate preview summary</string>
+    <string name="preference_zebra_stripes_background_color">Preference zebra stripes background color</string>
+    <string name="preference_stamp_font_color_summary">Preference stamp font color summary</string>
+    <string name="duration_4m">Duration 4m</string>
+    <string name="preference_calibrate_level_reset">Preference calibrate level reset</string>
+    <string name="preference_show_zoom">Preference show zoom</string>
+    <string name="flash_mode">Flash mode</string>
+    <string name="preference_show_exposure_lock">Preference show exposure lock</string>
+    <string name="preference_hdr_tonemapping_exponential">Preference hdr tonemapping exponential</string>
+    <string name="preference_noise_reduction_mode_summary">Preference noise reduction mode summary</string>
+    <string name="color_effect_blackboard">Color effect blackboard</string>
+    <string name="preference_save_preshots">Preference save preshots</string>
+    <string name="error_features_4k">Error features 4k</string>
+    <string name="preference_video_restart_max_filesize">Preference video restart max filesize</string>
+    <string name="preference_show_pitch_lines">Preference show pitch lines</string>
+    <string name="preference_video_low_power_check">Preference video low power check</string>
+    <string name="cancelled_timer">Cancelled timer</string>
+    <string name="preference_max_brightness_summary">Preference max brightness summary</string>
+    <string name="video_resume">Video resume</string>
+    <string name="preference_force_video_4k">Preference force video 4k</string>
+    <string name="preference_face_detection">Preference face detection</string>
+    <string name="preference_gps_direction">Preference gps direction</string>
+    <string name="preference_video_max_duration">Preference video max duration</string>
+    <string name="preference_iso_summary">Preference iso summary</string>
+    <string name="duration_20m">Duration 20m</string>
+    <string name="photo_mode_x_auto">Photo mode x auto</string>
+    <string name="preference_show_camera_id_summary">Preference show camera id summary</string>
+    <string name="preference_pause_preview_summary">Preference pause preview summary</string>
+    <string name="cant_write_folder">Cant write folder</string>
+    <string name="scene_mode_portrait">Scene mode portrait</string>
+    <string name="preference_color_effect">Preference color effect</string>
+    <string name="scene_mode_theatre">Scene mode theatre</string>
+    <string name="preference_immersive_mode_gui">Preference immersive mode gui</string>
+    <string name="preference_ghost_image">Preference ghost image</string>
+    <string name="preference_camera_api">Preference camera api</string>
+    <string name="preference_video_max_filesize_5gb">Preference video max filesize 5gb</string>
+    <string name="failed_create_folder">Failed create folder</string>
+    <string name="preference_burst_interval_10m">Preference burst interval 10m</string>
+    <string name="face_detection_enable">Face detection enable</string>
+    <string name="preference_comment_ypr">Preference comment ypr</string>
+    <string name="photo_mode_panorama_full">Photo mode panorama full</string>
+    <string name="preference_stamp_style_shadowed">Preference stamp style shadowed</string>
+    <string name="focus_distance">Focus distance</string>
+    <string name="preference_crop_guide_1_25">Preference crop guide 1 25</string>
+    <string name="preference_fast_burst_n_images_entries_4">Preference fast burst n images entries 4</string>
+    <string name="duration_5s">Duration 5s</string>
+    <string name="scene_mode_sunset">Scene mode sunset</string>
+    <string name="preference_textstamp">Preference textstamp</string>
+    <string name="preference_audio_noise_control_sensitivity">Preference audio noise control sensitivity</string>
+    <string name="preference_zebra_stripes_color_transparent">Preference zebra stripes color transparent</string>
+    <string name="preference_video_profile_gamma_2_8">Preference video profile gamma 2 8</string>
+    <string name="preference_raw_focus_bracketing">Preference raw focus bracketing</string>
+    <string name="photo_mode_focus_bracketing">Photo mode focus bracketing</string>
+    <string name="unlocked">Unlocked</string>
+    <string name="scene_mode_steady_photo">Scene mode steady photo</string>
+    <string name="next">Next</string>
+    <string name="preference_video_fps">Preference video fps</string>
+    <string name="preference_using_saf">Preference using saf</string>
+    <string name="preference_licence_androidx">Preference licence androidx</string>
+    <string name="preference_video_bitrate">Preference video bitrate</string>
+    <string name="scene_mode_night_portrait">Scene mode night portrait</string>
+    <string name="take_photo">Take photo</string>
+    <string name="preference_show_video_max_amp_summary">Preference show video max amp summary</string>
+    <string name="preference_burst_interval">Preference burst interval</string>
+    <string name="exposure_lock">Exposure lock</string>
+    <string name="preference_fast_burst_n_images_entries_5">Preference fast burst n images entries 5</string>
+    <string name="preference_lock_video_summary">Preference lock video summary</string>
+    <string name="preference_edge_mode_summary">Preference edge mode summary</string>
+    <string name="preference_show_time">Preference show time</string>
+    <string name="preference_save_location">Preference save location</string>
+    <string name="preference_expo_bracketing_stops_summary">Preference expo bracketing stops summary</string>
+    <string name="changed_save_location">Changed save location</string>
+    <string name="preference_screen_location_settings">Preference screen location settings</string>
+    <string name="preference_focus_assist_2x">Preference focus assist 2x</string>
+    <string name="preference_location_disable">Preference location disable</string>
+    <string name="preference_fast_burst_n_images_entries_10">Preference fast burst n images entries 10</string>
+    <string name="preference_image_format_webp">Preference image format webp</string>
+    <string name="preference_video_bitrate_60000000">Preference video bitrate 60000000</string>
+    <string name="preference_video_bitrate_50000000">Preference video bitrate 50000000</string>
+    <string name="preference_save_video_prefix_summary">Preference save video prefix summary</string>
+    <string name="preference_video_profile_gamma_2_6">Preference video profile gamma 2 6</string>
+    <string name="color_effect">Color effect</string>
+    <string name="preference_nr_mode_low_light_message">Preference nr mode low light message</string>
+    <string name="failed_to_open_camera_1">Failed to open camera 1</string>
+    <string name="preference_burst_mode">Preference burst mode</string>
+    <string name="preference_fast_burst_n_images_entries_3">Preference fast burst n images entries 3</string>
+    <string name="preference_video_output_format_summary">Preference video output format summary</string>
+    <string name="preference_preview">Preference preview</string>
+    <string name="preference_audio_noise_control_sensitivity_0">Preference audio noise control sensitivity 0</string>
+    <string name="restore_settings_failed">Restore settings failed</string>
+    <string name="white_balance_lock">White balance lock</string>
+    <string name="preference_photo_optimise_focus_summary">Preference photo optimise focus summary</string>
+    <string name="preference_reset_summary">Preference reset summary</string>
+    <string name="failed_to_record_video">Failed to record video</string>
+    <string name="preference_lock_orientation">Preference lock orientation</string>
+    <string name="preference_camera2_fast_burst_summary">Preference camera2 fast burst summary</string>
+    <string name="preference_enable_remote">Preference enable remote</string>
+    <string name="preference_camera_api_camera2">Preference camera api camera2</string>
+    <string name="preference_licence_androidx_text">Preference licence androidx text</string>
+    <string name="switch_to_video">Switch to video</string>
+    <string name="preference_burst_mode_4x">Preference burst mode 4x</string>
+    <string name="preference_screen_remote_control">Preference screen remote control</string>
+    <string name="preference_keep_display_on">Preference keep display on</string>
+    <string name="failed_to_start_camera_preview">Failed to start camera preview</string>
+    <string name="preference_show_cycle_raw">Preference show cycle raw</string>
+    <string name="preference_using_saf_summary">Preference using saf summary</string>
+    <string name="switch_to_back_camera">Switch to back camera</string>
+    <string name="video_log">Video log</string>
+    <string name="preference_raw_expo_bracketing_summary">Preference raw expo bracketing summary</string>
+    <string name="panorama_cancelled">Panorama cancelled</string>
+    <string name="preference_video_max_filesize_summary">Preference video max filesize summary</string>
+    <string name="preference_nr_save_all">Preference nr save all</string>
+    <string name="preference_burst_interval_no_delay">Preference burst interval no delay</string>
+    <string name="preference_show_toasts_summary">Preference show toasts summary</string>
+    <string name="saf_select_save_location">Saf select save location</string>
+    <string name="preference_video_log_summary">Preference video log summary</string>
+    <string name="zoom">Zoom</string>
+    <string name="white_balance_daylight">White balance daylight</string>
+    <string name="focus_peaking_disable">Focus peaking disable</string>
+    <string name="preference_video_log_extra_strong">Preference video log extra strong</string>
+    <string name="preference_ghost_image_alpha">Preference ghost image alpha</string>
+    <string name="preference_allow_haptic_feedback_summary">Preference allow haptic feedback summary</string>
+    <string name="scene_mode_auto">Scene mode auto</string>
+    <string name="finish_panorama">Finish panorama</string>
+    <string name="preference_video_subtitle_summary">Preference video subtitle summary</string>
+    <string name="preference_background_photo_saving">Preference background photo saving</string>
+    <string name="preference_video_max_filesize_1gb">Preference video max filesize 1gb</string>
+    <string name="photo_mode_fast_burst_full">Photo mode fast burst full</string>
+    <string name="location_not_available">Location not available</string>
+    <string name="screen_is_locked">Screen is locked</string>
+    <string name="preference_calibrate_level_calibrate">Preference calibrate level calibrate</string>
+    <string name="preference_focus_peaking_off">Preference focus peaking off</string>
+    <string name="preference_units_distance">Preference units distance</string>
+    <string name="preference_burst_mode_20x">Preference burst mode 20x</string>
+    <string name="preference_video_bitrate_200000000">Preference video bitrate 200000000</string>
+    <string name="preference_fast_burst_n_images_entries_20">Preference fast burst n images entries 20</string>
+    <string name="preference_fast_burst_n_images">Preference fast burst n images</string>
+    <string name="preference_crop_guide_2">Preference crop guide 2</string>
+    <string name="exposure_compensation">Exposure compensation</string>
+    <string name="preference_show_angle_line">Preference show angle line</string>
+    <string name="preference_crop_guide_1_85">Preference crop guide 1 85</string>
+    <string name="no">No</string>
+    <string name="preference_stamp_dateformat">Preference stamp dateformat</string>
+    <string name="stamp_enable">Stamp enable</string>
+    <string name="photo">Photo</string>
+    <string name="camera">Camera</string>
+    <string name="preference_fast_burst_n_images_entries_12">Preference fast burst n images entries 12</string>
+    <string name="preference_video_max_filesize_9gb">Preference video max filesize 9gb</string>
+    <string name="preference_video_max_filesize_300mb">Preference video max filesize 300mb</string>
+    <string name="preference_stamp_dateformat_default">Preference stamp dateformat default</string>
+    <string name="preference_panorama_save_no">Preference panorama save no</string>
+    <string name="remaining">Remaining</string>
+    <string name="preference_show_pitch_lines_summary">Preference show pitch lines summary</string>
+    <string name="preference_hdr_tonemapping_aces">Preference hdr tonemapping aces</string>
+    <string name="white_balance_cloudy">White balance cloudy</string>
+    <string name="preference_privacy_policy_text">Preference privacy policy text</string>
+    <string name="dont_show_again">Dont show again</string>
+    <string name="preference_hdr_save_expo">Preference hdr save expo</string>
+    <string name="scene_mode_barcode">Scene mode barcode</string>
+    <string name="preference_image_format">Preference image format</string>
+    <string name="preference_show_textstamp">Preference show textstamp</string>
+    <string name="preference_histogram_rgb">Preference histogram rgb</string>
+    <string name="preference_hdr_contrast_enhancement_smart">Preference hdr contrast enhancement smart</string>
+    <string name="preference_calibrate_level_dialog">Preference calibrate level dialog</string>
+    <string name="preference_stamp_dateformat_yyyymmdd">Preference stamp dateformat yyyymmdd</string>
+    <string name="preference_video_bitrate_6000000">Preference video bitrate 6000000</string>
+    <string name="audio_control_stop">Audio control stop</string>
+    <string name="preference_zebra_stripes">Preference zebra stripes</string>
+    <string name="preference_video_output_format_mpeg4_h264">Preference video output format mpeg4 h264</string>
+    <string name="preference_nr_save_summary">Preference nr save summary</string>
+    <string name="preference_remove_device_exif">Preference remove device exif</string>
+    <string name="preference_show_white_balance_lock">Preference show white balance lock</string>
+    <string name="preference_touch_capture">Preference touch capture</string>
+    <string name="preference_show_white_balance_lock_summary">Preference show white balance lock summary</string>
+    <string name="preference_crop_guide_1_78">Preference crop guide 1 78</string>
+    <string name="photo_mode_x_hdr">Photo mode x hdr</string>
+    <string name="color_effect_negative">Color effect negative</string>
+    <string name="color_effect_mono">Color effect mono</string>
+    <string name="preference_timer">Preference timer</string>
+    <string name="failed_to_save_video">Failed to save video</string>
+    <string name="preference_zebra_stripes_95pc">Preference zebra stripes 95pc</string>
+    <string name="preference_noise_reduction_mode">Preference noise reduction mode</string>
+    <string name="preference_audio_control">Preference audio control</string>
+    <string name="preference_immersive_mode_off">Preference immersive mode off</string>
+    <string name="preference_focus_bracketing_n_images_entries_10">Preference focus bracketing n images entries 10</string>
+    <string name="preference_thumbnail_animation">Preference thumbnail animation</string>
+    <string name="preference_expo_bracketing_n_images_summary">Preference expo bracketing n images summary</string>
+    <string name="preference_burst_mode_100x">Preference burst mode 100x</string>
+    <string name="anti_banding_off">Anti banding off</string>
+    <string name="flash_off">Flash off</string>
+    <string name="preference_burst_interval_30m">Preference burst interval 30m</string>
+    <string name="preference_licence_google_icons">Preference licence google icons</string>
+    <string name="preference_focus_bracketing_n_images">Preference focus bracketing n images</string>
+    <string name="preference_burst_interval_1h">Preference burst interval 1h</string>
+    <string name="preference_record_audio_channels_summary">Preference record audio channels summary</string>
+    <string name="preference_stamp_geo_address_prefer">Preference stamp geo address prefer</string>
+    <string name="choose_camera">Choose camera</string>
+    <string name="preference_video_bitrate_30000000">Preference video bitrate 30000000</string>
+    <string name="preference_allow_long_press_summary">Preference allow long press summary</string>
+    <string name="resume_video">Resume video</string>
+    <string name="preference_raw_only">Preference raw only</string>
+    <string name="white_balance_unlock">White balance unlock</string>
+    <string name="preference_exposure">Preference exposure</string>
+    <string name="preference_ghost_image_alpha_summary">Preference ghost image alpha summary</string>
+    <string name="centre_of_screen">Centre of screen</string>
+    <string name="preference_expo_bracketing_stops">Preference expo bracketing stops</string>
+    <string name="duration_1h">Duration 1h</string>
+    <string name="preference_show_zoom_controls">Preference show zoom controls</string>
+    <string name="preference_burst_interval_10s">Preference burst interval 10s</string>
+    <string name="noise_reduction_mode_default">Noise reduction mode default</string>
+    <string name="scene_mode_fireworks">Scene mode fireworks</string>
+    <string name="accuracy_medium">Accuracy medium</string>
+    <string name="photo_mode_x_beauty">Photo mode x beauty</string>
+    <string name="preference_audio_noise_control_sensitivity_m3">Preference audio noise control sensitivity m3</string>
+    <string name="preference_ui_placement">Preference ui placement</string>
+    <string name="preference_pause_preview">Preference pause preview</string>
+    <string name="preference_zebra_stripes_foreground_color">Preference zebra stripes foreground color</string>
+    <string name="preference_quality_summary">Preference quality summary</string>
+    <string name="preference_stamp_gpsformat">Preference stamp gpsformat</string>
+    <string name="auto_stabilise_not_supported">Auto stabilise not supported</string>
+    <string name="failed_to_auto_stabilise">Failed to auto stabilise</string>
+    <string name="preference_video_max_filesize_100mb">Preference video max filesize 100mb</string>
+    <string name="preference_fast_burst_n_images_entries_15">Preference fast burst n images entries 15</string>
+    <string name="photo_mode">Photo mode</string>
+    <string name="yes">Yes</string>
+    <string name="preference_free_memory">Preference free memory</string>
+    <string name="preference_comment_ypr_summary">Preference comment ypr summary</string>
+    <string name="flash_frontscreen_on">Flash frontscreen on</string>
+    <string name="preference_show_cycle_raw_summary">Preference show cycle raw summary</string>
+    <string name="focus_bracketing_target_distance">Focus bracketing target distance</string>
+    <string name="preference_about">Preference about</string>
+    <string name="infinite">Infinite</string>
+    <string name="preference_video_profile_gamma_2_2">Preference video profile gamma 2 2</string>
+    <string name="whats_new_text">Whats new text</string>
+    <string name="about_copy_to_clipboard">About copy to clipboard</string>
+    <string name="duration_3s">Duration 3s</string>
+    <string name="duration_7m">Duration 7m</string>
+    <string name="preference_stamp_timeformat">Preference stamp timeformat</string>
+    <string name="repeats_to_go">Repeats to go</string>
+    <string name="magnetic_accuracy_title">Magnetic accuracy title</string>
+    <string name="preference_white_balance">Preference white balance</string>
+    <string name="bottom_of_screen">Bottom of screen</string>
+    <string name="duration_15s">Duration 15s</string>
+    <string name="preference_record_audio_src_voice_communication">Preference record audio src voice communication</string>
+    <string name="duration_1m">Duration 1m</string>
+    <string name="preference_show_store_location">Preference show store location</string>
+    <string name="preference_stamp_geo_address_no">Preference stamp geo address no</string>
+    <string name="aperture">Aperture</string>
+    <string name="preference_ghost_image_last">Preference ghost image last</string>
+    <string name="preference_calibrate_level">Preference calibrate level</string>
+    <string name="preference_startup_focus_summary">Preference startup focus summary</string>
+    <string name="duration_30m">Duration 30m</string>
+    <string name="preference_audio_control_summary">Preference audio control summary</string>
+    <string name="failed_to_process_hdr">Failed to process hdr</string>
+    <string name="preference_remove_device_exif_summary">Preference remove device exif summary</string>
+    <string name="started_timer">Started timer</string>
+    <string name="preference_histogram">Preference histogram</string>
+    <string name="preference_remote_disconnect_screen_dim">Preference remote disconnect screen dim</string>
+    <string name="preference_video_max_filesize_2gb">Preference video max filesize 2gb</string>
+    <string name="preference_burst_mode_500x">Preference burst mode 500x</string>
+    <string name="preference_video_bitrate_80000000">Preference video bitrate 80000000</string>
+    <string name="preference_zebra_stripes_background_color_summary">Preference zebra stripes background color summary</string>
+    <string name="preference_exif_artist_summary">Preference exif artist summary</string>
+    <string name="face_detection_enabled">Face detection enabled</string>
+    <string name="preference_video_profile_gamma_2_0">Preference video profile gamma 2 0</string>
+    <string name="preference_stamp_fontsize_summary">Preference stamp fontsize summary</string>
+    <string name="anti_banding_auto">Anti banding auto</string>
+    <string name="error_features_frame_rate">Error features frame rate</string>
+    <string name="preference_save_video_prefix">Preference save video prefix</string>
+    <string name="preference_screen_video_settings">Preference screen video settings</string>
+    <string name="preference_stamp_style_background">Preference stamp style background</string>
+    <string name="photo_mode_noise_reduction_full">Photo mode noise reduction full</string>
+    <string name="preference_show_take_photo">Preference show take photo</string>
+    <string name="gb_abbreviation">Gb abbreviation</string>
+    <string name="preference_show_take_photo_summary">Preference show take photo summary</string>
+    <string name="preference_show_when_locked_summary">Preference show when locked summary</string>
+    <string name="preference_video_bitrate_100000">Preference video bitrate 100000</string>
+    <string name="preference_video_bitrate_8000000">Preference video bitrate 8000000</string>
+    <string name="preference_image_format_jpeg">Preference image format jpeg</string>
+    <string name="preference_hdr_contrast_enhancement_always">Preference hdr contrast enhancement always</string>
+    <string name="preference_panorama_save_all_plus_debug">Preference panorama save all plus debug</string>
+    <string name="saved_settings">Saved settings</string>
+    <string name="preference_online_help">Preference online help</string>
+    <string name="preference_remote_type">Preference remote type</string>
+    <string name="face_detection_disable">Face detection disable</string>
+    <string name="preference_hdr_tonemapping_summary">Preference hdr tonemapping summary</string>
+    <string name="focus_bracketing_add_infinity">Focus bracketing add infinity</string>
+    <string name="external_camera">External camera</string>
+    <string name="preference_require_location_summary">Preference require location summary</string>
+    <string name="preference_video_bitrate_3000000">Preference video bitrate 3000000</string>
+    <string name="preference_camera2_fake_flash_summary">Preference camera2 fake flash summary</string>
+    <string name="preference_save_photo_prefix_summary">Preference save photo prefix summary</string>
+    <string name="cancelled_repeat_mode">Cancelled repeat mode</string>
+    <string name="preference_category_exif_tags">Preference category exif tags</string>
+    <string name="color_effect_aqua">Color effect aqua</string>
+    <string name="preference_burst_mode_10x">Preference burst mode 10x</string>
+    <string name="preference_ui_placement_top">Preference ui placement top</string>
+    <string name="preference_burst_interval_2s">Preference burst interval 2s</string>
+    <string name="preference_video_bitrate_20000000">Preference video bitrate 20000000</string>
+    <string name="preference_video_output_format_3gpp">Preference video output format 3gpp</string>
+    <string name="duration_6m">Duration 6m</string>
+    <string name="preference_record_audio_src_unprocessed">Preference record audio src unprocessed</string>
+    <string name="preference_burst_interval_15s">Preference burst interval 15s</string>
+    <string name="preference_video_bitrate_5000000">Preference video bitrate 5000000</string>
+    <string name="preference_hdr_contrast_enhancement">Preference hdr contrast enhancement</string>
+    <string name="preference_expo_bracketing_n_images">Preference expo bracketing n images</string>
+    <string name="preference_video_profile_gamma_summary">Preference video profile gamma summary</string>
+    <string name="clear_folder_history">Clear folder history</string>
+    <string name="audio_listener_failed">Audio listener failed</string>
+    <string name="duration_3m">Duration 3m</string>
+    <string name="preference_nr_save">Preference nr save</string>
+    <string name="preference_ghost_image_summary">Preference ghost image summary</string>
+    <string name="accuracy_unknown">Accuracy unknown</string>
+    <string name="exposure_unlocked">Exposure unlocked</string>
+    <string name="image_saving_notification">Image saving notification</string>
+    <string name="switch_to_front_camera">Switch to front camera</string>
+    <string name="preference_video_capture_rate_normal">Preference video capture rate normal</string>
+    <string name="preference_restore_settings_question">Preference restore settings question</string>
+    <string name="duration_30s">Duration 30s</string>
+    <string name="preference_quality">Preference quality</string>
+    <string name="flash_frontscreen_torch">Flash frontscreen torch</string>
+    <string name="preference_edge_mode">Preference edge mode</string>
+    <string name="preference_focus_assist_summary">Preference focus assist summary</string>
+    <string name="preference_stamp_dateformat_none">Preference stamp dateformat none</string>
+    <string name="preference_video_profile_gamma_1_8">Preference video profile gamma 1 8</string>
+    <string name="preference_force_video_4k_summary">Preference force video 4k summary</string>
+    <string name="preference_audio_noise_control_sensitivity_summary">Preference audio noise control sensitivity summary</string>
+    <string name="panorama_info">Panorama info</string>
+    <string name="preference_stamp_dateformat_mmddyyyy">Preference stamp dateformat mmddyyyy</string>
+    <string name="preference_timer_beep_summary">Preference timer beep summary</string>
+    <string name="video_power_critical">Video power critical</string>
+    <string name="preference_antibanding_summary">Preference antibanding summary</string>
+    <string name="transmit">Data transmission in progress.\nDo not disconnect.</string>
+
+</resources>

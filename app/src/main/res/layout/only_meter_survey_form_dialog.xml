@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submitButton"
+        android:layout_marginBottom="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_toolbar_gradient"
+                android:orientation="horizontal"
+                android:paddingVertical="15dp"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/back_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="3dp"
+                    android:src="@drawable/outline_arrow_back_ios_new_24"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/home_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Survey Form"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/adapter_border"
+                android:elevation="1dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/select_service_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:background="@drawable/adapter_border"
+                        android:gravity="center|left"
+                        android:hint="Select Service Number"
+                        android:padding="5dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:visibility="visible" />
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutChangeImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/captured_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="Capture Image"
+                            android:background="@drawable/bg_capture_dashed"
+                            android:padding="5dp"
+                            android:src="@drawable/outline_add_a_photo_24" />
+
+
+
+                        <TextView
+                            android:id="@+id/btn_capture_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:paddingVertical="12dp"
+                            android:background="@drawable/button_bg_new"
+                            android:backgroundTint="@color/ui_new_color"
+                            android:fontFamily="@font/inter"
+                            android:text="Capture Meter Image"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#2B7CEE"
+        android:fontFamily="@font/abeezee"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="SUBMIT"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

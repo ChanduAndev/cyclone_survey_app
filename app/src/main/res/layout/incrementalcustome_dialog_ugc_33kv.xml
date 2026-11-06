@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Pole Attributes"
+                        android:textSize="20dp" />
+                    <Button
+                        android:id="@+id/btn_topclear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clear"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_button"
+                        android:textAllCaps="false"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="SS Name* :"
+                    android:textColor="@color/red"/>
+                <TextView
+                    android:id="@+id/tv_sunname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="SS Name* :"
+                    android:textColor="#0A4E75"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Feeder Name* :"
+                    android:textColor="@color/red"/>
+                <TextView
+                    android:id="@+id/tv_feedename"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="SS Name* :"
+                    android:textColor="#0A4E75"/>
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Pole No* :"
+                        android:textColor="@color/red"/>
+
+                    <EditText
+                        android:id="@+id/ed_pole_no"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="From Pole* :"
+                        android:textColor="@color/red"/>
+
+                    <EditText
+                        android:id="@+id/ed_frompole"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_distance"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Distance B/W From Pole and To Pole* :"
+                            android:textColor="@color/red" />
+                        <TextView
+                            android:id="@+id/tv_distance"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="10"
+                            android:textSize="15dp"
+                            android:textStyle="bold|italic"
+                            android:textColor="@color/red1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Line Type* :"
+                        android:textColor="@color/red"/>
+                    <Spinner
+                        android:id="@+id/sp_lineType"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/line_type" />
+                </LinearLayout>
+                <!-- <TextView
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="4dp"
+                     android:padding="4dp"
+                     android:text="No.Of Circuit* :"
+                     android:textColor="@color/red"/>
+                 <Spinner
+                     android:id="@+id/sp_noofcircuit"
+                     android:layout_width="fill_parent"
+                     android:layout_height="40dp"
+                     android:layout_marginTop="10dp"
+                     android:background="@drawable/ddimg"
+                     android:entries="@array/noof_circuit" />-->
+                <LinearLayout
+                    android:id="@+id/lyt_underground"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Is End Point* :"
+                            android:textColor="@color/red"/>
+                        <Spinner
+                            android:id="@+id/sp_undergisendpole"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/is_endpole" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Is WO Survey Completed ? * :"
+                            android:textColor="@color/red"/>
+                        <Spinner
+                            android:id="@+id/sp_ug_wosurveycompleted"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/is_wosurvey_completed" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="No.Of Cables* :"
+                        android:textColor="@color/red"/>
+                    <Spinner
+                        android:id="@+id/sp_noofcircuit_underg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/noof_circuit" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Straight Through Joint/RMU* :"
+                        android:textColor="@color/red"/>
+                    <Spinner
+                        android:id="@+id/sp_straight_rmu"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/straight_rmu" />
+                    <LinearLayout
+                        android:id="@+id/lyt_rmu"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="RMU* :"
+                            android:textColor="@color/red"/>
+                        <Spinner
+                            android:id="@+id/sp_rmu"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/rmu" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lyt_underpolestructure"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Type Of Structure* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp__underpolestructure"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/undergpole_structure" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lyt_ugpole"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Pole Type* :"
+                            android:textColor="@color/red"/>
+                        <Spinner
+                            android:id="@+id/sp_ugpoletype"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/ugpole_type"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Pole Height* :"
+                            android:textColor="@color/red"/>
+
+
+                        <Spinner
+                            android:id="@+id/sp_ugpoleheight"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/pole_height" />
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="PoleSupport* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_ugpolesupport"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/ugpole_support" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lyt_ugssname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="SS Name* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_ugssname"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/pole_configuration" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Tapping Point* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_ugtapingpoint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/taping_point" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lyt_ugtapping"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="No.Of Tappings* :"
+                            android:textColor="@color/red"/>
+                        <Spinner
+                            android:id="@+id/sp_ugnooftappings"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/nofof_tappings" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_ugtappinglocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Tapping Location Name"
+                                android:maxLength="100"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Cable Size* :"
+                        android:textColor="@color/red"/>
+                    <Spinner
+                        android:id="@+id/sp_cablesize"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/cable_size" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_remarks_underground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLength="100"
+                            android:hint="Enter Any Remarks"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_ugpolepaintingcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Polepainting Code"
+                            android:maxLength="100"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lyt_overhead"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Is End Pole* :"
+                            android:textColor="@color/red"/>
+                        <Spinner
+                            android:id="@+id/sp_isendpole"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/is_endpole" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Is WO Survey Completed ? * :"
+                            android:textColor="@color/red"/>
+                        <Spinner
+                            android:id="@+id/sp_oh_wosurveycompleted"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/is_wosurvey_completed" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Pole Type* :"
+                            android:textColor="@color/red"/>
+                        <Spinner
+                            android:id="@+id/sp_poletype"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/pole_type" />
+                        <!--
+                                            <EditText
+                                                android:id="@+id/ed_pole_type"
+                                                android:layout_width="fill_parent"
+                                                android:layout_height="wrap_content" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Pole Height* :"
+                            android:textColor="@color/red"/>
+
+                        <!--  <EditText
+                              android:id="@+id/ed_pole_height"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content" />-->
+                        <Spinner
+                            android:id="@+id/sp_poleheight"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/pole_height" />
+
+
+                    </LinearLayout>
+
+                    <!--<LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="No.Of Circuits* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_noof_circuits"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/pole_noofcircuits" />
+
+
+                    </LinearLayout>-->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="PoleSupport* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_polesupport"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/pole_support" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Tapping Point* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_tapingpoint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/taping_point" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lyt_tapping"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="No.Of Tappings* :"
+                            android:textColor="@color/red"/>
+                        <Spinner
+                            android:id="@+id/sp_nooftappings"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/nofof_tappings" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_tappinglocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Tapping Location Name"
+                                android:maxLength="100"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="ConductorSize* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_conductorsize"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/conductor_size" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Pinpoint*:"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_pinpoint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/pinpoint" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lyt_polestructure"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Pole Structure* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp__polestructure"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/pole_structure" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="PoleConfiguration* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_poleconfiguration"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/pole_configuration" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_ssname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="SS Name* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_ssname"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/pole_configuration" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lyt_incroh_htscnum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="HT ServiceNumber* :"
+                            android:textColor="@color/red"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_incroh_htscnum"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLength="100"
+                                android:hint="Enter HT ServiceNumber"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Is MultiCircuit* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_ismulticircute"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/is_multicircuit" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lyt_circuit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="No.Of Circuit* :"
+                            android:textColor="@color/red"/>
+                        <Spinner
+                            android:id="@+id/sp_noofcircuit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/noof_circuit_overhead" />
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Circuit Type* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_circutetype"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/circuit_type" />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lyt_diffvoltage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Different Voltages* :"
+                            android:textColor="@color/red"/>
+
+                        <Spinner
+                            android:id="@+id/sp_diffvoltage"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/circuit_type" />
+                    </LinearLayout>
+
+
+
+
+
+
+                    <!-- <LinearLayout
+                         android:layout_width="fill_parent"
+                         android:layout_height="fill_parent"
+                         android:orientation="vertical">
+                         <TextView
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_margin="4dp"
+                             android:padding="4dp"
+                             android:text="Tubular Pole* :"
+                             android:textColor="@color/red"/>
+
+                         <Spinner
+                             android:id="@+id/sp_tublarpole"
+                             android:layout_width="fill_parent"
+                             android:layout_height="40dp"
+                             android:layout_marginTop="10dp"
+                             android:background="@drawable/ddimg"
+                             android:entries="@array/tublar_pole" />
+
+                     </LinearLayout>-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_polepaintingcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLength="100"
+                            android:hint="Enter Polepainting Code"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_remarks_overhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLength="100"
+                            android:hint="Enter Any Remarks"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Longitude" />
+
+                    <EditText
+                        android:id="@+id/ed_lat_y"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <Button
+
+                        android:id="@+id/btn_clear"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_button"
+                        android:text="Clear" />
+
+                    <Button
+                        android:id="@+id/btn_add"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_button"
+                        android:textAllCaps="false"
+                        android:text="Add" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

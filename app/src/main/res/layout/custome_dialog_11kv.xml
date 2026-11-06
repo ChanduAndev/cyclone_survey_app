@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ui_new_color"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Attributes"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/btn_repeat_pole"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_work_involvements"
+                        android:gravity="center"
+                        android:text="Repeat Pole"
+                        android:layout_marginRight="10dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/ui_new_color" />
+
+                    <TextView
+                        android:id="@+id/btn_topclear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_work_involvements"
+                        android:gravity="center"
+                        android:text="Clear"
+                        android:textAllCaps="false"
+                        android:textColor="@color/ui_new_color" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/main_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:layout_margin="15dp"
+                android:layout_marginTop="15dp"
+                android:elevation="1dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:id="@+id/address_1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Address 1"
+                        android:textStyle="normal"
+                        android:textSize="14sp"
+                        android:textColor="@color/light_gray_clor" />
+
+                    <TextView
+                        android:id="@+id/tv_address_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Address details"
+                        android:textStyle="normal"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:id="@+id/address_2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Address 2"
+                        android:textStyle="normal"
+                        android:textSize="14sp"
+                        android:textColor="@color/light_gray_clor" />
+
+                    <TextView
+                        android:id="@+id/tv_address_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Address details"
+                        android:textStyle="normal"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:layout_margin="15dp"
+                android:layout_marginTop="15dp"
+                android:elevation="1dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="DISTANCE (in meters)"
+                    android:textColor="@color/lightGrey"
+                    android:fontFamily="@font/inter"
+                    />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+
+                            android:textColor="@color/colorAccent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="From Current Location"
+                            android:textSize="10sp"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:padding="5dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="24sp"
+                            android:id="@+id/last_pole_distance"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="From Source Pole"
+                            android:textSize="11sp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="normal"
+                            android:textColor="@color/white"
+                            android:background="@drawable/bg_button_round"
+                            android:backgroundTint="@color/ui_new_color"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="2dp"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_badge_circle"
+                    android:padding="4dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Distance From Current Location :"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text=""
+                        android:layout_marginLeft="3dp"
+                        android:id="@+id/current_distance"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner_field"
+                android:layout_margin="15dp"
+                android:elevation="1dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="SS Name* :"
+                        android:textColor="@color/lightGrey" />
+
+                    <TextView
+                        android:id="@+id/tv_sunname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="SS Name* :"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Feeder Name* :"
+                        android:textColor="@color/lightGrey" />
+
+                    <TextView
+                        android:id="@+id/tv_feedename"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="SS Name* :"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner_field"
+                android:layout_margin="15dp"
+                android:elevation="1dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Pole No* :"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/ed_pole_no"
+                        android:background="@null"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="From Pole* :"
+                        android:textColor="@color/black" />
+
+
+
+                    <LinearLayout
+                        android:id="@+id/tv_from_pole_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:visibility="visible"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/ed_frompole"
+                            android:background="@null"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_change_from_pole"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:visibility="visible"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/redred"
+                            android:textStyle="bold"
+                            android:text="Change From Pole"/>
+                    </LinearLayout>
+
+                    <Spinner
+                        android:id="@+id/sp_from_pole"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                       android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/Survey_type" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="0.5dp"
+                        android:background="#000000" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Survey Type* :"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/sp_Survey_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/Survey_type" />
+            </LinearLayout>
+
+            <!--START JHC PHASE 1-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/jhc_layout"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Pole Survey Type* :"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/sp_pole_survey_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pole_survey_type" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Line Survey Type* :"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/sp_line_survey_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pole_survey_type" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--END JHC PHASE 1-->
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Line Type* :"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/sp_lineType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/line_type" />
+            </LinearLayout>
+            <!-- <TextView
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="4dp"
+                 android:padding="4dp"
+                 android:text="No.Of Circuit* :"
+                 android:textColor="@color/black"/>
+             <Spinner
+                 android:id="@+id/sp_noofcircuit"
+                 android:layout_width="fill_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="10dp"
+                 android:background="@drawable/bg_spinner_field"
+                 android:entries="@array/noof_circuit" />-->
+
+            <!--UnderGround Layout Start-->
+            <include layout="@layout/under_ground_layout" />
+
+            <!--Over Head Layout Start-->
+            <include layout="@layout/over_head_layout" />
+            <!--<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Longitude" />
+
+                <EditText
+                    android:id="@+id/ed_lat_y"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>-->
+            <!--AB Cable Start Layout-->
+            <include layout="@layout/ab_cable_layout1" />
+
+
+            <LinearLayout
+                android:id="@+id/sg_bf_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Feeder Segregaion/Bifurcation :"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/sp_fdr_sg_bf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/sp_bf_sg" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/circuit_type_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Circuit Type :"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/sp_ckt_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/sp_ckt_type" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <TextView
+
+                    android:id="@+id/btn_clear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/adapter_border"
+                    android:backgroundTint="@color/ui_new_color"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:text="Clear"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/btn_add"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/adapter_border"
+                    android:backgroundTint="@color/ui_new_color"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

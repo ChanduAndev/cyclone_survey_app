@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/adapter_border"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="7dp"
+    android:paddingRight="1dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/asset_mapping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+
+
+        >
+
+        <RelativeLayout
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            android:padding="4dp"
+            android:background="@drawable/round_outline"
+            android:id="@+id/c_1"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+
+                android:layout_centerInParent="true"
+                android:src="@drawable/app_logo" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/c_1"
+            android:layout_toLeftOf="@+id/btn_next"
+            android:layout_marginRight="1dp"
+
+            >
+
+            <TextView
+                android:id="@+id/est_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="EST NO"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/purpose"
+                android:layout_marginTop="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Estimation ID"
+                android:textColor="@color/lite_black"
+                android:textSize="11sp"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_next"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:tint="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

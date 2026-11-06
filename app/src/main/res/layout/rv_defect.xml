@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- DEFECT_TYPE CheckBox -->
+    <CheckBox
+        android:id="@+id/checkBoxType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/new_color"
+        android:textStyle="bold"
+        android:checked="false"
+        android:text="DEFECT_TYPE" />
+
+    <!-- Container for DEFECT_SUB_TYPEs -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_subtype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp" />
+
+</LinearLayout>

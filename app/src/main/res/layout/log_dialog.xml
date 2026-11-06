@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/button_background"
+    android:backgroundTint="@color/white"
+    android:padding="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    >
+
+    <ImageView
+
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/logout_icon" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/inter"
+        android:gravity="center"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/redred"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inter"
+        android:gravity="center"
+        android:id="@+id/description"
+        android:text="Are you sure you want to Logout?"
+        android:textColor="#95A2B5"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inter"
+        android:gravity="center"
+        android:id="@+id/log_info"
+        android:text=""
+        android:textColor="@color/redred"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/back_to_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/redred"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Confirm Logout"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialog_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg_new"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/redred"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

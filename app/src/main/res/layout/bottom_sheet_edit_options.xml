@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="14dp"
+    android:clipToOutline="true"
+    android:paddingBottom="16dp">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:id="@+id/tv_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Select Edit options"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/close_white"
+            android:contentDescription="Close"
+            app:tint="@color/redred" />
+
+    </RelativeLayout>
+
+
+    <!-- ALL ATTRIBUTES -->
+    <RelativeLayout
+        android:id="@+id/option_all"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_edit_option"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:background="@drawable/bg_option_icon"
+            android:src="@drawable/ic_option"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivIcon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="All Attributes"
+            android:textColor="@color/ui_black_color"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:tint="#777777" />
+
+    </RelativeLayout>
+
+
+    <!-- POLE CONFIGURATION -->
+    <RelativeLayout
+        android:id="@+id/option_pole_config"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edit_option"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivIcon1"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:background="@drawable/bg_option_icon"
+            android:src="@drawable/ic_option"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivIcon1"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="Pole Configuration"
+            android:textColor="@color/ui_black_color"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:tint="#777777" />
+
+    </RelativeLayout>
+
+
+    <!-- POLE ATTRIBUTES -->
+    <RelativeLayout
+        android:id="@+id/option_pole"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edit_option"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:id="@+id/ivIcon2"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:background="@drawable/bg_option_icon"
+            android:src="@drawable/ic_option"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivIcon2"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="Pole Attributes"
+            android:textColor="@color/ui_black_color"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:tint="#777777" />
+
+    </RelativeLayout>
+
+
+    <!-- DTR PARTICULARS -->
+    <RelativeLayout
+        android:id="@+id/option_source"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edit_option"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivIcon3"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:background="@drawable/bg_option_icon"
+            android:src="@drawable/ic_option"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivIcon3"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="DTR Particulars"
+            android:textColor="@color/ui_black_color"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:tint="#777777" />
+
+    </RelativeLayout>
+
+
+    <!-- SOURCE POLE -->
+    <RelativeLayout
+        android:id="@+id/option_source_pole"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edit_option"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:id="@+id/ivIcon4"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:background="@drawable/bg_option_icon"
+            android:src="@drawable/ic_option"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivIcon4"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="Source Pole"
+            android:textColor="@color/ui_black_color"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:tint="#777777" />
+
+    </RelativeLayout>
+
+
+    <!-- BOQ DETAILS -->
+    <RelativeLayout
+        android:id="@+id/option_boq"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edit_option"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:id="@+id/ivIcon5"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:background="@drawable/bg_option_icon"
+            android:src="@drawable/ic_option"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivIcon5"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="BOQ Details"
+            android:textColor="@color/ui_black_color"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:tint="#777777" />
+
+    </RelativeLayout>
+
+
+    <!-- HTTVR -->
+    <RelativeLayout
+        android:id="@+id/option_httvr"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edit_option"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivIcon6"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:background="@drawable/bg_option_icon"
+            android:src="@drawable/ic_option"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivIcon6"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="HTTVR Pole Details"
+            android:textColor="@color/ui_black_color"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:tint="#777777" />
+
+    </RelativeLayout>
+
+</LinearLayout>

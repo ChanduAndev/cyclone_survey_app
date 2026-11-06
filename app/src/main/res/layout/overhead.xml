@@ -1,0 +1,2907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/lyt_overhead">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--<RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Attributes"
+                    android:textSize="20dp" />
+                <Button
+                    android:id="@+id/btn_topclear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_button"
+                    android:textAllCaps="false"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />-->
+            <!--<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="DTR Structure* :"
+                    android:textColor="@color/red"/>
+                <TextView
+                    android:id="@+id/tv_dtrstrcuture"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="DTR Structure* :"
+                    android:textColor="#0A4E75"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="LT Circuit* :"
+                    android:textColor="@color/red"/>
+                <TextView
+                    android:id="@+id/tv_ltcircuit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="LT Circuit* :"
+                    android:textColor="#0A4E75"/>
+            </LinearLayout>-->
+
+
+            <!--<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole No* :"
+                    android:textColor="@color/red"/>
+
+                <EditText
+                    android:id="@+id/ed_pole_no"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="From Pole* :"
+                    android:textColor="@color/red"/>
+
+                <EditText
+                    android:id="@+id/ed_frompole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Line Type* :"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_lineType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/line_type" />
+            </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is Multi Circuit ?*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_ismulti_circuit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_is_multi_circuit_lt" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyt_spi_no_circuit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Total No of Circuits*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_noof_circuits"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_noof_ckts" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lyt_oh_noof_circuits"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Multi Voltage/Same Voltage*"
+                        android:textColor="@color/red"/>
+                    <Spinner
+                        android:id="@+id/sp_oh_multi_voltage_same_voltage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/oh_same_multi" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lyt_oh_multivoltage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.esri.arcgisruntime.mapping.view.MapView
+                    android:id="@+id/map_view_33kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/map_border"
+                    android:padding="2dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="4dp"
+                    android:text="Select Other Circuits * :"
+                    android:textColor="@color/red" />
+
+
+                <!--33KV MULTI CIRCUIT-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_33kv_vlckts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="33kv Voltage Ckts"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_33kv_vlckts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Select No. of Feeders *"
+                            android:textColor="@color/red1"/>
+
+                        <Spinner
+                            android:id="@+id/sp_oh_no_of_33_feeders"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/oh_no_of_33_feeders" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/main_layout_feeder_1_33"
+                            android:visibility="gone"
+                            >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:padding="4dp"
+                                android:text="Select Feeder 1 *"
+                                android:textColor="@color/red1"/>
+
+                            <Spinner
+                                android:id="@+id/sp_oh_33_feeder_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <TextView
+                                android:id="@+id/ed_oh_33_feeder_1_ns"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:textColor="@color/black"
+                                android:hint="Enter Feeder 1 ID"
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone"
+                                android:padding="5dp"
+                                android:textSize="18sp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/layout_oh_33_feeder_1"
+                                android:weightSum="4"
+                                android:visibility="gone"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ed_oh_33_feeder_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Feeder 1 ID"
+                                    android:layout_margin="3dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="3"
+                                    android:singleLine="true"
+                                    android:textSize="18sp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/get_oh_33_feeder_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:text="GET"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:padding="5dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/button_background"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/feeder_1_pole_layout_33"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:padding="4dp"
+                                    android:text="Select Feeder 1 Pole*"
+                                    android:textColor="@color/red1"/>
+
+                                <Spinner
+                                    android:id="@+id/sp_oh_33_feeder_1_pole"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/ed_oh_33_pole_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Pole Number"
+                                    android:visibility="gone"
+                                    android:inputType="phone"
+                                    android:layout_marginTop="10dp"
+                                    android:padding="5dp"
+                                    android:background="@drawable/distance_border"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:id="@+id/main_layout_feeder_2_33"
+                            >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:padding="4dp"
+                                android:text="Select Feeder 2 *"
+                                android:textColor="@color/red1"/>
+
+                            <Spinner
+                                android:id="@+id/sp_oh_33_feeder_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <TextView
+                                android:id="@+id/ed_oh_33_feeder_2_ns"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:textColor="@color/black"
+                                android:hint="Enter Feeder 2 ID"
+                                android:layout_marginTop="10dp"
+                                android:padding="5dp"
+                                android:visibility="gone"
+                                android:textSize="18sp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/layout_oh_33_feeder_2"
+                                android:weightSum="4"
+                                android:visibility="gone"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ed_oh_33_feeder_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Feeder 2 ID"
+                                    android:layout_margin="3dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18sp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/get_oh_33_feeder_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:text="GET"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:padding="5dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/button_background"
+                                    />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/feeder_2_pole_layout_33"
+                                android:orientation="vertical">
+
+
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:padding="4dp"
+                                    android:text="Select Feeder 2 Pole*"
+                                    android:textColor="@color/red1"/>
+
+                                <Spinner
+                                    android:id="@+id/sp_oh_33_feeder_2_pole"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/ed_oh_33_pole_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Pole Number"
+                                    android:visibility="gone"
+                                    android:inputType="phone"
+                                    android:layout_marginTop="10dp"
+                                    android:padding="5dp"
+                                    android:background="@drawable/distance_border"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:id="@+id/main_layout_feeder_3_33"
+                            >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:padding="4dp"
+                                android:text="Select Feeder 3 *"
+                                android:textColor="@color/red1"/>
+
+                            <Spinner
+                                android:id="@+id/sp_oh_33_feeder_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <TextView
+                                android:id="@+id/ed_oh_33_feeder_3_ns"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:textColor="@color/black"
+                                android:hint="Enter Feeder 3 ID"
+                                android:layout_marginTop="10dp"
+                                android:padding="5dp"
+                                android:visibility="gone"
+                                android:textSize="18sp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/layout_oh_33_feeder_3"
+                                android:visibility="gone"
+                                android:weightSum="4"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ed_oh_33_feeder_3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Feeder 3 ID"
+                                    android:layout_margin="3dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18sp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/get_oh_33_feeder_3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:text="GET"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:padding="5dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/button_background"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/feeder_3_pole_layout_33"
+                                android:orientation="vertical">
+
+
+
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:padding="4dp"
+                                    android:text="Select Feeder 3 Pole*"
+                                    android:textColor="@color/red1"/>
+
+                                <Spinner
+                                    android:id="@+id/sp_oh_33_feeder_3_pole"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/ed_oh_33_pole_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Pole Number"
+                                    android:visibility="gone"
+                                    android:inputType="phone"
+                                    android:layout_marginTop="10dp"
+                                    android:padding="5dp"
+                                    android:background="@drawable/distance_border"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_33kv_vlckts1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_33kv_vlckts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 33kv Voltage Ckts"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--11KV MULTI CIRCUIT-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_11kv_vlckts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="11kv/6.3kv Voltage Ckts"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_11kv_vlckts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="Select No. of Feeders *"
+                            android:textColor="@color/red1"/>
+
+                        <Spinner
+                            android:id="@+id/sp_oh_no_of_11_feeders"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/oh_no_of_11_feeders" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/main_layout_feeder_1"
+                            android:visibility="gone"
+                            >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:padding="4dp"
+                                android:text="Select Feeder 1 *"
+                                android:textColor="@color/red1"/>
+
+                            <Spinner
+                                android:id="@+id/sp_oh_11_feeder_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <TextView
+                                android:id="@+id/ed_oh_11_feeder_1_ns"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:textColor="@color/black"
+                                android:hint="Enter Feeder 1 ID"
+                                android:layout_marginTop="10dp"
+                                android:padding="5dp"
+                                android:visibility="gone"
+                                android:textSize="18sp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/layout_oh_11_feeder_1"
+                                android:weightSum="4"
+                                android:visibility="gone"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ed_oh_11_feeder_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Feeder 1 ID"
+                                    android:layout_margin="3dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18sp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/get_oh_11_feeder_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:text="GET"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:padding="5dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/button_background"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/feeder_1_pole_layout_11"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:padding="4dp"
+                                    android:text="Select Feeder 1 Pole*"
+                                    android:textColor="@color/red1"/>
+
+                                <Spinner
+                                    android:id="@+id/sp_oh_11_feeder_1_pole"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+                                <EditText
+                                    android:id="@+id/ed_oh_11_pole_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Pole Number"
+                                    android:visibility="gone"
+                                    android:inputType="phone"
+                                    android:layout_marginTop="10dp"
+                                    android:padding="5dp"
+                                    android:background="@drawable/distance_border"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:id="@+id/main_layout_feeder_2"
+                            >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:padding="4dp"
+                                android:text="Select Feeder 2 *"
+                                android:textColor="@color/red1"/>
+
+                            <Spinner
+                                android:id="@+id/sp_oh_11_feeder_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <TextView
+                                android:id="@+id/ed_oh_11_feeder_2_ns"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:textColor="@color/black"
+                                android:hint="Enter Feeder 2 ID"
+                                android:layout_marginTop="10dp"
+                                android:padding="5dp"
+                                android:visibility="gone"
+                                android:textSize="18sp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/layout_oh_11_feeder_2"
+                                android:weightSum="4"
+                                android:visibility="gone"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ed_oh_11_feeder_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Feeder 2 ID"
+                                    android:layout_margin="3dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18sp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/get_oh_11_feeder_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:text="GET"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:padding="5dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/button_background"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/feeder_2_pole_layout_11"
+                                android:orientation="vertical">
+
+
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:padding="4dp"
+                                    android:text="Select Feeder 2 Pole*"
+                                    android:textColor="@color/red1"/>
+
+                                <Spinner
+                                    android:id="@+id/sp_oh_11_feeder_2_pole"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/ed_oh_11_pole_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Pole Number"
+                                    android:visibility="gone"
+                                    android:inputType="phone"
+                                    android:layout_marginTop="10dp"
+                                    android:padding="5dp"
+                                    android:background="@drawable/distance_border"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:id="@+id/main_layout_feeder_3"
+                            >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:padding="4dp"
+                                android:text="Select Feeder 3 *"
+                                android:textColor="@color/red1"/>
+
+                            <Spinner
+                                android:id="@+id/sp_oh_11_feeder_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <TextView
+                                android:id="@+id/ed_oh_11_feeder_3_ns"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:textColor="@color/black"
+                                android:hint="Enter Feeder 3 ID"
+                                android:layout_marginTop="10dp"
+                                android:padding="5dp"
+                                android:visibility="gone"
+                                android:textSize="18sp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/layout_oh_11_feeder_3"
+                                android:visibility="gone"
+                                android:weightSum="4"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ed_oh_11_feeder_3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Feeder 3 ID"
+                                    android:layout_margin="3dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18sp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/get_oh_11_feeder_3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:text="GET"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:padding="5dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/button_background"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/feeder_3_pole_layout_11"
+                                android:orientation="vertical">
+
+
+
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:padding="4dp"
+                                    android:text="Select Feeder 3 Pole*"
+                                    android:textColor="@color/red1"/>
+
+                                <Spinner
+                                    android:id="@+id/sp_oh_11_feeder_3_pole"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/ed_oh_11_pole_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Pole Number"
+                                    android:inputType="phone"
+                                    android:layout_marginTop="10dp"
+                                    android:visibility="gone"
+                                    android:padding="5dp"
+                                    android:background="@drawable/distance_border"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_11kv_vlckts1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_11kv_vlckts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 11kv Voltage Ckts"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--LT MULTI CIRCUIT-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_lt_vlckts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LT Voltage Ckts"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_lt_vlckts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="Select No. of LT Ckts *"
+                            android:textColor="@color/red1"/>
+
+                        <Spinner
+                            android:id="@+id/sp_oh_no_of_lt_feeders"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/oh_no_of_lt_feeders" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/main_layout_feeder_1_lt"
+                            android:visibility="gone"
+                            >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:padding="4dp"
+                                android:text="Select DTR Code *"
+                                android:textColor="@color/red1"/>
+
+                            <Spinner
+                                android:id="@+id/sp_oh_lt_feeder_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <TextView
+                                android:id="@+id/ed_oh_lt_feeder_1_ns"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:textColor="@color/black"
+                                android:hint="Enter DTR Code"
+                                android:layout_marginTop="10dp"
+                                android:padding="5dp"
+                                android:visibility="gone"
+                                android:textSize="18sp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/layout_oh_lt_feeder_1"
+                                android:weightSum="4"
+                                android:visibility="gone"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ed_oh_lt_feeder_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter DTR Code"
+                                    android:layout_margin="3dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18sp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/get_oh_lt_feeder_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:text="GET"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:padding="5dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/button_background"
+                                    />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/feeder_1_pole_layout_lt"
+                                android:orientation="vertical">
+
+
+
+
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:padding="4dp"
+                                    android:text="Select LT Ckt 1 Pole*"
+                                    android:textColor="@color/red1"/>
+
+                                <Spinner
+                                    android:id="@+id/sp_oh_lt_feeder_1_pole"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+                                <EditText
+                                    android:id="@+id/ed_oh_lt_pole_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Pole Number"
+                                    android:visibility="gone"
+                                    android:inputType="phone"
+                                    android:layout_marginTop="10dp"
+                                    android:padding="5dp"
+                                    android:background="@drawable/distance_border"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:id="@+id/main_layout_feeder_2_lt"
+                            >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:padding="4dp"
+                                android:text="Select DTR Code 2 *"
+                                android:textColor="@color/red1"/>
+
+                            <Spinner
+                                android:id="@+id/sp_oh_lt_feeder_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <TextView
+                                android:id="@+id/ed_oh_lt_feeder_2_ns"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:textColor="@color/black"
+                                android:hint="Enter DTR Code"
+                                android:layout_marginTop="10dp"
+                                android:padding="5dp"
+                                android:visibility="gone"
+                                android:textSize="18sp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/layout_oh_lt_feeder_2"
+                                android:weightSum="4"
+                                android:visibility="gone"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ed_oh_lt_feeder_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter DTR Code"
+                                    android:layout_margin="3dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18sp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/get_oh_lt_feeder_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:text="GET"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:padding="5dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/button_background"
+                                    />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/feeder_2_pole_layout_lt"
+                                android:orientation="vertical">
+
+
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:padding="4dp"
+                                    android:text="Select LT Ckt 2 Pole*"
+                                    android:textColor="@color/red1"/>
+
+                                <Spinner
+                                    android:id="@+id/sp_oh_lt_feeder_2_pole"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/ed_oh_lt_pole_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter Pole Number"
+                                    android:visibility="gone"
+                                    android:inputType="phone"
+                                    android:layout_marginTop="10dp"
+                                    android:padding="5dp"
+                                    android:background="@drawable/distance_border"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:id="@+id/main_layout_feeder_3_lt"
+                            >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:padding="4dp"
+                                android:text="Select DTR Code 3 *"
+                                android:textColor="@color/red1"/>
+
+                            <Spinner
+                                android:id="@+id/sp_oh_lt_feeder_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <TextView
+                                android:id="@+id/ed_oh_lt_feeder_3_ns"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:textColor="@color/black"
+                                android:hint="Enter DTR Code"
+                                android:layout_marginTop="10dp"
+                                android:padding="5dp"
+                                android:layout_weight="3"
+                                android:textSize="18sp"
+                                android:background="@drawable/bg_spinner_field"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/layout_oh_lt_feeder_3"
+                                android:visibility="gone"
+                                android:weightSum="4"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/ed_oh_lt_feeder_3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:textColor="@color/black"
+                                    android:hint="Enter DTR Code"
+                                    android:layout_margin="3dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18sp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/get_oh_lt_feeder_3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:text="GET"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:padding="5dp"
+                                    android:layout_margin="3dp"
+                                    android:background="@drawable/button_background"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/feeder_3_pole_layout_lt"
+                                android:orientation="vertical">
+
+
+
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:padding="4dp"
+                                    android:text="Select LT Ckt 3 Pole*"
+                                    android:textColor="@color/red1"/>
+
+                                <Spinner
+                                    android:id="@+id/sp_oh_lt_feeder_3_pole"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/bg_spinner_field"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/ed_oh_lt_pole_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:textColor="#03FB0D"
+                                    android:hint="Enter Pole Number"
+                                    android:inputType="phone"
+                                    android:layout_marginTop="10dp"
+                                    android:visibility="gone"
+                                    android:padding="5dp"
+                                    android:background="@drawable/distance_border"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_lt_vlckts1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_lt_vlckts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of LT Voltage Ckts"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_6_3kv_vlckts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="6.3kv Voltage Ckts"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_6_3kv_vlckts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_6_3kv_vlckts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 6.3kv Voltage Ckts"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Line Configuration* :"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_lineconfig"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_line_config" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Support*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_strut_stay_details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_strut" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Conductor Size*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_conductor_size"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_conductorsize" />
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Crossing*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_crossing"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_crossing" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_oh_crossing"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_6_3_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="6.3kv Crossing"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_6_3_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/edt_oh_6_3_crossing"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:textColor="@color/black"
+                            android:hint="Enter 6.3kv Crossings Feeder ID"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            android:background="@drawable/bg_spinner_field"
+                            />
+
+                       <!-- <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_6_3_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 6.3kv Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_11kv_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="11kv Crossings"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_11kv_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/edt_oh_11kv_crossing"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:textColor="@color/black"
+                            android:hint="Enter 11kv Crossings Feeder ID"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            android:background="@drawable/bg_spinner_field"
+                            />
+
+                        <!--<com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_11kv_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 11kv Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_33kv_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="33kv Crossings"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_33kv_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/edt_oh_33kv_crossing"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:textColor="@color/black"
+                            android:hint="Enter 33kv Crossings Feeder ID"
+
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            android:background="@drawable/bg_spinner_field"
+                            />
+
+                       <!-- <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_33kv_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 33kv Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_lt_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LT Crossings"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_lt_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/edt_oh_lt_crossing"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:textColor="@color/black"
+                            android:hint="Enter LT Crossings DTR Code"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            android:background="@drawable/bg_spinner_field"
+                            />
+
+                       <!-- <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_lt_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of LT Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_tc_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TeleCommunication Crossings"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_tc_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_tc_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of TeleCommunication Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_tm_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Transmission Crossings"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_tm_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_tm_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of Transmission Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is Street Light Connection Available?*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_isstreetlight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_is_streetlight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/street_light_layout"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Street Light Control Box Status?*"
+                        android:textColor="@color/red"/>
+                    <Spinner
+                        android:id="@+id/sp_oh_is_streetlight_status"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/oh_is_streetlight_status" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="If Street Light Meter is Available ?*"
+                        android:textColor="@color/red"/>
+                    <Spinner
+                        android:id="@+id/sp_oh_streetlight_meter_available"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/e_yes_no" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/meter_source_layout"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Street Light Meter Source*"
+                        android:textColor="@color/red"/>
+                    <Spinner
+                        android:id="@+id/sp_oh_streetlight_meter_source"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/oh_is_streetlight_source" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Consumer Services (Other Than Street Light) connected to Pole?*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_otherthan_streetlight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_is_other_thanstreetlight" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_oh_con_services"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_oh_con_services"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter No. of Services*"
+                    android:maxLength="2"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+            <!--OTHER CABLES START-->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is other cables connected to Pole?*\n(Non Power Cables)"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_other_cables"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_is_other_cables" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edt_oh_other_cables"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/black"
+                android:hint="Enter No. of Cables*"
+                android:inputType="phone"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:maxLength="2"
+                android:background="@drawable/distance_border"
+                />
+
+
+
+            <!--OTHER CABLES END-->
+
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Type*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_pole_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_poletype" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Height*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_pole_height"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_poletypehite"
+
+                     />
+                <!--android:entries="@array/oh_poletype"-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pin/Cut Point*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_pin_cutpoint"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_pin_point" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyt_oh_is_doublefeeding_pole"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Type of Insulator*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_type_of_insulator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_type_of_insulator" />
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is it Double Feeding Pole?*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_is_doublefeeding_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_is_doublefeeding" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/end_pole_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is End Pole* :"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_isendpole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/is_endpole_pole" />
+            </LinearLayout>
+<!--
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is WO Survey Completed ? * :"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_ltoh_wosurveycompleted"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/is_survey_complete" />
+            </LinearLayout>
+-->
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Tapping point*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_tapping_point"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_tappingpoint" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lyt_oh_noof_spurlines"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="No of Tappings*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_noof_spurlines"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_noof_spurlines" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_oh_tappinglocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Tapping Location Name"
+                        android:maxLength="100"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/lay_oh_dtr_pole_dtr_meter_avilable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="DTR Meter Available*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_dtr_pole_dtr_meter_avilable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_dtr_meter_avilable" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_oh_dtr_pole_no_of_meter"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="No Of Meters*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_dtr_pole_no_of_meters"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_no_of_meters" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyt_otherthan_streetlight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/lyt_oh_aglservice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_aglservices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Agl Services"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_edt_aglservices"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_aglservices"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No.Of Agl Services"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lyt_oh_chacquaservices"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_aquaservices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Aqua Services"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_edt_aquaservices"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_aquaservices"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No.Of Aqua Services"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lyt_oh_chindustrialservices"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_industrialservices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Industrial Services"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_edt_industrialservices"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_industrialservices"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No.Of Industrial Services"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Defects observed?*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_defects"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_ismulti_circuit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/defects_layout"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/ch_pole_defects"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pole Defects"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp" />
+                <Spinner
+                    android:id="@+id/sp_pole_defects"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/dd_pole_defects" />
+                <CheckBox
+                    android:id="@+id/ch_conductors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Conductor/Cable Defects"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp" />
+                <Spinner
+                    android:id="@+id/sp_conductors"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/dd_conductor" />
+                <CheckBox
+                    android:id="@+id/ch_insulators"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LT Insulators"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp" />
+                <Spinner
+                    android:id="@+id/sp_insulators"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/dd_lt_insulators" />
+                <CheckBox
+                    android:id="@+id/ch_cross_arm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cross Arm"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp" />
+                <Spinner
+                    android:id="@+id/sp_cross_arm"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/dd_cross_arm" />
+                <CheckBox
+                    android:id="@+id/ch_strut_pole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Strut Pole"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp" />
+                <Spinner
+                    android:id="@+id/sp_strut_pole"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/dd_strut_pole" />
+                <CheckBox
+                    android:id="@+id/ch_stray_wire"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stay Wire"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp" />
+                <Spinner
+                    android:id="@+id/sp_stray_wire"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/dd_stray_wire" />
+                <CheckBox
+                    android:id="@+id/ch_ht_clearance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="HT/LT Clearance"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp" />
+                <Spinner
+                    android:id="@+id/sp_ht_clearance"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/dd_ht_clearance" />
+                <CheckBox
+                    android:id="@+id/ch_int_pole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loose Span"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp" />
+                <Spinner
+                    android:id="@+id/sp_int_pole"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/dd_loose_span" />
+                <CheckBox
+                    android:id="@+id/ch_restringing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Restringing"
+                    android:visibility="gone"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp" />
+                <Spinner
+                    android:id="@+id/sp_restringing"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/dd_loose_span" />
+
+                <CheckBox
+                    android:id="@+id/ch_other_defects"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Other Defects"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/ed_other_defects"
+                    android:visibility="gone"
+                    android:padding="8dp"
+                    android:maxLength="100"
+                    android:background="@drawable/ed_background"
+                    android:hint="Enter Other Defects(max 100 chars)"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+            <!--IMAGES START-->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/images_layout"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="4dp"
+                    android:text="Upload Photos(*min-1)"
+                    android:textSize="15sp"
+                    android:textColor="@color/redred"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:id="@+id/image_1"
+                            android:src="@drawable/upload_photo"
+                            android:scaleType="fitXY"
+                            android:layout_margin="3dp"
+                            />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="IMAGE 1"
+                            android:padding="5dp"
+                            android:layout_margin="3dp"
+                            android:id="@+id/upload_image_1"
+                            android:background="@drawable/text_border"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:id="@+id/image_2"
+                            android:scaleType="fitXY"
+                            android:layout_margin="3dp"
+                            android:src="@drawable/upload_photo"
+                            />
+
+                        <TextView
+                            android:id="@+id/upload_image_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="IMAGE 2"
+                            android:padding="5dp"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/text_border"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:layout_margin="5dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="90dp"
+                            android:id="@+id/image_3"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/upload_photo"
+                            />
+
+                        <TextView
+                            android:id="@+id/upload_image_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="IMAGE 3"
+                            android:layout_margin="3dp"
+                            android:padding="5dp"
+                            android:background="@drawable/text_border"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <!--IMAGES END-->
+
+            <!--POLE CONCRETE START-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is Pole Concrete Available?*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_pole_concrete"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/pole_concrete" />
+
+
+            </LinearLayout>
+
+            <!--POLE CONCRETE END-->
+
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_oh_pole_paintingcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Pole Painting Code"
+                        android:maxLength="100"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_oh_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Remarks"
+                        android:maxLength="100"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+
+            <!--<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button"
+                    android:padding="4dp"
+                    android:text="Clear"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_button"
+                    android:textAllCaps="false"
+                    android:text="Add" />
+
+            </LinearLayout>-->
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

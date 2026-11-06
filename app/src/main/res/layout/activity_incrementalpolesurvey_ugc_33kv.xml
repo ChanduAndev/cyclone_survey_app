@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityUG33KV">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=" 33Kv Feeder "
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold|italic"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/red"
+                    android:textStyle="bold|italic"
+                    android:text="Surveyed Poles" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:textColor="@color/red"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/tv_surveyedpole"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textStyle="bold|italic"
+                    android:text="0" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyt_surveytype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Survey Type :"
+                    android:textColor="@color/red"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold|italic"/>
+                <Spinner
+                    android:id="@+id/sp_loadmap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/load_map" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_tapingpoint"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Taping Point Location:"
+                    android:textColor="@color/red"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold|italic"/>
+                <Spinner
+                    android:id="@+id/sp_tappingpoint"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/load_map" />
+            </LinearLayout>
+
+            <!-- <com.google.android.material.textfield.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <com.google.android.material.textfield.TextInputEditText
+                     android:id="@+id/edt_frompole"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:inputType="number"
+                     android:maxLength="3"
+                     android:hint="@string/from_pole"/>
+
+             </com.google.android.material.textfield.TextInputLayout>
+             <com.google.android.material.textfield.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <com.google.android.material.textfield.TextInputEditText
+                     android:id="@+id/edt_topole"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:inputType="number"
+                     android:maxLength="3"
+                     android:hint="@string/to_pole"/>
+
+             </com.google.android.material.textfield.TextInputLayout>-->
+
+
+            <Button
+                android:id="@+id/btn_polenext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/round_button"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp" />
+            <Button
+                android:id="@+id/btn_taping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/round_button"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/foter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/powerby"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

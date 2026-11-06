@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:id="@+id/lay1"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/background_1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/gis_new" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/lay1"
+                android:orientation="vertical"
+                android:background="@drawable/layout_shadow"
+                android:layout_marginTop="-40dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:fontFamily="cursive"
+                    android:text="@string/app_name"
+                    android:textColor="@color/color_6"
+                    android:textSize="22dp"
+                    android:textStyle="bold|italic"
+                    android:layout_margin="10dp"/>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/layout_shadow">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="30dp"
+                        android:gravity="center"
+                        android:text="USER SIGN IN"
+                        android:fontFamily="cursive"
+                        android:textStyle="bold|italic"
+                        android:textSize="22dp" />
+
+                    <!--  <com.google.android.material.textfield.TextInputLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="5dp"
+                          android:hint="Unsername"
+                          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                          <com.google.android.material.textfield.TextInputEditText
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"/>
+
+
+                      </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/usernameWrapper1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Username"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/login_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textStyle="bold|italic"
+                            android:singleLine="true"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/usernameWrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Password"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:passwordToggleEnabled="true">
+
+                        <!--  <EditText
+                              android:id="@+id/username"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:inputType="textEmailAddress"
+                              android:hint="Username"
+                              android:padding="5dp"
+                              />-->
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/login_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:textStyle="bold|italic"
+                            android:singleLine="true"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_login"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="30dp"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_login"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_round_corner"
+                            android:gravity="center"
+                            android:text="Login"
+                            android:textStyle="bold|italic"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+
+
+                        <!--<ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/btn_login"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center"
+                            android:src="@drawable/ic_arrow_forward_black_24dp" />-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <include layout="@layout/footer" />
+</RelativeLayout>

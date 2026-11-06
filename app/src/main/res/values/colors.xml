@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <!--   <color name="colorPrimary">#3498DB</color>
+    <color name="colorPrimaryDark">#3498DB</color>-->
+ <color name="colorPrimary">#2B7CEE</color>
+ <color name="colorPrimary1">#2B7CEE</color>
+ <color name="colorPrimaryDark">#2B7CEE</color>
+ <color name="colorAccent">#D81B60</color>
+
+ <color name="colorAccent1">#E8A8BF</color>
+
+ <!--  <color name="red">#D50000</color>-->
+ <color name="red1">#D50000</color>
+ <color name="red">#1F1F1F</color>
+ <color name="heding_color">#C8CBD3</color>
+ <color name="body_color">#DFDBFF </color>
+ <color name="edit_text_white">#fff</color>
+ <color name="text_color">#3498DB</color><!-- #EDFBC6 -->
+ <color name="color_1">#FC9304</color>
+ <color name="color_2">#4a9CEEAB</color>
+ <color name="color_3">#4CB8C4</color>
+ <color name="color_4">#3DD2AE</color>
+ <color name="color_5">#5AD870</color>
+ <color name="color_6">#03086C</color>
+ <color name="white">#FFFFFF</color>
+ <color name="color_7">#D8E7DA</color>
+ <color name="blue">#006699</color>
+ <color name="bluebtn">#5a5ee8</color>
+ <color name="totalcompletedbtn_btn">#ce8554</color>
+ <color name="completed">#9c981b</color>
+ <color name="profile">#067017</color>
+ <item name="darkpurple" type="color">#ff7519</item>
+ <item name="estimates" type="color">#2F80ED</item>
+ <item name="pmi" type="color">#27AE60</item>
+ <item name="rdss" type="color">#3F51B5</item>
+ <item name="profile_card" type="color">#F2C94C</item>
+
+ <color name="colorgreen">#1F8657</color>
+ <color name="coloryellow">#FCF071</color>
+ <color name="redred">#F0113A</color>
+ <color name="blue_light">#9FB9FC</color>
+ <color name="pure_light_blue">#D2DEFD</color>
+ <color name="popup_bclack">#2B2A2A</color>
+ <color name="lite_black">#595C6E</color>
+ <color name="light_gray_clor">#4a000000</color>
+ <color name="toolBarColor">#393274</color>
+ <color name="blue_c">#43A8FD</color>
+ <color name="blue_d">#AED3F9</color>
+ <color name="par_green">#27F706</color>
+
+ <color name="black">#FF000000</color>
+ <color name="lightGrey">#747474</color>
+ <color name="new_color">#2B7CEE</color>
+ <color name="background_color">#E6E5E5</color>
+ <color name="amber">#FFBF00</color>
+ <color name="ui_new_color">#2B7CEE</color>
+ <color name="ui_green_color">#006E0E</color>
+ <color name="ui_gray_color">#95A2B5</color>
+ <color name="ui_black_color">#1F1F1F</color>
+ <color name="ui_gray_new_color">#D8E0E9</color>
+ <color name="disabledColor">#F6F5F5</color>
+ <color name="ui_green_new">#0CB51C</color>
+ <color name="pending_approval">#FEF7F2</color>
+
+ <color name="light_gray_clor_1">#8C000000</color>
+ <color name="light_gray_clor_2">#1A000000</color>
+ <color name="red2">#D50000</color>
+
+
+
+
+
+ <color name="gray_view">#08000000</color>
+ <color name="gray_view_1">#03000000</color>
+ <color name="seekbar_background">#20000000</color>
+ <color name="icons_background">#20000000</color> <!-- when used as background color for imagebutton, the rgb color seems to be ignored for Android 6 onwards, but still relevant for older versions -->
+ <color name="icons_background_tint">#ff000000</color>
+ <color name="shutter_icon">#2F9CF2</color>
+ <color name="shutter_icon_pressed">#40C4FF</color>
+ <color name="shutter_icon_video_recording">#F44336</color>
+    <color name="my_status_bar_color">#2B7CEE</color>
+
+</resources>
+

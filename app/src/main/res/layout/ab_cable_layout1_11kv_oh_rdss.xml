@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--UnderGround Layout Start-->
+    <LinearLayout
+        android:id="@+id/lay_ab_cable_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Voltage Level* :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_abc_voltage_level"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/voltage_leavel_ug_ab" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Is End Point* :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_abc_dergisendpole"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/abc_is_endpole" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Is WO Survey Completed ? * :"
+                android:textColor="@color/red"/>
+            <Spinner
+                android:id="@+id/sp_abc_wosurveycompleted"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/is_wosurvey_completed" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="No.Of Cables* :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_abc_noofcircuit"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/abc_noof_circuit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Location Type*:"
+                android:textColor="@color/red" />
+            <!--Straight Through Joint/RMU-->
+            <Spinner
+                android:id="@+id/sp_abc_straight_rmu"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/abc_straight_rmu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_abc_line_capacitor"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Line Capacitor Work Condition :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_abc_line_capacitor"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/abc_line_capacitor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_abc_auto_reclosure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Auto Reclosure Type:"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_abc_auto_reclosure"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/abc_auto_reclosure" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lay_abc_no_of_ab_switches"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="No of AB Switches:"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_abc_no_of_ab_switches"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/oh_no_of_ab_switches" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lay_abc_ht_service_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="HT Service Number :"
+                android:textColor="@color/red" />
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_abc_ht_service_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_abc_rmu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="RMU* :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_abc_rmu"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/abc_rmu" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_abc_derpolestructure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Type Of Structure* :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_abc_derpolestructure"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/abc_pole_structure" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_abc_pole"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Type* :"
+                    android:textColor="@color/red" />
+
+                <Spinner
+                    android:id="@+id/sp_abc_poletype"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/abc_pole_type" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Height* :"
+                    android:textColor="@color/red" />
+
+
+                <Spinner
+                    android:id="@+id/sp_abc_poleheight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/abc_pole_height" />
+            </LinearLayout>
+
+            <!--     <LinearLayout
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_margin="4dp"
+                         android:padding="4dp"
+                         android:text="Strut/Stay details* :"
+                         android:textColor="@color/red" />
+
+                     <Spinner
+                         android:id="@+id/sp_abc_struct_stay_detailes"
+                         android:layout_width="fill_parent"
+                         android:layout_height="40dp"
+                         android:layout_marginTop="10dp"
+                         android:background="@drawable/ddimg"
+                         android:entries="@array/abc_struct_stay" />
+
+                 </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="PoleSupport* :"
+                    android:textColor="@color/red" />
+
+                <Spinner
+                    android:id="@+id/sp_abc_polesupport"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/abc_pole_support" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--<LinearLayout
+            android:id="@+id/lyt_ugssname"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="SS Name* :"
+                android:textColor="@color/red"/>
+
+            <Spinner
+                android:id="@+id/sp_ugssname"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/pole_configuration" />
+
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/lay_abc_dtr_pole_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Section Name :"
+                    android:textColor="@color/red" />
+
+                <Spinner
+                    android:id="@+id/sp_abc_section_name_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="DTR Code:"
+                    android:textColor="@color/red" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_abc_dtr_structure_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="DTR Structure Type :"
+                    android:textColor="@color/red" />
+
+                <Spinner
+                    android:id="@+id/sp_abc_dtr_structure_type_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/abc_dtr_structure_type_dtr_pole" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Phase :"
+                    android:textColor="@color/red" />
+
+                <Spinner
+                    android:id="@+id/sp_abc_phase_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/abc_phase_dtr_pole" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Capacity :"
+                    android:textColor="@color/red" />
+
+                <Spinner
+                    android:id="@+id/sp_abc_capacity_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/abc_dtr_capacity" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Make:"
+                    android:textColor="@color/red" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_abc_make_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Serial Number:"
+                    android:textColor="@color/red" />
+
+                <EditText
+                    android:id="@+id/ed_abc_serial_number_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Location Name:"
+                    android:textColor="@color/red" />
+
+                <EditText
+                    android:id="@+id/ed_abc_location_name_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Type of Load:"
+                    android:textColor="@color/red" />
+
+                <Spinner
+                    android:id="@+id/sp_abc_type_of_load"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/abc_type_of_load" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="DTR Location type:"
+                    android:textColor="@color/red" />
+
+                <Spinner
+                    android:id="@+id/sp_abc_dtr_location_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/abc_dtr_location_type" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is LT ckts available :"
+                    android:textColor="@color/red" />
+
+                <Spinner
+                    android:id="@+id/sp_abc_is_lt_ckts_available"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/abc_lt_ckts_avalable" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_abc_no_of_lt_circuits"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="No of LT circuits:"
+                    android:textColor="@color/red" />
+
+                <Spinner
+                    android:id="@+id/sp_abc_no_of_lt_circuits"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/abc_of_lt_circuit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="AB Switch Available:"
+                    android:textColor="@color/red" />
+
+                <Spinner
+                    android:id="@+id/sp_abc_ab_switch_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/abc_ab_switch_dtr_pole" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Tapping Point* :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_abc_tapingpoint"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/abc_taping_point" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_abc_tapping"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="No.Of Tappings* :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_abc_nooftappings"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/abc_nofof_tappings" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_abc_tappinglocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Tapping Location Name"
+                    android:inputType="text"
+                    android:maxLength="100" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Cable Size* :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_abc_cablesize"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/abc_cable_size" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_abc_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Any Remarks"
+                android:inputType="text"
+                android:maxLength="100" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_abc_polepaintingcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Polepainting Code"
+                android:inputType="text"
+                android:maxLength="100" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</LinearLayout>

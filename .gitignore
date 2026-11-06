@@ -1,0 +1,21 @@
+# Ignore Android/Gradle build folders
+.gradle/
+build/
+*/build/
+
+# Android Studio files
+.idea/
+*.iml
+local.properties
+
+# Output files
+*.apk
+*.ap_
+*.aab
+*.db
+*.hprof
+
+# Misc
+captures/
+.DS_Store
+uninstall.bat

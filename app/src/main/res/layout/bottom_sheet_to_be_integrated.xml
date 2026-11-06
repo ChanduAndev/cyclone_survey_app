@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+
+    android:background="@drawable/alert_dialog_bg">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Integrate the Data !!"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+      />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The data will be transmitted and Integrated to existing GIS Data."
+        android:fontFamily="@font/inter"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:textColor="@color/lite_black"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/side_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+       >
+
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/adapter_border"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:text="Cancel"
+            android:visibility="visible"
+            android:textColor="@color/ui_new_color"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/okayButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_work_involvements"
+            android:backgroundTint="@color/ui_new_color"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:text="Proceed"
+            android:visibility="visible"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        />
+
+</LinearLayout>

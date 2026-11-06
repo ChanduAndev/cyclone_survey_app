@@ -1,0 +1,226 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <ScrollView
+        android:id="@+id/boq_solar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Row: DTR16 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/dtr_16"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="DTR16" />
+
+            </LinearLayout>
+
+            <!-- Row: DTR25 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/dtr_25"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="DTR25" />
+
+            </LinearLayout>
+
+            <!-- Row: DTR40 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/dtr_40"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="DTR40" />
+
+
+            </LinearLayout>
+
+            <!-- Row: DTR63 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/dtr_63"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="DTR63" />
+
+
+            </LinearLayout>
+
+            <!-- Row: DTR100 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/dtr_100"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="DTR100" />
+
+
+            </LinearLayout>
+
+            <!-- Row: DTR160 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/dtr_160"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="DTR160" />
+
+
+            </LinearLayout>
+
+            <!-- Row: LN63 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/ln_63"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="LN63" />
+
+
+            </LinearLayout>
+
+            <!-- Row: LC6311 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/ln_63_11"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="LC6311" />
+
+
+            </LinearLayout>
+
+            <!-- Row: LN11 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/ln_11"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="LN11" />
+
+
+            </LinearLayout>
+
+            <!-- Row: LCLT3W5W -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/lc_lt_3w_5w"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="LCLT3W5W" />
+
+
+            </LinearLayout>
+
+            <!-- Row: LNLT3W -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/ln_lt_3w"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="LNLT3W" />
+
+
+            </LinearLayout>
+
+            <!-- Row: LNLT4W -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/ln_lt_4w"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="LNLT4W" />
+
+
+            </LinearLayout>
+
+            <!-- Row: LNLT5W -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/ln_lt_5w"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="LNLT5W" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

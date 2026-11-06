@@ -1,0 +1,3863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/survey_11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_conductor_11"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_conductor_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Conductor/Cable Type*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_conductor_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:background="@drawable/bg_spinner_field" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_conductor_size_11"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_conductor_size_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Conductor/Cable Size*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_conductor_size_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:background="@drawable/bg_spinner_field" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Is Multi Circuit?*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_is_multi_circuit_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/e_yes_no" />
+
+            <LinearLayout
+                android:id="@+id/multi_ckt_layout_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Select Other Circuits*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/ch_multi_33kv_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text=" 33kv Voltage Circuits"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/layout_33kv_multi_ckt_pole_11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Select 33KV Multi Ckt Pole*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_33kv_multi_ckt_pole_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/ch_multi_11kv_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text=" 11kv Voltage Circuits"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_11kv_multi_ckt_pole_11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Select 11KV Multi Ckt Pole*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_11kv_multi_ckt_pole_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/ch_multi_lt_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text=" LT Voltage Circuits"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pole_configuration"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Pole Configuration*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_pole_configuration_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:entries="@array/pole_configuration" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/upload_image_1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="Capture Photo"
+                android:textColor="@color/redred"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/image_1_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                  <pl.droidsonroids.gif.GifImageView
+                      android:id="@+id/loader_image"
+                      android:layout_width="150dp"
+                      android:layout_height="150dp"
+                      android:layout_centerInParent="true"
+                      android:background="@color/white"
+                      android:src="@drawable/loading"
+                      android:visibility="gone" />
+                  <ImageView
+                      android:id="@+id/image_1"
+                      android:layout_width="150dp"
+                      android:layout_height="150dp"
+                      android:layout_margin="3dp"
+                      android:scaleType="fitXY"
+                      android:visibility="visible"
+                      android:src="@drawable/upload_photo" />
+
+                  <TextView
+                      android:id="@+id/upload_image_1"
+                      android:layout_width="150dp"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="3dp"
+                      android:background="@drawable/text_border"
+                      android:gravity="center"
+                      android:padding="5dp"
+                      android:text="Capture Image1"
+                      android:textColor="@color/black" />
+              </LinearLayout>
+               <LinearLayout
+                   android:id="@+id/image_2_layout"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:visibility="gone"
+                   android:orientation="vertical">
+
+                   <pl.droidsonroids.gif.GifImageView
+                       android:id="@+id/loader_image_2"
+                       android:layout_width="150dp"
+                       android:layout_height="150dp"
+                       android:layout_centerInParent="true"
+                       android:background="@color/white"
+                       android:src="@drawable/loading"
+                       android:visibility="gone" />
+                   <ImageView
+                       android:id="@+id/image_2"
+                       android:layout_width="150dp"
+                       android:layout_height="150dp"
+                       android:layout_margin="3dp"
+                       android:scaleType="fitXY"
+                       android:src="@drawable/upload_photo" />
+
+                   <TextView
+                       android:id="@+id/upload_image_2"
+                       android:layout_width="150dp"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="3dp"
+                       android:background="@drawable/text_border"
+                       android:gravity="center"
+                       android:padding="5dp"
+                       android:text="Capture Image2"
+                       android:textColor="@color/black" />
+               </LinearLayout>
+           </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_type_of_nature_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Nature Of Service*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_type_of_nature_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:entries="@array/nature_of_service" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_capacity_httvr"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Capacity*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_capacity_httvr"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:background="@drawable/bg_spinner_field" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_material_httvr"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="HTTVR Pole Material*"
+                android:textColor="@color/redred"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_material_httvr"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:background="@drawable/bg_spinner_field" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_ht_sc_no_no_11kv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="HT service number*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_ht_sc_no_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/remarks_estimates_bg"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                android:hint="Enter HT service number"
+                android:inputType="textCapCharacters"
+                android:maxLength="8"
+                android:padding="5dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_service_released"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Is Service Released?*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_service_released_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/service_released" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_ht_service_no_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="HT Service Number*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_ht_service_no_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_service_released_no_11kv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Registration number*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_service_released_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/remarks_estimates_bg"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                android:hint="Enter Registration number"
+                android:inputType="textCapCharacters"
+                android:maxLength="16"
+                android:padding="10dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_ab_switch_11kv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="AB Switch*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_pole_ab_switch_type_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_target_feeders"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Target feeders corresponding to this location*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_target_feeders_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sp_pole_type_11"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Pole Type*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_pole_type_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/pole_type" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sp_pole_height_11"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_pole_height_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Pole Height*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_pole_height_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:background="@drawable/bg_spinner_field" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/ch_11kv_pole_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Proposed Pole"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_hint_text_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="(This option to be selected when there is requirement of replacement of Existing Pole)*"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layout_sp_pole_desc_11"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_sp_pole_desc_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Pole Description*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_sp_pole_desc_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:background="@drawable/bg_spinner_field" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pole_support_11kv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Pole Support*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_pole_support_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:entries="@array/pole_support" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sp_no_of_pole_support_11"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_select_pole_no_text_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Select the no of STRUT*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/ch_33kv_8_stuart_poles_11kv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Proposed PSCC 8M Strut "
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/layout_sp_pole_desc_11kv_8_sturt"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_sp_pole_desc_11kv_8_sturt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Pole Description*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_sp_pole_desc_11kv_8_sturt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:popupBackground="@drawable/spinner_dropdown_bg"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_select_8m_pole_no_11kv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Select the no 8M Poles*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_no_8_poles_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/no_of_pole_support"
+                    android:popupBackground="@drawable/spinner_dropdown_bg"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/ch_33kv_9_stuart_poles_11kv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Proposed PSCC 9.1M Strut"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/layout_sp_pole_desc_11kv_stuart_9m"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_sp_pole_desc_11kv_stuart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Pole Description*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_sp_pole_desc_11kv_stuart_9m"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:popupBackground="@drawable/spinner_dropdown_bg"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_select_9m_pole_no_11kv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Select the no 9.1M Poles*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_no_9_poles_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:popupBackground="@drawable/spinner_dropdown_bg"
+                    android:entries="@array/no_of_pole_support"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pole_bifercation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Feeder Segregaion/Bifurcation"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_fbc_sc"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/sp_bf_sg_estimates" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sturt_type_of_black_clamps_11kv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:fontFamily="@font/inter"
+                android:text="Stay/Strut Clamps*"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Select 9.1M Stay Clamps*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_sturt_type_black_clamps_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/cut_insulators" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter"
+                android:text="No Of Stay Clamps*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_sturt_no_of_black_clamps_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:clickable="false"
+                android:entries="@array/cut_insulators"
+                android:focusable="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sturt_8m_type_of_black_clamps_11kv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:fontFamily="@font/inter"
+                android:text="Stay  Clamps*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Select 8M Stay Clamps*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_sturt_8m_type_black_clamps_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/cut_insulators" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter"
+                android:text="No Of Stay Clamps*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_sturt_8m_no_of_black_clamps_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:clickable="false"
+                android:entries="@array/cut_insulators"
+                android:focusable="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_main_pole_stay_clamps_11kv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:fontFamily="@font/inter"
+                android:text="Stay  Clamps*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Type Of Stay Clamps*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_main_pole_stay_clamps_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/cut_insulators" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter"
+                android:text="No Of Stay Clamps*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_no_stay_clamps_main_pole"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center|left"
+                android:layout_margin="5dp"
+                android:background="@drawable/distance_border"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:inputType="text"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="2"
+                android:textColor="@color/ui_black_color"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_no_main_pole_stay_clamps_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:clickable="false"
+                android:entries="@array/cut_insulators"
+                android:focusable="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sp_no_of_pole_stay_support_11"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_select_pole_no_text_stay_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Select the no of Stays*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_no_stays_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:entries="@array/no_of_pole_stay_support" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sp_pole_cut_pin_point_11"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Pin/Cut Point*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_pole_pin_cut_point_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:entries="@array/pin_cut_point_estimates" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_ded_end_pole_11kv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Is Ded End Pole*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_ded_end_pole_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/dedend_pole_estimates" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_materials_11kv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_fabrication_materials_11kv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Fabrication Materials"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_v_crossing_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/ch_no_of_v_crossing_11kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="V Crossing Arms"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/layout_no_v_crossing_arms_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Select V Cross Arm type"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_type_of_v_crossing_arms_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/inter"
+                        android:text="No Of V Crossing Arms*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_no_of_v_crossing_arms_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_top_cleat_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/ch_top_cleat_11kc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Top Cleat"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/layout_no_top_cleat_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Select Top Cleat type"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_type_top_cleat_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/inter"
+                        android:text="No Of Top Cleat*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_no_of_top_cleat_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_tapping_cross_arm_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/ch_tapping_cross_arms_11kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Tapping Cross Arm"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/layout_no_tapping_cross_arms_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Select Tapping Crossing Arm Type"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_tapping_x_arm_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/inter"
+                        android:text="No Of Tapping Cross Arms*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_no_of_tapping_cross_arms_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_channel_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/ch_channel_11kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Channel"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/layout_no_channel_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Select Channel Type"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_channel_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/inter"
+                        android:text="No Of Channels"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_no_of_channel_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_side_arm_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/ch_side_arm_11kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Side Arm"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/layout_no_side_arm_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Select Side Arm Type"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_side_arm_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/inter"
+                        android:text="No Of Side Arm"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_no_of_side_arm_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:fontFamily="@font/inter"
+                android:text="Back Clamps"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/ch_back_clamps_11kv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:checked="true"
+                android:text="Back Clamps"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/layout_type_of_black_clamps_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Type Of Back Camps*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_type_black_clamps_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/cut_insulators" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter"
+                    android:text="No Of Back Clamps*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_no_of_black_clamps_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:clickable="false"
+                    android:entries="@array/back_clamps"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_insulators_details_11kv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Insulator Details"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_no_of_pin_insulators_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/ch_pin_insulators_11kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Pin Insulators"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/layout_no_of_pin_insulators_type_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Select Pin Insulator Type*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_pin_insulators_type_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="No Of Pin Insulators*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_no_of_pin_insulators_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/pin_insulators" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_no_of_cut_insulators"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Type Of Insulators*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/ch_disc_insulators_11kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Disc Insulators"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/layout_type_of_disc_insulator_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Type Of  Disc Insulators*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_type_disc_insulators_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/cut_insulators" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="No Of Disc Insulators*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_no_of_disc_insulators_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/cut_insulators" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="No Of Count Arm*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_no_of_count_side_arm_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/cut_insulators"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/layout_type_of_metal_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Type Of  Metal Parts*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_type_metal_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/cut_insulators" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/inter"
+                        android:text="No Of Metal Parts*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_no_of_metal_parts_11kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:ellipsize="end"
+                        android:gravity="center|left"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/ui_black_color"
+                        android:visibility="visible"
+                        tools:text="2" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_no_of_metal_insulators_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/cut_insulators"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pole_concrete_11kv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_pole_concrete_11kv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Pole Concrete Required?"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_pole_concrete_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:entries="@array/pole_concrete" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pole_structure_11kv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Pole Structure"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_pole_structure_11kv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:entries="@array/pole_structure_estimates" />
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/sap_33_material_layout_11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_material_card"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_material_header"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Material"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Materials Excluding Conductors &amp; Poles"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Table Header -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EEF2F7"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/qty_11kv_new"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/uom_11kv_new"
+                    android:gravity="center"
+                    android:text="QTY"
+                    android:textColor="#2878FF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/uom_11kv_new"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:text="UOM"
+                    android:textColor="#2878FF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/desc_11kv_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/qty_11kv_new"
+                    android:paddingStart="16dp"
+                    android:text="DESCRIPTION"
+                    android:textColor="#2878FF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/material_rv_11_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/sap_33_material_layout_11_AB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_material_card"
+            android:orientation="vertical"
+            android:elevation="4dp"
+            android:visibility="gone">
+
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_material_header"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="AB Switch material"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="(Materials Excluding Conductors &amp; Poles)"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EEF2F7"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/qty_11kv_ab"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/uom_11kv_ab"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="QTY"
+                    android:textColor="#2878FF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/uom_11kv_ab"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="UoM"
+                    android:textColor="#2878FF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/desc_11kv_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/qty_11kv_ab"
+                    android:fontFamily="@font/inter"
+                    android:paddingStart="16dp"
+                    android:text="  DESCRIPTION"
+                    android:textColor="#2878FF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/material_rv_11_ab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/material_adapter" />
+
+
+        </LinearLayout>
+
+        <!--        35dp-->
+        <LinearLayout
+            android:id="@+id/layout_dtr_survey"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter"
+                android:text="--------DTR Details--------"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:text="DTR Survey Type*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_dtr_survey_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:entries="@array/dtr_survey_type" />
+
+
+            <LinearLayout
+                android:id="@+id/existing_layout_dtr_details_11kv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_dtr_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter"
+                    android:text="----Existing DTR Details----"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/existing_main_lt_layout_11kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_dtrstrcuture_code"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Existing DTR Structure Code :"
+                        android:textColor="@color/ui_black_color"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/existing_dtr_structure_code_11kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:gravity="center|left"
+                        android:hint="Existing Select DTR Structure Code"
+                        android:padding="5dp"
+                        android:textColor="@color/ui_black_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/existing_dtr_details_11kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/existing_layout_dtr_phase_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Existing DTR Phase*"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/existing_sp_dtr_phase_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/distance_border"
+                            android:padding="5dp"
+                            android:textSize="15dp"
+                            tools:text="hello" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/existing_layout_dtr_capacity"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Existing DTR Capacity*"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/existing_sp_dtr_capacity_phase1_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/distance_border"
+                            android:padding="10dp"
+                            android:textSize="15dp"
+                            tools:text="hello" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/existing_layout_dtr_location_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Existing DTR Location*"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/existing_dtr_location_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/distance_border"
+                            android:padding="10dp"
+                            android:textSize="15dp"
+                            tools:text="hello" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/existing_layout_dtr_make_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Existing DTR Make*"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/existing_dtr_make"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/distance_border"
+                            android:padding="10dp"
+                            android:textSize="15dp"
+                            tools:text="hello" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/existing_layout_dtr_sl_no_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Existing DTR Serial No*"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/existing_dtr_sl_no"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/distance_border"
+                            android:padding="10dp"
+                            android:textSize="15dp"
+                            tools:text="hello" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/distance_border"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+                    <!-- Title -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="-----DTR Particulars-----"
+                        android:textStyle="bold" />
+                    <!-- Details Layout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+                        <!-- Row 1: Phase & Capacity -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Phase :"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_phase"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:text="III" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Capacity :"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_capacity"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:text="" />
+                        </LinearLayout>
+                        <!-- Row 2: Sl.No -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Sl.No :"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_slno"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:text="" />
+                        </LinearLayout>
+                        <!-- Row 3: Make -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Make :"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_make"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:text="" />
+                        </LinearLayout>
+                        <!-- Row 4: Location -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Location :"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_location_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:text="" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_edit_dtr_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:text="Edit DTR DETAILS"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_details_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/package_no_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Package No:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/package_no"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bg_spinner_field"
+                            android:gravity="center_vertical"
+                            android:padding="4dp"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/voltage_ratio_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Voltage Ratio:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/voltage_ratio"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bg_spinner_field"
+                            android:gravity="center_vertical"
+                            android:padding="4dp"
+                            android:paddingStart="10dp"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dtr_manufacture_date_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Select DTR Manufacture Date:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/dtr_manufacture_date"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bg_spinner_field"
+                            android:gravity="center_vertical"
+                            android:padding="4dp"
+                            android:paddingStart="10dp"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dtr_install_date_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Select DTR Installation Date:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/dtr_install_date"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bg_spinner_field"
+                            android:gravity="center_vertical"
+                            android:padding="4dp"
+                            android:paddingStart="10dp"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/existing_dtr_particulars_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/existing_dtr_layout_dtr_phase_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Existing DTR Phase*"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/existing_dtr_sp_dtr_phase_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_spinner_field" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/existing_dtr_layout_dtr_capacity"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Existing DTR Capacity*"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/existing_dtr_sp_dtr_capacity_phase1_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/dtr_phase1_capacity_11kv"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/existing_dtr_sp_dtr_capacity_phase2_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/dtr_phase2_capacity_11kv"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/existing_dtr_layout_dtr_location_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Existing DTR Location*"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/existing_dtr_dtr_location_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/distance_border"
+                            android:hint="Enter Existing DTR Location Name"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="200"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textSize="15dp"
+                            tools:text="hello" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/existing_dtr_layout_dtr_make_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Existing DTR Make*"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/sp_existing_dtr_et_dtr_make"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:popupBackground="@drawable/spinner_dropdown_bg"
+                            android:entries="@array/dtr_apartment"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/existing_dtr_et_dtr_make"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/distance_border"
+                            android:hint="Enter Existing DTR Make"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="200"
+                            android:padding="10dp"
+                            android:textAllCaps="true"
+                            android:textSize="15dp"
+                            android:visibility="gone"
+                            tools:text="hello" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/existing_dtr_layout_dtr_sl_no_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Existing DTR Serial No*"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/existing_dtr_et_dtr_sl_no"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/distance_border"
+                            android:hint="Enter Existing Serial number"
+                            android:maxLength="200"
+                            android:padding="10dp"
+                            android:textSize="15dp"
+                            tools:text="hello" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_apartment_11kv_existing"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Is LT Circuit Available?*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_dtr_apartment_11_existing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/dtr_apartment" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_no_of_lt_circuits_11_existing"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="No of LT Circuits*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="(i.e No of feedings / No of LT Feeders)"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="(Ex : A Feeding , B -feeding , C -Feeding )"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_no_of_lt_circuits_11_existing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_meter_11kv_existing"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Is Meter connected to DTR without LT Pole*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_meter_available_11_existing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/meter_available_estimates" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sap_33_material_layout_11_meter_existing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_material_card"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_material_header"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="LT Meter"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="(Materials Excluding Conductors &amp; Poles)"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#EEF2F7"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/qty_11kv_meter_existing"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/uom_11kv_meter_existing"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="QTY"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/uom_11kv_meter_existing"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="UoM"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/desc_11kv_meter_existing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/qty_11kv_meter_existing"
+                            android:fontFamily="@font/inter"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="   DESCRIPTION"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/material_rv_11_meter_existing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:nestedScrollingEnabled="false"
+                        tools:listitem="@layout/material_adapter" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/proposed_layout_dtr_details_11kv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter"
+                    android:text="----Proposed DTR Details----"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_phase_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed DTR Phase*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_dtr_phase_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:popupBackground="@drawable/spinner_dropdown_bg"
+                        android:background="@drawable/bg_spinner_field" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_capacity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed DTR Capacity*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_dtr_capacity_phase1_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:popupBackground="@drawable/spinner_dropdown_bg"
+                        android:entries="@array/dtr_phase1_capacity_11kv"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_dtr_capacity_phase2_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:popupBackground="@drawable/spinner_dropdown_bg"
+                        android:entries="@array/dtr_phase2_capacity_11kv"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_material"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_sp_pole_desc_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="DTR Material"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_dtr_material_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:popupBackground="@drawable/spinner_dropdown_bg"
+                        android:background="@drawable/bg_spinner_field" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_location_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed DTR Location*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+
+                    <EditText
+                        android:id="@+id/dtr_location_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:hint="Enter DTR Location Name"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="200"
+                        android:padding="10dp"
+                        android:textSize="15dp"
+                        tools:text="hello" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_lt_layout_11kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed DTR Structure Code :"
+                        android:textColor="@color/ui_black_color"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/dtr_structure_code_11kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:gravity="center|left"
+                        android:hint="ProposedSelect DTR Structure Code"
+                        android:padding="5dp"
+                        android:textColor="@color/ui_black_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_apartment_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_lt_available"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Is LT Circuit Available?*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_dtr_apartment_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:popupBackground="@drawable/spinner_dropdown_bg"
+                        android:background="@drawable/bg_spinner_field" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_no_of_lt_circuits_11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/inter"
+                        android:text="No of LT Circuits*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/inter"
+                        android:text="(i.e No of feedings / No of LT Feeders)"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/inter"
+                        android:text="(Ex : A Feeding , B -feeding , C -Feeding )"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_no_of_lt_circuits_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:popupBackground="@drawable/spinner_dropdown_bg"
+                        android:background="@drawable/bg_spinner_field" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_meter_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Is Meter connected to DTR without LT Pole*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_meter_available_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:popupBackground="@drawable/spinner_dropdown_bg"
+                        android:entries="@array/meter_available_estimates" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_make_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed DTR Make*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_dtr_make"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/distance_border"
+                        android:maxLength="200"
+                        android:padding="10dp"
+                        android:textSize="15dp"
+                        android:visibility="gone"
+                        tools:text="hello" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_existing_dtr_et_dtr_make_proposed"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_sl_no_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed DTR Serial No*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_dtr_sl_no"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/distance_border"
+                        android:maxLength="200"
+                        android:padding="10dp"
+                        android:textSize="15dp"
+                        tools:text="hello" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_phase_desc_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed DTR Description*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_dtr_phase_desc_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_mounting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_dtr_mounting_11kv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed DTR Mounting*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_dtr_mounting_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:popupBackground="@drawable/spinner_dropdown_bg"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/dtr_mounting_11kv" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sap_33_material_layout_11_meter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/adapter_border"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="start"
+                        android:text="LT Meter"
+                        android:textColor="@color/redred"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="start"
+                        android:text="(Materials Excluding Conductors &amp; Poles)"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/new_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/qty_11kv_meter"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/uom_11kv_meter"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="QTY"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/uom_11kv_meter"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="UoM"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/desc_11kv_meter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/qty_11kv_meter"
+                            android:fontFamily="@font/inter"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="  DESCRIPTION"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/new_color" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/material_rv_11_meter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:nestedScrollingEnabled="false"
+                        tools:listitem="@layout/material_adapter" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_type_of_load_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Type of Load*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_type_of_load_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/type_of_load_estimates" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/layout_gi_pipe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_gi_pipe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed GI Pipes*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <CheckBox
+                        android:id="@+id/ch_gi_pipe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="GI Pipes"
+                        android:textSize="18sp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_sp_gi_pipes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_sp_sp_gi_pipes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Select GI Pipes *"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/sp_gi_pipes"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/no_of_lt_ckts" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_ab_switch_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed DTR AB Switch*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_pole_dtr_ab_switch_type_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_hg_fuse_set_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed HG Fuse Set*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_hg_fuse_set_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_lt_fuse_set_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed LT Fuse /Distribution Box*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_lt_fuse_distribution_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/lt_fuse" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_lt_box_distribution_11kv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Proposed Distribution Box*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_lt_fuse_box_distribution_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/lt_fuse" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_dtr_shifted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Is DTR Shifted?*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_dtr_shifted_11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/dtr_shifted" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_dtr_shifted_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="DTR Shifting remark*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/dtr_shifted_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/distance_border"
+                    android:gravity="top|start"
+                    android:hint="Enter DTR Shifted Remark"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:lines="3"
+                    android:maxLength="500"
+                    android:paddingStart="10dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="false"
+                    android:textSize="12sp"
+                    tools:text="hello" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_lt_ckt_available_11"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Is LT Circuit available?*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_lt_ckt_available_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/e_yes_no" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_no_of_lt_ckt_11"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="No of LT Circuits*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_no_of_lt_ckt_11"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/no_of_lt_ckts" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/existing_dtr_layout_dtr_make_11kv_existing"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Existing DTR Make*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/existing_dtr_et_dtr_make_existing"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/distance_border"
+                android:hint="Enter Existing DTR Make"
+                android:inputType="textCapCharacters"
+                android:maxLength="200"
+                android:padding="10dp"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                tools:text="hello" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/existing_dtr_layout_dtr_sl_no_11kv_existing"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/updated_layout_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Existing DTR Serial No*"
+                android:textColor="@color/ui_black_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/existing_dtr_et_dtr_sl_no_existing"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/distance_border"
+                android:hint="Enter Existing Serial number"
+                android:maxLength="200"
+                android:padding="10dp"
+                android:textSize="15dp"
+                tools:text="hello" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,1999 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_toolbar_gradient"
+    tools:context=".estimates.new_module.EstimatesMap">
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+            <RelativeLayout
+                android:id="@+id/back_layout"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/outline_arrow_back_ios_new_24"
+                    android:tint="@color/white" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/close_layout"
+                android:layout_toRightOf="@id/back_layout"
+                >
+
+                <TextView
+                    android:id="@+id/home_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/inter"
+                    android:text="ESTIMATES"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/close_layout"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+               >
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/current_location"
+                     />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+<!--        <TextView-->
+<!--            android:id="@+id/wo_no"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:background="@color/background_color"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingTop="5dp"-->
+<!--            android:text="WO NO : "-->
+<!--            android:textColor="@color/red1"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="gone" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/est_no"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:background="@color/background_color"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingTop="5dp"-->
+<!--            android:text="EST NO : "-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="visible" />-->
+
+
+        <TextView
+            android:id="@+id/present_survey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/background_color"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="PRESENT SURVEY : "
+            android:textColor="@color/redred"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/background_color"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="33KV"
+                    android:textColor="@color/redred"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/circle_border"
+                        android:backgroundTint="#FFFF0000"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Existing Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FFFF0000"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Proposed Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FFFF0000"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Multi Ckt Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="#FFFF0000"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Line"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/background_color"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="11KV"
+                    android:textColor="@color/redred"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/circle_border"
+                        android:backgroundTint="#FF00FF00"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Existing Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FF00FF00"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Proposed Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FF00FF00"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Multi Ckt Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="#FF00FF00"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Line"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/background_color"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="LT"
+                    android:textColor="@color/redred"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/circle_border"
+                        android:backgroundTint="#FF00FFFF"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Existing Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FF00FFFF"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Proposed Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FF00FFFF"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Multi Ckt Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="#FF00FFFF"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/background_color"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Line"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/legends_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_layout"
+        android:background="@drawable/tool_bar_bg"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/legend_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+
+            <TextView
+                android:id="@+id/tv_legend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Hide Legend"
+                android:textColor="@color/ui_new_color"
+                android:fontFamily="@font/inter"
+                android:visibility="gone" />
+
+            <!-- Minimize icon -->
+            <ImageView
+                android:id="@+id/icon_minimize"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Minimize"
+                android:src="@drawable/ic_minimize"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_show_legend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Show Estimates details"
+                android:textColor="@color/ui_new_color"
+                android:fontFamily="@font/inter"
+                android:background="@drawable/bg_work_involvements"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <!-- Maximize icon -->
+            <ImageView
+                android:id="@+id/icon_maximize"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Maximize"
+                android:src="@drawable/ic_maximize"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_scrolling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="This is a long scrolling text example.............................................................................."
+            android:ellipsize="marquee"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+        <LinearLayout
+            android:id="@+id/layout_est_feeder_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tv_action_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:gravity="start"
+                android:paddingRight="5dp"
+                tools:text="Enhancement of DTR Required"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/wo_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/inter"
+                android:gravity="start"
+                android:paddingTop="5dp"
+                android:text="Wo No : "
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/est_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/inter"
+                android:gravity="start"
+                android:paddingTop="5dp"
+                android:text="EST NO : "
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/est_nature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/inter"
+                android:gravity="start"
+                android:paddingTop="5dp"
+                android:text="EST NO : "
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/feeder_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+                android:fontFamily="@font/inter"
+                android:gravity="start"
+                android:paddingTop="5dp"
+                android:text="EST NO : "
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_line_survey_type"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_line_survey_type"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:background="@drawable/ddimg" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/legend_header_est_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+
+            <TextView
+                android:id="@+id/tv_legend_est_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Hide Legend"
+                android:textColor="@color/ui_new_color"
+                android:fontFamily="@font/inter"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <!-- Minimize icon -->
+            <ImageView
+                android:id="@+id/icon_minimize_est_info"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Minimize"
+                android:src="@drawable/ic_minimize"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_show_legend_est_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Show Legend"
+                android:textColor="@color/ui_new_color"
+                android:fontFamily="@font/inter"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <!-- Maximize icon -->
+            <ImageView
+                android:id="@+id/icon_maximize_est_info"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Maximize"
+                android:src="@drawable/ic_maximize"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_display_est_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="33KV"
+                    android:textColor="@color/redred"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/circle_border"
+                        android:backgroundTint="#FFFF0000"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Existing Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FFFF0000"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Proposed Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FFFF0000"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Multi Ckt Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="#FF0000FF"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Line"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="11KV"
+                    android:textColor="@color/redred"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/circle_border"
+                        android:backgroundTint="#FF0000FF"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Existing Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FF0000FF"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Proposed Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FF00FF00"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Multi Ckt Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+
+                        android:background="@drawable/dot_dash_dash"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Line"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="LT"
+                    android:textColor="@color/redred"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/circle_border"
+                        android:backgroundTint="#FF00FFFF"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Existing Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FF00FFFF"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Proposed Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/proposed_pole"
+                        android:backgroundTint="#FF00FFFF"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text=" Multi Ckt Pole"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/dot"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="  Line"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tap_load_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/adapter_border"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Tap on the map to load existing data"
+            android:textAllCaps="true"
+            android:textColor="@color/ui_new_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tap_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/adapter_border"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Tap on the map to select the tapping location"
+            android:textAllCaps="false"
+            android:textColor="@color/redred"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/legends_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/header_layout"-->
+<!--        android:background="@color/background_color"-->
+<!--        android:orientation="vertical"-->
+<!--        android:visibility="visible"-->
+<!--        android:padding="8dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/wo_no"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:background="@color/background_color"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingTop="5dp"-->
+<!--            android:text="Wo No : "-->
+<!--            android:textColor="@color/red1"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="gone" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/est_no"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:background="@color/background_color"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingTop="5dp"-->
+<!--            android:text="EST NO : "-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="visible" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/est_nature"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:background="@color/background_color"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingTop="5dp"-->
+<!--            android:text="EST NO : "-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="visible" />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/feeder_id"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:background="@color/background_color"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingTop="5dp"-->
+<!--            android:text="EST NO : "-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="gone" />-->
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/legend_header"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="end"-->
+<!--            android:padding="4dp">-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_legend"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Hide Legend"-->
+<!--                android:textColor="@color/red1"-->
+<!--                android:visibility="visible"-->
+<!--                android:layout_gravity="center"/>-->
+
+<!--            &lt;!&ndash; Minimize icon &ndash;&gt;-->
+<!--            <ImageView-->
+<!--                android:id="@+id/icon_minimize"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:src="@drawable/ic_minimize"-->
+<!--                android:contentDescription="Minimize"-->
+<!--                android:visibility="gone" />-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_show_legend"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Show Legend"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_gravity="center"/>-->
+
+
+<!--            &lt;!&ndash; Maximize icon &ndash;&gt;-->
+<!--            <ImageView-->
+<!--                android:id="@+id/icon_maximize"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:src="@drawable/ic_maximize"-->
+<!--                android:contentDescription="Maximize"-->
+<!--                android:visibility="gone" />-->
+<!--        </LinearLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/layout_display_est_info"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:visibility="visible"-->
+<!--            android:weightSum="3">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="start"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@color/background_color"-->
+<!--                    android:fontFamily="@font/inter"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="33KV"-->
+<!--                    android:textColor="@color/redred"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="15dp"-->
+<!--                        android:layout_height="15dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:background="@drawable/circle_border"-->
+<!--                        android:backgroundTint="#FFFF0000"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="  Existing Pole"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="24dp"-->
+<!--                        android:layout_height="22dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:background="@drawable/proposed_pole"-->
+<!--                        android:backgroundTint="#FFFF0000"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text=" Proposed Pole"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:visibility="gone">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="24dp"-->
+<!--                        android:layout_height="22dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:background="@drawable/proposed_pole"-->
+<!--                        android:backgroundTint="#FFFF0000"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text=" Multi Ckt Pole"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="3dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:background="#FF0000FF"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="  Line"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="start"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@color/background_color"-->
+<!--                    android:fontFamily="@font/inter"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="11KV"-->
+<!--                    android:textColor="@color/redred"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="15dp"-->
+<!--                        android:layout_height="15dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:background="@drawable/circle_border"-->
+<!--                        android:backgroundTint="#FF0000FF"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="  Existing Pole"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="24dp"-->
+<!--                        android:layout_height="22dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:background="@drawable/proposed_pole"-->
+<!--                        android:backgroundTint="#FF0000FF"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text=" Proposed Pole"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:visibility="gone">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="24dp"-->
+<!--                        android:layout_height="22dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:background="@drawable/proposed_pole"-->
+<!--                        android:backgroundTint="#FF00FF00"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text=" Multi Ckt Pole"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="3dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="5dp"-->
+
+<!--                        android:background="@drawable/dot_dash_dash"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="  Line"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="start"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@color/background_color"-->
+<!--                    android:fontFamily="@font/inter"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="LT"-->
+<!--                    android:textColor="@color/redred"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="15dp"-->
+<!--                        android:layout_height="15dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:background="@drawable/circle_border"-->
+<!--                        android:backgroundTint="#FF00FFFF"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="  Existing Pole"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="24dp"-->
+<!--                        android:layout_height="22dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:background="@drawable/proposed_pole"-->
+<!--                        android:backgroundTint="#FF00FFFF"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text=" Proposed Pole"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:visibility="gone">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="24dp"-->
+<!--                        android:layout_height="22dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:background="@drawable/proposed_pole"-->
+<!--                        android:backgroundTint="#FF00FFFF"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text=" Multi Ckt Pole"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="3dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:background="@drawable/dot"-->
+
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:background="@color/background_color"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="  Line"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tap_load_data"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/adapter_border"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="5dp"-->
+<!--            android:text="Tap on the map to load existing data"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textColor="@color/redred"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="gone" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tap_select"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/adapter_border"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="5dp"-->
+<!--            android:text="Tap on the map to select the tapping location"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/redred"-->
+<!--            android:textSize="12sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="gone" />-->
+
+
+<!--    </LinearLayout>-->
+
+
+
+
+
+
+    <com.esri.arcgisruntime.mapping.view.MapView
+        android:id="@+id/map1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@id/legends_layout" />
+
+    <RelativeLayout
+        android:id="@+id/reload_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/footer"
+        android:layout_marginBottom="25dp"
+        android:visibility="gone"
+        android:background="@drawable/button_gradient"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:text="    Reload Locations   "
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/reload_map_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="25dp"
+        android:layout_above="@+id/footer"
+        android:background="@drawable/button_gradient"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:text="    Reload Base Map    "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_bottom_version"
+        android:orientation="horizontal"
+        >
+
+
+
+        <TextView
+            android:id="@+id/btn_complete_survey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_gradient"
+            android:fontFamily="@font/inter"
+            android:padding="8dp"
+            android:text="COMPLETE SURVEY"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_transmit_data"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/inter"
+            android:padding="4dp"
+            android:text="TRANSMIT DATA"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_toolbar_gradient"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter"
+            android:text="@string/powerby"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

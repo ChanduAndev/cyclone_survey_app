@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Temporary camera images -->
+    <cache-path
+        name="camera_cache"
+        path="." />
+
+    <!-- Keep this if your existing app uses it elsewhere -->
+    <external-path
+        name="my_images"
+        path="Android/data/com.apepdcl.gis_survey/files/Pictures" />
+
+</paths>
+
+

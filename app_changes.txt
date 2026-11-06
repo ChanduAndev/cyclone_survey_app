@@ -1,0 +1,78 @@
+App Version 4.3.2 Changes:
+-------------------------
+Edit Pole Details,Source Pole, Pole Lat Longs in 11KV & 33KV 
+Edit Pole Details,Source Pole, Pole Lat Longs in Asset Survey
+Added a CYCLONE column in PMI Survey
+Added EST_No,Work_order_no,GIS_ID in failure dialog box.
+
+App Version 4.3.3 Changes
+-------------------------
+Removed LT 500 meters Restriction
+
+
+App Version 4.3.4 Changes
+-------------------------
+Added POLE_RATIO and PLINTH_RATIO columns in PMI
+
+
+App Version 4.3.5 Changes
+-------------------------
+Added CURRENT_LAT and CURRENT_LONG columns in PMI
+if the selected pole no is 200 meters far from current location showing an alert
+if offline 500 meters online 200
+DATA_ID null issue resolved
+Inserted BBOX Coordinates
+Added Simplified is false in uploadImage API
+
+App Version 4.4 Changes
+-------------------------
+Resolved Est_feeders null issue
+Released Solarization of SC ST
+
+App Version 4.4.1 Changes
+-------------------------
+showing Action Remarks in all screens in the Solar module
+Changed UG Cable home screen design
+
+App Version 4.4.2 Changes
+-------------------------
+Re-design the UI for “Select Location Survey Type” and “New/Mapped Location” in a single dialog.
+Added distance validation for the intermediate pole across all voltage levels. currently commented
+Added A dialog for when the DTR shifting case
+Added A dialog for when the Existing line tapping case if the Pole_type is changed then inserted E_POLE as Y
+Added A dialog for Intermediate Pole
+Mapped Location Showing only when required
+Check Box : Proposed Pole
+(This option to be selected when there is requirement of replacement of Existing Pole)
+No of LT Ckts
+(ie No of feedings / No of LT Feeders)
+(Ex : A Feeding , B -feeding , C -Feeding )
+Added Estimate details for error dialog boxes
+Changed Dashboard design
+Resolved crash issue in Solar module
+
+App Version 4.4.3 Changes
+-------------------------
+Offline Survey
+Update Location showing near 300 meters poles
+
+App Version 4.4.4 Changes
+-------------------------
+Resolved PMI distance and crashed issue
+
+App Version 4.4.5 Changes
+-------------------------
+Added 10 feeders in 11KV
+"Add the button ALL and near by DTRs (100mts)near by Distance 50, 100, 200,500,1000 there are no DTRs found in the selected 50mts range"
+Show the existing circuits in modify work involvement
+Showing only 100 meters poles from selected Location in PMI app and Estimate & Work order module
+Added AIResponse when the defect is rejected in offline in PMI app
+Loading Existing Locations nearedBy 500 meters in Online and 1000 meters Offline
+Added Survey_Mode column in PMI app
+Changed Source Pole Logic like Removed Duplicates and Showing poles like Ascending Order
+Selected reference Pole also material adding Provision (Intermediate)
+Added Proposed SS for both 33kV and 11kV
+
+
+
+

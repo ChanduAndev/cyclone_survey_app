@@ -1,0 +1,1981 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR Attributes"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:id="@+id/btn_lttopclear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/button_round_corner"
+                        android:gravity="center"
+                        android:text="Clear"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR Structure :"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/tv_dtrstrcuture"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR Structure :"
+                        android:textColor="#0A4E75" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR Make :"
+                        android:textColor="@color/red" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/aut_dtrmake"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView2"
+                        android:layout_alignLeft="@+id/textView2"
+                        android:ems="10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_dtrserialnum"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter DTR Serial No."
+                            android:inputType="number"
+                            android:maxLength="10" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR LoadType :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_dtrload"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_load" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR Phase :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_dtrphase"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_phase" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR Capacity :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_dtrcapacity"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_abswt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR Structure Type :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_dtrstr_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_str_type" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR Pole Support :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_dtrs_pole_support"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_pole_support" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_noof_sturts"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_noof_sturts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter No.Of Sturts"
+                            android:inputType="number"
+                            android:maxLength="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_noof_stay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_noof_stay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter No.Of Stay"
+                            android:inputType="number"
+                            android:maxLength="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Pole No :"
+                        android:textColor="@color/red" />
+
+                    <EditText
+                        android:id="@+id/ed_pole_no"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="From Pole :"
+                        android:textColor="@color/red" />
+
+                    <EditText
+                        android:id="@+id/ed_frompole"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <!--  <LinearLayout
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="10dp"
+                      android:orientation="vertical">
+
+                      <TextView
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="4dp"
+                          android:padding="4dp"
+                          android:text="Line Type* :"
+                          android:textColor="@color/red" />
+
+                      <Spinner
+                          android:id="@+id/sp_lineType"
+                          android:layout_width="fill_parent"
+                          android:layout_height="40dp"
+                          android:layout_marginTop="10dp"
+                          android:background="@drawable/ddimg"
+                          android:entries="@array/line_type" />
+                  </LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR AB Switch :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_dtrabswt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_abswt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_abswt_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR AB SwitchType :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_dtrabswt_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_abswt_type" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR HG Fuse Set :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_dtrgh_fuseset"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_ghfuse" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_dtrhgfuse"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="BUS Bar type(ABS to HG Fuse) :"
+                            android:textColor="@color/red" />
+
+                        <Spinner
+                            android:id="@+id/sp_busbar_type"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/dtr_busbar" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_busbar_condoctorsize"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:padding="4dp"
+                                android:text="Conductor Size :"
+                                android:textColor="@color/red" />
+
+                            <Spinner
+                                android:id="@+id/sp_consuctorsize"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/ddimg"
+                                android:entries="@array/busbar_conductorsize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="HG Fuse to DTR :"
+                            android:textColor="@color/red" />
+
+                        <Spinner
+                            android:id="@+id/sp_hgfuseto_dtr"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/hg_fuseto_dtr" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Conductor Size :"
+                            android:textColor="@color/red" />
+
+                        <Spinner
+                            android:id="@+id/sp_hgfuseto_dtr_consuctorsize"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/busbar_conductorsize" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Earth Pipes :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_earthpits"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_earthpits" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_earthpitstype"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Earth Pipes Type:"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_earthpits_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_earthpitstype" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_cipipes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="CI Pipes :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_cipipes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_cipipes" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_gipipes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="GI Pipes :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_gipipes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_gipipes" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR Meter:"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_dtrmeter"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_meter" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_nof_dtrmeters"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="No.Of DTR Meters:"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_noof_dtrmeters"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/noofdtr_meters" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_dtrmeter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_meternum"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Meter1 Serial No"
+                                android:inputType="text"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_metermake"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Meter1 Make"
+                                    android:maxLength="100" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_metercapacity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Meter1 Capacity / LTCT Ratio"
+                                    android:maxLength="100" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:padding="4dp"
+                                android:text="Meter1 Type :"
+                                android:textColor="@color/red" />
+
+                            <Spinner
+                                android:id="@+id/sp_metertype"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/ddimg"
+                                android:entries="@array/meter_type" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Modem Available :"
+                            android:textColor="@color/red" />
+
+                        <Spinner
+                            android:id="@+id/sp_modem_available"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/dtr_modem" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_modem"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_modemserial_no"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Modem Serial No"
+                                    android:inputType="number"
+                                    android:maxLength="100" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_modem_make"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Modem Make"
+                                    android:maxLength="100" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_dtrmeter_two"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_meternum_two"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Meter2 Serial No"
+                                android:inputType="text"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_metermake_two"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Meter2 Make"
+                                android:maxLength="100" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_metercapacity_two"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Meter2 Capacity / LTCT Ratio"
+                                android:maxLength="100" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Meter2 Type :"
+                            android:textColor="@color/red" />
+
+                        <Spinner
+                            android:id="@+id/sp_metertype_two"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/meter_type" />
+                    </LinearLayout>
+                    <!-- </LinearLayout>-->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Modem2 Available :"
+                            android:textColor="@color/red" />
+
+                        <Spinner
+                            android:id="@+id/sp_modemtwo_available"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/dtr_modem" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_modemtwo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_modemtwo_serial_no"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Modem2 Serial No"
+                                    android:inputType="number"
+                                    android:maxLength="100" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_modemtwo_make"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Modem2 Make"
+                                    android:maxLength="100" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_dtrmeter_three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_meternum_three"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Meter3 Serial No"
+                                android:inputType="text"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_metermake_three"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Meter3 Make"
+                                android:maxLength="100" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_metercapacity_three"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Meter3 Capacity / LTCT Ratio"
+                                android:maxLength="100" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Meter3 Type :"
+                            android:textColor="@color/red" />
+
+                        <Spinner
+                            android:id="@+id/sp_metertype_three"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/meter_type" />
+                    </LinearLayout>
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Modem3 Available :"
+                            android:textColor="@color/red" />
+
+                        <Spinner
+                            android:id="@+id/sp_modemthree_available"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/dtr_modem" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_modem_three"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_modemthree_serial_no"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Modem3 Serial No"
+                                    android:inputType="number"
+                                    android:maxLength="100" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_modemthree_make"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Modem3 Make"
+                                    android:maxLength="100" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Modem Available :"
+                        android:textColor="@color/red" />
+                    <Spinner
+                        android:id="@+id/sp_modem_available"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_modem" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lyt_modem"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_modemserial_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Modem Serial No"
+                                android:maxLength="100"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_modem_make"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Modem Make"
+                                android:maxLength="100" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>-->
+                <!--<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="BUS Bar type(ABS to HG Fuse) :"
+                        android:textColor="@color/red" />
+                    <Spinner
+                        android:id="@+id/sp_busbar_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_busbar" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lyt_busbar_condoctorsize"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Conductoe Size :"
+                            android:textColor="@color/red" />
+                        <Spinner
+                            android:id="@+id/sp_consuctorsize"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/busbar_conductorsize" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="HG Fuse to DTR :"
+                        android:textColor="@color/red" />
+                    <Spinner
+                        android:id="@+id/sp_hgfuseto_dtr"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/hg_fuseto_dtr" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Conductoe Size :"
+                        android:textColor="@color/red" />
+                    <Spinner
+                        android:id="@+id/sp_hgfuseto_dtr_consuctorsize"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/busbar_conductorsize" />
+                </LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Lt Fuse Set  :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_lt_fuseset"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/lt_fuseset" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Lt Bus Bar  :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_lt_busbar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/lt_busbar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_busbarcable_size"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Lt Bus Bar Cable Size  :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_lt_busbarcable_size"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/lt_busbar_cablesize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_lt_busbarconductor_size"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Lt Bus Bar Conductor Size  :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_lt_busbarconductor_size"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/lt_busbar_conductorsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR Pole :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_dtrpole"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_pole" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_dtrpolepin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="PIN :"
+                            android:textColor="@color/red" />
+
+                        <Spinner
+                            android:id="@+id/sp_pin"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/pin" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="No.Of PIN Insulators:"
+                            android:textColor="@color/red" />
+
+                        <Spinner
+                            android:id="@+id/sp_noof_pininsulators"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/no_of_pin" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_dtrpolecut"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="CUT :"
+                            android:textColor="@color/red" />
+
+                        <Spinner
+                            android:id="@+id/sp_cut"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/cut" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_noof_cpin_insulators"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No.Of Pin Insulators"
+                                android:inputType="number"
+                                android:maxLength="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_noof_disc_insulators"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No.Of Disc Insulators"
+                                android:inputType="number"
+                                android:maxLength="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_landmark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter LandMark" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="No.of LT Circuits :"
+                        android:textColor="@color/red" />
+
+                    <Spinner
+                        android:id="@+id/sp_noof_ltcircuits"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/noof_ltcircuits" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="4dp"
+                        android:text="Defects observed?*"
+                        android:textColor="@color/red"/>
+                    <Spinner
+                        android:id="@+id/sp_dtr_defects"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/oh_ismulti_circuit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/defects_layout"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_structure_defects"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DTR Structure Defects"
+                        android:visibility="visible"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <Spinner
+                        android:id="@+id/sp_structure_defects"
+                        android:layout_width="fill_parent"
+                        android:visibility="gone"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/ch_fencing_required"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fencing Required"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/ch_dtr_ab_switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DTR AB Switch Defects"
+                        android:visibility="gone"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <Spinner
+                        android:id="@+id/sp_dtr_ab_switch"
+                        android:layout_width="fill_parent"
+                        android:visibility="gone"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dd_dtr_ab_switch" />
+
+                    <CheckBox
+                        android:id="@+id/ch_hg_fuse_set"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HG Fuse Set Damaged"
+                        android:visibility="gone"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/distribution_box_damaged"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Distribution Box Damaged/LT Fuse Set Damaged"
+                        android:visibility="gone"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/distribution_board_damaged"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Distribution Board Damaged"
+                        android:visibility="gone"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/lg_hg_fuse_set_damaged"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LT Fuse Set Damaged"
+                        android:visibility="gone"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/ch_earth_pits_damaged"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Earth Pits Damaged"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <Spinner
+                        android:id="@+id/sp_earth_pits_damaged"
+                        android:layout_width="fill_parent"
+                        android:visibility="gone"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        />
+                    <CheckBox
+                        android:id="@+id/ch_no_of_lt_bushings_damaged"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LT Bushings Damaged"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+
+
+
+                    <Spinner
+                        android:id="@+id/sp_no_of_lt_bushings_damaged"
+                        android:layout_width="fill_parent"
+                        android:visibility="gone"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dd_dtr_lt_bushings_damaged" />
+                    <CheckBox
+                        android:id="@+id/ch_no_of_ht_bushings_damaged"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HT Bushings Damaged"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <Spinner
+                        android:id="@+id/sp_no_of_ht_bushings_damaged"
+                        android:layout_width="fill_parent"
+                        android:visibility="gone"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dd_dtr_ht_bushings_damaged" />
+                    <CheckBox
+                        android:id="@+id/ch_pg_clamp_lugs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PG Clamps/Lugs"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <Spinner
+                        android:id="@+id/sp_pg_clamp_lugs"
+                        android:layout_width="fill_parent"
+                        android:visibility="gone"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dd_dtr_pg_clamp" />
+                    <CheckBox
+                        android:id="@+id/ch_xlpe_cable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="XLPE Cable Damaged"
+                        android:visibility="gone"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/ch_lightening_aresters"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lightening Aresters"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <Spinner
+                        android:id="@+id/sp_lightening_aresters"
+                        android:layout_width="fill_parent"
+                        android:visibility="gone"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dd_dtr_lighetning" />
+                    <CheckBox
+                        android:id="@+id/ch_oil_leakage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Oil Leakage"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/ch_other_defects"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Other Defects"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/ed_other_defects"
+                        android:visibility="gone"
+                        android:padding="8dp"
+                        android:maxLength="100"
+                        android:background="@drawable/ed_background"
+                        android:hint="Enter Other Defects (max 100 chars)"
+                        />
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/ed_remarks"
+                    android:padding="8dp"
+                    android:maxLength="100"
+                    android:background="@drawable/ed_background"
+                    android:hint="Enter Remarks"
+                    />
+
+
+                <!--IMAGES START-->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/images_layout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="4dp"
+                        android:text="Upload Photos(*min-1)"
+                        android:textSize="15sp"
+                        android:textColor="@color/redred"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_margin="5dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:id="@+id/image_1"
+                                android:src="@drawable/upload_photo"
+                                android:scaleType="centerCrop"
+                                />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="IMAGE 1"
+                                android:padding="5dp"
+                                android:layout_margin="3dp"
+                                android:id="@+id/upload_image_1"
+                                android:background="@drawable/text_border"
+                                android:textColor="@color/black"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_margin="5dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:id="@+id/image_2"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/upload_photo"
+                                />
+
+                            <TextView
+                                android:id="@+id/upload_image_2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="IMAGE 2"
+                                android:padding="5dp"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/text_border"
+                                android:textColor="@color/black"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_margin="5dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:id="@+id/image_3"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/upload_photo"
+                                />
+
+                            <TextView
+                                android:id="@+id/upload_image_3"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="IMAGE 3"
+                                android:layout_margin="3dp"
+                                android:padding="5dp"
+                                android:background="@drawable/text_border"
+                                android:textColor="@color/black"/>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <!--IMAGES END-->
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btn_clear"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_round_corner"
+                        android:padding="4dp"
+                        android:text="Back"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btn_add"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_round_corner"
+                        android:padding="4dp"
+                        android:text="Save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="12dp"
+    android:background="@drawable/bg_group_card"
+    android:elevation="2dp"
+    >
+
+    <!-- Blue Header -->
+    <RelativeLayout
+        android:background="@drawable/bg_group_card"
+        android:backgroundTint="#2F80ED"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingHorizontal="14dp">
+
+        <TextView
+            android:id="@+id/tvGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pole Related"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24"
+            android:tint="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Expandable Layout -->
+    <LinearLayout
+        android:id="@+id/expandableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+        <!-- Capture Image UI -->
+        <LinearLayout
+            android:id="@+id/captureLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/bg_capture_dashed"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_photo_camera_white_48dp"
+                android:paddingHorizontal="8dp"
+                android:background="@drawable/round_boarder"
+                android:backgroundTint="#2B7CEE"
+                android:contentDescription="Capture Image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capture Image"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:textColor="#222222" />
+        </LinearLayout>
+
+        <!-- Taken Image UI -->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/taken_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="12dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- LEFT CHANGE IMAGE BOX -->
+            <LinearLayout
+                android:id="@+id/layoutChangeImage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/bg_capture_dashed">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_photo_camera_white_48dp"
+                    android:paddingHorizontal="8dp"
+                    android:background="@drawable/round_boarder"
+                    android:backgroundTint="#2B7CEE"
+                    android:contentDescription="Capture Image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Change Image"
+                    android:fontFamily="@font/abeezee"
+                    android:textColor="#222222"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <!-- RIGHT IMAGE PREVIEW -->
+            <FrameLayout
+                android:id="@+id/layoutPreview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="16dp"
+                    app:cardUseCompatPadding="false"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/imgPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/b1" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Overlay button -->
+                <ImageView
+                    android:id="@+id/fullImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_boarder"
+                    android:backgroundTint="#2B7CEE"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_focus_blue" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

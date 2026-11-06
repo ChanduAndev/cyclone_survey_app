@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/button_background"
+    android:backgroundTint="@color/white"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="5dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <TextView
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="@font/abeezee"
+        android:text="Please upload DTR image and Select DTR type to proceed with service numbers survey."
+        android:textStyle="normal"
+        android:textColor="@color/lightGrey"
+        android:textSize="12sp" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutChangeImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <ImageView
+            android:id="@+id/captured_image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:contentDescription="Capture Image"
+            android:background="@drawable/bg_capture_dashed"
+            android:padding="5dp"
+            android:src="@drawable/outline_add_a_photo_24" />
+
+
+
+        <TextView
+            android:id="@+id/btn_capture_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/button_bg_new"
+            android:backgroundTint="@color/ui_new_color"
+            android:fontFamily="@font/inter"
+            android:text="Capture DTR Image"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_dtr_type_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/inter"
+            android:text="Select DTR type"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Spinner
+            style="@style/CustomSpinnerStyle"
+            android:id="@+id/sp_dtr_type"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_spinner_field"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/enter_dtr_type"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center|left"
+        android:background="@drawable/adapter_border"
+        android:gravity="center|left"
+        android:hint="Enter Dtr Type"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="2"
+        >
+
+        <TextView
+            android:id="@+id/cancel_button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/abeezee"
+            android:layout_margin="5dp"
+            android:paddingVertical="7dp"
+            android:background="@drawable/curve_border"
+            android:backgroundTint="@color/redred"
+            android:text="Cancel"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/proceed_button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/abeezee"
+            android:layout_margin="5dp"
+            android:paddingVertical="7dp"
+            android:background="@drawable/curve_border"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Proceed"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

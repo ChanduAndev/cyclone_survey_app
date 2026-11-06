@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activitys.MainActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_10dp"
+                    android:background="@drawable/distance_border_new"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <CheckBox
+                            android:id="@+id/ch_dtrsurvey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter"
+                            android:text=" DTR Survey"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/ch_ltsurvey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter"
+                            android:text=" LT Survey"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/inter"
+                        android:padding="5dp"
+                        android:text="* NOTE : Please  Complete  DTR Survey and Start LT  Survey "
+                        android:textColor="@color/red1"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lyt_dtrselect"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tv_subname"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:fontFamily="@font/inter"
+                                android:text=" DTR Structure :"
+                                android:textColor="@color/ui_black_color"
+                                android:textStyle="bold|italic" />
+
+                            <Spinner
+                                android:id="@+id/sp_dtrcode"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:background="@drawable/ddimg"
+                                android:backgroundTint="@color/ui_gray_new_color" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyt_dtrselect_lt"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tv_subname_lt"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:fontFamily="@font/inter"
+                                android:text=" DTR Structure :"
+                                android:textColor="@color/ui_black_color"
+                                android:textStyle="bold|italic" />
+
+                            <Spinner
+                                android:id="@+id/sp_dtrcode_lt"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:background="@drawable/ddimg"
+                                android:backgroundTint="@color/ui_gray_new_color" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/lyt_ltcircuitselect"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_federname"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:fontFamily="@font/inter"
+                                android:text="LT Circuit :"
+                                android:textColor="@color/red"
+                                android:textStyle="bold|italic" />
+
+                            <Spinner
+                                android:id="@+id/sp_circuit"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:background="@drawable/bg_spinner_field" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyt_is_multi_circuit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:fontFamily="@font/inter"
+                                android:text="Multi Circuit Available ?"
+                                android:textColor="@color/ui_black_color"
+                                android:textStyle="bold|italic" />
+
+                            <Spinner
+                                android:id="@+id/sp_is_multi_circuit"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                android:entries="@array/multi_ckt_req" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/btn_next"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/size_20dp"
+                            android:background="@drawable/button_background"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Next"
+                            android:padding="10dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_10dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginRight="@dimen/size_10dp"
+                    android:layout_marginBottom="@dimen/size_10dp"
+                    android:background="@drawable/distance_border"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Update Survey Completion Status"
+                        android:textColor="@color/red1"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text=" DTR Structure :"
+                            android:textColor="@color/ui_black_color"
+                            android:textStyle="bold|italic" />
+
+                        <Spinner
+                            android:id="@+id/sp_complete_dtrcode"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:background="@drawable/bg_spinner_field"
+                           />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/complete_survey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/size_20dp"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="SUBMIT"
+                        android:padding="10dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <include layout="@layout/footer" />
+    </RelativeLayout>
+
+
+</LinearLayout>

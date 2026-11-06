@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_toolbar_gradient"
+    android:fitsSystemWindows="true"
+    tools:context="com.apepdcl.gis_survey.estimates.sou.ToBeIntegratedActivity">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <!-- Back button -->
+        <RelativeLayout
+            android:id="@+id/back_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/outline_arrow_back_ios_new_24"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+        <!-- Title -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/close_layout"
+            android:layout_toRightOf="@id/back_layout"
+           >
+
+            <TextView
+                android:id="@+id/home_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/inter"
+                android:text="To be Integrated"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Close button -->
+        <RelativeLayout
+            android:id="@+id/close_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"
+            android:background="@drawable/round_boarder">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_close_24"
+                android:tint="@color/new_color" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/main_ui_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_layout"
+        android:background="@drawable/tool_bar_bg"
+        android:elevation="16dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/c_1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/suc" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_description_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/location_count_info"
+            android:text="Please Select a work order from below provided list to transmit and integrate the survey data to GIS asset module."
+            android:textAllCaps="false"
+            android:textColor="@color/lite_black"
+            android:textSize="12sp" />
+
+
+
+
+
+        <!-- RecyclerView + Loader overlay -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp">
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/to_be_integrated_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:itemCount="1"
+                tools:listitem="@layout/transmit_adapter"
+                android:visibility="visible" />
+
+            <!-- Progress Loader -->
+            <LinearLayout
+                android:id="@+id/loader_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="PLEASE WAIT..."
+                    android:textColor="@color/red1"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Downloading Master Data"
+                    android:textColor="@color/color_6"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- GIF Loader -->
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/loader"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:src="@drawable/loader_new"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

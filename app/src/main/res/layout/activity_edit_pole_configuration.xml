@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/two_side_square_border"
+        android:padding="5dp">
+
+
+        <RelativeLayout
+            android:id="@+id/back_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_boarder">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                app:tint="@color/new_color" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/close_layout"
+            android:layout_toRightOf="@id/back_layout"
+            android:background="@drawable/btn_rounded_primary"
+            android:backgroundTint="@color/new_color">
+
+            <TextView
+                android:id="@+id/home_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/inter"
+                android:paddingTop="5dp"
+                android:text="Edit Pole Configuration"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/close_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_boarder">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_close_24"
+                app:tint="@color/new_color" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/layout_connecting_point"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Change Pole Configuration*"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/sp_pole_config"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ddimg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_dtr_survey"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="35dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter"
+                    android:text="--------DTR Details--------"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter"
+                    android:text="DTR Survey Type*"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/sp_dtr_survey_11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/dtr_survey_type" />
+
+                <LinearLayout
+                    android:id="@+id/existing_layout_dtr_details_11kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_dtr_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="----Existing DTR Details----"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/existing_main_lt_layout_11kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_dtrstrcuture_code"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Existing DTR Structure Code :"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/existing_dtr_structure_code_11kv"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Existing Select DTR Structure Code"
+                            android:padding="5dp"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/existing_dtr_details_11kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/existing_layout_dtr_phase_11kv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="Existing DTR Phase*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/existing_sp_dtr_phase_11"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/distance_border"
+                                android:padding="10dp"
+                                android:textSize="15dp"
+                                tools:text="hello" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/existing_layout_dtr_capacity"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="Existing DTR Capacity*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/existing_sp_dtr_capacity_phase1_11"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/distance_border"
+                                android:padding="10dp"
+                                android:textSize="15dp"
+                                tools:text="hello" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/existing_layout_dtr_location_11kv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="Existing DTR Location*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/existing_dtr_location_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/distance_border"
+                                android:padding="10dp"
+                                android:textSize="15dp"
+                                tools:text="hello" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/existing_layout_dtr_make_11kv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="Existing DTR Make*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/existing_dtr_make"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/distance_border"
+                                android:padding="10dp"
+                                android:textSize="15dp"
+                                tools:text="hello" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/existing_layout_dtr_sl_no_11kv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="Existing DTR Serial No*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/existing_dtr_sl_no"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/distance_border"
+                                android:padding="10dp"
+                                android:textSize="15dp"
+                                tools:text="hello" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/distance_border"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:visibility="gone">
+                        <!-- Title -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="-----DTR Particulars-----"
+                            android:textStyle="bold" />
+                        <!-- Details Layout -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical">
+                            <!-- Row 1: Phase & Capacity -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Phase :"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_dtr_phase"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:text="III" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Capacity :"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_dtr_capacity"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:text="" />
+                            </LinearLayout>
+                            <!-- Row 2: Sl.No -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingVertical="5dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Sl.No :"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_dtr_slno"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:text="" />
+                            </LinearLayout>
+                            <!-- Row 3: Make -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingVertical="5dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Make :"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_dtr_make"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:text="" />
+                            </LinearLayout>
+                            <!-- Row 4: Location -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingVertical="5dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Location :"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_dtr_location_name"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:text="" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_edit_dtr_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:text="Edit DTR DETAILS"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/existing_dtr_particulars_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/existing_dtr_layout_dtr_phase_11kv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="Existing DTR Phase*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <Spinner
+                                android:id="@+id/existing_dtr_sp_dtr_phase_11"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/ddimg" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/existing_dtr_layout_dtr_capacity"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="Existing DTR Capacity*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <Spinner
+                                android:id="@+id/existing_dtr_sp_dtr_capacity_phase1_11"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/ddimg"
+                                android:entries="@array/dtr_phase1_capacity_11kv"
+                                android:visibility="gone" />
+
+                            <Spinner
+                                android:id="@+id/existing_dtr_sp_dtr_capacity_phase2_11"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/ddimg"
+                                android:entries="@array/dtr_phase2_capacity_11kv"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/existing_dtr_layout_dtr_location_11kv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="Existing DTR Location*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/existing_dtr_dtr_location_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/distance_border"
+                                android:hint="Enter Existing DTR Location Name"
+                                android:inputType="textCapCharacters"
+                                android:maxLength="200"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textSize="15dp"
+                                tools:text="hello" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/existing_dtr_layout_dtr_make_11kv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="Existing DTR Make*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+
+                            <Spinner
+                                android:id="@+id/sp_existing_dtr_et_dtr_make"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/ddimg"
+                                android:entries="@array/dtr_apartment"
+                                android:visibility="visible" />
+
+                            <EditText
+                                android:id="@+id/existing_dtr_et_dtr_make"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/distance_border"
+                                android:hint="Enter Existing DTR Make"
+                                android:inputType="textCapCharacters"
+                                android:maxLength="200"
+                                android:padding="10dp"
+                                android:textAllCaps="true"
+                                android:textSize="15dp"
+                                android:visibility="gone"
+                                tools:text="hello" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/existing_dtr_layout_dtr_sl_no_11kv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="Existing DTR Serial No*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/existing_dtr_et_dtr_sl_no"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/distance_border"
+                                android:hint="Enter Existing Serial number"
+                                android:maxLength="200"
+                                android:padding="10dp"
+                                android:textSize="15dp"
+                                tools:text="hello" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_apartment_11kv_existing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Is LT Circuit Available?*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/sp_dtr_apartment_11_existing"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/dtr_apartment" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_no_of_lt_circuits_11_existing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="No of LT Circuits*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="(i.e No of feedings / No of LT Feeders)"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="(Ex : A Feeding , B -feeding , C -Feeding )"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                        <Spinner
+                            android:id="@+id/sp_no_of_lt_circuits_11_existing"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_meter_11kv_existing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Is Meter connected to DTR without LT Pole*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/sp_meter_available_11_existing"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/meter_available_estimates" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sap_33_material_layout_11_meter_existing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/adapter_border"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="LT Meter"
+                            android:textColor="@color/redred"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="(Materials Excluding Conductors &amp; Poles)"
+                            android:textColor="@color/new_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/new_color" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/qty_11kv_meter_existing"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toStartOf="@id/uom_11kv_meter_existing"
+                                android:fontFamily="@font/inter"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="QTY"
+                                android:textColor="@color/new_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/uom_11kv_meter_existing"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/inter"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="UoM"
+                                android:textColor="@color/new_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/desc_11kv_meter_existing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toStartOf="@id/qty_11kv_meter_existing"
+                                android:fontFamily="@font/inter"
+                                android:gravity="start"
+                                android:padding="5dp"
+                                android:text="DESCRIPTION"
+                                android:textColor="@color/new_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/new_color" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/material_rv_11_meter_existing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:nestedScrollingEnabled="false"
+                            tools:listitem="@layout/material_adapter" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/proposed_layout_dtr_details_11kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="----Proposed DTR Details----"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_phase_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Proposed DTR Phase*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/sp_dtr_phase_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/dtr_phase_11kv" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_capacity"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Proposed DTR Capacity*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/sp_dtr_capacity_phase1_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/dtr_phase1_capacity_11kv"
+                            android:visibility="gone" />
+
+                        <Spinner
+                            android:id="@+id/sp_dtr_capacity_phase2_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/dtr_phase2_capacity_11kv"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_material"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_sp_pole_desc_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="DTR Material"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/sp_dtr_material_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_location_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Proposed DTR Location*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                        <EditText
+                            android:id="@+id/dtr_location_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/distance_border"
+                            android:hint="Enter DTR Location Name"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="200"
+                            android:padding="10dp"
+                            android:textSize="15dp"
+                            tools:text="hello" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_lt_layout_11kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Proposed DTR Structure Code :"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/dtr_structure_code_11kv"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="ProposedSelect DTR Structure Code"
+                            android:padding="5dp"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_apartment_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_lt_available"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Is LT Circuit Available?*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/sp_dtr_apartment_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/dtr_apartment" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_no_of_lt_circuits_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/inter"
+                            android:text="No of LT Circuits*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/inter"
+                            android:text="(i.e No of feedings / No of LT Feeders)"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/inter"
+                            android:text="(Ex : A Feeding , B -feeding , C -Feeding )"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                        <Spinner
+                            android:id="@+id/sp_no_of_lt_circuits_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_meter_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Is Meter connected to DTR without LT Pole*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/sp_meter_available_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/meter_available_estimates" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_make_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Proposed DTR Make*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_dtr_make"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/distance_border"
+                            android:maxLength="200"
+                            android:padding="10dp"
+                            android:textSize="15dp"
+                            android:visibility="gone"
+                            tools:text="hello" />
+
+                        <Spinner
+                            android:id="@+id/sp_existing_dtr_et_dtr_make_proposed"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_sl_no_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Proposed DTR Serial No*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_dtr_sl_no"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/distance_border"
+                            android:maxLength="200"
+                            android:padding="10dp"
+                            android:textSize="15dp"
+                            tools:text="hello" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_phase_desc_11kv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Proposed DTR Description*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/sp_dtr_phase_desc_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_mounting"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_dtr_mounting_11kv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:text="Proposed DTR Mounting*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/sp_dtr_mounting_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/dtr_mounting_11kv" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sap_33_material_layout_11_meter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/adapter_border"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="LT Meter"
+                            android:textColor="@color/redred"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="(Materials Excluding Conductors &amp; Poles)"
+                            android:textColor="@color/new_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/new_color" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/qty_11kv_meter"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toStartOf="@id/uom_11kv_meter"
+                                android:fontFamily="@font/inter"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="QTY"
+                                android:textColor="@color/new_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/uom_11kv_meter"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/inter"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="UoM"
+                                android:textColor="@color/new_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/desc_11kv_meter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toStartOf="@id/qty_11kv_meter"
+                                android:fontFamily="@font/inter"
+                                android:gravity="start"
+                                android:padding="5dp"
+                                android:text="DESCRIPTION"
+                                android:textColor="@color/new_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/new_color" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/material_rv_11_meter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:nestedScrollingEnabled="false"
+                            tools:listitem="@layout/material_adapter" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_shifted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Is DTR Shifted?*"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/sp_dtr_shifted_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/dtr_shifted" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_shifted_remark"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="DTR Shifting remark*"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/dtr_shifted_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/distance_border"
+                        android:gravity="top|start"
+                        android:hint="Enter DTR Shifted Remark"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:lines="3"
+                        android:maxLength="500"
+                        android:paddingStart="10dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="14dp"
+                        android:singleLine="false"
+                        android:textSize="15sp"
+                        tools:text="hello" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_lt_ckt_available_11"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Is LT Circuit available?*"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/sp_lt_ckt_available_11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/e_yes_no" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_no_of_lt_ckt_11"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="No of LT Circuits*"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/sp_no_of_lt_ckt_11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/no_of_lt_ckts" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sap_33_material_layout_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/adapter_border"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="Pole Material"
+                    android:textColor="@color/redred"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="(Materials Excluding Conductors &amp; Poles)"
+                    android:textColor="@color/new_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/qty_11kv_new"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/uom_11kv_new"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="QTY"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/uom_11kv_new"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="UoM"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/desc_11kv_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/qty_11kv_new"
+                        android:fontFamily="@font/inter"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="DESCRIPTION"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/material_rv_11_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/material_adapter" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sap_33_material_layout_11_AB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/adapter_border"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="AB Switch material"
+                    android:textColor="@color/redred"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="(Materials Excluding Conductors &amp; Poles)"
+                    android:textColor="@color/new_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/qty_11kv_ab"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/uom_11kv_ab"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="QTY"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/uom_11kv_ab"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="UoM"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/desc_11kv_ab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/qty_11kv_ab"
+                        android:fontFamily="@font/inter"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="DESCRIPTION"
+                        android:textColor="@color/new_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/material_rv_11_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/material_adapter" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/inter"
+                android:padding="4dp"
+                android:text="Update"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

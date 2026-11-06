@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="auto"
+    android:versionCode="92"
+    android:versionName="1.54.1"
+    tools:ignore="GoogleAppIndexingWarning">
+    <!-- ignore GoogleAppIndexingWarning as we don't want to implement that -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.microphone" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- needed for targetting Android 11 - see https://developer.android.com/about/versions/11/behavior-changes-11 -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name="net.sourceforge.app.OpenCameraApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/app_icon_new"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/app_icon_new"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.apepdcl.gis_survey.WebGis"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.EditProposedDTRActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.WebActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.EditBOQDetailsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.EditPoleDetailsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.EditPoleConfigDetailsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.LoginActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.apepdcl.gis_survey.crash_report.CrashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="false"/>
+        <activity
+            android:name="net.sourceforge.app.MainActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- clearTaskOnLaunch set to true, so if user goes to gallery then returns to home, we return to the camera rather than remaining in gallery if user relaunches Open Camera -->
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE_SECURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAMERA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAPTURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity
+            android:name="net.sourceforge.app.remotecontrol.DeviceScanner"
+            android:exported="false"
+            android:label="@string/scan_ble" /> <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
+        <activity
+            android:name="net.sourceforge.app.TakePhoto"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:icon="@drawable/ic_launcher_take_photo"
+            android:label="@string/take_photo"
+            android:taskAffinity="" /> <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
+        <receiver
+            android:name="net.sourceforge.app.MyWidgetProviderTakePhoto"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher_take_photo"
+            android:label="@string/take_photo">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_take_photo" />
+        </receiver> <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
+        <service
+            android:name="net.sourceforge.app.MyTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_photo_camera_white_48dp"
+            android:label="@string/camera"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            tools:targetApi="n">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service> <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
+        <service
+            android:name="net.sourceforge.app.MyTileServiceVideo"
+            android:exported="true"
+            android:icon="@drawable/ic_videocam_white_48dp"
+            android:label="@string/record_video"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            tools:targetApi="n">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service> <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
+        <service
+            android:name="net.sourceforge.app.MyTileServiceFrontCamera"
+            android:exported="true"
+            android:icon="@drawable/ic_face_white_48dp"
+            android:label="@string/selfie"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            tools:targetApi="n">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="net.sourceforge.app.remotecontrol.BluetoothLeService"
+            android:enabled="true"
+            android:exported="false" /> <!-- 33KV UCG MANIFEST START -->
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.activity.FeederMasterActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.ArcGISMapActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.CompletedMapActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.MainActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.activity.CompetedSurveyFeederActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.activity.IncrementalCompetedSurveyFeederActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.activity.IncrementalTransmitDataActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.activity.LoginActivityUG33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.activity.PoleSurveyActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.activity.ProfileActivityActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.activity.SampleUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.activity.TransmitDataActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.activity.TransmitDataHomeActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc33kv.rdssugc33kv.LoadMapHomeActivityUG33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- GIS MANIFEST START -->
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.EditDtr"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.PmiHome"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.PmiMap"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.apepdcl.gis_survey.sasa.SasaHome"
+            android:exported="false" />
+        <!--
+ <activity
+            android:name="com.apepdcl.gis_survey.estimates.OnlyLtEdit"
+            android:exported="false" />
+        -->
+        <activity
+            android:name="com.apepdcl.gis_survey.module_33KV.MapWebActivity33"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.EditLocationsMap"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.Edit33Home"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.ApproveBOQActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.BoQActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.ToBeIntegratedActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.OfflineHome"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.LocationDetails"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.OfflineLTActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.ApproveSurvey"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.CompleteSurvey"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.PendingSurvey"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.TransmitSurvey"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.sou.SurveyList"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.SelectWorkInvolvmentsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.WorkInvolmentsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.EstimatesDashboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.apepdcl.gis.cyclone.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.apepdcl.gis.cyclone.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.new_module.EstimatesMap"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.ArcGISMapActivityEstimates"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.PrepareEstimate"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.EstimatesHome"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.DashBoard"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.estimates.new_module.DashboardRdss"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_33KV.AddTappingPoint33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_33KV.CompletedMapActivity33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_33KV.CompletedSurveyActivity33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_33KV.TransmitDataHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_33KV.ArcGISMapActivity33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_33KV.PoleSurveyActivity33KV"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.module_33KV.edit_screens.Edit33KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.module_33KV.edit_screens.Edit33KVPoleAttributesAsset"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.module_33KV.edit_screens.OfflineEdit33KVAssetActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.module_33KV.SurveyHome33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.UpdatedDTRSurveyActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.IntermediateMapActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.Profile"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.view_feeder_sketch.CompletedMapActivity11KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.view_feeder_sketch.CompetedSurveyFeederActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.view_feeder_sketch.FeederKetchHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.transmit.TransmitDataActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.transmit.TransmitHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.ArcGISMapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.edit_screens.EditPoleAttributesAsset"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.PoleSurveyTappingLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.PoleSurveyActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.edit_screens.Edit11KV"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.edit_screens.OfflineEdit11KVAssetActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.DTRMasterDownloadActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.SelectFeeder"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.module_11KV.Home11KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.ArcGISMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.TransmitDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.DTRSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.LineTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name="com.apepdcl.gis_survey.lt_edit_screens.EditLT"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.lt_edit_screens.EditPoleAttributesLtAsset"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.lt_edit_screens.OfflineEditLTAssetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.CmpDTRSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.CompletedMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.ProfileActivityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.DTRGISMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.TransMitSurveyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.TransmitDTRDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.LTSurveyHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.incremental.IncrementalDTRSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.incremental.IncrementalLineTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.incremental.IncrementalArcGISMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.incremental.IncrementalTopTenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.IncrementalTransmitHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.incremental.TransMitIncrementalSurveyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.incremental.IncrementalTransmitDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.LoadMapHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.incremental.IncrementalCmpDTRSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.incremental.IncrementalLTCompletedMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.activitys.DTRSurveyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- GIS MANIFEST END -->
+        <!-- PMI OLD STARTS -->
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_33kv.activities.NoRecordsFoundScreen33KVPMI"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_33kv.activities.PMICompletedMapActivity33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_33kv.activities.PMICompletedSurveyActivity33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_33kv.activities.PMITransmitDataHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIArcGISMapActivity11kv"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_33kv.activities.PMIArcGISMapActivity33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_33kv.activities.PMIAddTappingPoint33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_33kv.activities.PMIPoleSurveyActivity33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_33kv.activities.PMISurveyHome33KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMICompletedMapActivity11KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMICompetedSurveyFeederActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIFeederKetchHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.transmit.PMITransmitDataActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.transmit.PMITransmitHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIIncrementalLineTypeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIIncrementalTopTenActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIIncrementalDTRSelectActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIPoleSurveyTappingLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMILineTypeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIDTRSurveyActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIDTRSelectActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIPoleSurveyActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIDTRMasterDownloadActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMISelectFeeder"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMILTSurveyHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIHome11KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIReport11KV"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.pmi_old.module_11kv.activities.PMIHomeActivity"
+            android:exported="false" /> <!-- PMI OLD ENDS -->
+        <!-- RDSS NEW STARTS -->
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.RdssHome"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.UGCablesHome"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OHLineHome"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.AssetsHomeRdssUgCable"
+            android:exported="false" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.UGCableProposedMap"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.edit.EditOptionsRdss"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.ViewMapRdssActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.edit.EditPoleAttributesRdss"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.ProposedHomeRdssUGCable"
+            android:exported="false" /> <!-- RDSS NEW ENDS -->
+        <!-- RDSS OH 11KV STARTS -->
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.FeederMasterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.ArcGISMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.PoleSurveyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.TransmitDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.TransmitHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.FeederKetchHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.CompletedMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.IncrementalCompletedMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.CompetedSurveyFeederActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.IncrementalCompetedFeederActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.DTRMasterDownloadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.MakeMasterDownloadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.ProfileActivityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.FeederServiceMasterDownloadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.HelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.WebHelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.activitys.MultiVoltageMasterDownloadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.incremetal.ArcGISMapIncremntalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.incremetal.MainIncementalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.incremetal.TopTenDatalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.incremetal.PoleSurveyIncremtalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.incremetal.MultiVoltageMasterDownloadIncrementalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.incremetal.MakeMasterDownloadIncremntalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.incremetal.FeederServiceMasterDownloadIncemntalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.incremetal.DTRMasterDownloadIncrementaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE_OH.incremetal.IncrementalTransmitDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- RDSS OH 11KV ENDS -->
+        <!-- RDSS UG 11KV STARTS -->
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.FeederMasterRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.CompetedSurveyFeederRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.CompletedMapRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.DTRMasterDownloadRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.FeederKetchHomeRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- <activity -->
+        <!-- android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.FeederMasterRDSSUg11KvActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.FeederServiceMasterDownloadRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.HelpRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.IncrementalCompetedFeederRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.IncrementalCompletedMapRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.IntermediateMapRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.LoginRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.ArcGISMapRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.MakeMasterDownloadRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.MultiVoltageMasterDownloadRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.PoleSurveyRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.PoleSurveyTappingLocationRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.ProfileActivityRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.TransmitDataRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.TransmitHomeRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.activity.WebHelpRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.incremental.ArcGISMapIncremntalRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.incremental.DTRMasterDownloadIncrementaRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.incremental.FeederServiceMasterDownloadIncemntalRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.incremental.IncrementalTransmitDataRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.incremental.MainIncementalRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.incremental.MakeMasterDownloadIncremntalRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.incremental.MultiVoltageMasterDownloadIncrementalRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.incremental.PoleSurveyIncremtalRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.incremental.TopTenDatalRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.apepdcl.gis_survey.RDSS.OLD_CODE.ugc11kv.MainRDSSUg11KvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!--PMI NEW STARTS-->
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.new_screens.PMINewHome"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.new_screens.Select11KVFeeder"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.new_screens.Transmit11KV"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.new_screens.Select33KVFeeder"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.new_screens.Transmit33KV"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.new_screens.SelectLTCircuit"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.PMIWorkInvolments"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.new_screens.TransmitLT"
+            android:exported="false" />
+
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.SelectLTPoleRectify"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.RectifyMapLT"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.SelectLTCircuitRectify"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.AllPolesRectifyLTMap"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.Select11KVFeederRectify"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.offline.OfflineRectifySurvey"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false" />
+
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.offline.Select11PoleRectifyOffline"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false" />
+
+
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.Select11PoleRectify"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.RectifyMap11"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.Select33KVFeederRectify"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.Select33PoleRectify"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.rectification.RectifyMap33"
+            android:exported="false" />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.PMI.FullScreenImageActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:configChanges="orientation|screenSize" />
+
+
+        <!--PMI NEW ENDS-->
+
+
+        <!--METER SURVEY STARTS-->
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.MeterSurveyHome"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.PendingDtrList"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.MeterSurveyMap"
+            android:exported="false"
+            />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.MeterSurveyForm"
+            android:exported="false"
+            />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.PickServiceLocation"
+            android:exported="false"
+            />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.TransmitMeterHome"
+            android:exported="false"
+            />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.ContinueDtrList"
+            android:exported="false"
+            />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.ToBeComplete"
+            android:exported="false"
+            />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.CompletedSurvey"
+            android:exported="false"
+            />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.ReaderProfile"
+            android:exported="false"
+            />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.OnlyMeterSurveyMap"
+            android:exported="false"
+            />
+
+        <activity
+            android:name="com.apepdcl.gis_survey.METER_SURVEY.SingleSurveyMap"
+            android:exported="false"
+            />
+
+        <!--METER SURVEY ENDS-->
+
+
+    </application>
+
+</manifest>

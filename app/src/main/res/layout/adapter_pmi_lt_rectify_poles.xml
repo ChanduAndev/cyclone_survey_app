@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="4dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/white"
+        android:outlineAmbientShadowColor="@color/background_color"
+        android:outlineSpotShadowColor="@color/background_color"
+        android:layout_margin="5dp"
+        android:paddingVertical="5dp"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Distance :"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="distance"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/redred"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Number :"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pole_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Number"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/new_color"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Config :"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pole_config"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Config"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/new_color"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Type :"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pole_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Type"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/new_color"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Height :"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pole_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Height"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/new_color"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Support :"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pole_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Support"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/new_color"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/pole_defects_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Defects :"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pole_defects"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Defects"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/pole_defects_tv"
+                    android:textAllCaps="false"
+                    android:layout_alignParentRight="true"
+                    android:gravity="end"
+                    android:textColor="@color/new_color"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/pole_defects_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Sub Defects :"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lite_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pole_sub_defects"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pole Defects"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/pole_defects_tv"
+                    android:textAllCaps="false"
+                    android:layout_alignParentRight="true"
+                    android:gravity="end"
+                    android:textColor="@color/new_color"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/capture_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/curve_border"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="6dp"
+                android:paddingHorizontal="1dp"
+                android:paddingVertical="12dp"
+                android:text="CAPTURE IMAGE"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/two_side_square_border"
+        android:padding="5dp">
+
+
+        <RelativeLayout
+            android:id="@+id/back_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_boarder">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:tint="@color/new_color" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/profile_layout"
+            android:layout_toRightOf="@id/back_layout"
+            android:background="@drawable/btn_rounded_primary"
+            android:backgroundTint="@color/new_color">
+
+            <TextView
+                android:id="@+id/home_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:fontFamily="@font/inter"
+                android:paddingTop="5dp"
+                android:text="P.M.I"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_boarder">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_close_24"
+                android:tint="@color/new_color" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/inter"
+                    android:text="Select Voltage Level :"
+                    android:textColor="@color/new_color"
+                    android:textStyle="bold|italic" />
+
+                <Spinner
+                    android:id="@+id/sp_voltage_level"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:visibility="gone"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/est_voltage_level" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/adapter_border"
+                    android:id="@+id/main_layout_33">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="33KV DETAILS"
+                        android:textSize="16sp"
+                        android:padding="5dp"
+                        android:textColor="@color/redred"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/new_color"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Select EHT SS :"
+                        android:textColor="@color/new_color"
+                        android:textStyle="bold|italic" />
+
+                    <Spinner
+                        android:id="@+id/sp_ssname"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/ddimg"
+                        />
+
+                    <TextView
+                        android:id="@+id/sub_station_name_33"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:gravity="center|left"
+                        android:hint="Select EHT SS"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Select 33kV Feeder:"
+                        android:textColor="@color/new_color"
+                        android:textStyle="bold|italic" />
+
+                    <Spinner
+                        android:id="@+id/sp_feedername"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/ddimg" />
+
+                    <TextView
+                        android:id="@+id/feeder_33kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:gravity="center|left"
+                        android:hint="Select 33 kV Feeder Details"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btn_next_33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_background"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="Next"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/loader_33"
+                        android:layout_gravity="center"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/colorPrimary"
+                        android:visibility="gone"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/adapter_border"
+                    android:id="@+id/main_layout_11">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="11KV DETAILS"
+                        android:textSize="16sp"
+                        android:padding="5dp"
+                        android:textColor="@color/redred"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/new_color"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Select 33/11KV SS :"
+                        android:textColor="@color/new_color"
+                        android:textStyle="bold|italic" />
+
+                    <Spinner
+                        android:id="@+id/sp_ss_name_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/ddimg"
+                        />
+
+                    <TextView
+                        android:id="@+id/sub_station_name_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:gravity="center|left"
+                        android:hint="Select 33/11KV SS"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Select 11kV Feeder:"
+                        android:textColor="@color/new_color"
+                        android:textStyle="bold|italic" />
+
+                    <Spinner
+                        android:id="@+id/sp_feeder_name_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/ddimg"
+                        />
+
+                    <TextView
+                        android:id="@+id/feeder_11kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:gravity="center|left"
+                        android:hint="Select 11 kV Feeder Details"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btn_next_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_background"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="Next"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/loader_11"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/adapter_border"
+                    android:id="@+id/main_layout_lt">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="LT DETAILS"
+                        android:textSize="16sp"
+                        android:padding="5dp"
+                        android:textColor="@color/redred"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/new_color"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Select DTR Structure Code :"
+                        android:textColor="@color/new_color"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/dtr_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:gravity="center|left"
+                        android:hint="Select DTR Structure Code"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Select LT Circuit Code:"
+                        android:textColor="@color/new_color"
+                        android:textStyle="bold|italic" />
+
+                    <Spinner
+                        android:id="@+id/sp_circuit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:background="@drawable/ddimg" />
+
+                    <Button
+                        android:id="@+id/btn_next_lt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_background"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="Next"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/loader_lt"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_marginTop="80dp"
+                android:id="@+id/loader"
+                >
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/loading"
+                    android:visibility="visible" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/inter"
+                    android:paddingTop="5dp"
+                    android:text="Downloading Feeder Master Data..."
+
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/transmit_layout"
+                android:visibility="gone"
+                android:background="@drawable/adapter_border"
+                android:layout_margin="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/layout_33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_border"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/poles_33kv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="33KV Defects"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="11sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_border"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/poles_11kv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="11KV Defects"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="11sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_lt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_border"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/poles_lt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="  LT Defects  "
+                            android:textColor="@color/lightGrey"
+                            android:textSize="11sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_transmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_background"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="TRANSMIT"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/loader_transmit"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/colorPrimary"
+                    android:visibility="gone"
+                    />
+
+
+            </LinearLayout>
+
+            <!--NEW DESIGN STARTS-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:background="@drawable/adapter_border"
+                android:id="@+id/new_main_layout_11">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="11KV DETAILS"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:textColor="@color/redred"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" />
+
+            </LinearLayout>
+
+            <!--NEW DESIGN ENDS-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_page_bg">
+
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Login Card -->
+
+        <LinearLayout
+            android:id="@+id/loginCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_login_card"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- Space for logo -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cyclone Damage Assessment"
+                android:textColor="#2F80ED"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="Eastern Power Distribution\nCompany of AP"
+                android:textAlignment="center"
+                android:textColor="#808080"
+                android:textSize="12sp" />
+
+            <!-- Login Tabs -->
+            <LinearLayout
+                android:id="@+id/layout_login_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/txtSubTitle"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/adapter_border"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/tab_employees"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:gravity="center"
+                    android:text="Operation"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tab_others"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Others"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- Login Forms -->
+            <FrameLayout
+                android:id="@+id/login_forms_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_login_tabs"
+                android:layout_marginTop="20dp">
+
+                <!-- EMPLOYEES LOGIN -->
+                <LinearLayout
+                    android:id="@+id/employeeLoginContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Username"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/inter" />
+
+                    <EditText
+                        android:id="@+id/ed_user_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_edittext_round"
+                        android:fontFamily="@font/inter"
+                        android:hint="Enter your username"
+                        android:inputType="text"
+                        android:paddingStart="20dp"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Password"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/inter" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_edittext_round">
+
+                        <EditText
+                            android:id="@+id/ed_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toStartOf="@id/imgTogglePassword"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/inter"
+                            android:hint="Enter your password"
+                            android:inputType="textPassword"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/imgTogglePassword"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_eye_closed" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_login_button"
+                        android:gravity="center"
+                        android:text="Login"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+
+                <!-- OTHERS LOGIN -->
+                <LinearLayout
+                    android:id="@+id/othersLoginContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- Mobile Number -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile Number"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/inter" />
+
+                    <EditText
+                        android:id="@+id/ed_mobile_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_edittext_round"
+                        android:fontFamily="@font/inter"
+                        android:hint="Enter mobile number"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:paddingStart="20dp"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="14sp" />
+
+                    <!-- Send OTP -->
+                    <TextView
+                        android:id="@+id/btn_send_otp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button_background"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Send OTP"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- OTP Section -->
+                    <LinearLayout
+                        android:id="@+id/layout_otp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Enter OTP"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/ed_otp"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_edittext_round"
+                            android:hint="Enter OTP"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:paddingStart="20dp"
+                            android:textColor="@color/ui_black_color" />
+
+                        <TextView
+                            android:id="@+id/btn_verify_otp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/button_background"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:text="Verify OTP"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Registration Details -->
+                    <LinearLayout
+                        android:id="@+id/layout_other_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Name"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/ed_other_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_edittext_round"
+                            android:hint="Enter your name"
+                            android:inputType="textPersonName"
+                            android:paddingStart="20dp"
+                            android:textColor="@color/ui_black_color" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Designation"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/ed_other_designation"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_edittext_round"
+                            android:hint="Enter designation"
+                            android:inputType="textCapWords"
+                            android:paddingStart="20dp"
+                            android:textColor="@color/ui_black_color" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="User Type"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_user_type"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:popupBackground="@drawable/spinner_dropdown_bg"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/userType"/>
+
+
+                        <EditText
+                            android:id="@+id/ed_other_office"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_edittext_round"
+                            android:hint="Enter User Type"
+                            android:inputType="textCapWords"
+                            android:visibility="gone"
+                            android:paddingStart="20dp"
+                            android:textColor="@color/ui_black_color" />
+
+                        <TextView
+                            android:id="@+id/btn_save_other"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/button_background"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:text="Continue"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/powerby"
+                android:textColor="#909090"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/loader"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_centerHorizontal="true"
+                android:indeterminateTint="@color/colorPrimary"
+                android:layout_centerInParent="true"
+                android:progressTint="@color/colorPrimary"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Floating Logo -->
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@drawable/bg_logo_circle"
+            android:elevation="12dp"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/new_logo_ui" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

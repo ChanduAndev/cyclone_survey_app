@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    tools:context=".estimates.sou.NewPrepareEstimates">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/two_side_square_border"
+        android:padding="5dp">
+
+
+        <RelativeLayout
+            android:id="@+id/back_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_boarder">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:tint="@color/new_color" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/close_layout"
+            android:layout_toRightOf="@id/back_layout"
+            android:background="@drawable/btn_rounded_primary"
+            android:backgroundTint="@color/new_color">
+
+            <TextView
+                android:id="@+id/home_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/inter"
+                android:paddingTop="5dp"
+                android:text="ESTIMATES"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/close_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_boarder">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_close_24"
+                android:tint="@color/new_color" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_layout"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/adapter_border"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/c_1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_outline"
+                android:padding="4dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/app_logo" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/est_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="EST NO"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/purpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:text="Purpose"
+                android:textColor="@color/lite_black"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/inter"
+                android:text="Work Involvements :"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/ch_33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter"
+                android:text=" 33KV Network"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:id="@+id/main_33kv_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Select Feeder Type :"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold|italic" />
+
+                <Spinner
+                    android:id="@+id/sp_survey_type_33"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/line_type_work_involments" />
+
+
+                <LinearLayout
+                    android:id="@+id/main_33kv_layout_sub_station"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/layout_33kv_extension_sub_station"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select EHT SS :"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/sp_sub_station_name_33"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Select EHT-SS"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_33kv_extension"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Select 33kv Feeder :"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/feeder_name_33"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:gravity="center|left"
+                        android:hint="Select Feeder"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_33kv_extension_feeder_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Enter  33kv Feeder name :"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold|italic" />
+
+                    <EditText
+                        android:id="@+id/et_feeder_name_33kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:ellipsize="end"
+                        android:gravity="center|left"
+                        android:hint="Enter 33kv Proposed Feeder Name"
+                        android:inputType="textCapCharacters"
+                        android:padding="5dp"
+
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/taping_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Enter Sub Station Name :"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold|italic" />
+
+                    <EditText
+                        android:id="@+id/taping_location_33"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:hint="Enter Sub Station Name"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="33/11 KV Sub Station :"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/sp_sub_station_33"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/only_yes_no"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+
+            <!--NEW DESIGN BY SOUBHAGYA START-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                >
+
+
+
+
+                <CheckBox
+                    android:id="@+id/new_ch_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/inter"
+                    android:text=" 11KV Network New"
+                    android:visibility="visible"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:id="@+id/new_layout_main_11"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select No Of Feeders:"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold|italic" />
+
+
+                        <Spinner
+                            android:id="@+id/new_sp_no_of_feeders_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="@dimen/size_5dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/no_of_feeders_11kv" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/new_layout_11kv_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:padding="8dp"
+                        android:background="@drawable/adapter_border"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="FEEDER 1 DETAILS"
+                            android:gravity="center"
+                            android:textSize="17dp"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select Feeder Type :"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <Spinner
+                            android:id="@+id/new_sp_survey_type_11_1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/line_type_work_involments" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select 33/11KV SS :"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/new_sp_sub_station_name_11_feeder_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Select 33/11KV SS"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/new_tv_feeder_1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:visibility="gone"
+                            android:text="Select 11kV Feeder:"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <EditText
+                            android:id="@+id/new_et_feeder_no_1_11kv"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Enter 11 kV Feeder Details"
+                            android:inputType="textCapCharacters"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/new_et_feeder_no_1_11kv_line_extended"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Select 11 kV Feeder Details"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/new_layout_11kv_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:padding="8dp"
+                        android:background="@drawable/adapter_border"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="FEEDER 2 DETAILS"
+                            android:gravity="center"
+                            android:textSize="17dp"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select Feeder Type :"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <Spinner
+                            android:id="@+id/new_sp_survey_type_11_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/line_type_work_involments" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select 33/11KV SS :"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/new_sp_sub_station_name_11_feeder_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Select 33/11KV SS"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/new_tv_feeder_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:visibility="gone"
+                            android:fontFamily="@font/inter"
+                            android:text="Select 11kV Feeder:"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <EditText
+                            android:id="@+id/new_et_feeder_no_2_11kv"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Enter 11 kV Feeder Details"
+                            android:inputType="textCapCharacters"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/new_et_feeder_no_2_11kv_line_extended"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Select 11 kV Feeder Details"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/new_layout_11kv_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:padding="8dp"
+                        android:background="@drawable/adapter_border"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="FEEDER 3 DETAILS"
+                            android:gravity="center"
+                            android:textSize="17dp"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select Feeder Type :"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <Spinner
+                            android:id="@+id/new_sp_survey_type_11_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/line_type_work_involments" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select 33/11KV SS :"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/new_sp_sub_station_name_11_feeder_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Select 33/11KV SS"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/new_tv_feeder_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:visibility="gone"
+                            android:fontFamily="@font/inter"
+                            android:text="Select 11kV Feeder:"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <EditText
+                            android:id="@+id/new_et_feeder_no_3_11kv"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Enter 11 kV Feeder Details"
+                            android:inputType="textCapCharacters"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/new_et_feeder_no_3_11kv_line_extended"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Select 11 kV Feeder Details"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/new_layout_11kv_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:padding="8dp"
+                        android:background="@drawable/adapter_border"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="FEEDER 4 DETAILS"
+                            android:gravity="center"
+                            android:textSize="17dp"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select Feeder Type :"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <Spinner
+                            android:id="@+id/new_sp_survey_type_11_4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/line_type_work_involments" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select 33/11KV SS :"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/new_sp_sub_station_name_11_feeder_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Select 33/11KV SS"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/new_tv_feeder_4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:visibility="gone"
+                            android:fontFamily="@font/inter"
+                            android:text="Select 11kV Feeder:"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <EditText
+                            android:id="@+id/new_et_feeder_no_4_11kv"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Enter 11 kV Feeder Details"
+                            android:inputType="textCapCharacters"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/new_et_feeder_no_4_11kv_line_extended"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Select 11 kV Feeder Details"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/new_layout_11kv_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:padding="8dp"
+                        android:background="@drawable/adapter_border"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="FEEDER 5 DETAILS"
+                            android:gravity="center"
+                            android:textSize="17dp"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select Feeder Type :"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <Spinner
+                            android:id="@+id/new_sp_survey_type_11_5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/line_type_work_involments" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select 33/11KV SS :"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/new_sp_sub_station_name_11_feeder_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Select 33/11KV SS"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/new_tv_feeder_5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:visibility="gone"
+                            android:fontFamily="@font/inter"
+                            android:text="Select 11kV Feeder:"
+                            android:textColor="@color/new_color"
+                            android:textStyle="bold|italic" />
+
+                        <EditText
+                            android:id="@+id/new_et_feeder_no_5_11kv"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Enter 11 kV Feeder Details"
+                            android:inputType="textCapCharacters"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/new_et_feeder_no_5_11kv_line_extended"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/distance_border"
+                            android:gravity="center|left"
+                            android:hint="Select 11 kV Feeder Details"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--NEW DESIGN BY SOUBHAGYA END-->
+
+
+
+            <CheckBox
+                android:id="@+id/ch_lt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/inter"
+                android:text=" LT Network"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:id="@+id/main_lt_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Select Survey Type :"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/sp_survey_type_lt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/e_survey_type_lt"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="DTR Structure Code :"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/dtr_structure_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|left"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/distance_border"
+                    android:gravity="center|left"
+                    android:hint="Select DTR Structure Code"
+                    android:padding="5dp"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/layout_lt_ckt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="LT Circuit Code:"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold|italic" />
+
+                    <EditText
+                        android:id="@+id/lt_ckt_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:hint="Enter LT Circuit Code"
+                        android:padding="5dp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:text="Next"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

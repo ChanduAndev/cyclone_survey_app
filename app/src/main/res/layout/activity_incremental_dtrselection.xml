@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activitys.MainActivity">
+    <include layout="@layout/toolbar" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+          android:layout_margin="@dimen/size_10dp"
+            android:background="@drawable/background_1"
+            android:orientation="vertical">
+            <CheckBox
+                android:id="@+id/ch_dtrsurvey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DTR Survey" />
+
+            <CheckBox
+                android:id="@+id/ch_ltsurvey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="LT Survey" />
+            <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/size_1dp"
+            android:background="@color/white">
+                <LinearLayout
+                    android:id="@+id/lyt_dtrselect"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_subname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=" DTR Structure :"
+                android:textColor="@color/red"
+                android:layout_margin="@dimen/size_5dp"
+                android:textStyle="bold|italic"/>
+            <Spinner
+                android:id="@+id/sp_dtrcode"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/size_5dp"
+                android:background="@drawable/ddimg" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lyt_ltcircuitselect"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_federname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="LT Circuit :"
+                android:textColor="@color/red"
+                android:layout_margin="@dimen/size_5dp"
+                android:textStyle="bold|italic"/>
+            <Spinner
+                android:id="@+id/sp_circuit"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/size_5dp"
+                android:background="@drawable/ddimg" />
+                </LinearLayout>
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/size_20dp"
+                android:gravity="center"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/button_round_corner" />
+        </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/footer" />
+    </RelativeLayout>
+
+
+</LinearLayout>

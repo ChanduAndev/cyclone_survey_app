@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/lay_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_spinner_field"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:elevation="1dp"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_subname"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="33/11kV SS Name :"
+                            android:textColor="@color/black"
+                            android:textStyle="normal" />
+
+                        <Spinner
+                            android:id="@+id/sp_ssname1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/ss_name" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_federname"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text=" 11kV Feeder Name :"
+                            android:textColor="@color/black"
+                            android:textStyle="normal" />
+
+                        <Spinner
+                            android:id="@+id/sp_feedername1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_spinner_field" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_is_multi_circuit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/abeezee"
+                            android:text="Multi Circuit Available ?"
+                            android:textColor="@color/black"
+                            android:textStyle="normal" />
+
+                        <Spinner
+                            android:id="@+id/sp_is_multi_circuit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/multi_ckt_req"
+                            />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <Button
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_above="@+id/bottom_layout_version"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/ui_new_color"
+            android:gravity="center"
+            android:text="Next"
+            android:fontFamily="@font/abeezee"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/two_sides_rounded_border_up"
+        android:backgroundTint="@color/light_gray_clor_2"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter"
+            android:text="@string/powerby"
+            android:textColor="@color/ui_black_color"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

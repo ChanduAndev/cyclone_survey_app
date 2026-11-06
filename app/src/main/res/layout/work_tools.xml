@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/home_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter"
+            android:text="Work Involvements"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_close_24" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_section_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkbox_33kv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="33 kV Feeder"
+                    android:textSize="20sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/main_33kv_layout_estimates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Select Feeder Type :"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold|italic" />
+
+                    <Spinner
+                        android:id="@+id/sp_survey_type_33_estimates"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/line_type_work_involments" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_oh_33_feeder_1_estimate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/ed_oh_33_feeder_1"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="3dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/ddimg"
+                        android:hint="Select 33 kV Feeder "
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_section_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkbox_11kv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="11 kV Feeder"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/main_11kv_layout_estimate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Select Feeder Type :"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold|italic" />
+
+                    <Spinner
+                        android:id="@+id/sp_survey_type_11_estimates"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/line_type_work_involments" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_feeder_11kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_11kv_feeder_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Select Feeder 1*"
+                            android:visibility="visible" />
+
+                        <Spinner
+                            android:id="@+id/sp_feeders_11kv_feeder1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/size_20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="@dimen/size_20dp"
+                            android:background="@drawable/ddimg"
+                            android:entries="@array/feeder_no_33kv_feeder"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_feeders_list_11kv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:id="@+id/layout_oh_11_feeder_1_estimate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+
+                            <TextView
+                                android:id="@+id/ed_oh_11_feeder_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_margin="3dp"
+                                android:layout_weight="3"
+                                android:background="@drawable/ddimg"
+                                android:hint="Select 11 kV Feeder"
+                                android:padding="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/get_oh_11_feeder_1"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_background"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="GET"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <CheckBox
+                    android:id="@+id/checkbox_DTR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkbox_11kv"
+                    android:text="DTR  "
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_section_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkbox_lt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="LT Network"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/main_lt_layout_estimates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="DTR Structure Code :"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold|italic" />
+
+                    <EditText
+                        android:id="@+id/dtr_structure_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/distance_border"
+                        android:focusable="false"
+                        android:hint="Enter DTR Structure Code"
+                        android:padding="5dp"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/start_survey_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="Start Survey"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

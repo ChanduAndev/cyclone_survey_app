@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_bottom_sheet_rounded">
+
+    <ProgressBar
+        android:id="@+id/progressLoader"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Wait.."
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data transmission in progress.\nDo not disconnect."
+        android:textSize="16sp"
+        android:textColor="#9E9E9E"
+        android:gravity="center"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="CANCEL"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:backgroundTint="#2979FF"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>

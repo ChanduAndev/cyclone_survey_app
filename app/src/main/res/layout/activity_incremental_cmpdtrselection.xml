@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_5dp">
+
+                <TextView
+                    android:id="@+id/tv_subname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_5dp"
+                    android:text=" DTR Code :"
+                    android:textColor="@color/red"
+                    android:textStyle="bold|italic" />
+
+                <Spinner
+                    android:id="@+id/sp_incr_cmpdtrcode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/margin_5dp"
+                    android:background="@drawable/ddimg" />
+
+                <TextView
+                    android:id="@+id/tv_incr_federname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_5dp"
+                    android:text="LT Circuit :"
+                    android:textColor="@color/red"
+                    android:textStyle="bold|italic" />
+
+                <Spinner
+                    android:id="@+id/sp_incr_cmpcircuit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/margin_5dp"
+                    android:background="@drawable/ddimg" />
+
+                <Button
+                    android:id="@+id/btn_incr_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size_20dp"
+                    android:background="@drawable/button_round_corner"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_5dp"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/footer" />
+    </RelativeLayout>
+
+
+</LinearLayout>

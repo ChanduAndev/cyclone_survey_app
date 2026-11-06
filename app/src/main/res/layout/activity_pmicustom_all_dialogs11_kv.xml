@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ScrollView
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+
+      <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:layout_marginTop="4dp"
+              android:layout_marginEnd="4dp"
+              android:layout_marginBottom="4dp"
+              android:padding="4dp"
+              android:text="Pole Attributes"
+              android:textSize="15dp" />
+
+          <LinearLayout
+              android:orientation="horizontal"
+              android:layout_alignParentRight="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_repeat_pole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_round_corner"
+                android:backgroundTint="@color/red"
+                android:gravity="center"
+                android:text="Repeat Pole"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_topclear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_round_corner"
+                android:backgroundTint="@color/red"
+                android:gravity="center"
+                android:text="Clear"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+          </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/distance_border"
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical"
+            android:visibility="gone">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:padding="5dp"
+              android:text="DISTANCE (in meters)"
+              android:textColor="@color/red" />
+
+          <View
+              android:layout_width="fill_parent"
+              android:layout_height="1dp"
+              android:background="@color/lightGrey" />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:weightSum="2"
+              android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text=""
+                  android:textStyle="bold"
+                  android:textSize="18sp"
+
+                  android:textColor="@color/colorAccent" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="From Current Location"
+                  android:textSize="10sp"
+                  android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text=""
+                  android:textStyle="bold"
+                  android:textSize="24sp"
+                  android:id="@+id/last_pole_distance"
+                  android:textColor="@color/redred" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="From Source Pole"
+                  android:textSize="13sp"
+                  android:textStyle="bold"
+                  android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+
+          </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="start"
+              android:text="Distance From Current Location :"
+              android:textColor="@color/red" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="start"
+              android:text=""
+              android:layout_marginLeft="3dp"
+              android:id="@+id/current_distance"
+              android:textColor="@color/red" />
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="4dp"
+              android:padding="4dp"
+              android:text="SS Name* :"
+              android:textColor="@color/red" />
+
+          <TextView
+              android:id="@+id/tv_sunname"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="4dp"
+              android:padding="4dp"
+              android:text="SS Name* :"
+              android:textColor="#0A4E75" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="4dp"
+              android:padding="4dp"
+              android:text="Feeder Name* :"
+              android:textColor="@color/red" />
+
+          <TextView
+              android:id="@+id/tv_feedename"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="4dp"
+              android:padding="4dp"
+              android:text="SS Name* :"
+              android:textColor="#0A4E75" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="4dp"
+              android:padding="4dp"
+              android:text="Defective Location No* :"
+              android:textColor="@color/red" />
+
+          <EditText
+              android:id="@+id/ed_pole_no"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+          <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="4dp"
+              android:padding="4dp"
+              android:text="From Pole* :"
+              android:textColor="@color/red" />
+
+          <EditText
+              android:id="@+id/ed_frompole"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="4dp"
+              android:padding="4dp"
+              android:text="Survey Type* :"
+              android:textColor="@color/red" />
+
+          <Spinner
+              android:id="@+id/sp_Survey_type"
+              android:layout_width="fill_parent"
+              android:layout_height="40dp"
+              android:layout_marginTop="10dp"
+              android:background="@drawable/ddimg"
+              android:entries="@array/Survey_type" />
+        </LinearLayout>
+
+        <!--START JHC PHASE 1-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/jhc_layout"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Pole Survey Type* :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_pole_survey_type"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/pole_survey_type" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Line Survey Type* :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/sp_line_survey_type"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/pole_survey_type" />
+          </LinearLayout>
+        </LinearLayout>
+
+        <!--END JHC PHASE 1-->
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="4dp"
+              android:padding="4dp"
+              android:text="Line Type* :"
+              android:textColor="@color/red" />
+
+          <Spinner
+              android:id="@+id/sp_lineType"
+              android:layout_width="fill_parent"
+              android:layout_height="40dp"
+              android:layout_marginTop="10dp"
+              android:background="@drawable/ddimg"
+              android:entries="@array/line_type" />
+        </LinearLayout>
+        <!-- <TextView
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="4dp"
+             android:padding="4dp"
+             android:text="No.Of Circuit* :"
+             android:textColor="@color/red"/>
+         <Spinner
+             android:id="@+id/sp_noofcircuit"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:layout_marginTop="10dp"
+             android:background="@drawable/ddimg"
+             android:entries="@array/noof_circuit" />-->
+
+        <!--UnderGround Layout Start-->
+        <include layout="@layout/under_ground_layout_pmi" />
+
+        <!--Over Head Layout Start-->
+        <include layout="@layout/over_head_layout_pmi" />
+        <!--<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Longitude" />
+
+            <EditText
+                android:id="@+id/ed_lat_y"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>-->
+        <!--AB Cable Start Layout-->
+        <include layout="@layout/ab_cable_layout1" />
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="15dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+          <Button
+
+              android:id="@+id/btn_clear"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="4dp"
+              android:layout_weight="1"
+              android:background="@drawable/button_round_corner"
+              android:backgroundTint="@color/red"
+              android:padding="4dp"
+              android:text="Clear"
+              android:textAllCaps="false"
+              android:textColor="@color/white" />
+
+          <Button
+              android:id="@+id/btn_add"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="4dp"
+              android:layout_weight="1"
+              android:background="@drawable/button_round_corner"
+              android:backgroundTint="@color/red"
+              android:padding="4dp"
+              android:text="Add"
+              android:textAllCaps="false"
+              android:textColor="@color/white" />
+
+        </LinearLayout>
+      </LinearLayout>
+
+    </RelativeLayout>
+
+  </ScrollView>
+
+</RelativeLayout>

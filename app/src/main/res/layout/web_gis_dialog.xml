@@ -1,0 +1,182 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+
+    android:background="@drawable/alert_dialog_bg">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:padding="8dp"
+       android:orientation="vertical">
+       <!-- Title -->
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Web GIS"
+           android:textSize="18sp"
+           android:textStyle="bold"
+           android:textColor="@android:color/black"
+           android:layout_marginBottom="16dp"/>
+
+       <!-- 33KV Card -->
+       <com.google.android.material.card.MaterialCardView
+           android:id="@+id/web_33"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="12dp"
+           app:cardCornerRadius="12dp"
+           android:visibility="visible"
+           app:cardElevation="2dp"
+           app:strokeWidth="1dp"
+           app:strokeColor="#CCCCCC">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="5dp">
+
+               <!-- Icon -->
+               <ImageView
+                   android:id="@+id/icon33"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/app_logo"
+                   android:layout_centerVertical="true"/>
+
+               <!-- Text -->
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="33KV Web GIS"
+                   android:textSize="16sp"
+                   android:textColor="@android:color/black"
+                   android:layout_toEndOf="@id/icon33"
+                   android:layout_marginStart="12dp"
+                   android:layout_centerVertical="true"/>
+
+               <!-- Radio -->
+               <RadioButton
+                   android:id="@+id/radio_33"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:buttonTint="@color/radio_color_selector"
+                   android:layout_centerVertical="true"/>
+
+           </RelativeLayout>
+
+       </com.google.android.material.card.MaterialCardView>
+
+       <!-- 11KV Card -->
+       <com.google.android.material.card.MaterialCardView
+           android:id="@+id/web_11"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="12dp"
+           app:cardCornerRadius="12dp"
+           app:cardElevation="2dp"
+           android:visibility="visible"
+           app:strokeWidth="1dp"
+           app:strokeColor="#CCCCCC">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="5dp">
+
+               <ImageView
+                   android:id="@+id/icon11"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/app_logo"
+                   android:layout_centerVertical="true"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="11KV Web GIS"
+                   android:textSize="16sp"
+                   android:textColor="@android:color/black"
+                   android:layout_toEndOf="@id/icon11"
+                   android:layout_marginStart="12dp"
+                   android:layout_centerVertical="true"/>
+
+               <RadioButton
+                   android:id="@+id/radio_11"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:buttonTint="@color/radio_color_selector"
+                   android:layout_centerVertical="true"/>
+
+           </RelativeLayout>
+
+       </com.google.android.material.card.MaterialCardView>
+
+       <!-- LT Card -->
+       <com.google.android.material.card.MaterialCardView
+           android:id="@+id/web_LT"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="8dp"
+           app:cardCornerRadius="12dp"
+           app:cardElevation="2dp"
+           android:visibility="visible"
+           app:strokeWidth="1dp"
+           app:strokeColor="#CCCCCC">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="5dp">
+
+               <ImageView
+                   android:id="@+id/iconLT"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/app_logo"
+                   android:layout_centerVertical="true"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="LT Web GIS"
+                   android:textSize="16sp"
+                   android:textColor="@android:color/black"
+                   android:layout_toEndOf="@id/iconLT"
+                   android:layout_marginStart="12dp"
+                   android:layout_centerVertical="true"/>
+
+               <RadioButton
+                   android:id="@+id/radio_LT"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:buttonTint="@color/radio_color_selector"
+                   android:layout_centerVertical="true"/>
+
+           </RelativeLayout>
+
+       </com.google.android.material.card.MaterialCardView>
+
+       <!-- Continue Button -->
+       <TextView
+           android:id="@+id/tv_continue"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Continue"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:padding="10dp"
+           android:textColor="@android:color/white"
+           android:backgroundTint="@color/colorPrimary"
+           android:layout_marginTop="10dp"
+           android:background="@drawable/rounded_button"/>
+   </LinearLayout>
+
+</LinearLayout>

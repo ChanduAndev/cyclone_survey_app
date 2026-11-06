@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_sheet_bg"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_sec_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Area Codes"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/tvSelectedCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0 Selected"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"/>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:queryHint="Search your area code here"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAreas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/btnApply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_blue"/>
+
+</LinearLayout>

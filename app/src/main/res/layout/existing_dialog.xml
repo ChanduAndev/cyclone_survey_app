@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/button_background"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/pole_survey_type"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Location Survey type*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_is_location_exists"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:popupBackground="@drawable/spinner_dropdown_bg"
+                     />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_same_other"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_same_dtr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Is Location belongs to same feeder?*"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/more_info_is_same_feeder"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/outline_info_24"
+                        android:tint="@color/ui_new_color"
+                        />
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_same_feeder_location"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:popupBackground="@drawable/spinner_dropdown_bg"
+                    android:entries="@array/e_yes_no" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_voltage_level"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Select voltage level?*"
+                    android:textColor="@color/ui_black_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_layout_voltage_level"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:popupBackground="@drawable/spinner_dropdown_bg"
+                    android:entries="@array/voltage_level_new" />
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ch_int_pole_proposed_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+
+                <CheckBox
+                    android:id="@+id/ch_int_pole_proposed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Intermediate Pole?"
+                    android:fontFamily="@font/inter"
+                    android:textSize="14sp"
+                    android:visibility="visible"
+                    android:button="@null"
+                    android:padding="8dp"
+                    android:drawableStart="@drawable/selector_checkbox_icon"
+                    android:drawablePadding="8dp"/>
+
+                <ImageView
+                    android:id="@+id/more_info_int_pole"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/outline_info_24"
+                    android:tint="@color/ui_new_color"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/log_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/inter"
+                android:gravity="start"
+                android:text=""
+                android:background="@drawable/bg_work_involvements"
+                android:drawableLeft="@drawable/outline_info_24"
+                android:drawableTint="@color/ui_new_color"
+                android:drawablePadding="8dp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/back_to_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_gradient"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

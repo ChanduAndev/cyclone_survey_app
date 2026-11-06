@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_toolbar_gradient"
+    android:fitsSystemWindows="true"
+    tools:context="com.apepdcl.gis_survey.estimates.sou.BoQActivity">
+
+    <!-- Header Layout -->
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_toolbar_gradient"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:id="@+id/back_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/outline_arrow_back_ios_new_24"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/close_layout"
+            android:layout_toRightOf="@id/back_layout">
+
+            <TextView
+                android:id="@+id/home_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/inter"
+                android:text="Complete"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/close_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_boarder"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_close_24"
+                android:tint="@color/new_color" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Bottom Version Footer (Absolute bottom) -->
+    <RelativeLayout
+        android:id="@+id/layout_bottom_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_toolbar_gradient"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter"
+            android:text="@string/powerby"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Action Buttons Pinned Above Footer (Outside ScrollView) -->
+    <LinearLayout
+        android:id="@+id/layout_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_bottom_version"
+        android:orientation="horizontal"
+        android:padding="@dimen/size_8dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        android:weightSum="2">
+
+        <!-- Secondary Action: Cancel -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/update_button_bg"
+            app:backgroundTint="@null"
+            android:fontFamily="@font/inter"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="8dp"
+            app:strokeWidth="1dp" />
+
+        <!-- Primary Action: Complete (Gradient Style) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_complete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button_gradient"
+            app:backgroundTint="@null"
+            android:fontFamily="@font/inter"
+            android:text="Complete"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="8dp"
+            app:strokeWidth="0dp" />
+
+    </LinearLayout>
+
+    <!-- NestedScrollView (Constrained between Header and Buttons) -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/new_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_layout"
+        android:layout_above="@+id/layout_btns"
+        android:background="@drawable/tool_bar_bg">
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tool_bar_bg"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/sap_33_material_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:text="BoQ Details"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layout_gis_id_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
+                    app:strokeColor="#F1F1F1"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Blue left accent -->
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="match_parent"
+                            android:background="#287BFF" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <!-- First row: Estimate, GIS ID, Nature -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!-- Estimate Number -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.2"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/estimate_no_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/inter"
+                                        android:text="Est no"
+                                        android:textColor="#8A9AB5"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/est_no"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:fontFamily="@font/inter"
+                                        android:textColor="#202020"
+                                        android:textSize="11sp"
+                                        android:textStyle="bold"
+                                        tools:text="MKP-00045" />
+                                </LinearLayout>
+
+                                <!-- GIS ID -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/inter"
+                                        android:text="GIS ID"
+                                        android:textColor="#8A9AB5"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/gis_id"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:fontFamily="@font/inter"
+                                        android:textColor="#202020"
+                                        android:textSize="11sp"
+                                        android:textStyle="bold"
+                                        tools:text="100000064" />
+                                </LinearLayout>
+
+                                <!-- Estimate Nature -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.7"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/inter"
+                                        android:text="Est Nature"
+                                        android:textColor="#8A9AB5"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/est_nature"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:fontFamily="@font/inter"
+                                        android:textColor="#202020"
+                                        android:textSize="11sp"
+                                        android:textStyle="bold"
+                                        tools:text="LT" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="#F0F0F0" />
+
+                            <!-- Description label -->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter"
+                                android:text="Description"
+                                android:textColor="#8A9AB5"
+                                android:textSize="10sp" />
+
+                            <!-- Description value -->
+                            <TextView
+                                android:id="@+id/tv_description"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/inter"
+                                android:textColor="#202020"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                tools:text="Pole Replacement - Area 5 Residential Zone" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/layout_gis_id_details_wo_rdss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_length"
+                    android:backgroundTint="@color/ui_new_color"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:background="@drawable/bg_length"
+                        android:backgroundTint="@color/white"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/gis_id_wo_rdss"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="start"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:text="BOQ Details For" />
+
+                        <TextView
+                            android:id="@+id/tv_est_feeders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="start"
+                            android:padding="2dp"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:text="BOQ Details For" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:text="Materials Details"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layout_materials_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_length"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:id="@+id/qty"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="QTY"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/uom"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/qty"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="UoM"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/voltage"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/uom"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="DATA"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/voltage"
+                            android:fontFamily="@font/inter"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="DESCRIPTION"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/background_color" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_completed_boq"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="10" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Loader & Error Views -->
+    <TextView
+        android:id="@+id/tv_error_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/ui_new_color"
+        android:textSize="18sp"
+        android:visibility="gone"
+        tools:text="No Records Found" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/loader"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/loader_new"
+        android:visibility="gone" />
+
+</RelativeLayout>

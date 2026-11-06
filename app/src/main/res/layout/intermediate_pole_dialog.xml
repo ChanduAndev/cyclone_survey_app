@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_border"
+    android:backgroundTint="@color/white"
+    android:padding="10dp"
+    android:layout_margin="5dp"
+    >
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/abeezee"
+        android:gravity="center"
+        android:text="Intermediate Pole"
+        android:id="@+id/title"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/abeezee"
+        android:gravity="center"
+        android:text="Enter the pole numbers for which inline pole to be added."
+        android:textColor="@color/lightGrey"
+        android:textStyle="normal"
+        android:textSize="12sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_spinner_field"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+
+        <EditText
+            android:id="@+id/pole_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:hint="Enter Pole 1"
+            android:inputType="phone"
+            android:maxLength="4"
+            android:textColorHint="@color/grey_font"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_spinner_field"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+
+        <EditText
+            android:id="@+id/pole_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:hint="Enter Pole 2"
+            android:inputType="phone"
+            android:maxLength="4"
+            android:textColorHint="@color/grey_font"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_work_involvements"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/ui_new_color"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/adapter_border"
+            android:backgroundTint="@color/ui_new_color"
+
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Submit"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

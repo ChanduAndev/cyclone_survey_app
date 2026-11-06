@@ -1,0 +1,47 @@
+<!-- res/layout/dialog_veg_filter.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPDATE DTR STRUCTURE CODE"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="#212121" />
+
+    <RadioGroup
+        android:id="@+id/rg_edit_dtr_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/rg_only_dtr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Only DTR particulurs"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rg_non_dtr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Attributes" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_apply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#008000" />
+</LinearLayout>

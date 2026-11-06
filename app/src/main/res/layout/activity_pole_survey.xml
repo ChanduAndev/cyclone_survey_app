@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/background_color"
+    tools:context=".module_11KV.PoleSurveyActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_layout_version">
+        <include layout="@layout/toolbar"/>
+        <LinearLayout
+            android:id="@+id/lay_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_spinner_field"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tv_surveyedpole"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/abeezee"
+                            android:text="Surveyed Poles"
+                            android:textColor="@color/lite_black"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/lyt_surveytype"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:text=" Survey Type :"
+                            android:textColor="@color/black"
+                            android:textStyle="normal" />
+
+                        <Spinner
+                            android:id="@+id/sp_loadmap"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/load_map" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_tapingpoint"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Select Taping Point Location:"
+                            android:textColor="@color/black"
+                            android:textStyle="normal" />
+
+                        <Spinner
+                            android:id="@+id/sp_tappingpoint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/load_map_33_kv" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+                    <Button
+                        android:id="@+id/btn_taping"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/ui_new_color"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center"
+                        android:text="Next"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    <Button
+                        android:id="@+id/btn_add_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="12dp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:fontFamily="@font/abeezee"
+                        android:text="Add Taping Point for Spur Line"
+                        android:textAllCaps="true"
+                        android:background="@drawable/bg_work_involvements"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+
+            android:weightSum="2"
+            >
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_work_involvements"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="Edit Survey"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/btn_polenext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:paddingHorizontal="18dp"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/ui_new_color"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="    Next    "
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/two_sides_rounded_border_up"
+        android:backgroundTint="@color/light_gray_clor_2"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter"
+            android:text="@string/powerby"
+            android:textColor="@color/ui_black_color"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

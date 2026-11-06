@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_background"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="Cancel"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_dialog_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/custom_dialog_new_recyclerview"
+        android:layout_below="@+id/iv_cancel" />
+
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="విద్యుత్ శాఖ వారి హెచ్చరిక"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="ఇది మీ డైలాగ్ వివరాలు. మీరు ఇక్కడ ఏదైనా సమాచారం ఇవ్వవచ్చు..."
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/button_background"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:id="@+id/location_survey_type"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="New/Mapped Location?*"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_is_location_exists"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:popupBackground="@drawable/spinner_dropdown_bg"
+            android:background="@drawable/bg_spinner_field"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_existing_connecting_point"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="Location Number?*"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/sp_exsting_connecting_point"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_spinner_field" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pole_survey_type"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="Location Survey type*"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_location_survey_type"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_spinner_field"
+            android:popupBackground="@drawable/spinner_dropdown_bg"
+            android:entries="@array/pole_survey_type_estimates" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_same_other"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_same_dtr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Is Location belongs to same feeder?*"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/more_info_is_same_feeder"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/outline_info_24" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_same_feeder_location"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_spinner_field"
+            android:popupBackground="@drawable/spinner_dropdown_bg"
+            android:entries="@array/e_yes_no" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_voltage_level"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="Select voltage level?*"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_layout_voltage_level"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_spinner_field"
+            android:popupBackground="@drawable/spinner_dropdown_bg"
+            android:entries="@array/voltage_level_new" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ch_int_pole_proposed_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/ch_int_pole_proposed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intermediate Pole?"
+            android:textColor="@color/new_color"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/more_info_int_pole"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="7dp"
+            android:src="@drawable/outline_info_24" />
+
+    </RelativeLayout>
+
+
+    <TextView
+
+        android:id="@+id/log_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/inter"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/ui_black_color"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_gradient"
+        android:fontFamily="@font/inter"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="SUBMIT"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
+</ScrollView>

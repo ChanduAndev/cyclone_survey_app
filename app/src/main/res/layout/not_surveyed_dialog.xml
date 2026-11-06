@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    android:elevation="30dp"
+    android:background="@drawable/alert_dialog_bg">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/title"
+            android:text="Updated Successfully"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="12dp"/>
+
+
+
+
+
+
+
+        <!-- Buttons (Horizontal) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/cancelBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:visibility="visible"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textAllCaps="false"
+                android:background="@drawable/button_background"
+                android:backgroundTint="#E5E7EB"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/okBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:padding="8dp"
+                android:visibility="visible"
+                android:background="@drawable/button_gradient"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:layout_marginStart="8dp"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pole_type_cyclone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Pole Type "
+                android:textSize="14sp"
+                android:textColor="@color/ui_black_color"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_pole_type_cyclone"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:background="@drawable/bg_spinner_field"
+              />
+
+            <TextView
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:visibility="visible"
+                android:background="@drawable/button_gradient"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:layout_marginTop="5dp"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:textColor="@android:color/white"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+
+    <!-- Icon -->

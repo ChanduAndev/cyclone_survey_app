@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/lyt_overhead">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--<RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Attributes"
+                    android:textSize="20dp" />
+                <Button
+                    android:id="@+id/btn_topclear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_button"
+                    android:textAllCaps="false"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />-->
+            <!--<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="DTR Structure* :"
+                    android:textColor="@color/red"/>
+                <TextView
+                    android:id="@+id/tv_dtrstrcuture"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="DTR Structure* :"
+                    android:textColor="#0A4E75"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="LT Circuit* :"
+                    android:textColor="@color/red"/>
+                <TextView
+                    android:id="@+id/tv_ltcircuit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="LT Circuit* :"
+                    android:textColor="#0A4E75"/>
+            </LinearLayout>-->
+
+
+            <!--<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole No* :"
+                    android:textColor="@color/red"/>
+
+                <EditText
+                    android:id="@+id/ed_pole_no"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="From Pole* :"
+                    android:textColor="@color/red"/>
+
+                <EditText
+                    android:id="@+id/ed_frompole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Line Type* :"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_lineType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/line_type" />
+            </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is End Pole* :"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_isendpole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/is_endpole" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is WO Survey Completed ? * :"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_ltoh_wosurveycompleted"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/is_survey_complete" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Line Configuration* :"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_lineconfig"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_line_config" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is Street Light Connection Available?*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_isstreetlight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_is_streetlight" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is Services (Other Than Steet Light) connected to Pole?*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_otherthan_streetlight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_is_other_thanstreetlight" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_oh_dtr_pole_dtr_meter_avilable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="DTR Meter Available*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_dtr_pole_dtr_meter_avilable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_dtr_meter_avilable" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_oh_dtr_pole_no_of_meter"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="No Of Meters*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_dtr_pole_no_of_meters"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_no_of_meters" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyt_otherthan_streetlight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/lyt_oh_aglservice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_aglservices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Agl Services"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_edt_aglservices"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_aglservices"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No.Of Agl Services"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lyt_oh_chacquaservices"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_aquaservices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Aqua Services"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_edt_aquaservices"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_aquaservices"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No.Of Aqua Services"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lyt_oh_chindustrialservices"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_industrialservices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Industrial Services"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_edt_industrialservices"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_industrialservices"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No.Of Industrial Services"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pin/Cut Point*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_pin_cutpoint"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_pin_point" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyt_oh_is_doublefeeding_pole"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is it Double Feeding Pole?*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_is_doublefeeding_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_is_doublefeeding" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Type*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_pole_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_poletype" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Height*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_pole_height"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_poletype" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Support*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_strut_stay_details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_strut" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Tapping point*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_tapping_point"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_tappingpoint" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyt_oh_noof_spurlines"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="No of Spur Lines*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_noof_spurlines"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_noof_spurlines" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_oh_tappinglocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Tapping Location Name"
+                        android:maxLength="100"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Conductor Size*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_conductor_size"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_conductorsize" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is Multi Circuit ?*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_ismulti_circuit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_ismulti_circuit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_oh_noof_circuits"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+               <!-- <LinearLayout
+                    android:id="@+id/lyt_spi_no_circuit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="No of Circuits*"
+                        android:textColor="@color/red"/>
+                    <Spinner
+                        android:id="@+id/sp_oh_noof_circuits"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/oh_noof_ckts" />
+                </LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Multi Voltage/Same Voltage*"
+                        android:textColor="@color/red"/>
+                    <Spinner
+                        android:id="@+id/sp_oh_multi_voltage_same_voltage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ddimg"
+                        android:entries="@array/oh_same_multi" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyt_spi_no_circuit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="No of Circuits*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_oh_noof_circuits"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_noof_ckts" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyt_oh_multivoltage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_33kv_vlckts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="33kv Voltage Ckts"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_33kv_vlckts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_33kv_vlckts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 33kv Voltage Ckts"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_11kv_vlckts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="11kv Voltage Ckts"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_11kv_vlckts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_11kv_vlckts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 11kv Voltage Ckts"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_6_3kv_vlckts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="6.3kv Voltage Ckts"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_6_3kv_vlckts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_6_3kv_vlckts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 6.3kv Voltage Ckts"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_lt_vlckts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LT Voltage Ckts"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_lt_vlckts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_lt_vlckts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of LT Voltage Ckts"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Crossing*"
+                    android:textColor="@color/red"/>
+                <Spinner
+                    android:id="@+id/sp_crossing"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ddimg"
+                    android:entries="@array/oh_crossing" />
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/lyt_oh_crossing"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_6_3_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="6.3kv Crossing"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_6_3_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_6_3_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 6.3kv Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_11kv_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="11kv Crossings"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_11kv_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_11kv_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 11kv Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_33kv_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="33kv Crossings"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_33kv_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_33kv_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of 33kv Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_lt_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LT Crossings"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_lt_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_lt_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of LT Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_tc_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TeleCommunication Crossings"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_tc_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_tc_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of TeleCommunication Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/ch_oh_tm_crossing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Transmission Crossings"
+                        android:layout_marginTop="16dp"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:id="@+id/lyt_oh_tm_crossing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_oh_tm_crossing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter No. of Transmission Crossings"
+                                android:maxLength="1"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_oh_pole_paintingcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Pole Painting Code"
+                        android:maxLength="100"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_oh_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Remarks"
+                        android:maxLength="100"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <!--<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button"
+                    android:padding="4dp"
+                    android:text="Clear"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_button"
+                    android:textAllCaps="false"
+                    android:text="Add" />
+
+            </LinearLayout>-->
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

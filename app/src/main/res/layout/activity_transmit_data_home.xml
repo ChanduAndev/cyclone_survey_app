@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    tools:context=".module_33KV.TransmitDataHomeActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="15dp"
+        android:background="@drawable/distance_border_new"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tv_escount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="No.of Surveyed "
+            android:textColor="@color/ui_black_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_image_numbers"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="No.of Images "
+            android:textColor="@color/ui_black_color"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btn_transmit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/inter"
+            android:text="Transmit Data"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Note* : After Completion of the Survey of the entire Feeder, Please contact Nodal Officer, Division Office for updating the Status as Completion."
+            android:textColor="@color/ui_black_color"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <include layout="@layout/footer" />
+
+</RelativeLayout>

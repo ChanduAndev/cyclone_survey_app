@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityUG33KV">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp">
+    <!--<TextView
+        android:id="@+id/tv_subname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=" SS Name :"
+        android:textColor="@color/red"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold|italic"/>
+    <Spinner
+        android:id="@+id/sp_ssname"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ddimg"
+        android:entries="@array/ss_name" />-->
+       <!-- <TextView
+            android:id="@+id/tv_federname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=" Feeder Name :"
+            android:textColor="@color/red"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold|italic"/>
+        <Spinner
+            android:id="@+id/sp_feedername"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ddimg" />-->
+        <!--<TextView
+            android:id="@+id/tv_workorder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=" Work Order Number :"
+            android:textColor="@color/red"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold|italic"/>
+        <Spinner
+            android:id="@+id/sp_workorder"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ddimg" />-->
+
+<!--
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_from_polenum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Fome Pole"
+                android:maxLength="100"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_to_polenum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter To Pole"
+                android:maxLength="100"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+-->
+        <CheckBox
+            android:id="@+id/ch_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download suveyed data"
+            android:layout_above="@+id/button"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold|italic"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginTop="20dp"
+            android:text="Download"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/round_button" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/foter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/powerby"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

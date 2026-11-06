@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <CheckBox
+        android:id="@+id/ch_int_pole_33kv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intermediate Pole?"
+        android:textSize="14sp"
+        android:visibility="visible"
+        android:button="@null"
+        android:padding="8dp"
+        android:drawableStart="@drawable/selector_checkbox_icon"
+        android:drawablePadding="8dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_desc_for_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:text="Capturing  of a proposed Intermediate Pole between two existing poles"
+        android:textColor="@color/ui_new_color"
+        android:textSize="14sp"
+        android:background="@drawable/bg_work_involvements"
+        android:drawableLeft="@drawable/outline_info_24"
+        android:drawableTint="@color/ui_new_color"
+        android:drawablePadding="10dp"
+        android:textStyle="bold" />
+
+
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:layout_marginTop="8dp"
+        android:text="Mapping Of Existing Pole/Location (Tapping Location)"
+        android:textColor="@color/ui_new_color"
+        android:textSize="14sp"
+        android:visibility="visible"
+        android:textStyle="bold" />
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_intermediate_poll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter"
+                android:text="Select Location Number 1*"
+                android:textColor="@color/lightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_intermediate_poll_1"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner_field" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/location_layout_int_2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter"
+                android:text="Select Location Number 2*"
+                android:textColor="@color/lightGrey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_intermediate_poll_2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:popupBackground="@drawable/spinner_dropdown_bg"
+                android:background="@drawable/bg_spinner_field" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_tapping_point"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter"
+            android:text="Select Existing Pole/Location Number*"
+            android:textColor="@color/lightGrey"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_tapping_point"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:popupBackground="@drawable/spinner_dropdown_bg"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_spinner_field" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter"
+            android:text="Note: First Location should be Tapping Location/Pole only"
+            android:textColor="@color/ui_new_color"
+            android:textSize="12sp"
+            android:background="@drawable/bg_work_involvements"
+            android:drawableLeft="@drawable/outline_info_24"
+            android:drawableTint="@color/ui_new_color"
+            android:drawablePadding="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter"
+            android:text="Note: Select the valid tapping location with the help of existing poles loaded on the map"
+            android:textColor="@color/ui_new_color"
+            android:textSize="12sp"
+            android:background="@drawable/bg_work_involvements"
+            android:drawableLeft="@drawable/outline_info_24"
+            android:drawableTint="@color/ui_new_color"
+            android:drawablePadding="10dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

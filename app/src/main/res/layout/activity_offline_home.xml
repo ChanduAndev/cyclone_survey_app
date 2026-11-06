@@ -1,0 +1,3169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="5dp">
+
+
+        <RelativeLayout
+            android:id="@+id/back_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/close_layout"
+            android:layout_toRightOf="@id/back_layout"
+            android:backgroundTint="@color/new_color">
+
+            <TextView
+                android:id="@+id/home_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+                android:fontFamily="@font/inter"
+                android:text="ESTIMATE DETAILS"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/close_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_boarder">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_close_24"
+                android:tint="@color/new_color" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!--NEW DESIGN BY SOUBHAGYA START-->
+
+    <ScrollView
+        android:id="@+id/main_layout_involvements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_complete_survey"
+        android:layout_below="@id/header_layout"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/adapter_border"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/c_1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_outline"
+                android:padding="4dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/app_logo" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/est_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="EST NO"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/purpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:text="Purpose"
+                android:textColor="@color/lite_black"
+                android:textSize="11sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/adapter_border"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:paddingHorizontal="10dp"
+                    android:text="33KV SURVEY"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="No of Locations : "
+                        android:textAllCaps="false"
+                        android:textColor="@color/lightGrey"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/no_locations_33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="SS Name : "
+                        android:textAllCaps="false"
+                        android:textColor="@color/new_color"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/ss_name_33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textColor="@color/new_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="Feeder : "
+                        android:textAllCaps="false"
+                        android:textColor="@color/new_color"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/feeder_name_33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textColor="@color/new_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="Survey Type : "
+                        android:textAllCaps="false"
+                        android:textColor="@color/new_color"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/survey_type_33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textColor="@color/new_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/continue_survey_33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:paddingHorizontal="1dp"
+                    android:paddingVertical="8dp"
+                    android:text="CONTINUE SURVEY"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <!--NEW 33KV LINE EXTENSION STARTS-->
+
+            <LinearLayout
+                android:id="@+id/main_layout_33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/adapter_border"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:paddingHorizontal="10dp"
+                    android:text="33KV SURVEY"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <LinearLayout
+                    android:id="@+id/main_layout_33_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 1 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/new_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_33_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_33_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_33_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_33_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_33_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_layout_33_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 2 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ui_black_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_33_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_33_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_33_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_33_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_33_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_layout_33_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 3 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ui_black_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_33_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_33_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_33_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/new_color"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_33_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/new_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_33_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_layout_33_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 4 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/new_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_33_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_33_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_33_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_33_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_33_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_layout_33_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 5 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/new_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_33_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_33_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_33_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_33_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_33_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--NEW 33KV LINE EXTENSION END-->
+
+            <LinearLayout
+                android:id="@+id/main_layout_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/adapter_border"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:paddingHorizontal="10dp"
+                    android:text="11KV SURVEY"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <LinearLayout
+                    android:id="@+id/main_layout_11_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 1 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ui_black_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_11_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_11_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_11_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_11_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_11_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_layout_11_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 2 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/new_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_11_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_11_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_11_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_11_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_11_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_layout_11_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 3 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ui_black_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_11_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_11_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_11_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_11_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_11_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_layout_11_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 4 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ui_black_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_11_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_11_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_11_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_11_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_11_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_layout_11_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 5 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ui_black_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_11_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_11_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_11_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_11_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_11_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_layout_11_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 6 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ui_black_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_11_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_11_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_11_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_11_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_11_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/main_layout_11_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 7 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ui_black_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_11_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_11_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_11_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_11_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_11_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/main_layout_11_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 8 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ui_black_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_11_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_11_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_11_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_11_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_11_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/main_layout_11_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 9 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ui_black_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_11_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_11_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_11_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_11_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_11_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/main_layout_11_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="FEEDER 10 DETAILS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ui_black_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="No of Locations : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/no_locations_11_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="SS Name : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/ss_name_11_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="Feeder : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/feeder_name_11_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:text="Survey Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGrey"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/survey_type_11_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="center"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ui_black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/continue_survey_11_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="8dp"
+                        android:text="CONTINUE SURVEY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_layout_lt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/adapter_border"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:paddingHorizontal="10dp"
+                    android:text="LT SURVEY"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/new_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="No of Locations : "
+                        android:textAllCaps="false"
+                        android:textColor="@color/lightGrey"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/no_locations_lt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textColor="@color/ui_black_color"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/continue_survey_lt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:paddingHorizontal="1dp"
+                    android:paddingVertical="8dp"
+                    android:text="CONTINUE SURVEY"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <!--NEW DESIGN BY SOUBHAGYA END-->
+
+
+    <Button
+        android:id="@+id/btn_complete_survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="4dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/inter"
+        android:padding="4dp"
+        android:text="COMPLETE SURVEY"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+</RelativeLayout>

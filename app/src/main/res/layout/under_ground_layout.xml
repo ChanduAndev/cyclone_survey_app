@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+    <!--UnderGround Layout Start-->
+    <LinearLayout
+        android:id="@+id/lyt_underground"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Voltage Level* :"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp_ug_voltage_level"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/voltage_leavel_ug_ab" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Is End Point* :"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp_undergisendpole"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/is_endpole" />
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Is WO Survey Completed ? * :"
+                android:textColor="@color/black"/>
+            <Spinner
+                android:id="@+id/sp_ug_wosurveycompleted"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/is_wosurvey_completed" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="No.Of Cables* :"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp_noofcircuit_underg"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/noof_circuit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Tapping Point* :"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp_ugtapingpoint"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/taping_point" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_ugtapping"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="No.Of Tappings* :"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp_ugnooftappings"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/nofof_tappings" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="none"
+                android:background="@drawable/bg_spinner_field"
+                android:layout_margin="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_ugtappinglocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="   Enter Tapping Location Name"
+                    android:inputType="text"
+                    android:background="@null"
+                    android:maxLength="100" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Cable Size* :"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp_cablesize"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field" />
+            <!-- android:entries="@array/ug_cable_size"-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Location Type*:"
+                android:textColor="@color/black" />
+            <!--Straight Through Joint/RMU-->
+            <Spinner
+                android:id="@+id/sp_straight_rmu"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/straight_rmu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_ug_line_capacitor"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Line Capacitor Work Condition :"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp_ug_line_capacitor"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/ug_line_capacitor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_ug_auto_reclosure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Auto Reclosure Type:"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp_ug_auto_reclosure"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/pc_auto_reclosure" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_ug_no_of_ab_switches"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="No of AB Switches:"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp_ug_no_of_ab_switches"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/oh_no_of_ab_switches" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_ug_ht_service_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="HT Service Number :"
+                android:textColor="@color/black" />
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_ug_ht_service_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_rmu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="RMU Type* :"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp_rmu"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/rmu" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="RMU Serial Number* :"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/ed_rmu_serial_number"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/black"
+                android:hint="Enter RMU Serial Number"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:background="@drawable/bg_spinner_field"
+                />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="RMU Make* :"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp_rmu_make"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/rmu_make" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_underpolestructure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Type Of Structure* :"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/sp__underpolestructure"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/undergpole_structure" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_ugpole"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Type* :"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/sp_ugpoletype"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/ugpole_type" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Pole Height* :"
+                    android:textColor="@color/black" />
+
+
+                <Spinner
+                    android:id="@+id/sp_ugpoleheight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/pole_height" />
+            </LinearLayout>
+
+            <!--    <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Strut/Stay details* :"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/sp_ug_struct_stay_detailes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/ug_struct_stay" />
+
+                </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="PoleSupport* :"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/sp_ugpolesupport"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/ugpole_support" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--<LinearLayout
+            android:id="@+id/lyt_ugssname"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="SS Name* :"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:id="@+id/sp_ugssname"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_field"
+                android:entries="@array/pole_configuration" />
+
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/lay_ug_dtr_pole_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Section Name :"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/sp_ug_section_name_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="DTR Structure:"
+                    android:textColor="@color/black" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_ug_dtr_structure_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="DTR Structure Type :"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/sp_ug_dtr_structure_type_dtr_pole"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/dtr_structure_type_dtr_pole" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:text="Is DTR available ?:"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/sp_ug_is_dtr_avalabile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:entries="@array/oh_is_dtr_avalable" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_ug_is_dtr_avalable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                ////////////////////////////////////////////
+
+
+                <LinearLayout
+                    android:id="@+id/layout_dtr_details_new_ug"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/distance_border"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <!-- Title -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="-----DTR Particulars-----"
+                        android:textStyle="bold" />
+
+                    <!-- Details Layout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <!-- Row 1: Phase & Capacity -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Phase :"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_phase_ug"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="III"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Capacity :"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_capacity_ug"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="100 KVA"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Row 2: Sl.No -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Sl.No :"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_slno_ug"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="14257"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Row 3: Make -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Make :"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_make_ug"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="Transctin hhahhahhaha"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Row 4: Location -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Location :"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_location_name_ug"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="WATER TANK"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_edit_dtr_details_ug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:text="Edit DTR DETAILS"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                /////////////////////////////////////////
+
+
+                <LinearLayout
+                    android:id="@+id/dtr_details_ug_old"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Phase :"
+                            android:textColor="@color/black" />
+
+                        <Spinner
+                            android:id="@+id/sp_ug_phase_dtr_pole"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/phase_dtr_pole" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Capacity :"
+                            android:textColor="@color/black" />
+
+                        <Spinner
+                            android:id="@+id/sp_ug_capacity_dtr_pole"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:entries="@array/arry_dtr_capacity" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Make:"
+                            android:textColor="@color/black" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/auto_ug_make_dtr_pole"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Serial Number:"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/ed_ug_serial_number_dtr_pole"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:text="Location Name:"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/ed_ug_location_name_dtr_pole"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Type of Load:"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/sp_ug_type_of_load"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/ug_type_of_load" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="DTR Location type:"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/sp_ug_dtr_location_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/ug_dtr_location_type" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Is LT ckts available :"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/sp_ug_is_lt_ckts_available"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/ug_lt_ckts_avalable" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lay_ug_no_of_lt_circuits"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="No of LT circuits:"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/sp_ug_no_of_lt_circuits"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/ug_of_lt_circuit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="AB Switch Available:"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/sp_ug_ab_switch_dtr_pole"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/ab_switch_dtr_pole" />
+                </LinearLayout>
+
+                <!--MODIFICATION START-->
+
+                <LinearLayout
+                    android:id="@+id/package_no_ug_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Package No:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/package_no_ug"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:background="@drawable/bg_spinner_field"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/voltage_ratio_ug_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Voltage Ratio:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/voltage_ratio_ug"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:padding="4dp"
+                        android:text=""
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_spinner_field"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dtr_manufacture_date_ug_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Select DTR Manufacture Date:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/dtr_manufacture_date_ug"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:padding="4dp"
+                        android:text=""
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_spinner_field"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dtr_install_date_ug_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        android:text="Select DTR Installation Date:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/dtr_install_date_ug"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:padding="4dp"
+                        android:text=""
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_spinner_field"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+
+                <!--MODIFICATION END-->
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="none"
+            android:background="@drawable/bg_spinner_field"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_remarks_underground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="   Enter Any Remarks"
+                android:inputType="text"
+                android:maxLength="100" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="none"
+            android:background="@drawable/bg_spinner_field"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_ugpolepaintingcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="  Enter Polepainting Code"
+                android:inputType="text"
+                android:maxLength="100" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

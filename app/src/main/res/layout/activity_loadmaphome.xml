@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activitys.LoadMapHomeActivity">
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+
+
+
+
+
+        <Button
+            android:id="@+id/btn_load_11kv_feedermap"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/distance_border_new"
+            android:text="Load 11 KV Map" />
+
+        <Button
+            android:id="@+id/btn_load_ltfeedermap"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/distance_border_new"
+            android:text="Load LT Map" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_load_ltincrementalmap"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/distance_border_new"
+            android:text="Load Incremental LTMap" />
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/foter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Powered By APEPDCL IT Wing"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </RelativeLayout>
+</RelativeLayout>
+
+
+</RelativeLayout>

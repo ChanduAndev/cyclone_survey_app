@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    tools:context="com.apepdcl.gis_survey.Profile">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/two_side_square_border"
+        android:backgroundTint="@color/colorPrimary">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+            <RelativeLayout
+                android:id="@+id/back_layout"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_boarder">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:tint="@color/new_color" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/close_layout"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_boarder">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_close_24"
+                    android:tint="@color/new_color" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ce_image"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/size_50dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_boarder"
+            android:padding="5dp"
+            android:src="@drawable/e_logo" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ce_image"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inter"
+            android:letterSpacing="0"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="Name:G,Ramakrishna" />
+
+        <TextView
+            android:id="@+id/section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/role"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-2dp"
+            android:fontFamily="@font/inter"
+            android:letterSpacing="0"
+            tools:text="Chandu"
+            android:textColor="@color/heding_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inter"
+            android:letterSpacing="0"
+            tools:text="Android"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:id="@+id/user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/section"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/inter"
+            android:letterSpacing="0"
+            android:text=""
+            android:textColor="@color/heding_color"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_layout"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="12dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/download_manual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curve_border"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:letterSpacing="0"
+                android:text="Download Manual"
+                android:textColor="@color/ui_black_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="1dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="@color/ui_black_color" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/curve_border"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:letterSpacing="0"
+                android:text="Help"
+                android:textColor="@color/ui_black_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="1dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="@color/ui_black_color" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/curve_border"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:letterSpacing="0"
+                android:text="Logout"
+                android:textColor="@color/ui_black_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="1dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="@color/ui_black_color" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lay_3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_2"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Note*"
+                android:textColor="@color/ui_black_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textStyle="bold"
+                android:text=" : For any doubts/ issues raised during the survey, the field staff have to contact the Nodal Officer/Helpdesk of their Division Office. "
+                android:textColor="@color/ui_black_color" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/two_sides_rounded_border_up"
+        android:backgroundTint="@color/light_gray_clor_2"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter"
+            android:text="@string/powerby"
+            android:textColor="@color/ui_black_color"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/loader"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:src="@drawable/loader_new"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    tools:context=".module_33KV.AddTappingPoint33KV">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/distance_border_new"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tapping Pole Number :"
+                    android:textColor="@color/ui_black_color"
+                    android:fontFamily="@font/inter"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/ed_tapping_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLength="4"
+                    android:padding="10dp"
+                    android:textColor="@color/ui_black_color"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter"
+                    android:background="@drawable/bg_spinner_field"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:hint="Enter Tapping Pole Number"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tapping Location Name :"
+                    android:textColor="@color/ui_black_color"
+                    android:fontFamily="@font/inter"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/ed_tapping_location_name"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/ui_black_color"
+                    android:fontFamily="@font/inter"
+                    android:background="@drawable/bg_spinner_field"
+                    android:hint="Enter Tapping Location Name"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/inter"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Submit"
+        android:textAllCaps="true"
+        android:textColor="@color/white" />
+
+
+<!--    <include layout="@layout/footer" />-->
+
+</RelativeLayout>

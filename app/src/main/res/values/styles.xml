@@ -1,0 +1,74 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontFamily">@font/inter</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+
+        <!-- REAL status bar color -->
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackgroundBlurRadius">20dp</item>
+
+        <!-- White icons -->
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+
+        <!-- Global font -->
+        <item name="fontFamily">@font/inter</item>
+    </style>
+
+<!--    <style name="AppTheme.NoActionBar">-->
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+<!--        <item name="fontFamily">@font/inter</item>-->
+<!--    </style>-->
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--buttons color-->
+        <item name="colorAccent">@color/black</item>
+        <!--title and message color-->
+        <item name="android:textColorPrimary">@color/black</item>
+        <!--dialog background-->
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme"
+        parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle"
+        parent="Widget.MaterialComponents.BottomSheet.Modal">
+
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomSpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

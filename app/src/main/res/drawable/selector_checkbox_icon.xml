@@ -1,0 +1,31 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/ui_new_color"/>
+                    <size android:width="22dp" android:height="22dp"/>
+                </shape>
+            </item>
+
+            <item
+                android:drawable="@drawable/ic_check_white"
+                android:gravity="center"/>
+        </layer-list>
+    </item>
+
+    <!-- Unchecked -->
+    <item>
+        <shape android:shape="oval">
+            <stroke
+                android:width="2dp"
+                android:color="@color/ui_new_color"/>
+            <solid android:color="@android:color/white"/>
+            <size android:width="22dp" android:height="22dp"/>
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="12dp">
+
+    <!-- Pole Number -->
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pole No"
+            android:textSize="12sp"
+            android:textColor="#777777" />
+
+        <TextView
+            android:id="@+id/tvPoleNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#222222" />
+
+    </LinearLayout>
+
+    <!-- Arrow -->
+    <ImageView
+        android:id="@+id/ivSelectPole"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="6dp"
+        android:src="@drawable/ic_arrow_right"
+        android:contentDescription="Select Pole"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>

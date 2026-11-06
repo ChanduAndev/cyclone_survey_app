@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/button_background"
+    android:backgroundTint="#0D0D10"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:text="AI Verification"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Image Scanner Frame -->
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:background="@drawable/bg_frame"
+        android:layout_marginTop="20dp"
+        >
+
+        <!-- Placeholder image -->
+        <ImageView
+            android:layout_margin="2dp"
+            android:id="@+id/taken_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:alpha="0.4"
+            android:src="@android:drawable/ic_menu_camera"/>
+
+        <!-- Scan Line -->
+        <View
+            android:id="@+id/scanLine"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#5B9EFF"/>
+
+    </FrameLayout>
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/status"
+        android:text="Please Wait..."
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Sub text -->
+    <TextView
+        android:text="AI is analyzing your image"
+        android:textColor="#80FFFFFF"
+        android:textSize="13sp"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Progress -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="4dp"
+        android:progressTint="#5B9EFF"
+        android:indeterminate="true"
+        android:layout_marginTop="15dp"
+        />
+
+
+
+
+
+    <!-- Cancel -->
+    <Button
+        android:id="@+id/cancel_button"
+        android:text="Cancel"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/red1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

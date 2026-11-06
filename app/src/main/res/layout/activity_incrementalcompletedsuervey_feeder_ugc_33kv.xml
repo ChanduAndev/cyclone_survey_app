@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    tools:context=".MainActivityUG33KV">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <TextView
+                android:id="@+id/tv_subname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=" SS Name :"
+                android:textColor="@color/red"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold|italic"/>
+            <Spinner
+                android:id="@+id/sp_cmpssname"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg"
+                android:entries="@array/ss_name" />
+            <TextView
+                android:id="@+id/tv_cmpfedername"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=" Feeder Name :"
+                android:textColor="@color/red"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold|italic"/>
+            <Spinner
+                android:id="@+id/sp_cmpfeedername"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddimg" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/round_button"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/foter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/powerby"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

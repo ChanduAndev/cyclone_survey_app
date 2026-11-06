@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainRDSSUg11KvActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar"/>
+        <LinearLayout
+            android:id="@+id/lay_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:padding="2dp"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_marginTop="100dp">
+
+                <!--  <LinearLayout
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="5dp"
+                      android:orientation="vertical"
+                      android:padding="5dp">
+
+                     &lt;!&ndash; <LinearLayout
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:id="@+id/tv_subname"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="10dp"
+                              android:text=" SS Name :"
+                              android:textColor="@color/red"
+                              android:textStyle="bold|italic" />
+
+                          <Spinner
+                              android:id="@+id/sp_ssname1"
+                              android:layout_width="fill_parent"
+                              android:layout_height="40dp"
+                              android:layout_marginTop="10dp"
+                              android:background="@drawable/ddimg"
+                              android:entries="@array/ss_name" />
+                      </LinearLayout>&ndash;&gt;
+
+                     &lt;!&ndash; <LinearLayout
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:id="@+id/tv_federname"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="10dp"
+                              android:text=" Feeder Name :"
+                              android:textColor="@color/red"
+                              android:textStyle="bold|italic" />
+
+                          <Spinner
+                              android:id="@+id/sp_feedername1"
+                              android:layout_width="fill_parent"
+                              android:layout_height="40dp"
+                              android:layout_marginTop="10dp"
+                              android:background="@drawable/ddimg" />
+
+                      </LinearLayout>&ndash;&gt;
+                      &lt;!&ndash;<LinearLayout
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:id="@+id/tv_incr_wr"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="10dp"
+                              android:text=" Work Order :"
+                              android:textColor="@color/red"
+                              android:textStyle="bold|italic" />
+
+                          <Spinner
+                              android:id="@+id/sp_workorder"
+                              android:layout_width="fill_parent"
+                              android:layout_height="40dp"
+                              android:layout_marginTop="10dp"
+                              android:background="@drawable/ddimg" />
+
+                      </LinearLayout>&ndash;&gt;
+                  </LinearLayout>-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_main"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+
+            <CheckBox
+                android:id="@+id/ch_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download suveyed data"
+                android:layout_above="@+id/button"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold|italic"
+                android:layout_centerHorizontal="true" />
+
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_round_corner"
+                android:gravity="center"
+                android:text="Download"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <include layout="@layout/footer"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

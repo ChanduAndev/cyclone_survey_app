@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submitButton"
+        android:layout_marginBottom="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_toolbar_gradient"
+                android:orientation="horizontal"
+                android:paddingVertical="15dp"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/back_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="3dp"
+                    android:src="@drawable/outline_arrow_back_ios_new_24"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/home_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Survey Form"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/pole_details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pole_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:paddingLeft="1dp"
+                        tools:text="Location #2"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/background_color" />
+
+                    <!-- First Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/abeezee"
+                                android:text="Pole Height: "
+                                android:textColor="#9E9E9E"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/pole_height"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#E6F1FF"
+                                android:fontFamily="@font/abeezee"
+                                android:paddingHorizontal="4dp"
+                                tools:text="9.1 m"
+                                android:textColor="#4A90E2"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/abeezee"
+                                android:text="Pole Type: "
+                                android:textColor="#9E9E9E"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/pole_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#E6F1FF"
+                                android:fontFamily="@font/abeezee"
+                                android:paddingHorizontal="4dp"
+                                tools:text="RS JOIST"
+                                android:textAllCaps="false"
+                                android:textColor="#4A90E2"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/layoutChangeImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="vertical"
+
+                >
+
+                <ImageView
+                    android:id="@+id/captured_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Capture Image"
+                    android:background="@drawable/bg_capture_dashed"
+                    android:padding="5dp"
+                    android:src="@drawable/outline_add_a_photo_24" />
+
+
+
+                <TextView
+                    android:id="@+id/btn_capture_image_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingVertical="6dp"
+                    android:background="@drawable/button_bg_new"
+                    android:backgroundTint="@color/ui_new_color"
+                    android:fontFamily="@font/inter"
+                    android:text="Capture Pole Photo"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Select No. of Services Involved"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        style="@style/CustomSpinnerStyle"
+                        android:id="@+id/sp_no_of_services"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:entries="@array/no_of_feeders_11kv"
+                        android:spinnerMode="dropdown" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/services_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="visible"
+                        tools:listitem="@layout/service_list_adapter" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#2B7CEE"
+        android:fontFamily="@font/abeezee"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="SUBMIT"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
