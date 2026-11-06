@@ -650,7 +650,7 @@ public class SelectLTPoleRectify extends AppCompatActivity implements RVPolesAda
                             }
 
                             if (aiPoleListLT.isEmpty()) {
-                                tv_error_ai.setVisibility(View.VISIBLE);
+                                tv_error_ai.setVisibility(View.GONE);
                                 rv_lt.setVisibility(View.GONE);
                             } else {
                                 rv_lt.setVisibility(View.VISIBLE);
@@ -665,7 +665,7 @@ public class SelectLTPoleRectify extends AppCompatActivity implements RVPolesAda
 
 
                             if (nonAiPoleListLT.isEmpty()) {
-                                tv_error_non_ai.setVisibility(View.VISIBLE);
+                                tv_error_non_ai.setVisibility(View.GONE);
                                 rv_lt_non_ai.setVisibility(View.GONE);
                             } else {
                                 rv_lt_non_ai.setVisibility(View.VISIBLE);

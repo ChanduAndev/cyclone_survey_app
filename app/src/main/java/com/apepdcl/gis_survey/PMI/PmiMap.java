@@ -343,6 +343,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         NAME = getIntent().getStringExtra("NAME");
         SELECTED_VOLTAGE = getIntent().getStringExtra("SELECTED_VOLTAGE");
 
+
         filteredPolesList33 = new ArrayList<>();
         filteredPolesList11 = new ArrayList<>();
         filteredPolesListLT = new ArrayList<>();

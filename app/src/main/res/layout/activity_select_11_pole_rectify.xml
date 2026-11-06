@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#E6E5E5"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
@@ -54,9 +55,9 @@
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/abeezee"
                 android:paddingTop="5dp"
-                android:text="11KV PMI"
+                android:text="11KV Damage Rectification"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
@@ -324,6 +325,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:visibility="gone"
                 android:layout_marginTop="8dp"
                 android:text="Defects with AI validation "
                 android:textColor="@color/black"
@@ -337,6 +339,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/adapter_pmi_lt_rectify_poles"
                 android:overScrollMode="never" />
 
             <TextView
@@ -356,6 +360,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal"
+                android:visibility="gone"
                 android:weightSum="2">
 
                 <ImageView
@@ -384,6 +389,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
+                android:visibility="gone"
                 android:text="Defects without AI validation"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
@@ -395,6 +401,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:visibility="gone"
                 android:nestedScrollingEnabled="false"
                 android:overScrollMode="never" />
 

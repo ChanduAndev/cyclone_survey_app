@@ -822,7 +822,7 @@ public class Select11PoleRectify extends AppCompatActivity implements RVPolesAda
                             System.out.println("COUNT_OF_NON_AI_POLES ON_CREATE" + nonAiPoleList11.size());
 
                             if (aiPoleList11.isEmpty()) {
-                                tv_error_ai.setVisibility(View.VISIBLE);
+                                tv_error_ai.setVisibility(View.GONE);
                                 rv_33.setVisibility(View.GONE);
                             } else {
                                 rv_33.setVisibility(View.VISIBLE);
@@ -837,7 +837,7 @@ public class Select11PoleRectify extends AppCompatActivity implements RVPolesAda
 
 
                             if (nonAiPoleList11.isEmpty()) {
-                                tv_error_non_ai.setVisibility(View.VISIBLE);
+                                tv_error_non_ai.setVisibility(View.GONE);
                                 rv_11_non_ai.setVisibility(View.GONE);
                             } else {
                                 rv_11_non_ai.setVisibility(View.VISIBLE);

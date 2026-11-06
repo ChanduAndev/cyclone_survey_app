@@ -32,6 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="5dp"
+                android:visibility="visible"
                 android:paddingHorizontal="10dp"
                 >
 
@@ -226,7 +227,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/abeezee"
-                    android:text="Defects :"
+                    android:text="Damaged :"
                     android:textAllCaps="false"
                     android:textColor="@color/lite_black"
                     android:textSize="14sp" />
@@ -259,7 +260,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/abeezee"
-                    android:text="Sub Defects :"
+                    android:text="Damaged Type :"
                     android:textAllCaps="false"
                     android:textColor="@color/lite_black"
                     android:textSize="14sp" />

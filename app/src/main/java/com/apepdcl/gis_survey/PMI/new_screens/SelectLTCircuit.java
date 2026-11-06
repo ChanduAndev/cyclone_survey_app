@@ -92,6 +92,8 @@ public class SelectLTCircuit extends AppCompatActivity implements RVLTAdapter.On
 
     LinearLayout layout_dtr_details_1;
     TextView new_dtr_code_lt_1,tv_dtr_lt_ckt_1,tv_dtr_slno_1,tv_dtr_make_1,tv_dtr_capacity_1,tv_dtr_phase_1,btn_next;
+    String FROM = "";
+    LinearLayout main_lt_layout;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -112,6 +114,7 @@ public class SelectLTCircuit extends AppCompatActivity implements RVLTAdapter.On
         tv_dtr_make_1 = findViewById(R.id.tv_dtr_make_1);
         tv_dtr_capacity_1 = findViewById(R.id.tv_dtr_capacity_1);
         tv_dtr_phase_1 = findViewById(R.id.tv_dtr_phase_1);
+        main_lt_layout = findViewById(R.id.main_lt_layout);
 
 
         rv_33 = findViewById(R.id.rv_33);
@@ -124,6 +127,14 @@ public class SelectLTCircuit extends AppCompatActivity implements RVLTAdapter.On
         //profile_layout = findViewById(R.id.profile_layout);
         polesListLT = new ArrayList<>();
         getFeederMasterData();
+
+        if ("RECTIFY_SURVEY".equalsIgnoreCase(FROM)){
+            rv_33.setVisibility(View.VISIBLE);
+            main_lt_layout.setVisibility(View.GONE);
+        }else {
+            rv_33.setVisibility(View.GONE);
+            main_lt_layout.setVisibility(View.VISIBLE);
+        }
 
         /*RecyclerView.LayoutManager layoutManager1 = new LinearLayoutManager(SelectLTCircuit.this);
         rv_33.setLayoutManager(layoutManager1);

@@ -61,24 +61,24 @@ public interface RetrofitServicePMI {
     @POST("defectsSurvey33kV")
     Call<JsonObject> getPoles33Rectify(@Body JsonObject jsonObject);
 
-    @POST("new/defectsSurveyForPole11kV")
+    @POST("defectsToRectifyVoltageWise")
     Call<JsonObject> getPoles11RectifyNew(@Body JsonObject jsonObject);
 
-    @POST("new/defectsSurveyForPole33kV")
+    @POST("defectsToRectifyVoltageWise")
     Call<JsonObject> getPoles33RectifyNew(@Body JsonObject jsonObject);
 
-    @POST("new/defectsSurveyForPoleLt")
+    @POST("defectsToRectifyVoltageWise")
     Call<JsonObject> getPolesLTRectifyNew(@Body JsonObject jsonObject);
 
 
 
-    @POST("new/updateRectifiedDtls")
+    @POST("updateRectifiedDtls")
     Call<JsonObject> transmitDataNewRectify(@Body JsonArray jsonArray);
 
     @POST("defectsmasterNew")
     Call<JsonObject> getDefectMasterNew(@Body JsonObject jsonObject);
 
-    @POST("new/feederWiseSurvyedPoles")
+    @POST("feederWiseSurvyedPoles")
     Call<JsonObject> getFeederWisePoleNo(@Body JsonObject jsonObject);
 
     @POST("new/defectsSurveyedDetailsFeederWise")

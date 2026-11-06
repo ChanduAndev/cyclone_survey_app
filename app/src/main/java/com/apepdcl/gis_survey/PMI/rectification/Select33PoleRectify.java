@@ -480,7 +480,7 @@ public class Select33PoleRectify extends AppCompatActivity implements RVPolesAda
                             }
 
                             if (aiPoleList33.isEmpty()) {
-                                tv_error_ai.setVisibility(View.VISIBLE);
+                                tv_error_ai.setVisibility(View.GONE);
                                 rv_33.setVisibility(View.GONE);
                             } else {
                                 rv_33.setVisibility(View.VISIBLE);
@@ -495,7 +495,7 @@ public class Select33PoleRectify extends AppCompatActivity implements RVPolesAda
 
 
                             if (nonAiPoleList33.isEmpty()) {
-                                tv_error_non_ai.setVisibility(View.VISIBLE);
+                                tv_error_non_ai.setVisibility(View.GONE);
                                 rv_33_non_ai.setVisibility(View.GONE);
                             } else {
                                 rv_33_non_ai.setVisibility(View.VISIBLE);

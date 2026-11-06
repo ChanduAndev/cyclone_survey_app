@@ -107,7 +107,7 @@ public class RectifyMap33 extends AppCompatActivity {
     LocationDisplay mLocationDisplay;
     GraphicsOverlay mGraphicsOverlay;
     ArcGISMap map;
-    TextView name_value, id_value;
+    TextView name_value, id_value,damaged_type_33kv;
     PointCollection polylinePoints;
     GraphicsOverlay graphicsOverlay;
     private Point ptWgs84;
@@ -136,7 +136,7 @@ public class RectifyMap33 extends AppCompatActivity {
     private ArrayList<String> selectedSubDefectTypes;
     String subDefectType = "";
     PmiDatabase pmiDatabase;
-    int OFFLINE_DISTANCE=150,ONLINE_DISTANCE=100;
+    int OFFLINE_DISTANCE=150,ONLINE_DISTANCE=50;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -174,6 +174,7 @@ public class RectifyMap33 extends AppCompatActivity {
 
         name_value = findViewById(R.id.name_value);
         id_value = findViewById(R.id.id_value);
+        damaged_type_33kv = findViewById(R.id.damaged_type_33kv);
         name_value.setText(NAME);
         id_value.setText(ID);
         tv_pole_number.setText("" + model.getPOLE_NO());
@@ -181,6 +182,7 @@ public class RectifyMap33 extends AppCompatActivity {
         gpsTraker = new GpsTraker(this);
         mGraphicsOverlay = new GraphicsOverlay();
         mv.getGraphicsOverlays().add(mGraphicsOverlay);
+        damaged_type_33kv.setText(subDefectType);
 
 
         map = new ArcGISMap(Basemap.Type.IMAGERY_WITH_LABELS, gpsTraker.getLatitude(), gpsTraker.getLongitude(), 20);
@@ -815,48 +817,37 @@ public class RectifyMap33 extends AppCompatActivity {
                 animator.start();
             });
             aiDialog.show();
-            //uploadImageToServer(safeBitmap);
-//            if (model.getDEFECT_GROUP().equalsIgnoreCase("POLE_DEFECTS")) {
-//                uploadImageToServer(safeBitmap);
-//            } else if (model.getDEFECT_GROUP().equalsIgnoreCase("DTR_DEFECTS")) {
-//                uploadImageToServer(safeBitmap);
-//            } else if (model.getDEFECT_GROUP().equalsIgnoreCase("CONDUCTOR_DEFECTS")) {
-//                transmitPoleWithoutAIResponse();
-//            } else if (model.getDEFECT_GROUP().equalsIgnoreCase("TOWER_DEFECTS")) {
-//                transmitPoleWithoutAIResponse();
-//            } else {
-//                transmitPoleWithoutAIResponse();
+            transmitPoleWithoutAIResponse();
+
+//            if (model != null) {
+//
+//                String grpId = model.getGRP_ID();
+//                String aiFlag = model.getAI_FLAG();
+//
+//                if (aiFlag == null || aiFlag.trim().isEmpty()) {
+//
+//                    new AlertDialog.Builder(RectifyMap33.this)
+//                            .setTitle("Alert")
+//                            .setMessage("AI Flag is not available. Please Contact Admin.")
+//                            .setPositiveButton("OK", null)
+//                            .show();
+//
+//                }
+//
+//                else if ("AI".equalsIgnoreCase(aiFlag)
+//                        && ("P".equalsIgnoreCase(grpId)
+//                        || "D".equalsIgnoreCase(grpId)
+//                        || "T".equalsIgnoreCase(grpId)
+//                        || "C".equalsIgnoreCase(grpId)
+//                        || "N".equalsIgnoreCase(grpId))) {
+//
+//                    uploadImageToServer(bitmap);
+//
+//                } else if ("NON AI".equalsIgnoreCase(aiFlag)) {
+//
+//                    transmitPoleWithoutAIResponse();
+//                }
 //            }
-
-            if (model != null) {
-
-                String grpId = model.getGRP_ID();
-                String aiFlag = model.getAI_FLAG();
-
-                if (aiFlag == null || aiFlag.trim().isEmpty()) {
-
-                    new AlertDialog.Builder(RectifyMap33.this)
-                            .setTitle("Alert")
-                            .setMessage("AI Flag is not available. Please Contact Admin.")
-                            .setPositiveButton("OK", null)
-                            .show();
-
-                }
-
-                else if ("AI".equalsIgnoreCase(aiFlag)
-                        && ("P".equalsIgnoreCase(grpId)
-                        || "D".equalsIgnoreCase(grpId)
-                        || "T".equalsIgnoreCase(grpId)
-                        || "C".equalsIgnoreCase(grpId)
-                        || "N".equalsIgnoreCase(grpId))) {
-
-                    uploadImageToServer(bitmap);
-
-                } else if ("NON AI".equalsIgnoreCase(aiFlag)) {
-
-                    transmitPoleWithoutAIResponse();
-                }
-            }
 
         } else {
             Toast.makeText(this, "Please Check Internet Connection", Toast.LENGTH_SHORT).show();

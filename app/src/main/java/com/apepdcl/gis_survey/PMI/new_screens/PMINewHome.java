@@ -253,12 +253,14 @@ public class PMINewHome extends AppCompatActivity {
                     } else {
                         //checkLTData();
                         Intent intent = new Intent(PMINewHome.this, SelectLTCircuit.class);
+                        intent.putExtra("FROM", "START_SURVEY");
                         startActivity(intent);
 
                     }
 
                 } else {
                     Intent intent = new Intent(PMINewHome.this, SelectLTCircuit.class);
+                    intent.putExtra("FROM", "START_SURVEY");
                     startActivity(intent);
                     //checkLTData();
                 }
@@ -278,27 +280,27 @@ public class PMINewHome extends AppCompatActivity {
         lt_rectify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                postingList.clear();
-//                postingList = pmiDatabase.getPmiPostingData();
-//
-//                if (!postingList.isEmpty()) {
-//                    int poles_count_33 = 0;
-//
-//                    for (int i = 0; i < postingList.size(); i++) {
-//                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("LT")) {
-//                            poles_count_33++;
-//                        }
-//                    }
-//
-//                    if (poles_count_33 > 0) {
-//                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
-//                    } else {
-//                        checkLTDataForRectify();
-//                    }
-//
-//                } else {
-//                    checkLTDataForRectify();
-//                }
+                postingList.clear();
+                postingList = pmiDatabase.getPmiPostingData();
+
+                if (!postingList.isEmpty()) {
+                    int poles_count_33 = 0;
+
+                    for (int i = 0; i < postingList.size(); i++) {
+                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("LT")) {
+                            poles_count_33++;
+                        }
+                    }
+
+                    if (poles_count_33 > 0) {
+                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+                    } else {
+                        checkLTDataForRectify();
+                    }
+
+                } else {
+                    checkLTDataForRectify();
+                }
 
 
             }
@@ -307,56 +309,56 @@ public class PMINewHome extends AppCompatActivity {
         el_rectify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                postingList.clear();
-//                postingList = pmiDatabase.getPmiPostingData();
-//
-//                if (!postingList.isEmpty()) {
-//                    int poles_count_11 = 0;
-//
-//                    for (int i = 0; i < postingList.size(); i++) {
-//                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("11 KV")) {
-//                            poles_count_11++;
-//                        }
-//                    }
-//
-//                    if (poles_count_11 > 0) {
-//                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
-//
-//                    } else {
-//                        check11KVDataForRectify();
-//
-//                    }
-//
-//                } else {
-//                    check11KVDataForRectify();
-//
-//                }
+                postingList.clear();
+                postingList = pmiDatabase.getPmiPostingData();
+
+                if (!postingList.isEmpty()) {
+                    int poles_count_11 = 0;
+
+                    for (int i = 0; i < postingList.size(); i++) {
+                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("11 KV")) {
+                            poles_count_11++;
+                        }
+                    }
+
+                    if (poles_count_11 > 0) {
+                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+
+                    } else {
+                        check11KVDataForRectify();
+
+                    }
+
+                } else {
+                    check11KVDataForRectify();
+
+                }
             }
         });
 
         tt_rectify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                postingList.clear();
-//                postingList = pmiDatabase.getPmiPostingData();
-//                if (!postingList.isEmpty()) {
-//                    int poles_count_33 = 0;
-//
-//                    for (int i = 0; i < postingList.size(); i++) {
-//                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("33KV")) {
-//                            poles_count_33++;
-//                        }
-//                    }
-//
-//                    if (poles_count_33 > 0) {
-//                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
-//                    } else {
-//                        check33KVDataForRectify();
-//                    }
-//
-//                } else {
-//                    check33KVDataForRectify();
-//                }
+                postingList.clear();
+                postingList = pmiDatabase.getPmiPostingData();
+                if (!postingList.isEmpty()) {
+                    int poles_count_33 = 0;
+
+                    for (int i = 0; i < postingList.size(); i++) {
+                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("33KV")) {
+                            poles_count_33++;
+                        }
+                    }
+
+                    if (poles_count_33 > 0) {
+                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+                    } else {
+                        check33KVDataForRectify();
+                    }
+
+                } else {
+                    check33KVDataForRectify();
+                }
             }
         });
 
@@ -1036,6 +1038,7 @@ public class PMINewHome extends AppCompatActivity {
                                 Toast.makeText(PMINewHome.this, "NO DATA FOUND", Toast.LENGTH_SHORT).show();
                             } else {
                                 Intent intent = new Intent(PMINewHome.this, SelectLTCircuitRectify.class);
+                                intent.putExtra("FROM", "RECTIFY_SURVEY");
                                 startActivity(intent);
                             }
 
@@ -1071,8 +1074,14 @@ public class PMINewHome extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String userId = preferences.getString(MobileConstants.USERNAME, "");
         JsonObject dtrDetailsReqestVo = new JsonObject();
+        if (loginDataResponses.get(0).getROLE().equalsIgnoreCase("AEOP")){
+            dtrDetailsReqestVo.addProperty("USERID", loginDataResponses.get(0).getUSERID());
+        }else {
+            String user = preferences.getString(MobileConstants.SESSION_ID, "");
+            dtrDetailsReqestVo.addProperty("USERID", user);
+        }
         dtrDetailsReqestVo.addProperty("OFFICE_ID", loginDataResponses.get(0).getSEC_CODE());
-        dtrDetailsReqestVo.addProperty("USERID", userId);
+       // dtrDetailsReqestVo.addProperty("USERID", userId);
 
         retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
         Call<JsonObject> responseVoCall = retrofitServicePmi.userWiseDefectListRectify(dtrDetailsReqestVo);

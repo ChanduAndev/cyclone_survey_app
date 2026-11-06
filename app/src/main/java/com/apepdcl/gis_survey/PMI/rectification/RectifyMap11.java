@@ -108,7 +108,7 @@ public class RectifyMap11 extends AppCompatActivity {
     LocationDisplay mLocationDisplay;
     GraphicsOverlay mGraphicsOverlay;
     ArcGISMap map;
-    TextView name_value, id_value;
+    TextView name_value, id_value,damaged_type;
     PointCollection polylinePoints;
     GraphicsOverlay graphicsOverlay;
     private Point ptWgs84;
@@ -137,7 +137,7 @@ public class RectifyMap11 extends AppCompatActivity {
     int warning = 0;
     private ArrayList<String> selectedSubDefectTypes;
     String subDefectType = "";
-    int OFFLINE_DISTANCE=150,ONLINE_DISTANCE=100;
+    int OFFLINE_DISTANCE=150,ONLINE_DISTANCE=50;
 
 
     @SuppressLint("MissingInflatedId")
@@ -158,14 +158,10 @@ public class RectifyMap11 extends AppCompatActivity {
         NAME = getIntent().getStringExtra("FEEDER_NAME");
         model = (PoleModel11KV) getIntent().getSerializableExtra("MODEL");
         selectedSubDefectTypes=getIntent().getStringArrayListExtra("SELECTED_SUB_DEFECT_TYPE");
-
-
-       // System.out.println("SELECTED_SUB_DEFECT_TYPE    :"+selectedSubDefectTypes);
-
         if (selectedSubDefectTypes != null && !selectedSubDefectTypes.isEmpty()) {
             subDefectType = TextUtils.join(", ", selectedSubDefectTypes);
         }
-        //System.out.println("SELECTED_SUB_DEFECT_TYPE______    :"+subDefectType);
+        System.out.println("SELECTED_SUB_DEFECT_TYPE______    :"+subDefectType);
         detector = new TFLiteObjectDetector(this);
 
         back_layout = findViewById(R.id.back_layout);
@@ -175,6 +171,7 @@ public class RectifyMap11 extends AppCompatActivity {
         mv = findViewById(R.id.map1);
 
         name_value = findViewById(R.id.name_value);
+        damaged_type = findViewById(R.id.damaged_type);
         id_value = findViewById(R.id.id_value);
         name_value.setText(NAME);
         id_value.setText(ID);
@@ -183,6 +180,8 @@ public class RectifyMap11 extends AppCompatActivity {
         gpsTraker = new GpsTraker(this);
         mGraphicsOverlay = new GraphicsOverlay();
         mv.getGraphicsOverlays().add(mGraphicsOverlay);
+
+        damaged_type.setText(subDefectType);
 
 
         map = new ArcGISMap(Basemap.Type.IMAGERY_WITH_LABELS, gpsTraker.getLatitude(), gpsTraker.getLongitude(), 20);
@@ -810,49 +809,37 @@ public class RectifyMap11 extends AppCompatActivity {
                 animator.start();
             });
             aiDialog.show();
-//            if (model.getDEFECT_GROUP().equalsIgnoreCase("POLE_DEFECTS")) {
-//                uploadImageToServer(safeBitmap);
-//            } else if (model.getDEFECT_GROUP().equalsIgnoreCase("DTR_DEFECTS")) {
-//                uploadImageToServer(safeBitmap);
-//            } else if (("Vegitation or Tree Related".equalsIgnoreCase(model.getDEFECT_GROUP()) || "Vegetation or Tree Related".equalsIgnoreCase(model.getDEFECT_GROUP()))) {
-//                uploadImageToServer(safeBitmap);
-//            } else if (model.getDEFECT_GROUP().equalsIgnoreCase("CONDUCTOR_DEFECTS")) {
-//                transmitPoleWithoutAIResponse();
-//            } else if (model.getDEFECT_GROUP().equalsIgnoreCase("TOWER_DEFECTS")) {
-//                transmitPoleWithoutAIResponse();
-//            } else {
-//                transmitPoleWithoutAIResponse();
+            transmitPoleWithoutAIResponse();
+
+//            if (model != null) {
+//
+//                String grpId = model.getGRP_ID();
+//                String aiFlag = model.getAI_FLAG();
+//
+//                if (aiFlag == null || aiFlag.trim().isEmpty()) {
+//
+//                    new AlertDialog.Builder(RectifyMap11.this)
+//                            .setTitle("Alert")
+//                            .setMessage("AI Flag is not available. Please Contact Admin.")
+//                            .setPositiveButton("OK", null)
+//                            .show();
+//
+//                }
+//
+//                else if ("AI".equalsIgnoreCase(aiFlag)
+//                        && ("P".equalsIgnoreCase(grpId)
+//                        || "D".equalsIgnoreCase(grpId)
+//                        || "T".equalsIgnoreCase(grpId)
+//                        || "C".equalsIgnoreCase(grpId)
+//                        || "N".equalsIgnoreCase(grpId))) {
+//
+//                    uploadImageToServer(bitmap);
+//
+//                } else if ("NON AI".equalsIgnoreCase(aiFlag)) {
+//
+//                    transmitPoleWithoutAIResponse();
+//                }
 //            }
-
-            if (model != null) {
-
-                String grpId = model.getGRP_ID();
-                String aiFlag = model.getAI_FLAG();
-
-                if (aiFlag == null || aiFlag.trim().isEmpty()) {
-
-                    new AlertDialog.Builder(RectifyMap11.this)
-                            .setTitle("Alert")
-                            .setMessage("AI Flag is not available. Please Contact Admin.")
-                            .setPositiveButton("OK", null)
-                            .show();
-
-                }
-
-                else if ("AI".equalsIgnoreCase(aiFlag)
-                        && ("P".equalsIgnoreCase(grpId)
-                        || "D".equalsIgnoreCase(grpId)
-                        || "T".equalsIgnoreCase(grpId)
-                        || "C".equalsIgnoreCase(grpId)
-                        || "N".equalsIgnoreCase(grpId))) {
-
-                    uploadImageToServer(bitmap);
-
-                } else if ("NON AI".equalsIgnoreCase(aiFlag)) {
-
-                    transmitPoleWithoutAIResponse();
-                }
-            }
 
             // uploadImageToServer(safeBitmap);
         } else {
@@ -1443,21 +1430,21 @@ public class RectifyMap11 extends AppCompatActivity {
 
 
 
-        JsonArray jsonArray = new JsonArray();
-        for (int j = 0; j < model.getAiResponseModel().size(); j++) {
-            AIResponseModel aiResponseModel = model.getAiResponseModel().get(j);
-            JsonObject resObject = new JsonObject();
-            resObject.addProperty("AI_RESPONSE", aiResponseModel.getAI_RESPONSE());
-            resObject.addProperty("POSITION", aiResponseModel.getPOSITION());
-            resObject.addProperty("VOLTAGE", aiResponseModel.getVOLTAGE());
-            resObject.addProperty("LEAN_ANGLE", aiResponseModel.getLEAN_ANGLE());
-            resObject.addProperty("POSTITION_XARM", aiResponseModel.getPOSTITION_XARM());
-            resObject.addProperty("VD_DEPTH", aiResponseModel.getVD_DEPTH());
-            resObject.addProperty("VC_REASON", aiResponseModel.getVC_REASON());
-            jsonArray.add(resObject);
-        }
+//        JsonArray jsonArray = new JsonArray();
+//        for (int j = 0; j < model.getAiResponseModel().size(); j++) {
+//            AIResponseModel aiResponseModel = model.getAiResponseModel().get(j);
+//            JsonObject resObject = new JsonObject();
+//            resObject.addProperty("AI_RESPONSE", aiResponseModel.getAI_RESPONSE());
+//            resObject.addProperty("POSITION", aiResponseModel.getPOSITION());
+//            resObject.addProperty("VOLTAGE", aiResponseModel.getVOLTAGE());
+//            resObject.addProperty("LEAN_ANGLE", aiResponseModel.getLEAN_ANGLE());
+//            resObject.addProperty("POSTITION_XARM", aiResponseModel.getPOSTITION_XARM());
+//            resObject.addProperty("VD_DEPTH", aiResponseModel.getVD_DEPTH());
+//            resObject.addProperty("VC_REASON", aiResponseModel.getVC_REASON());
+//            jsonArray.add(resObject);
+//        }
 
-        requestObject.add("RESPONSE", jsonArray);
+//        requestObject.add("RESPONSE", jsonArray);
         array.add(requestObject);
 
 

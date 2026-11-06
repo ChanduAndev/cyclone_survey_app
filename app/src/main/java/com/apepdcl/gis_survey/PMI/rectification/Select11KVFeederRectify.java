@@ -119,7 +119,7 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
         selectedFeederName11 = model.getFEEDER_NAME();
         if (ConnectivityChecking.checkConnection(Select11KVFeederRectify.this)) {
             getPoleCount();
-            getPoleCountOffline();
+            //getPoleCountOffline();
         } else {
             ArrayList<OfflineDataFor11> data = pmiDatabase.getTotalOfflineDataToSurvey(model.getFEEDER_ID());
             if (data.isEmpty()) {
@@ -142,11 +142,11 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
         progressDialog.show();
         JsonObject requestObject = new JsonObject();
         requestObject.addProperty("POLE_ID", model.getPOLE_ID());
+        requestObject.addProperty("VOLTAGE_LEVEL", "11KV");
 //        requestObject.addProperty("FEEDER_ID", selectedFeederId11);
 //        requestObject.addProperty("VERSION", getResources().getString(R.string.displayVersion));
         retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
         Call<JsonObject> responseVoCall = retrofitServicePmi.getPoles11RectifyNew(requestObject);
-
 
         responseVoCall.enqueue(new Callback<JsonObject>() {
             @Override
@@ -155,110 +155,231 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
                 if (response.body() != null) {
 
                     JsonObject surveyedResponseVo = response.body();
-                    // Log.v("FEEDER==", "" + surveyedResponseVo);
-                    if (MobileConstants.TRUE.equalsIgnoreCase(surveyedResponseVo.get("STATUS").getAsString())) {
+
+                    if (MobileConstants.TRUE.equalsIgnoreCase(
+                            surveyedResponseVo.get("STATUS").getAsString())) {
+
                         try {
-                            JsonObject responseObject = surveyedResponseVo.getAsJsonObject("RESPONSE");
-                            if (responseObject.has("AI")
-                                    && !responseObject.get("AI").isJsonNull()
-                                    && responseObject.get("AI").isJsonArray()) {
 
-                                JsonArray aiArray = responseObject.getAsJsonArray("AI");
+                            // RESPONSE is now directly a JSON Array
+                            JsonArray responseArray =
+                                    surveyedResponseVo.getAsJsonArray("RESPONSE");
 
+                            if (responseArray != null) {
 
-                                for (int i = 0; i < aiArray.size(); i++) {
+                                for (int i = 0; i < responseArray.size(); i++) {
+
+                                    JsonObject poleObject =
+                                            responseArray.get(i).getAsJsonObject();
+
                                     PoleModel11KV model = new PoleModel11KV();
-                                    model.setFEEDER_ID(aiArray.get(i).getAsJsonObject().get("FEEDER_ID").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("FEEDER_ID").getAsString());
-                                    model.setGLAT(aiArray.get(i).getAsJsonObject().get("GLAT").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("GLAT").getAsString());
-                                    model.setPOLE_ID(aiArray.get(i).getAsJsonObject().get("REF_ID").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("REF_ID").getAsString());
-                                    model.setPOLE_NO(aiArray.get(i).getAsJsonObject().get("POLE_NO").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("POLE_NO").getAsString());
-                                    model.setGLONG(aiArray.get(i).getAsJsonObject().get("GLONG").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("GLONG").getAsString());
-                                    model.setPOLE_CONFIG(aiArray.get(i).getAsJsonObject().get("POLE_CONFIG").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("POLE_CONFIG").getAsString());
-                                    model.setPOLE_HEIGHT(aiArray.get(i).getAsJsonObject().get("POLE_HEIGHT").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("POLE_HEIGHT").getAsString());
-                                    model.setPOLE_SUPPORT(aiArray.get(i).getAsJsonObject().get("POLE_SUPPORT").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("POLE_SUPPORT").getAsString());
-                                    model.setPOLE_TYPE(aiArray.get(i).getAsJsonObject().get("POLE_TYPE").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("POLE_TYPE").getAsString());
-                                    model.setDEFECT_TYPE(aiArray.get(i).getAsJsonObject().get("DEFECT_TYPE").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("DEFECT_TYPE").getAsString());
-                                    //model.setDEFECT_GROUP(aiArray.get(i).getAsJsonObject().get("DEFECT_GROUP").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("DEFECT_GROUP").getAsString());
-                                    model.setGRP_ID(aiArray.get(i).getAsJsonObject().get("GRP_ID").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("GRP_ID").getAsString());
-                                    model.setAI_FLAG(aiArray.get(i).getAsJsonObject().get("AI_FLAG").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("AI_FLAG").getAsString());
-                                    model.setDEFECT_SUB_TYPE(aiArray.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE").getAsString());
-                                    model.setIS_RECTIFIED(aiArray.get(i).getAsJsonObject().get("RECTIFIED").isJsonNull() ? "N" : aiArray.get(i).getAsJsonObject().get("RECTIFIED").getAsString());
-                                    model.setIMG_URL(aiArray.get(i).getAsJsonObject().get("IMG_URL").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("IMG_URL").getAsString());
+
+                                    model.setFEEDER_ID(getJsonValue(poleObject, "FEEDER_ID"));
+                                    model.setGLAT(getJsonValue(poleObject, "GLAT"));
+                                    model.setPOLE_ID(getJsonValue(poleObject, "REF_ID"));
+                                    model.setPOLE_NO(getJsonValue(poleObject, "POLE_NO"));
+                                    model.setGLONG(getJsonValue(poleObject, "GLONG"));
+                                    model.setPOLE_CONFIG(getJsonValue(poleObject, "POLE_CONFIG"));
+                                    model.setPOLE_HEIGHT(getJsonValue(poleObject, "POLE_HEIGHT"));
+                                    model.setPOLE_SUPPORT(getJsonValue(poleObject, "POLE_SUPPORT"));
+                                    model.setPOLE_TYPE(getJsonValue(poleObject, "POLE_TYPE"));
+                                    model.setDEFECT_TYPE(getJsonValue(poleObject, "DEFECT_TYPE"));
+                                    model.setGRP_ID(getJsonValue(poleObject, "GRP_ID"));
+                                    model.setAI_FLAG(getJsonValue(poleObject, "AI_FLAG"));
+                                    model.setDEFECT_SUB_TYPE(getJsonValue(poleObject, "DEFECT_SUB_TYPE"));
+
+                                    model.setIS_RECTIFIED(
+                                            getJsonValue(poleObject, "RECTIFIED", "N"));
+
+                                    model.setIMG_URL(getJsonValue(poleObject, "IMG_URL"));
+
                                     model.setAI_PENDING("N");
-                                    aiPoleList11.add(model);
-                                }
 
-
-                            }
-
-                            // Process NON AI array
-                            if (responseObject.has("NON AI")
-                                    && !responseObject.get("NON AI").isJsonNull()
-                                    && responseObject.get("NON AI").isJsonArray()) {
-
-                                JsonArray nonAiArray = responseObject.getAsJsonArray("NON AI");
-
-                                for (int i = 0; i < nonAiArray.size(); i++) {
-                                    PoleModel11KV model = new PoleModel11KV();
-                                    model.setFEEDER_ID(nonAiArray.get(i).getAsJsonObject().get("FEEDER_ID").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("FEEDER_ID").getAsString());
-                                    model.setGLAT(nonAiArray.get(i).getAsJsonObject().get("GLAT").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("GLAT").getAsString());
-                                    model.setPOLE_ID(nonAiArray.get(i).getAsJsonObject().get("REF_ID").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("REF_ID").getAsString());
-                                    model.setPOLE_NO(nonAiArray.get(i).getAsJsonObject().get("POLE_NO").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("POLE_NO").getAsString());
-                                    model.setGLONG(nonAiArray.get(i).getAsJsonObject().get("GLONG").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("GLONG").getAsString());
-                                    model.setPOLE_CONFIG(nonAiArray.get(i).getAsJsonObject().get("POLE_CONFIG").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("POLE_CONFIG").getAsString());
-                                    model.setPOLE_HEIGHT(nonAiArray.get(i).getAsJsonObject().get("POLE_HEIGHT").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("POLE_HEIGHT").getAsString());
-                                    model.setPOLE_SUPPORT(nonAiArray.get(i).getAsJsonObject().get("POLE_SUPPORT").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("POLE_SUPPORT").getAsString());
-                                    model.setPOLE_TYPE(nonAiArray.get(i).getAsJsonObject().get("POLE_TYPE").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("POLE_TYPE").getAsString());
-                                    model.setDEFECT_TYPE(nonAiArray.get(i).getAsJsonObject().get("DEFECT_TYPE").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("DEFECT_TYPE").getAsString());
-                                    //model.setDEFECT_GROUP(nonAiArray.get(i).getAsJsonObject().get("DEFECT_GROUP").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("DEFECT_GROUP").getAsString());
-                                    model.setGRP_ID(nonAiArray.get(i).getAsJsonObject().get("GRP_ID").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("GRP_ID").getAsString());
-                                    model.setAI_FLAG(nonAiArray.get(i).getAsJsonObject().get("AI_FLAG").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("AI_FLAG").getAsString());
-                                    model.setDEFECT_SUB_TYPE(nonAiArray.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE").getAsString());
-                                    model.setIS_RECTIFIED(nonAiArray.get(i).getAsJsonObject().get("RECTIFIED").isJsonNull() ? "N" : nonAiArray.get(i).getAsJsonObject().get("RECTIFIED").getAsString());
-                                    model.setIMG_URL(nonAiArray.get(i).getAsJsonObject().get("IMG_URL").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("IMG_URL").getAsString());
-                                    model.setAI_PENDING("N");
+                                    // Add all records to one list
                                     nonAiPoleList11.add(model);
                                 }
                             }
 
-
                             progressDialog.dismiss();
-                           // showSelectSurveyTypeDialog();
-                            Intent intent = new Intent(Select11KVFeederRectify.this, Select11PoleRectify.class);
-                            intent.putExtra("FEEDER_ID",  selectedFeederId11);
+
+                            Intent intent = new Intent(
+                                    Select11KVFeederRectify.this,
+                                    Select11PoleRectify.class
+                            );
+
+                            intent.putExtra("FEEDER_ID", selectedFeederId11);
                             intent.putExtra("FEEDER_NAME", selectedFeederName11);
                             intent.putExtra("SS_CODE", selectedSSCode11);
-                            intent.putExtra("POLE_ID", model.getPOLE_ID());
+
                             startActivity(intent);
                             finish();
 
-
-
                         } catch (Exception e) {
+                            progressDialog.dismiss();
                             e.printStackTrace();
                         }
+
                     } else {
 
                         progressDialog.dismiss();
-                        Toast.makeText(Select11KVFeederRectify.this, surveyedResponseVo.get("ERR_MSG").toString(), Toast.LENGTH_SHORT).show();
+
+                        Toast.makeText(
+                                Select11KVFeederRectify.this,
+                                surveyedResponseVo.has("ERR_MSG")
+                                        ? surveyedResponseVo.get("ERR_MSG").getAsString()
+                                        : "No pole data found",
+                                Toast.LENGTH_SHORT
+                        ).show();
                     }
 
-
                 } else {
+
                     progressDialog.dismiss();
-                    Toast.makeText(Select11KVFeederRectify.this, "Server Busy Try Again", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(
+                            Select11KVFeederRectify.this,
+                            "Server Busy Try Again",
+                            Toast.LENGTH_SHORT
+                    ).show();
                 }
             }
 
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
+
                 progressDialog.dismiss();
+
                 CommanUtilits.netWorkError(Select11KVFeederRectify.this);
-                //Toast.makeText(Select11KVFeederRectify.this, "Try Again" + t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
 
+
+//        responseVoCall.enqueue(new Callback<JsonObject>() {
+//            @Override
+//            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+//
+//                if (response.body() != null) {
+//
+//                    JsonObject surveyedResponseVo = response.body();
+//                    // Log.v("FEEDER==", "" + surveyedResponseVo);
+//                    if (MobileConstants.TRUE.equalsIgnoreCase(surveyedResponseVo.get("STATUS").getAsString())) {
+//                        try {
+//                            JsonObject responseObject = surveyedResponseVo.getAsJsonObject("RESPONSE");
+//                            if (responseObject.has("AI")
+//                                    && !responseObject.get("AI").isJsonNull()
+//                                    && responseObject.get("AI").isJsonArray()) {
+//
+//                                JsonArray aiArray = responseObject.getAsJsonArray("AI");
+//
+//
+//                                for (int i = 0; i < aiArray.size(); i++) {
+//                                    PoleModel11KV model = new PoleModel11KV();
+//                                    model.setFEEDER_ID(aiArray.get(i).getAsJsonObject().get("FEEDER_ID").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("FEEDER_ID").getAsString());
+//                                    model.setGLAT(aiArray.get(i).getAsJsonObject().get("GLAT").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("GLAT").getAsString());
+//                                    model.setPOLE_ID(aiArray.get(i).getAsJsonObject().get("REF_ID").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("REF_ID").getAsString());
+//                                    model.setPOLE_NO(aiArray.get(i).getAsJsonObject().get("POLE_NO").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("POLE_NO").getAsString());
+//                                    model.setGLONG(aiArray.get(i).getAsJsonObject().get("GLONG").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("GLONG").getAsString());
+//                                    model.setPOLE_CONFIG(aiArray.get(i).getAsJsonObject().get("POLE_CONFIG").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("POLE_CONFIG").getAsString());
+//                                    model.setPOLE_HEIGHT(aiArray.get(i).getAsJsonObject().get("POLE_HEIGHT").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("POLE_HEIGHT").getAsString());
+//                                    model.setPOLE_SUPPORT(aiArray.get(i).getAsJsonObject().get("POLE_SUPPORT").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("POLE_SUPPORT").getAsString());
+//                                    model.setPOLE_TYPE(aiArray.get(i).getAsJsonObject().get("POLE_TYPE").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("POLE_TYPE").getAsString());
+//                                    model.setDEFECT_TYPE(aiArray.get(i).getAsJsonObject().get("DEFECT_TYPE").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("DEFECT_TYPE").getAsString());
+//                                    //model.setDEFECT_GROUP(aiArray.get(i).getAsJsonObject().get("DEFECT_GROUP").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("DEFECT_GROUP").getAsString());
+//                                    model.setGRP_ID(aiArray.get(i).getAsJsonObject().get("GRP_ID").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("GRP_ID").getAsString());
+//                                    model.setAI_FLAG(aiArray.get(i).getAsJsonObject().get("AI_FLAG").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("AI_FLAG").getAsString());
+//                                    model.setDEFECT_SUB_TYPE(aiArray.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE").getAsString());
+//                                    model.setIS_RECTIFIED(aiArray.get(i).getAsJsonObject().get("RECTIFIED").isJsonNull() ? "N" : aiArray.get(i).getAsJsonObject().get("RECTIFIED").getAsString());
+//                                    model.setIMG_URL(aiArray.get(i).getAsJsonObject().get("IMG_URL").isJsonNull() ? "" : aiArray.get(i).getAsJsonObject().get("IMG_URL").getAsString());
+//                                    model.setAI_PENDING("N");
+//                                    aiPoleList11.add(model);
+//                                }
+//
+//
+//                            }
+//
+//                            // Process NON AI array
+//                            if (responseObject.has("NON AI")
+//                                    && !responseObject.get("NON AI").isJsonNull()
+//                                    && responseObject.get("NON AI").isJsonArray()) {
+//
+//                                JsonArray nonAiArray = responseObject.getAsJsonArray("NON AI");
+//
+//                                for (int i = 0; i < nonAiArray.size(); i++) {
+//                                    PoleModel11KV model = new PoleModel11KV();
+//                                    model.setFEEDER_ID(nonAiArray.get(i).getAsJsonObject().get("FEEDER_ID").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("FEEDER_ID").getAsString());
+//                                    model.setGLAT(nonAiArray.get(i).getAsJsonObject().get("GLAT").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("GLAT").getAsString());
+//                                    model.setPOLE_ID(nonAiArray.get(i).getAsJsonObject().get("REF_ID").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("REF_ID").getAsString());
+//                                    model.setPOLE_NO(nonAiArray.get(i).getAsJsonObject().get("POLE_NO").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("POLE_NO").getAsString());
+//                                    model.setGLONG(nonAiArray.get(i).getAsJsonObject().get("GLONG").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("GLONG").getAsString());
+//                                    model.setPOLE_CONFIG(nonAiArray.get(i).getAsJsonObject().get("POLE_CONFIG").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("POLE_CONFIG").getAsString());
+//                                    model.setPOLE_HEIGHT(nonAiArray.get(i).getAsJsonObject().get("POLE_HEIGHT").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("POLE_HEIGHT").getAsString());
+//                                    model.setPOLE_SUPPORT(nonAiArray.get(i).getAsJsonObject().get("POLE_SUPPORT").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("POLE_SUPPORT").getAsString());
+//                                    model.setPOLE_TYPE(nonAiArray.get(i).getAsJsonObject().get("POLE_TYPE").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("POLE_TYPE").getAsString());
+//                                    model.setDEFECT_TYPE(nonAiArray.get(i).getAsJsonObject().get("DEFECT_TYPE").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("DEFECT_TYPE").getAsString());
+//                                    //model.setDEFECT_GROUP(nonAiArray.get(i).getAsJsonObject().get("DEFECT_GROUP").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("DEFECT_GROUP").getAsString());
+//                                    model.setGRP_ID(nonAiArray.get(i).getAsJsonObject().get("GRP_ID").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("GRP_ID").getAsString());
+//                                    model.setAI_FLAG(nonAiArray.get(i).getAsJsonObject().get("AI_FLAG").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("AI_FLAG").getAsString());
+//                                    model.setDEFECT_SUB_TYPE(nonAiArray.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE").getAsString());
+//                                    model.setIS_RECTIFIED(nonAiArray.get(i).getAsJsonObject().get("RECTIFIED").isJsonNull() ? "N" : nonAiArray.get(i).getAsJsonObject().get("RECTIFIED").getAsString());
+//                                    model.setIMG_URL(nonAiArray.get(i).getAsJsonObject().get("IMG_URL").isJsonNull() ? "" : nonAiArray.get(i).getAsJsonObject().get("IMG_URL").getAsString());
+//                                    model.setAI_PENDING("N");
+//                                    nonAiPoleList11.add(model);
+//                                }
+//                            }
+//
+//
+//                            progressDialog.dismiss();
+//                           // showSelectSurveyTypeDialog();
+//                            Intent intent = new Intent(Select11KVFeederRectify.this, Select11PoleRectify.class);
+//                            intent.putExtra("FEEDER_ID",  selectedFeederId11);
+//                            intent.putExtra("FEEDER_NAME", selectedFeederName11);
+//                            intent.putExtra("SS_CODE", selectedSSCode11);
+//                            intent.putExtra("POLE_ID", model.getPOLE_ID());
+//                            startActivity(intent);
+//                            finish();
+//
+//
+//
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+//                    } else {
+//
+//                        progressDialog.dismiss();
+//                        Toast.makeText(Select11KVFeederRectify.this, surveyedResponseVo.get("ERR_MSG").toString(), Toast.LENGTH_SHORT).show();
+//                    }
+//
+//
+//                } else {
+//                    progressDialog.dismiss();
+//                    Toast.makeText(Select11KVFeederRectify.this, "Server Busy Try Again", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<JsonObject> call, Throwable t) {
+//                progressDialog.dismiss();
+//                CommanUtilits.netWorkError(Select11KVFeederRectify.this);
+//                //Toast.makeText(Select11KVFeederRectify.this, "Try Again" + t.getMessage(), Toast.LENGTH_LONG).show();
+//            }
+//        });
+
     }
+
+
+    private String getJsonValue(JsonObject object, String key) {
+        return getJsonValue(object, key, "");
+    }
+
+    private String getJsonValue(JsonObject object, String key, String defaultValue) {
+
+        if (object == null || !object.has(key) || object.get(key).isJsonNull()) {
+            return defaultValue;
+        }
+
+        return object.get(key).getAsString();
+    }
+
 
     private void getPoleCount() {
         progressDialog.show();
@@ -291,7 +412,8 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
 
 
                             progressDialog.dismiss();
-                            openAlertDialog("Do you want to survey offline Or Online", poleNoList11);
+                            showPoleFeederBottomSheet(poleNoList11);
+                            //openAlertDialog("Do you want to survey offline Or Online", poleNoList11);
 
                             // showSelectSurveyTypeDialog();
 //                            Intent intent = new Intent(Select11KVFeederRectify.this, Select11PoleRectify.class);
