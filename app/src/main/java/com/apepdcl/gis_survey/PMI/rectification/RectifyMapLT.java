@@ -136,7 +136,7 @@ public class RectifyMapLT extends AppCompatActivity {
 
     TextView tv_pole_number;
     PmiDatabase pmiDatabase;
-    int OFFLINE_DISTANCE=150,ONLINE_DISTANCE=50;
+    int OFFLINE_DISTANCE=150000,ONLINE_DISTANCE=50000;
 
 
     @SuppressLint("MissingInflatedId")

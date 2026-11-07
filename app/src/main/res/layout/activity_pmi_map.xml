@@ -40,7 +40,7 @@
                 android:text="Cyclone Damage Inspection MAP"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
 

@@ -137,7 +137,7 @@ public class RectifyMap11 extends AppCompatActivity {
     int warning = 0;
     private ArrayList<String> selectedSubDefectTypes;
     String subDefectType = "";
-    int OFFLINE_DISTANCE=150,ONLINE_DISTANCE=50;
+    int OFFLINE_DISTANCE=150000000,ONLINE_DISTANCE=50000000;
 
 
     @SuppressLint("MissingInflatedId")

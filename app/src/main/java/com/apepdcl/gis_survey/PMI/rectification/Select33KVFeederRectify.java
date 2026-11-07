@@ -114,16 +114,25 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
         proceed_button = findViewById(R.id.proceed_button);
         tabLayout.addTab(tabLayout.newTab().setText("Surveyed Locations Rectification"));
         tabLayout.addTab(tabLayout.newTab().setText("Direct Rectification Update"));
+        tabLayout.selectTab(tabLayout.getTabAt(0));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+
+                // Selected: Blue background, White text
                 tab.view.setBackgroundResource(R.drawable.bg_tab_selected);
+
+                TextView tabText = (TextView) tab.view.getChildAt(1);
+                if (tabText != null) {
+                    tabText.setTextColor(ContextCompat.getColor(
+                            Select33KVFeederRectify.this, R.color.white));
+                }
+
                 if (tab.getPosition() == 0) {
                     rv_33.setVisibility(View.VISIBLE);
                     directRectification.setVisibility(View.GONE);
-
-                } else if (tab.getPosition() == 1) {
+                } else {
                     rv_33.setVisibility(View.GONE);
                     directRectification.setVisibility(View.VISIBLE);
                 }
@@ -131,13 +140,64 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
+
+                // Unselected: White background, Blue text
                 tab.view.setBackgroundResource(R.drawable.bg_tab_unselected);
+
+                TextView tabText = (TextView) tab.view.getChildAt(1);
+                if (tabText != null) {
+                    tabText.setTextColor(ContextCompat.getColor(
+                            Select33KVFeederRectify.this, R.color.new_color));
+                }
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+
+// Select first tab by default
+
+//        tabLayout.addTab(tabLayout.newTab().setText("Surveyed Locations Rectification"));
+//        tabLayout.addTab(tabLayout.newTab().setText("Direct Rectification Update"));
+//        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//
+//            @Override
+//            public void onTabSelected(TabLayout.Tab tab) {
+//                tab.view.setBackgroundResource(R.drawable.bg_tab_selected);
+//                tabLayout.setTabTextColors(
+//                        ContextCompat.getColor(Select33KVFeederRectify.this, R.color.white),
+//                        ContextCompat.getColor(Select33KVFeederRectify.this, R.color.white)
+//                );
+//                if (tab.getPosition() == 0) {
+//                    rv_33.setVisibility(View.VISIBLE);
+//                    directRectification.setVisibility(View.GONE);
+//
+//                } else if (tab.getPosition() == 1) {
+//                    rv_33.setVisibility(View.GONE);
+//                    directRectification.setVisibility(View.VISIBLE);
+//                }
+//            }
+//
+//            @Override
+//            public void onTabUnselected(TabLayout.Tab tab) {
+//                tab.view.setBackgroundResource(R.drawable.bg_tab_unselected);
+//                tabLayout.setTabTextColors(
+//                        ContextCompat.getColor(Select33KVFeederRectify.this, R.color.new_color),
+//                        ContextCompat.getColor(Select33KVFeederRectify.this, R.color.new_color)
+//                );
+//            }
+//
+//            @Override
+//            public void onTabReselected(TabLayout.Tab tab) {
+//            }
+//        });
+//        tabLayout.setTabTextColors(
+//                ContextCompat.getColor(this, R.color.new_color), // Unselected: Blue
+//                ContextCompat.getColor(this, R.color.white)      // Selected: White
+//        );
+//        // Select first tab by default
+//        tabLayout.selectTab(tabLayout.getTabAt(0));
 
         RecyclerView.LayoutManager layoutManager1 = new LinearLayoutManager(Select33KVFeederRectify.this);
         rv_33.setLayoutManager(layoutManager1);

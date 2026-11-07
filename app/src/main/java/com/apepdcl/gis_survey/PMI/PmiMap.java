@@ -1507,18 +1507,25 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         view_top_cleat = newDefectDialog.findViewById(R.id.view_top_cleat);
         view_others = newDefectDialog.findViewById(R.id.view_others);
 
-        if (SELECTED_VOLTAGE.equalsIgnoreCase("33KV")) {
-            home_heading.setText("33kV Cyclone Damage Inspection");
-        } else if (SELECTED_VOLTAGE.equalsIgnoreCase("11 KV")) {
-            home_heading.setText("11kV Cyclone Damage Inspection");
-        } else if (SELECTED_VOLTAGE.equalsIgnoreCase("LT")) {
-            home_heading.setText("LT Cyclone Damage Inspection");
-        }
 
         if ("SURVEY".equalsIgnoreCase(FROM)) {
+            if (SELECTED_VOLTAGE.equalsIgnoreCase("33KV")) {
+                home_heading.setText("33kV Cyclone Damage Inspection");
+            } else if (SELECTED_VOLTAGE.equalsIgnoreCase("11 KV")) {
+                home_heading.setText("11kV Cyclone Damage Inspection");
+            } else if (SELECTED_VOLTAGE.equalsIgnoreCase("LT")) {
+                home_heading.setText("LT Cyclone Damage Inspection");
+            }
             tv_question.setText("Is the selected location damaged?");
         } else {
-
+            if (SELECTED_VOLTAGE.equalsIgnoreCase("33KV")) {
+                home_heading.setText("33kV Cyclone Rectification");
+            } else if (SELECTED_VOLTAGE.equalsIgnoreCase("11 KV")) {
+                home_heading.setText("11kV Cyclone Rectification");
+            } else if (SELECTED_VOLTAGE.equalsIgnoreCase("LT")) {
+                home_heading.setText("LT Cyclone Rectification");
+            }
+            tv_question.setText("Is the selected location damaged and Rectified?");
         }
 
         iv_pole_demo.setOnClickListener(new View.OnClickListener() {
