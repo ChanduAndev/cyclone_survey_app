@@ -544,7 +544,7 @@ public class RectifyMap11 extends AppCompatActivity {
                     for (int i = currentIndex; i < endIndex; i++) {
                         polylinePoints.add(new Point(
                                 Double.parseDouble(filteredList.get(i).getGLAT()),
-                                Double.parseDouble(filteredList.get(i).getPOLE_NO())
+                                Double.parseDouble(filteredList.get(i).getGLONG())
                         ));
 
                         graphicsOverlay = new GraphicsOverlay();
