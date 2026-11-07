@@ -540,7 +540,7 @@ public class SelectLTCircuit extends AppCompatActivity implements RVLTAdapter.On
 
                             Intent intent = new Intent(SelectLTCircuit.this, PmiMap.class);
                             intent.putExtra("ID",  selectedDtrCode);
-                            intent.putExtra("NAME", dtr_location_name);
+                            intent.putExtra("NAME", selectedDtrCode);
                             intent.putExtra("SELECTED_VOLTAGE", "LT");
                             intent.putExtra("FROM", "SURVEY");
                             startActivity(intent);
