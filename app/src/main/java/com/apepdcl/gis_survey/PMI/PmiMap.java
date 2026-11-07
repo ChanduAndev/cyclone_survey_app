@@ -390,14 +390,16 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             }
         } else {
             if (SELECTED_VOLTAGE.equalsIgnoreCase("33KV")) {
-                home_heading.setText("33kV Cyclone Rectification");
+                home_heading.setText("33kV Damage Rectification");
                 feeder_name.setText(NAME + " (" + ID + ")");
             } else if (SELECTED_VOLTAGE.equalsIgnoreCase("11 KV")) {
-                home_heading.setText("11kV 33kV Cyclone Rectification");
+                home_heading.setText("11kV Damage Rectification");
                 feeder_name.setText(NAME + " (" + ID + ")");
             } else if (SELECTED_VOLTAGE.equalsIgnoreCase("LT")) {
-                home_heading.setText("LT 33kV Cyclone Rectification");
+                home_heading.setText("LT Damage Rectification");
                 feeder_name.setText(NAME + " (" + ID + ")");
+
+                System.out.println("GAGGAGGA"+NAME + " "+ ID);
             }
         }
 
@@ -1455,6 +1457,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         TextView pole_support = newDefectDialog.findViewById(R.id.pole_support);
         TextView home_heading = newDefectDialog.findViewById(R.id.home_heading);
         TextView tv_question = newDefectDialog.findViewById(R.id.tv_question);
+        TextView tv_defects_type = newDefectDialog.findViewById(R.id.tv_defects_type);
 
         TextView tv_youtube_view = newDefectDialog.findViewById(R.id.tv_youtube_view);
         TextView tv_dtr_pic_info = newDefectDialog.findViewById(R.id.tv_dtr_pic_info);
@@ -1509,6 +1512,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
 
 
         if ("SURVEY".equalsIgnoreCase(FROM)) {
+            tv_defects_type.setText("Select Damage");
             if (SELECTED_VOLTAGE.equalsIgnoreCase("33KV")) {
                 home_heading.setText("33kV Cyclone Damage Inspection");
             } else if (SELECTED_VOLTAGE.equalsIgnoreCase("11 KV")) {
@@ -1518,6 +1522,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             }
             tv_question.setText("Is the selected location damaged?");
         } else {
+            tv_defects_type.setText("Select Damaged Rectification");
             if (SELECTED_VOLTAGE.equalsIgnoreCase("33KV")) {
                 home_heading.setText("33kV Cyclone Rectification");
             } else if (SELECTED_VOLTAGE.equalsIgnoreCase("11 KV")) {
@@ -1652,7 +1657,8 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                     }
 
 
-                } else if ("33KV".equalsIgnoreCase(SELECTED_VOLTAGE)) {
+                }
+                else if ("33KV".equalsIgnoreCase(SELECTED_VOLTAGE)) {
 
                     if ("SURVEY".equalsIgnoreCase(FROM)) {
                         for (int i = 0; i < Select33KVFeeder.polesList33.size(); i++) {
@@ -1700,7 +1706,8 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                         }
                     }
 
-                } else {
+                }
+                else if ("LT".equalsIgnoreCase(SELECTED_VOLTAGE)){
 
                     if ("SURVEY".equalsIgnoreCase(FROM)) {
                         for (int i = 0; i < SelectLTCircuit.polesListLT.size(); i++) {
@@ -1725,19 +1732,19 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                             }
                         }
                     } else {
-                        for (int i = 0; i < SelectLTCircuit.polesListLT.size(); i++) {
+                        for (int i = 0; i < SelectLTCircuitRectify.polesListLT.size(); i++) {
 
                             if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
                                     .equalsIgnoreCase(
                                             String.valueOf(
-                                                    SelectLTCircuit.polesListLT
+                                                    SelectLTCircuitRectify.polesListLT
                                                             .get(i).getPOLE_NO()
                                             )
                                     )) {
 
                                 distance = getDistanceBetweenPolesLT(
-                                        SelectLTCircuit.polesListLT.get(i).getGLONG(),
-                                        SelectLTCircuit.polesListLT.get(i).getGLAT(),
+                                        SelectLTCircuitRectify.polesListLT.get(i).getGLONG(),
+                                        SelectLTCircuitRectify.polesListLT.get(i).getGLAT(),
                                         currentLat,
                                         currentLon
                                 );
@@ -1749,13 +1756,13 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                     }
                 }
 
-                System.out.println("CURRENT SELECTED POLE: "
-                        + CURRENT_SELECTED_POLE_NUMBER);
-
-                System.out.println("CURRENT GPS LAT: " + currentLat);
-                System.out.println("CURRENT GPS LNG: " + currentLon);
-                System.out.println("DISTANCE CHECK: " + distance);
-                System.out.println("ALLOWED RADIUS: " + radius);
+//                System.out.println("CURRENT SELECTED POLE: "
+//                        + CURRENT_SELECTED_POLE_NUMBER);
+//
+//                System.out.println("CURRENT GPS LAT: " + currentLat);
+//                System.out.println("CURRENT GPS LNG: " + currentLon);
+//                System.out.println("DISTANCE CHECK: " + distance);
+//                System.out.println("ALLOWED RADIUS: " + radius);
 
                 openCameraForMainImage();
 

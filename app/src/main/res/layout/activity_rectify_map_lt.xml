@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abeezee"
                 android:gravity="center"
-                android:text="POLE NUMBER:"
+                android:text="Pole Number:"
                 android:textColor="@color/colorPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -135,7 +135,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abeezee"
                 android:gravity="center"
-                android:text="DTR CODE:"
+                android:text="DTR Code:"
                 android:textColor="@color/colorPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -161,6 +161,7 @@
             android:layout_height="wrap_content"
             android:background="@color/background_color"
             android:paddingHorizontal="10dp"
+            android:visibility="gone"
             android:paddingVertical="4dp">
 
             <TextView
@@ -169,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abeezee"
                 android:gravity="center"
-                android:text="LT CKT CODE:"
+                android:text="LT Ckt Code:"
                 android:textColor="@color/colorPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -252,7 +253,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/abeezee"
             android:gravity="center"
-            android:text="    CAPTURE IMAGE    "
+            android:text="    Capture Image    "
             android:textColor="@color/white"
             android:textSize="18sp"
             android:paddingHorizontal="10dp"

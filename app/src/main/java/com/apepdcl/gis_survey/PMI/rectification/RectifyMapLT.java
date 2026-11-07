@@ -136,7 +136,7 @@ public class RectifyMapLT extends AppCompatActivity {
 
     TextView tv_pole_number;
     PmiDatabase pmiDatabase;
-    int OFFLINE_DISTANCE=150000,ONLINE_DISTANCE=50000;
+    int OFFLINE_DISTANCE=150000,ONLINE_DISTANCE=500000000;
 
 
     @SuppressLint("MissingInflatedId")
@@ -1464,9 +1464,11 @@ public class RectifyMapLT extends AppCompatActivity {
 
 
                             SelectLTPoleRectify.isDataChanged = true;
-
                             Toast.makeText(RectifyMapLT.this, "Data transmitted successfully", Toast.LENGTH_SHORT).show();
-                            onBackPressed();
+                            Intent intent = new Intent(RectifyMapLT.this,SelectLTCircuitRectify.class);
+                            intent.putExtra("FROM", "RECTIFY_SURVEY");
+                            startActivity(intent);
+                            finish();
 
 
                         } catch (Exception e) {

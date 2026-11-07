@@ -8,7 +8,7 @@ public class DefectsModel {
 
  private String DEFECT_ID,DEFECT_TYPE,DEFECT_SUB_TYPE,DEFECT_SUB_TYPE_ID,VOLTAGE_LEVEL;
 
- private String AI, PHOTO, GRP_ID, DEFECT_GROUP;
+ private String AI, PHOTO, GRP_ID, DEFECT_GROUP,RECT_SUB_TYPE;
 
  public String getAI() {
   return AI;

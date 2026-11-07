@@ -69,7 +69,7 @@ public class SelectLTCircuit extends AppCompatActivity implements RVLTAdapter.On
     private RetrofitServicePMI retrofitServicePmi;
     public static ArrayList<PoleModelLT> polesListLT;
 
-    String selectedDtrCode, selectedLTCircuitCode;
+    String selectedDtrCode, selectedLTCircuitCode,dtr_location_name;
     private TextView proceed_button;
 
     private List<FeederModel> feederList = new ArrayList<>();
@@ -219,6 +219,7 @@ public class SelectLTCircuit extends AppCompatActivity implements RVLTAdapter.On
             if (selectedDtr != null) {
 
                 selectedDtrCode = selectedDtr.getDtrCode();
+                dtr_location_name=selectedDtr.getDtrLocation();
 
                 new_dtr_code_lt_1.setText(selectedDtrCode);
 
@@ -539,7 +540,7 @@ public class SelectLTCircuit extends AppCompatActivity implements RVLTAdapter.On
 
                             Intent intent = new Intent(SelectLTCircuit.this, PmiMap.class);
                             intent.putExtra("ID",  selectedDtrCode);
-                            intent.putExtra("NAME", selectedDtrCode);
+                            intent.putExtra("NAME", dtr_location_name);
                             intent.putExtra("SELECTED_VOLTAGE", "LT");
                             intent.putExtra("FROM", "SURVEY");
                             startActivity(intent);

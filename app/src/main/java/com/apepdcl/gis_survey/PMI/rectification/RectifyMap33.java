@@ -1499,7 +1499,9 @@ public class RectifyMap33 extends AppCompatActivity {
                             Select33PoleRectify.isDataChanged = true;
 
                             Toast.makeText(RectifyMap33.this, "Data transmitted successfully", Toast.LENGTH_SHORT).show();
-                            onBackPressed();
+                            Intent intent =new Intent(RectifyMap33.this,Select33KVFeederRectify.class);
+                            startActivity(intent);
+                            finish();
 
 
                         } catch (Exception e) {

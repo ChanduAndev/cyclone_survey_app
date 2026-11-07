@@ -717,10 +717,9 @@ public class Select33PoleRectify extends AppCompatActivity implements RVPolesAda
         BottomSheetDialog bottomSheetDialog =
                 new BottomSheetDialog(Select33PoleRectify.this);
 
-        View view = getLayoutInflater().inflate(
-                R.layout.bottom_sheet_defect_sub_type,
-                null
-        );
+        View view = getLayoutInflater().inflate(R.layout.bottom_sheet_defect_sub_type, null);
+
+
 
         LinearLayout checkboxContainer =
                 view.findViewById(R.id.checkboxContainer);
