@@ -88,7 +88,7 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
     private String selectedSubStationId = "";
     private String selectedFeederId = "";
 
-    TextView tv_section,feeder_name,ss_name,proceed_button;
+    TextView tv_section, feeder_name, ss_name, proceed_button;
 
 
     @SuppressLint("MissingInflatedId")
@@ -109,18 +109,23 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
         ss_name = findViewById(R.id.ss_name);
         proceed_button = findViewById(R.id.proceed_button);
         feeder_name = findViewById(R.id.feeder_name);
-        directRectification =findViewById(R.id.direct_rectification_scroll);
+        directRectification = findViewById(R.id.direct_rectification_scroll);
         tabLayout = findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("Surveyed Locations Rectification"));
         tabLayout.addTab(tabLayout.newTab().setText("Direct Rectification Update"));
-
 
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-
+                tab.view.setBackgroundColor(R.drawable.bg_tab_selected);
+                TextView tabText = (TextView) tab.view.getChildAt(1);
+                if (tabText != null) {
+                    tabText.setTextColor(ContextCompat.getColor(
+                            Select11KVFeederRectify.this, R.color.white));
+                }
+                
                 if (tab.getPosition() == 0) {
 
                     rv_11.setVisibility(View.VISIBLE);
@@ -134,6 +139,13 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
+                tab.view.setBackgroundResource(R.drawable.bg_tab_unselected);
+
+                TextView tabText = (TextView) tab.view.getChildAt(1);
+                if (tabText != null) {
+                    tabText.setTextColor(ContextCompat.getColor(
+                            Select11KVFeederRectify.this, R.color.black));
+                }
             }
 
             @Override
@@ -192,7 +204,7 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
             if (data.isEmpty()) {
                 Toast.makeText(this, "No Data Found", Toast.LENGTH_SHORT).show();
 
-            }else {
+            } else {
                 Intent intent = new Intent(Select11KVFeederRectify.this, OfflineRectifySurvey.class);
                 intent.putExtra("SELECTED_FEEDER_ID", selectedFeederId11);
                 intent.putExtra("SELECTED_VOLTAGE_LEVEL", "11 KV");
@@ -492,7 +504,6 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
 //                            finish();
 
 
-
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -700,6 +711,7 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
             }
         });
     }
+
     private void processOfflineRectificationArray(
             JsonObject poleObject,
             String jsonKey,
@@ -1063,7 +1075,7 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
                 new LinearLayoutManager(this)
         );
 
-        PoleFeederAdapter adapter = new PoleFeederAdapter(this, poleFeederList,Select11KVFeederRectify.this);
+        PoleFeederAdapter adapter = new PoleFeederAdapter(this, poleFeederList, Select11KVFeederRectify.this);
 
         rvPoleFeeder.setAdapter(adapter);
 
@@ -1092,8 +1104,6 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
 
                     if (surveyedResponseVo.has("STATUS") && !surveyedResponseVo.get("STATUS").isJsonNull()) {
                         String status = surveyedResponseVo.get("STATUS").getAsString();
-
-
 
 
                         if (MobileConstants.TRUE.equalsIgnoreCase(status)) {
@@ -1139,7 +1149,8 @@ public class Select11KVFeederRectify extends AppCompatActivity implements RV11KV
 
         Gson gson = new Gson();
 
-        Type listType = new TypeToken<ArrayList<FeederModel>>() {}.getType();
+        Type listType = new TypeToken<ArrayList<FeederModel>>() {
+        }.getType();
 
         feederList = gson.fromJson(response, listType);
 

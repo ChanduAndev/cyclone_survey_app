@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -169,6 +170,12 @@ public class SelectLTCircuitRectify extends AppCompatActivity implements RVLTAda
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+                tab.view.setBackgroundColor(R.drawable.bg_tab_selected);
+                TextView tabText = (TextView) tab.view.getChildAt(1);
+                if (tabText != null) {
+                    tabText.setTextColor(ContextCompat.getColor(
+                            SelectLTCircuitRectify.this, R.color.white));
+                }
                 if (tab.getPosition() == 0) {
                     rv_33.setVisibility(View.VISIBLE);
                     directRectification.setVisibility(View.GONE);
@@ -182,6 +189,13 @@ public class SelectLTCircuitRectify extends AppCompatActivity implements RVLTAda
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
+                tab.view.setBackgroundResource(R.drawable.bg_tab_unselected);
+
+                TextView tabText = (TextView) tab.view.getChildAt(1);
+                if (tabText != null) {
+                    tabText.setTextColor(ContextCompat.getColor(
+                            SelectLTCircuitRectify.this, R.color.black));
+                }
             }
 
             @Override

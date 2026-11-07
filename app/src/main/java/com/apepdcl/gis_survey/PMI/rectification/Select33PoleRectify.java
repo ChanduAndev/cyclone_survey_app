@@ -817,7 +817,6 @@ public class Select33PoleRectify extends AppCompatActivity implements RVPolesAda
             intent.putExtra("FEEDER_NAME", selectedFeederName11);
             intent.putExtra("SS_CODE", selectedSSCode11);
             intent.putExtra("MODEL", model);
-
             startActivity(intent);
 
         } else {
