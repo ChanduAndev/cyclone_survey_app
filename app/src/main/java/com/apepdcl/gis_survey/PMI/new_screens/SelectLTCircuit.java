@@ -541,6 +541,7 @@ public class SelectLTCircuit extends AppCompatActivity implements RVLTAdapter.On
                             intent.putExtra("ID",  selectedDtrCode);
                             intent.putExtra("NAME", selectedDtrCode);
                             intent.putExtra("SELECTED_VOLTAGE", "LT");
+                            intent.putExtra("FROM", "SURVEY");
                             startActivity(intent);
 
 

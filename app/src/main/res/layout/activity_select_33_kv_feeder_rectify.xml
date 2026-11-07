@@ -88,9 +88,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:background="@android:color/white"
+        app:tabBackground="@drawable/bg_selected_page"
         app:tabMode="fixed"
         app:tabGravity="fill"
+        android:background="@android:color/transparent"
         app:tabIndicatorColor="@color/new_color"
         app:tabSelectedTextColor="@color/new_color"
         app:tabTextColor="@color/black" />

@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +36,8 @@ import com.apepdcl.gis_survey.PMI.PmiMap;
 import com.apepdcl.gis_survey.PMI.RetrofitClientInstancePMI;
 import com.apepdcl.gis_survey.PMI.RetrofitServicePMI;
 import com.apepdcl.gis_survey.PMI.models.DTR;
+import com.apepdcl.gis_survey.PMI.models.DtrModel;
+import com.apepdcl.gis_survey.PMI.models.FeederModel;
 import com.apepdcl.gis_survey.PMI.models.PoleModel33KV;
 import com.apepdcl.gis_survey.PMI.models.PoleModelLT;
 import com.apepdcl.gis_survey.PMI.new_screens.PMINewHome;
@@ -48,16 +51,21 @@ import com.apepdcl.gis_survey.estimates.models.DTRFeederMaster;
 import com.apepdcl.gis_survey.estimates.new_module.NewModel;
 import com.apepdcl.gis_survey.utilits.CommanUtilits;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
 import com.leo.searchablespinner.SearchableSpinner;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import retrofit2.Call;
@@ -88,12 +96,34 @@ public class SelectLTCircuitRectify extends AppCompatActivity implements RVLTAda
 
     TextView home_heading;
     String selectedDtrCode, selectedLTCircuitCode, selectedDTRLocation;
+    TabLayout tabLayout;
+    ScrollView directRectification;
+
+    private TextView proceed_button;
+    LinearLayout layout_dtr_details_1;
+
+    private List<FeederModel> feederList = new ArrayList<>();
+
+    private Map<String, String> sectionMap = new LinkedHashMap<>();
+    private Map<String, String> subStationMap = new LinkedHashMap<>();
+    private Map<String, String> feederMap = new LinkedHashMap<>();
+
+    private String selectedSecId = "";
+    private String selectedSubStationId = "";
+    private String selectedFeederId = "";
+
+    TextView tv_section,feeder_name,ss_name;
+
+    private List<DtrModel> dtrList = new ArrayList<>();
+    private Map<String, DtrModel> dtrMap = new LinkedHashMap<>();
+    TextView tv_dtr_lt_ckt_1,tv_dtr_slno_1,tv_dtr_make_1,tv_dtr_capacity_1,tv_dtr_phase_1,btn_next;
+    private DtrModel selectedDtr;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_lt_circuit);
+        setContentView(R.layout.select_lt_circuit_rectification);
         getSupportActionBar().hide();
 
         progressDialog = new ProgressDialog(this);
@@ -108,6 +138,19 @@ public class SelectLTCircuitRectify extends AppCompatActivity implements RVLTAda
         new_dtr_code_lt_1 = findViewById(R.id.new_dtr_code_lt_1);
         main_lt_layout = findViewById(R.id.main_lt_layout);
         home_heading = findViewById(R.id.home_heading);
+        tabLayout = findViewById(R.id.tab_layout_lt);
+        ss_name = findViewById(R.id.ss_name);
+        tv_section = findViewById(R.id.tv_section);
+        feeder_name = findViewById(R.id.feeder_name);
+        proceed_button = findViewById(R.id.proceed_button);
+        tv_dtr_lt_ckt_1 = findViewById(R.id.tv_dtr_lt_ckt_1);
+        tv_dtr_slno_1 = findViewById(R.id.tv_dtr_slno_1);
+        tv_dtr_make_1 = findViewById(R.id.tv_dtr_make_1);
+        tv_dtr_capacity_1 = findViewById(R.id.tv_dtr_capacity_1);
+        tv_dtr_phase_1 = findViewById(R.id.tv_dtr_phase_1);
+        btn_next = findViewById(R.id.btn_next);
+        directRectification =findViewById(R.id.direct_rectification_scroll_lt);
+        layout_dtr_details_1 = findViewById(R.id.layout_dtr_details_1);
         polesListLT = new ArrayList<>();
         aiPoleListLT = new ArrayList<>();
         nonAiPoleListLT = new ArrayList<>();
@@ -120,15 +163,42 @@ public class SelectLTCircuitRectify extends AppCompatActivity implements RVLTAda
         rv_33.setAdapter(adapter1);
         rv_33.setNestedScrollingEnabled(false);
 
-        if ("RECTIFY_SURVEY".equalsIgnoreCase(FROM)){
-            rv_33.setVisibility(View.VISIBLE);
-            home_heading.setText("LT Damage Rectification");
-            main_lt_layout.setVisibility(View.GONE);
-        }else {
-            home_heading.setText("LT Cyclone Damage Inspection");
-            rv_33.setVisibility(View.GONE);
-            main_lt_layout.setVisibility(View.VISIBLE);
-        }
+        tabLayout.addTab(tabLayout.newTab().setText("Surveyed Locations Rectification"));
+        tabLayout.addTab(tabLayout.newTab().setText("Direct Rectification Update"));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if (tab.getPosition() == 0) {
+                    rv_33.setVisibility(View.VISIBLE);
+                    directRectification.setVisibility(View.GONE);
+
+                } else  {
+                    rv_33.setVisibility(View.GONE);
+                    directRectification.setVisibility(View.VISIBLE);
+                }
+            }
+
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
+        });
+        btn_next.setOnClickListener(v -> {
+            getLTPolesDataOther();
+        });
+
+        proceed_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getDTRDetails();
+            }
+        });
+
 
         logout_layout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,11 +223,137 @@ public class SelectLTCircuitRectify extends AppCompatActivity implements RVLTAda
 
             }
         });
-
+        getFeederMasterData();
     }
 
 
+    private void getDTRDetails() {
+        polesListLT.clear();
+        progressDialog.show();
+        JsonObject requestObject = new JsonObject();
+        requestObject.addProperty("FEEDER_ID", selectedFeederId);
+        retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
+        Call<JsonObject> responseVoCall = retrofitServicePmi.getArnabFeederMasterData(requestObject);
 
+
+        responseVoCall.enqueue(new Callback<JsonObject>() {
+            @Override
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+
+                progressDialog.dismiss();
+                if (response.body() != null) {
+
+                    JsonObject surveyedResponseVo = response.body();
+
+                    if (surveyedResponseVo.has("STATUS") && !surveyedResponseVo.get("STATUS").isJsonNull()) {
+                        String status = surveyedResponseVo.get("STATUS").getAsString();
+
+
+
+
+                        if (MobileConstants.TRUE.equalsIgnoreCase(status)) {
+                            JsonObject object = surveyedResponseVo.getAsJsonObject("DATA");
+
+
+                            //JsonArray dtr_array = object.getAsJsonArray("DTR");
+                            layout_dtr_details_1.setVisibility(View.VISIBLE);
+                            JsonArray EHT_SS_MASTER = object.getAsJsonArray("DTR");
+
+                            parseDtrResponse(EHT_SS_MASTER);
+
+//
+
+                        } else {
+                            progressDialog.cancel();
+                            String errorMessage = surveyedResponseVo.has("ERR_MSG") && !surveyedResponseVo.get("ERR_MSG").isJsonNull()
+                                    ? surveyedResponseVo.get("ERR_MSG").getAsString()
+                                    : "Unknown error occurred";
+                            Toast.makeText(SelectLTCircuitRectify.this, errorMessage, Toast.LENGTH_SHORT).show();
+                        }
+
+                    } else {
+                        // Handle case where STATUS is missing or null
+                        Toast.makeText(SelectLTCircuitRectify.this, "Invalid response from server: STATUS is missing or null", Toast.LENGTH_SHORT).show();
+                    }
+
+                } else {
+                    Toast.makeText(SelectLTCircuitRectify.this, "Server Busy. Try Again.", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JsonObject> call, Throwable t) {
+                progressDialog.dismiss();
+                Toast.makeText(SelectLTCircuitRectify.this, "Try Again" + t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
+    private void parseDtrResponse(JsonArray response) {
+
+        Gson gson = new Gson();
+
+        Type listType = new TypeToken<ArrayList<DtrModel>>() {}.getType();
+
+        dtrList = gson.fromJson(response, listType);
+
+        if (dtrList == null) {
+            dtrList = new ArrayList<>();
+        }
+
+        loadDtrList();
+    }
+
+    private void loadDtrList() {
+
+        dtrMap.clear();
+
+        for (DtrModel model : dtrList) {
+
+            if (model.getDtrCode() != null) {
+
+                String displayName = model.getDtrCode()
+                        + " - "
+                        + model.getDtrLocation();
+
+                dtrMap.putIfAbsent(displayName, model);
+            }
+        }
+
+        ArrayList<String> dtrNames = new ArrayList<>(dtrMap.keySet());
+
+        SearchableSpinner searchableSpinner = new SearchableSpinner(SelectLTCircuitRectify.this);
+        searchableSpinner.setWindowTitle("Select DTR");
+
+        searchableSpinner.setSpinnerListItems(dtrNames);
+        searchableSpinner.show();
+
+        searchableSpinner.setOnItemSelectListener((position, selectedString) -> {
+            selectedDtr = dtrMap.get(selectedString);
+            if (selectedDtr != null) {
+
+                selectedDtrCode = selectedDtr.getDtrCode();
+
+                new_dtr_code_lt_1.setText(selectedDtrCode);
+
+                // Display DTR details
+                tv_dtr_phase_1.setText(selectedDtr.getPhase());
+
+                tv_dtr_capacity_1.setText(
+                        String.valueOf(selectedDtr.getCapacity())
+                );
+
+                // Update other fields if available in your API
+                tv_dtr_make_1.setText("-");
+                tv_dtr_slno_1.setText("-");
+                tv_dtr_lt_ckt_1.setText("-");
+
+            }
+        });
+
+
+    }
     private void openDTRNearByDialog(TextView edt_text, String dtr_view) {
 
         Dialog payDialog = new Dialog(this);
@@ -297,6 +493,76 @@ public class SelectLTCircuitRectify extends AppCompatActivity implements RVLTAda
         //getLTPolesData();
         // showAIDialog();
         getPoleCount();
+    }
+
+    private void getLTPolesDataOther() {
+        polesListLT.clear();
+        progressDialog.show();
+        JsonObject requestObject = new JsonObject();
+        requestObject.addProperty("DTR_STRUCTURE", selectedDtrCode);
+        // requestObject.addProperty("LT_CKTCODE", selectedLTCircuitCode);
+        requestObject.addProperty("VERSION", getResources().getString(R.string.displayVersion));
+        retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
+        Call<JsonObject> responseVoCall = retrofitServicePmi.getPolesLT(requestObject);
+
+
+        responseVoCall.enqueue(new Callback<JsonObject>() {
+            @Override
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+
+                if (response.body() != null) {
+                    progressDialog.dismiss();
+                    JsonObject surveyedResponseVo = response.body();
+                    // Log.v("FEEDER==", "" + surveyedResponseVo);
+                    if (MobileConstants.TRUE.equalsIgnoreCase(surveyedResponseVo.get("STATUS").getAsString())) {
+                        try {
+                            JsonArray array = surveyedResponseVo.getAsJsonArray("RESPONSE");
+                            for (int i = 0; i < array.size(); i++) {
+                                PoleModelLT model = new PoleModelLT();
+                                model.setDTR_CODE(selectedDtrCode);
+                                model.setLT_CKT_CODE(array.get(i).getAsJsonObject().get("LT_CKT_CODE").isJsonNull() ? "" : array.get(i).getAsJsonObject().get("LT_CKT_CODE").getAsString());
+                                model.setGLAT(array.get(i).getAsJsonObject().get("GLAT").isJsonNull() ? "" : array.get(i).getAsJsonObject().get("GLAT").getAsString());
+                                model.setPOLE_ID(array.get(i).getAsJsonObject().get("REF_ID").isJsonNull() ? "" : array.get(i).getAsJsonObject().get("REF_ID").getAsString());
+                                model.setPOLE_NO(array.get(i).getAsJsonObject().get("POLE_NO").isJsonNull() ? "" : array.get(i).getAsJsonObject().get("POLE_NO").getAsString());
+                                model.setGLONG(array.get(i).getAsJsonObject().get("GLONG").isJsonNull() ? "" : array.get(i).getAsJsonObject().get("GLONG").getAsString());
+                                model.setPOLE_CONFIG(array.get(i).getAsJsonObject().get("LINE_CONFIG").isJsonNull() ? "" : array.get(i).getAsJsonObject().get("LINE_CONFIG").getAsString());
+                                model.setPOLE_HEIGHT(array.get(i).getAsJsonObject().get("POLE_HEIGHT").isJsonNull() ? "" : array.get(i).getAsJsonObject().get("POLE_HEIGHT").getAsString());
+                                model.setPOLE_SUPPORT(array.get(i).getAsJsonObject().get("POLE_SUPPORT").isJsonNull() ? "" : array.get(i).getAsJsonObject().get("POLE_SUPPORT").getAsString());
+                                model.setPOLE_TYPE(array.get(i).getAsJsonObject().get("POLE_TYPE").isJsonNull() ? "" : array.get(i).getAsJsonObject().get("POLE_TYPE").getAsString());
+                                //model.setPOLE_STRUCTURE(array.get(i).getAsJsonObject().get("POLE_STRUCTURE").isJsonNull() ? "" : array.get(i).getAsJsonObject().get("POLE_STRUCTURE").getAsString());
+                                polesListLT.add(model);
+                            }
+
+                            Intent intent = new Intent(SelectLTCircuitRectify.this, PmiMap.class);
+                            intent.putExtra("ID",  selectedDtrCode);
+                            intent.putExtra("NAME", selectedDtrCode);
+                            intent.putExtra("SELECTED_VOLTAGE", "LT");
+                            intent.putExtra("FROM", "RECT");
+                            startActivity(intent);
+
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+
+                        Toast.makeText(SelectLTCircuitRectify.this, surveyedResponseVo.get("ERR_MSG").toString(), Toast.LENGTH_SHORT).show();
+                    }
+
+
+                } else {
+                    progressDialog.dismiss();
+                    Toast.makeText(SelectLTCircuitRectify.this, "Server Busy Try Again", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JsonObject> call, Throwable t) {
+                progressDialog.dismiss();
+                Toast.makeText(SelectLTCircuitRectify.this, "Try Again" + t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 
     private void getPoleCount() {
@@ -647,5 +913,194 @@ public class SelectLTCircuitRectify extends AppCompatActivity implements RVLTAda
     @Override
     public void onItemClick(PoleNosModelLT model) {
         getLtPolesData(model);
+    }
+
+    private void parseFeederResponse(JsonArray response) {
+
+        Gson gson = new Gson();
+
+        Type listType = new TypeToken<ArrayList<FeederModel>>() {}.getType();
+
+        feederList = gson.fromJson(response, listType);
+
+        if (feederList == null) {
+            feederList = new ArrayList<>();
+        }
+
+
+        loadSections();
+    }
+
+    private void loadSections() {
+
+        sectionMap.clear();
+
+        for (FeederModel model : feederList) {
+
+            if (model.getSecName() != null && model.getSecId() != null) {
+
+                sectionMap.putIfAbsent(
+                        model.getSecName(),
+                        model.getSecId()
+                );
+            }
+        }
+
+        ArrayList<String> sectionNames = new ArrayList<>(sectionMap.keySet());
+
+        tv_section.setOnClickListener(v -> {
+
+            SearchableSpinner searchableSpinner = new SearchableSpinner(SelectLTCircuitRectify.this);
+            searchableSpinner.setWindowTitle("SELECT SECTION");
+
+            searchableSpinner.setSpinnerListItems(sectionNames);
+            searchableSpinner.show();
+            searchableSpinner.setOnItemSelectListener((position, selectedString) -> {
+                selectedSecId = sectionMap.get(selectedString);
+                tv_section.setText(selectedString);
+                selectedSubStationId = "";
+                selectedFeederId = "";
+                loadSubStations();
+            });
+
+        });
+    }
+
+    private void loadSubStations() {
+
+        subStationMap.clear();
+
+        for (FeederModel model : feederList) {
+
+            if (selectedSecId.equals(model.getSecId())
+                    && model.getSubStationName() != null
+                    && model.getSubStationId() != null) {
+
+                subStationMap.putIfAbsent(
+                        model.getSubStationName(),
+                        model.getSubStationId()
+                );
+            }
+        }
+
+        ArrayList<String> subStationNames = new ArrayList<>(subStationMap.keySet());
+
+        ss_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SearchableSpinner searchableSpinner = new SearchableSpinner(SelectLTCircuitRectify.this);
+                searchableSpinner.setWindowTitle("Select 33/11KV SS");
+                searchableSpinner.setSpinnerListItems(subStationNames);
+                searchableSpinner.show();
+                searchableSpinner.setOnItemSelectListener((position, selectedString) -> {
+                    selectedSubStationId = subStationMap.get(selectedString);
+                    ss_name.setText(selectedString);
+                    selectedFeederId = "";
+                    loadFeeders();
+                });
+            }
+        });
+
+    }
+
+    private void loadFeeders() {
+
+        feederMap.clear();
+
+        for (FeederModel model : feederList) {
+
+            if (selectedSecId.equals(model.getSecId())
+                    && selectedSubStationId.equals(model.getSubStationId())
+                    && model.getFeederName() != null
+                    && model.getFeederId() != null) {
+
+                feederMap.putIfAbsent(
+                        model.getFeederName(),
+                        model.getFeederId()
+                );
+            }
+        }
+
+        ArrayList<String> feederNames = new ArrayList<>(feederMap.keySet());
+
+        feeder_name.setOnClickListener(v -> {
+
+            SearchableSpinner searchableSpinner = new SearchableSpinner(SelectLTCircuitRectify.this);
+            searchableSpinner.setWindowTitle("Select 11KV Feeder");
+            searchableSpinner.setSpinnerListItems(feederNames);
+            searchableSpinner.show();
+            searchableSpinner.setOnItemSelectListener((position, selectedString) -> {
+                selectedFeederId = feederMap.get(selectedString);
+                feeder_name.setText(selectedString);
+
+            });
+
+
+        });
+    }
+
+    private void getFeederMasterData() {
+        polesListLT.clear();
+        progressDialog.show();
+        JsonObject requestObject = new JsonObject();
+        requestObject.addProperty("DTR_STRUCTURE", "123");
+        requestObject.addProperty("LT_CKTCODE", "321");
+        requestObject.addProperty("VERSION", getResources().getString(R.string.displayVersion));
+        retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
+        Call<JsonObject> responseVoCall = retrofitServicePmi.getArnabFeederMasterData(requestObject);
+
+
+        responseVoCall.enqueue(new Callback<JsonObject>() {
+            @Override
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+
+                progressDialog.dismiss();
+                if (response.body() != null) {
+
+                    JsonObject surveyedResponseVo = response.body();
+
+                    if (surveyedResponseVo.has("STATUS") && !surveyedResponseVo.get("STATUS").isJsonNull()) {
+                        String status = surveyedResponseVo.get("STATUS").getAsString();
+
+
+
+
+                        if (MobileConstants.TRUE.equalsIgnoreCase(status)) {
+                            JsonObject object = surveyedResponseVo.getAsJsonObject("DATA");
+
+
+                            //JsonArray dtr_array = object.getAsJsonArray("DTR");
+
+                            JsonArray EHT_SS_MASTER = object.getAsJsonArray("11KV_FEEDER_MASTER");
+
+                            parseFeederResponse(EHT_SS_MASTER);
+
+//
+
+                        } else {
+                            progressDialog.cancel();
+                            String errorMessage = surveyedResponseVo.has("ERR_MSG") && !surveyedResponseVo.get("ERR_MSG").isJsonNull()
+                                    ? surveyedResponseVo.get("ERR_MSG").getAsString()
+                                    : "Unknown error occurred";
+                            Toast.makeText(SelectLTCircuitRectify.this, errorMessage, Toast.LENGTH_SHORT).show();
+                        }
+
+                    } else {
+                        // Handle case where STATUS is missing or null
+                        Toast.makeText(SelectLTCircuitRectify.this, "Invalid response from server: STATUS is missing or null", Toast.LENGTH_SHORT).show();
+                    }
+
+                } else {
+                    Toast.makeText(SelectLTCircuitRectify.this, "Server Busy. Try Again.", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JsonObject> call, Throwable t) {
+                progressDialog.dismiss();
+                Toast.makeText(SelectLTCircuitRectify.this, "Try Again" + t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 }

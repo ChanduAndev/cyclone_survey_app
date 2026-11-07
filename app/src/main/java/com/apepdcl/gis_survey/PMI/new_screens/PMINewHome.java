@@ -96,12 +96,11 @@ public class PMINewHome extends AppCompatActivity {
     private RetrofitServicePMI retrofitServicePmi;
     ArrayList<PostingModel> postingList;
     PmiDatabase pmiDatabase;
+    public static String ALLOW_RECTIFICATION="";
 
     public static ArrayList<DefectsModel> allDefectsList;
     public static ArrayList<DefectGroupModel> defectsGroupListLT, defectsGroupList11, defectsGroupList33;
     public static ArrayList<DefectRVModel> defectRVList;
-
-
 
 
     public static ArrayList<String> defectsTypeList;
@@ -152,8 +151,6 @@ public class PMINewHome extends AppCompatActivity {
         arcGISDatabase = new ArcGISDatabase(this);
 
 
-
-
         el_start_survey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -174,7 +171,7 @@ public class PMINewHome extends AppCompatActivity {
         tt_start_survey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               loadDefectsMaster("33KV");
+                loadDefectsMaster("33KV");
 
             }
         });
@@ -205,30 +202,12 @@ public class PMINewHome extends AppCompatActivity {
             }
         });
 
+
+
         lt_rectify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                postingList.clear();
-                postingList = pmiDatabase.getPmiPostingData();
-
-                if (!postingList.isEmpty()) {
-                    int poles_count_33 = 0;
-
-                    for (int i = 0; i < postingList.size(); i++) {
-                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("LT")) {
-                            poles_count_33++;
-                        }
-                    }
-
-                    if (poles_count_33 > 0) {
-                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
-                    } else {
-                        checkLTDataForRectify();
-                    }
-
-                } else {
-                    checkLTDataForRectify();
-                }
+                loadRectifyMaster("LT");
 
 
             }
@@ -244,7 +223,7 @@ public class PMINewHome extends AppCompatActivity {
         tt_rectify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               loadRectifyMaster("33KV");
+                loadRectifyMaster("33KV");
             }
         });
 
@@ -287,8 +266,11 @@ public class PMINewHome extends AppCompatActivity {
             }
         });
 
-    }
 
+
+
+
+    }
 
 
     private void openLogoutDialog() {
@@ -306,7 +288,7 @@ public class PMINewHome extends AppCompatActivity {
         TextView back_to_home = payDialog.findViewById(R.id.back_to_home);
         TextView log_info = payDialog.findViewById(R.id.log_info);
 
-         if (pmiDatabase.getCurrentPmiPostingData().size() > 0) {
+        if (pmiDatabase.getCurrentPmiPostingData().size() > 0) {
             dataAvailable = true;
             dataAvailableText = "If You Log out you will lose " + pmiDatabase.getCurrentPmiPostingData().size() + " Locations of PMI.";
             log_info.setText("Please Transmit PMI data before Logging out. All surveyed data will be deleted if you log out.");
@@ -329,7 +311,7 @@ public class PMINewHome extends AppCompatActivity {
                 payDialog.dismiss();
                 if (dataAvailable) {
                     openConfirmLogoutDialogBox();
-                }else {
+                } else {
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.clear().commit();
                     Intent intent = new Intent(PMINewHome.this, LoginActivity.class);
@@ -372,6 +354,7 @@ public class PMINewHome extends AppCompatActivity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -665,6 +648,7 @@ public class PMINewHome extends AppCompatActivity {
         retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
         Map<String, String> map = new HashMap<>();
         map.put("VERSION", getResources().getString(R.string.displayVersion));
+        System.out.println("VOLTAGE_LEVEL::::::" + voltageLevel);
 
         Gson gson = new Gson();
         JsonObject jsonObject = gson.toJsonTree(map).getAsJsonObject();
@@ -685,6 +669,7 @@ public class PMINewHome extends AppCompatActivity {
                         try {
                             OFFLINE_DISTANCE = surveyedResponseVo.get("OFFLINE_DISTANCE").getAsString();
                             ONLINE_DISTANCE = surveyedResponseVo.get("ONLINE_DISTANCE").getAsString();
+                            ALLOW_RECTIFICATION = surveyedResponseVo.get("ALLOW_RECTIFICATION").getAsString();
                             pmiDatabase.insertDistanceCheck(OFFLINE_DISTANCE, ONLINE_DISTANCE);
                             JsonArray array33 = surveyedResponseVo.getAsJsonArray("DATA");
                             List<String> list = new ArrayList<>();
@@ -799,7 +784,7 @@ public class PMINewHome extends AppCompatActivity {
                                 rvModel.setDefectsModelArrayList(listDefectsModels);
                                 defectRVList.add(rvModel);
                             }
-                            if ("11KV".equalsIgnoreCase(voltageLevel)){
+                            if ("11KV".equalsIgnoreCase(voltageLevel)) {
                                 postingList.clear();
                                 postingList = pmiDatabase.getPmiPostingData();
                                 if (!postingList.isEmpty()) {
@@ -828,7 +813,7 @@ public class PMINewHome extends AppCompatActivity {
 
                                 }
                             }
-                            else if ("33KV".equalsIgnoreCase(voltageLevel)){
+                            else if ("33KV".equalsIgnoreCase(voltageLevel)) {
                                 postingList.clear();
                                 postingList = pmiDatabase.getPmiPostingData();
                                 if (!postingList.isEmpty()) {
@@ -855,7 +840,7 @@ public class PMINewHome extends AppCompatActivity {
                                 }
 
                             }
-                            else if("LT".equalsIgnoreCase(voltageLevel)){
+                            else if ("LT".equalsIgnoreCase(voltageLevel)) {
                                 postingList.clear();
                                 postingList = pmiDatabase.getPmiPostingData();
                                 if (!postingList.isEmpty()) {
@@ -938,6 +923,7 @@ public class PMINewHome extends AppCompatActivity {
                         try {
                             OFFLINE_DISTANCE = surveyedResponseVo.get("OFFLINE_DISTANCE").getAsString();
                             ONLINE_DISTANCE = surveyedResponseVo.get("ONLINE_DISTANCE").getAsString();
+                            ALLOW_RECTIFICATION = surveyedResponseVo.get("ALLOW_RECTIFICATION").getAsString();
                             pmiDatabase.insertDistanceCheck(OFFLINE_DISTANCE, ONLINE_DISTANCE);
                             JsonArray array33 = surveyedResponseVo.getAsJsonArray("DATA");
                             List<String> list = new ArrayList<>();
@@ -1055,54 +1041,84 @@ public class PMINewHome extends AppCompatActivity {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                        if ("11KV".equalsIgnoreCase(voltageLevel)){
-                            postingList.clear();
-                            postingList = pmiDatabase.getPmiPostingData();
+                        System.out.println("ALLOW_RECTIFICATION : " + ALLOW_RECTIFICATION);
+                        if (ALLOW_RECTIFICATION.equalsIgnoreCase("N")){
+                            if ("11KV".equalsIgnoreCase(voltageLevel)) {
+                                postingList.clear();
+                                postingList = pmiDatabase.getPmiPostingData();
 
-                            if (!postingList.isEmpty()) {
-                                int poles_count_11 = 0;
+                                if (!postingList.isEmpty()) {
+                                    int poles_count_11 = 0;
 
-                                for (int i = 0; i < postingList.size(); i++) {
-                                    if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("11 KV")) {
-                                        poles_count_11++;
+                                    for (int i = 0; i < postingList.size(); i++) {
+                                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("11 KV")) {
+                                            poles_count_11++;
+                                        }
                                     }
-                                }
 
-                                if (poles_count_11 > 0) {
-                                    Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+                                    if (poles_count_11 > 0) {
+                                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+
+                                    } else {
+                                        check11KVDataForRectify();
+
+                                    }
 
                                 } else {
                                     check11KVDataForRectify();
 
                                 }
-
-                            } else {
-                                check11KVDataForRectify();
-
                             }
-                        }
-                        else if ("33KV".equalsIgnoreCase(voltageLevel)){
-                            postingList.clear();
-                            postingList = pmiDatabase.getPmiPostingData();
-                            if (!postingList.isEmpty()) {
-                                int poles_count_33 = 0;
+                            else if ("33KV".equalsIgnoreCase(voltageLevel)) {
+                                postingList.clear();
+                                postingList = pmiDatabase.getPmiPostingData();
+                                if (!postingList.isEmpty()) {
+                                    int poles_count_33 = 0;
 
-                                for (int i = 0; i < postingList.size(); i++) {
-                                    if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("33KV")) {
-                                        poles_count_33++;
+                                    for (int i = 0; i < postingList.size(); i++) {
+                                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("33KV")) {
+                                            poles_count_33++;
+                                        }
                                     }
-                                }
 
-                                if (poles_count_33 > 0) {
-                                    Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+                                    if (poles_count_33 > 0) {
+                                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        check33KVDataForRectify();
+                                    }
+
                                 } else {
                                     check33KVDataForRectify();
                                 }
-
-                            } else {
-                                check33KVDataForRectify();
                             }
+                            else if ("LT".equalsIgnoreCase(voltageLevel)){
+                                postingList.clear();
+                                postingList = pmiDatabase.getPmiPostingData();
+
+                                if (!postingList.isEmpty()) {
+                                    int poles_count_33 = 0;
+
+                                    for (int i = 0; i < postingList.size(); i++) {
+                                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("LT")) {
+                                            poles_count_33++;
+                                        }
+                                    }
+
+                                    if (poles_count_33 > 0) {
+                                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        checkLTDataForRectify();
+                                    }
+
+                                } else {
+                                    checkLTDataForRectify();
+                                }
+                            }
+                        }else {
+
                         }
+
+
                     } else {
                         openAlertDialog(surveyedResponseVo.get("ERR_MSG").toString());
                         //Toast.makeText(PMINewHome.this, surveyedResponseVo.get("ERR_MSG").toString(), Toast.LENGTH_SHORT).show();
@@ -1261,14 +1277,14 @@ public class PMINewHome extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String userId = preferences.getString(MobileConstants.USERNAME, "");
         JsonObject dtrDetailsReqestVo = new JsonObject();
-        if (loginDataResponses.get(0).getROLE().equalsIgnoreCase("AEOP")){
+        if (loginDataResponses.get(0).getROLE().equalsIgnoreCase("AEOP")) {
             dtrDetailsReqestVo.addProperty("USERID", loginDataResponses.get(0).getUSERID());
-        }else {
+        } else {
             String user = preferences.getString(MobileConstants.SESSION_ID, "");
             dtrDetailsReqestVo.addProperty("USERID", user);
         }
         dtrDetailsReqestVo.addProperty("OFFICE_ID", loginDataResponses.get(0).getSEC_CODE());
-       // dtrDetailsReqestVo.addProperty("USERID", userId);
+        // dtrDetailsReqestVo.addProperty("USERID", userId);
 
         retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
         Call<JsonObject> responseVoCall = retrofitServicePmi.userWiseDefectListRectify(dtrDetailsReqestVo);

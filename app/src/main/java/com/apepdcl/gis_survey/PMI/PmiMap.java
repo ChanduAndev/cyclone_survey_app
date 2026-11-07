@@ -94,6 +94,7 @@ import com.apepdcl.gis_survey.PMI.new_screens.TFLiteObjectDetector;
 import com.apepdcl.gis_survey.PMI.new_screens.YoloTFLiteDetector;
 import com.apepdcl.gis_survey.PMI.rectification.Select11KVFeederRectify;
 import com.apepdcl.gis_survey.PMI.rectification.Select33KVFeederRectify;
+import com.apepdcl.gis_survey.PMI.rectification.SelectLTCircuitRectify;
 import com.apepdcl.gis_survey.PMI.rectification.TransmitLoadingBottomSheet;
 import com.apepdcl.gis_survey.estimates.sou.SpinnerAdapter;
 import com.apepdcl.gis_survey.runtimeperimissions.ConnectivityChecking;
@@ -376,15 +377,28 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         }
 
 
-        if (SELECTED_VOLTAGE.equalsIgnoreCase("33KV")) {
-            home_heading.setText("33kV Cyclone Damage Inspection");
-            feeder_name.setText(NAME + " (" + ID + ")");
-        } else if (SELECTED_VOLTAGE.equalsIgnoreCase("11 KV")) {
-            home_heading.setText("11kV Cyclone Damage Inspection");
-            feeder_name.setText(NAME + " (" + ID + ")");
-        } else if (SELECTED_VOLTAGE.equalsIgnoreCase("LT")) {
-            home_heading.setText("LT Cyclone Damage Inspection");
-            feeder_name.setText(NAME + " (" + ID + ")");
+        if ("SURVEY".equalsIgnoreCase(FROM)) {
+            if (SELECTED_VOLTAGE.equalsIgnoreCase("33KV")) {
+                home_heading.setText("33kV Cyclone Damage Inspection");
+                feeder_name.setText(NAME + " (" + ID + ")");
+            } else if (SELECTED_VOLTAGE.equalsIgnoreCase("11 KV")) {
+                home_heading.setText("11kV Cyclone Damage Inspection");
+                feeder_name.setText(NAME + " (" + ID + ")");
+            } else if (SELECTED_VOLTAGE.equalsIgnoreCase("LT")) {
+                home_heading.setText("LT Cyclone Damage Inspection");
+                feeder_name.setText(NAME + " (" + ID + ")");
+            }
+        } else {
+            if (SELECTED_VOLTAGE.equalsIgnoreCase("33KV")) {
+                home_heading.setText("33kV Cyclone Rectification");
+                feeder_name.setText(NAME + " (" + ID + ")");
+            } else if (SELECTED_VOLTAGE.equalsIgnoreCase("11 KV")) {
+                home_heading.setText("11kV 33kV Cyclone Rectification");
+                feeder_name.setText(NAME + " (" + ID + ")");
+            } else if (SELECTED_VOLTAGE.equalsIgnoreCase("LT")) {
+                home_heading.setText("LT 33kV Cyclone Rectification");
+                feeder_name.setText(NAME + " (" + ID + ")");
+            }
         }
 
         gpsTraker = new GpsTraker(this);
@@ -1068,6 +1082,24 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
 
     private void processLTDataWithHandler() {
         // Similar pattern for LT
+
+
+        // Select list based on FROM
+        List<PoleModelLT> polesList;
+
+        if ("SURVEY".equalsIgnoreCase(FROM)) {
+
+            polesList = SelectLTCircuit.polesListLT;
+
+        } else if ("RECT".equalsIgnoreCase(FROM)) {
+
+            polesList = SelectLTCircuitRectify.polesListLT;
+
+        } else {
+            return;
+        }
+
+
         mHandler.post(new Runnable() {
             private int currentIndex = 0;
             private List<PoleModelLT> tempFilteredList = new ArrayList<>();
@@ -1079,22 +1111,22 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             public void run() {
                 try {
                     int chunkSize = 50;
-                    int endIndex = Math.min(currentIndex + chunkSize, SelectLTCircuit.polesListLT.size());
+                    int endIndex = Math.min(currentIndex + chunkSize, polesList.size());
 
                     for (int i = currentIndex; i < endIndex; i++) {
                         double distance = getDistanceBetweenPolesLT(
-                                SelectLTCircuit.polesListLT.get(i).getGLONG(),
-                                SelectLTCircuit.polesListLT.get(i).getGLAT(),
+                                polesList.get(i).getGLONG(),
+                                polesList.get(i).getGLAT(),
                                 currentLat, currentLon
                         );
                         if (distance <= 20000000) {
-                            tempFilteredList.add(SelectLTCircuit.polesListLT.get(i));
+                            tempFilteredList.add(polesList.get(i));
                         }
                     }
 
                     currentIndex = endIndex;
 
-                    if (currentIndex < SelectLTCircuit.polesListLT.size()) {
+                    if (currentIndex < polesList.size()) {
                         mHandler.post(this);
                     } else {
                         updateUIWithFilteredLTData(tempFilteredList);
@@ -4868,7 +4900,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         });
 
         builder.setNegativeButton("Cancel", (dialog, which) -> {
-            mainImageBitmapPMI=null;
+            mainImageBitmapPMI = null;
             dialog.dismiss();
             // ❌ Stop here – do nothing
             //isMainImagePMICaptured = false;

@@ -21,7 +21,7 @@ public class RetrofitClientInstancePMI {
     public static final String BASEURL_LOCAL = "http://10.150.250.23:5551/pmi/cyclone/";
     //public static final String BASEURL_PRE_PRODUCTION = "http://59.144.184.92:5513/gis-other-services/pmi/";
     public static final String BASEURL_PRODUCTION = "https://prodgis.apeasternpower.com/pmi/cyclone/";
-    //public static final String BASEURL_PRE_PRODUCTION = "https://preprodgis.apeasternpower.com/pmi";
+    public static final String BASEURL_PRE_PRODUCTION = "https://preprodgis.apeasternpower.com/pmi/cyclone/";
     //public static final String BASEURL_PRODUCTION = "https://prodgis.apeasternpower.com/pmi/";
 
 
@@ -41,7 +41,7 @@ public class RetrofitClientInstancePMI {
                     //.addNetworkInterceptor(networkInterceptor)
                     //  .cache(cache)
                     .build();
-            retrofit = new Retrofit.Builder().baseUrl(BASEURL_LOCAL).addConverterFactory(GsonConverterFactory.create(gson)).client(okHttpClient).build();
+            retrofit = new Retrofit.Builder().baseUrl(BASEURL_PRE_PRODUCTION).addConverterFactory(GsonConverterFactory.create(gson)).client(okHttpClient).build();
         }
         return retrofit;
     }

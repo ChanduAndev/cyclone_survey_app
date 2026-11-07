@@ -118,9 +118,8 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-
+                tab.view.setBackgroundResource(R.drawable.bg_tab_selected);
                 if (tab.getPosition() == 0) {
-
                     rv_33.setVisibility(View.VISIBLE);
                     directRectification.setVisibility(View.GONE);
 
@@ -132,6 +131,7 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
+                tab.view.setBackgroundResource(R.drawable.bg_tab_unselected);
             }
 
             @Override
