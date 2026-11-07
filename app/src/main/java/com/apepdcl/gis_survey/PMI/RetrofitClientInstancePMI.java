@@ -41,7 +41,7 @@ public class RetrofitClientInstancePMI {
                     //.addNetworkInterceptor(networkInterceptor)
                     //  .cache(cache)
                     .build();
-            retrofit = new Retrofit.Builder().baseUrl(BASEURL_LOCAL).addConverterFactory(GsonConverterFactory.create(gson)).client(okHttpClient).build();
+            retrofit = new Retrofit.Builder().baseUrl(BASEURL_PRODUCTION).addConverterFactory(GsonConverterFactory.create(gson)).client(okHttpClient).build();
         }
         return retrofit;
     }
