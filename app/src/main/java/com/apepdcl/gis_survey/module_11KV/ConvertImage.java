@@ -31,6 +31,53 @@ public class ConvertImage {
         return android.util.Base64.encodeToString(byteofimages1, Base64.DEFAULT);
     }
 
+    public static String convertBase64New(String filePath) {
+
+        if (filePath == null || filePath.trim().isEmpty()) {
+            return "";
+        }
+
+        Bitmap bitmap = null;
+
+        try {
+            File imgFile = new File(filePath);
+
+            if (!imgFile.exists()) {
+                return "";
+            }
+
+            bitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+
+            if (bitmap == null) {
+                return "";
+            }
+
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+            bitmap.compress(
+                    Bitmap.CompressFormat.JPEG,
+                    80,
+                    outputStream
+            );
+
+            byte[] imageBytes = outputStream.toByteArray();
+
+            return Base64.encodeToString(
+                    imageBytes,
+                    Base64.NO_WRAP
+            );
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "";
+
+        } finally {
+            if (bitmap != null && !bitmap.isRecycled()) {
+                bitmap.recycle();
+            }
+        }
+    }
+
 
 
 

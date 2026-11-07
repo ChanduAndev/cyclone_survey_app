@@ -97,6 +97,7 @@ import com.apepdcl.gis_survey.PMI.rectification.Select33KVFeederRectify;
 import com.apepdcl.gis_survey.PMI.rectification.SelectLTCircuitRectify;
 import com.apepdcl.gis_survey.PMI.rectification.TransmitLoadingBottomSheet;
 import com.apepdcl.gis_survey.estimates.sou.SpinnerAdapter;
+import com.apepdcl.gis_survey.module_11KV.ConvertImage;
 import com.apepdcl.gis_survey.runtimeperimissions.ConnectivityChecking;
 import com.apepdcl.gis_survey.sqldatabase.ArcGISDatabase;
 import com.apepdcl.gis_survey.utilits.CommanUtilits;
@@ -5167,16 +5168,15 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             requestObject.addProperty("FEEDER_ID", model.getFEEDER_ID());
             requestObject.addProperty("DEFECT_BY_USER", model.getDEFECT_BY_USER());
             requestObject.addProperty("POLE_CONFIG", model.getPOLE_CONFIG());
-            if ("RECT".equalsIgnoreCase(FROM)) {
-                requestObject.addProperty("RECTIFIED", "Y");
-            }
+
+
 
 
             requestObject.addProperty("DEFECT_TYPE", model.getDEFECT_TYPE());
             String commonImage;
 
             if ("DTR related".equalsIgnoreCase(model.getDEFECT_GROUP())
-                    || "DTR Mounting / Structure Defects"
+                    || "DTR Mounting / Structure Damaged"
                     .equalsIgnoreCase(model.getDEFECT_TYPE())) {
 
                 commonImage = model.getDTR_IMAGE();
@@ -5209,6 +5209,10 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                             ? ""
                             : commonImage
             );
+            if ("RECT".equalsIgnoreCase(FROM)) {
+                requestObject.addProperty("RECTIFIED", "Y");
+                requestObject.addProperty("RECT_SHORT_PATH", commonImage);
+            }
 
             requestObject.addProperty("DEFECT_SUB_TYPE", model.getDEFECT_SUB_TYPE());
             requestObject.addProperty("DEFECT_SUB_TYPE_ID", model.getDEFECT_SUB_TYPE_ID());
