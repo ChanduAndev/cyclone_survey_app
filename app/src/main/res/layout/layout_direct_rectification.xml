@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/main_lt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <!--NEW LT CHANGES STARTS-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/new_layout_lt_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_length"
+                android:backgroundTint="@color/ui_new_color"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/new_layout_11kv_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:background="@drawable/distance_boarder_new"
+                                android:fontFamily="@font/inter"
+                                android:gravity="start"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="5dp"
+                                android:text="Feeder 01 Details"
+                                android:textColor="@color/white"
+                                android:textSize="13dp"
+                                android:visibility="gone"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:fontFamily="@font/inter"
+                                android:text="Select Section:"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_section"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                android:gravity="center|left"
+                                android:hint="Select Section"
+                                android:padding="5dp"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:fontFamily="@font/inter"
+                                android:text="Select 33/11KV SS :"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/ss_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                android:gravity="center|left"
+                                android:hint="Select 33/11KV SS"
+                                android:padding="5dp"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/new_tv_feeder_1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/size_5dp"
+                                android:fontFamily="@font/inter"
+                                android:text="Select 11kV Feeder:"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+
+                            <TextView
+                                android:id="@+id/feeder_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/bg_spinner_field"
+                                android:gravity="center|left"
+                                android:hint="Select 11 kV Feeder Details"
+                                android:padding="5dp"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/proceed_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_gradient"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="Proceed"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dtr_details_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_spinner_field"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5dp"
+                            android:fontFamily="@font/inter"
+                            android:text="Select DTR Structure Code :"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/new_dtr_code_lt_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/bg_spinner_field"
+                            android:gravity="center|left"
+                            android:hint="Select DTR Structure Code"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+
+                        <!-- Row 1 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="4dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="PHASE:"
+                                android:textColor="#444444"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_phase_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="#444444"
+                                android:textSize="12sp"
+                                tools:text="III" />
+                        </LinearLayout>
+
+                        <!-- Row 2 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="4dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="CAPACITY:"
+                                android:textColor="#444444"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_capacity_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="#444444"
+                                android:textSize="12sp"
+                                tools:text="160" />
+                        </LinearLayout>
+
+
+                        <!-- Row 3 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="4dp">
+
+                            <TextView
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:text="MAKE:"
+                                android:textColor="#444444"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_make_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:gravity="end"
+                                android:textColor="#444444"
+                                android:textSize="12sp"
+                                tools:text="32323" />
+                        </LinearLayout>
+
+                        <!-- Row 3 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="4dp">
+
+                            <TextView
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="SLNO:"
+                                android:textColor="#444444"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_slno_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="#444444"
+                                android:textSize="12sp"
+                                tools:text="32323" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="4dp">
+
+                            <TextView
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No of LTCKT:"
+                                android:textColor="#444444"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_dtr_lt_ckt_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="#444444"
+                                android:textSize="12sp"
+                                tools:text="32323" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/btn_next"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_gradient"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="Submit"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

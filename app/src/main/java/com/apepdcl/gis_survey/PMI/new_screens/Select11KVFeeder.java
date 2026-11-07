@@ -379,6 +379,8 @@ public class Select11KVFeeder extends AppCompatActivity implements RV11KVAdapter
                             intent.putExtra("ID", selectedFeederId);
                             intent.putExtra("NAME", feeder_name.getText().toString());
                             intent.putExtra("SELECTED_VOLTAGE", "11 KV");
+                            intent.putExtra("FROM", "SURVEY");
+
                             startActivity(intent);
 
 

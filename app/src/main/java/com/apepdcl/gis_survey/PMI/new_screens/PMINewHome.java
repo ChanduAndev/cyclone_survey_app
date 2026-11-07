@@ -100,6 +100,10 @@ public class PMINewHome extends AppCompatActivity {
     public static ArrayList<DefectsModel> allDefectsList;
     public static ArrayList<DefectGroupModel> defectsGroupListLT, defectsGroupList11, defectsGroupList33;
     public static ArrayList<DefectRVModel> defectRVList;
+
+
+
+
     public static ArrayList<String> defectsTypeList;
 
     LinearLayout tt_rectify, el_rectify, lt_rectify;
@@ -147,39 +151,13 @@ public class PMINewHome extends AppCompatActivity {
         defectsTypeList = new ArrayList<>();
         arcGISDatabase = new ArcGISDatabase(this);
 
-        loadDefectsMaster();
+
 
 
         el_start_survey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                postingList.clear();
-                postingList = pmiDatabase.getPmiPostingData();
-                if (!postingList.isEmpty()) {
-                    int poles_count_11 = 0;
-
-                    for (int i = 0; i < postingList.size(); i++) {
-                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("11 KV")) {
-                            poles_count_11++;
-                        }
-                    }
-
-                    if (poles_count_11 > 0) {
-                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
-
-                    } else {
-                        //check11KVData();
-                        Intent intent = new Intent(PMINewHome.this, Select11KVFeeder.class);
-                        startActivity(intent);
-
-                    }
-
-                } else {
-                    //check11KVData();
-                    Intent intent = new Intent(PMINewHome.this, Select11KVFeeder.class);
-                    startActivity(intent);
-
-                }
+                loadDefectsMaster("11KV");
 
             }
         });
@@ -196,30 +174,7 @@ public class PMINewHome extends AppCompatActivity {
         tt_start_survey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                postingList.clear();
-                postingList = pmiDatabase.getPmiPostingData();
-                if (!postingList.isEmpty()) {
-                    int poles_count_33 = 0;
-
-                    for (int i = 0; i < postingList.size(); i++) {
-                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("33KV")) {
-                            poles_count_33++;
-                        }
-                    }
-
-                    if (poles_count_33 > 0) {
-                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
-                    } else {
-                       // check33KVData();
-                        Intent intent = new Intent(PMINewHome.this, Select33KVFeeder.class);
-                        startActivity(intent);
-                    }
-
-                } else {
-                    //check33KVData();
-                    Intent intent = new Intent(PMINewHome.this, Select33KVFeeder.class);
-                    startActivity(intent);
-                }
+               loadDefectsMaster("33KV");
 
             }
         });
@@ -236,34 +191,7 @@ public class PMINewHome extends AppCompatActivity {
         lt_start_survey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                postingList.clear();
-                postingList = pmiDatabase.getPmiPostingData();
-                if (!postingList.isEmpty()) {
-                    int poles_count_33 = 0;
-
-                    for (int i = 0; i < postingList.size(); i++) {
-                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("LT")) {
-                            poles_count_33++;
-                        }
-                    }
-
-                    if (poles_count_33 > 0) {
-                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
-
-                    } else {
-                        //checkLTData();
-                        Intent intent = new Intent(PMINewHome.this, SelectLTCircuit.class);
-                        intent.putExtra("FROM", "START_SURVEY");
-                        startActivity(intent);
-
-                    }
-
-                } else {
-                    Intent intent = new Intent(PMINewHome.this, SelectLTCircuit.class);
-                    intent.putExtra("FROM", "START_SURVEY");
-                    startActivity(intent);
-                    //checkLTData();
-                }
+                loadDefectsMaster("LT");
 
             }
         });
@@ -309,30 +237,7 @@ public class PMINewHome extends AppCompatActivity {
         el_rectify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                postingList.clear();
-                postingList = pmiDatabase.getPmiPostingData();
-
-                if (!postingList.isEmpty()) {
-                    int poles_count_11 = 0;
-
-                    for (int i = 0; i < postingList.size(); i++) {
-                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("11 KV")) {
-                            poles_count_11++;
-                        }
-                    }
-
-                    if (poles_count_11 > 0) {
-                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
-
-                    } else {
-                        check11KVDataForRectify();
-
-                    }
-
-                } else {
-                    check11KVDataForRectify();
-
-                }
+                loadRectifyMaster("11KV");
             }
         });
 
@@ -772,7 +677,7 @@ public class PMINewHome extends AppCompatActivity {
 
     }
 
-    private void loadDefectsMaster() {
+    private void loadDefectsMaster(String voltageLevel) {
         allDefectsList.clear();
         defectsTypeList.clear();
         defectRVList.clear();
@@ -913,8 +818,287 @@ public class PMINewHome extends AppCompatActivity {
                                 rvModel.setDefectsModelArrayList(listDefectsModels);
                                 defectRVList.add(rvModel);
                             }
+                            if ("11KV".equalsIgnoreCase(voltageLevel)){
+                                postingList.clear();
+                                postingList = pmiDatabase.getPmiPostingData();
+                                if (!postingList.isEmpty()) {
+                                    int poles_count_11 = 0;
+
+                                    for (int i = 0; i < postingList.size(); i++) {
+                                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("11 KV")) {
+                                            poles_count_11++;
+                                        }
+                                    }
+
+                                    if (poles_count_11 > 0) {
+                                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+
+                                    } else {
+                                        //check11KVData();
+                                        Intent intent = new Intent(PMINewHome.this, Select11KVFeeder.class);
+                                        startActivity(intent);
+
+                                    }
+
+                                } else {
+                                    //check11KVData();
+                                    Intent intent = new Intent(PMINewHome.this, Select11KVFeeder.class);
+                                    startActivity(intent);
+
+                                }
+                            }
+                            else if ("33KV".equalsIgnoreCase(voltageLevel)){
+                                postingList.clear();
+                                postingList = pmiDatabase.getPmiPostingData();
+                                if (!postingList.isEmpty()) {
+                                    int poles_count_33 = 0;
+
+                                    for (int i = 0; i < postingList.size(); i++) {
+                                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("33KV")) {
+                                            poles_count_33++;
+                                        }
+                                    }
+
+                                    if (poles_count_33 > 0) {
+                                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        // check33KVData();
+                                        Intent intent = new Intent(PMINewHome.this, Select33KVFeeder.class);
+                                        startActivity(intent);
+                                    }
+
+                                } else {
+                                    //check33KVData();
+                                    Intent intent = new Intent(PMINewHome.this, Select33KVFeeder.class);
+                                    startActivity(intent);
+                                }
+
+                            }
+                            else if("LT".equalsIgnoreCase(voltageLevel)){
+                                postingList.clear();
+                                postingList = pmiDatabase.getPmiPostingData();
+                                if (!postingList.isEmpty()) {
+                                    int poles_count_33 = 0;
+
+                                    for (int i = 0; i < postingList.size(); i++) {
+                                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("LT")) {
+                                            poles_count_33++;
+                                        }
+                                    }
+
+                                    if (poles_count_33 > 0) {
+                                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+
+                                    } else {
+                                        //checkLTData();
+                                        Intent intent = new Intent(PMINewHome.this, SelectLTCircuit.class);
+                                        intent.putExtra("FROM", "START_SURVEY");
+                                        startActivity(intent);
+
+                                    }
+
+                                } else {
+                                    Intent intent = new Intent(PMINewHome.this, SelectLTCircuit.class);
+                                    intent.putExtra("FROM", "START_SURVEY");
+                                    startActivity(intent);
+                                    //checkLTData();
+                                }
+
+                            }
+
                         } catch (Exception e) {
                             e.printStackTrace();
+                        }
+                    } else {
+                        openAlertDialog(surveyedResponseVo.get("ERR_MSG").toString());
+                        //Toast.makeText(PMINewHome.this, surveyedResponseVo.get("ERR_MSG").toString(), Toast.LENGTH_SHORT).show();
+                    }
+
+
+                } else {
+
+                    Toast.makeText(PMINewHome.this, "Server Busy Try Again", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JsonObject> call, Throwable t) {
+
+                Toast.makeText(PMINewHome.this, "Try Again" + t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
+    private void loadRectifyMaster(String voltageLevel) {
+        allDefectsList.clear();
+        defectsTypeList.clear();
+        defectRVList.clear();
+        retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
+        Map<String, String> map = new HashMap<>();
+        map.put("VERSION", getResources().getString(R.string.displayVersion));
+
+        Gson gson = new Gson();
+        JsonObject jsonObject = gson.toJsonTree(map).getAsJsonObject();
+        Call<JsonObject> responseVoCall = retrofitServicePmi.getRectifyMaster(jsonObject);
+
+
+        responseVoCall.enqueue(new Callback<JsonObject>() {
+            @Override
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+
+                if (response.body() != null) {
+
+                    JsonObject surveyedResponseVo = response.body();
+                    // Log.v("FEEDER==", "" + surveyedResponseVo);
+                    if (MobileConstants.TRUE.equalsIgnoreCase(surveyedResponseVo.get("STATUS").getAsString())) {
+                        String OFFLINE_DISTANCE = "", ONLINE_DISTANCE = "";
+
+                        try {
+                            OFFLINE_DISTANCE = surveyedResponseVo.get("OFFLINE_DISTANCE").getAsString();
+                            ONLINE_DISTANCE = surveyedResponseVo.get("ONLINE_DISTANCE").getAsString();
+                            pmiDatabase.insertDistanceCheck(OFFLINE_DISTANCE, ONLINE_DISTANCE);
+                            JsonArray array33 = surveyedResponseVo.getAsJsonArray("DATA");
+                            List<String> list = new ArrayList<>();
+                            for (int i = 0; i < array33.size(); i++) {
+                                DefectsModel model = new DefectsModel();
+                                model.setDEFECT_ID(array33.get(i).getAsJsonObject().get("DEFECT_ID").isJsonNull() ? "" : "" + array33.get(i).getAsJsonObject().get("DEFECT_ID").getAsInt());
+                                model.setDEFECT_TYPE(array33.get(i).getAsJsonObject().get("DEFECT_TYPE").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("DEFECT_TYPE").getAsString());
+                                model.setDEFECT_SUB_TYPE(array33.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE").getAsString());
+                                model.setDEFECT_SUB_TYPE_ID(array33.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE_ID").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("DEFECT_SUB_TYPE_ID").getAsString());
+                                model.setVOLTAGE_LEVEL(array33.get(i).getAsJsonObject().get("VOLTAGE_LEVEL").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("VOLTAGE_LEVEL").getAsString());
+                                list.add(array33.get(i).getAsJsonObject().get("DEFECT_TYPE").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("DEFECT_TYPE").getAsString());
+                                model.setAI(array33.get(i).getAsJsonObject().get("AI").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("AI").getAsString());
+                                model.setPHOTO(array33.get(i).getAsJsonObject().get("PHOTO").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("PHOTO").getAsString());
+                                model.setGRP_ID(array33.get(i).getAsJsonObject().get("GRP_ID").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("GRP_ID").getAsString());
+                                model.setDEFECT_GROUP(array33.get(i).getAsJsonObject().get("DEFECT_GROUP").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("DEFECT_GROUP").getAsString());
+                                allDefectsList.add(model);
+                            }
+
+
+                            // defectsGroupList = prepareGroupedDefects(allDefectsList);
+                            ArrayList<DefectsModel> tempLTDefectsList = new ArrayList<>();
+                            ArrayList<DefectsModel> temp11DefectsList = new ArrayList<>();
+                            ArrayList<DefectsModel> temp33DefectsList = new ArrayList<>();
+                            for (int i = 0; i < allDefectsList.size(); i++) {
+                                if (allDefectsList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("LT")) {
+                                    tempLTDefectsList.add(allDefectsList.get(i));
+                                }
+                                if (allDefectsList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("11 KV")) {
+                                    temp11DefectsList.add(allDefectsList.get(i));
+                                }
+                                if (allDefectsList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("33KV")) {
+                                    temp33DefectsList.add(allDefectsList.get(i));
+                                }
+                            }
+
+
+                            ArrayList<DefectGroupModel> tempListLt = prepareGroupedDefects(tempLTDefectsList);
+                            for (int i = 0; i < tempListLt.size(); i++) {
+                                DefectGroupModel defectGroupModel = new DefectGroupModel(tempListLt.get(i).getDefectGroup(), tempListLt.get(i).getDefects());
+                                defectGroupModel.setImage("");
+                                defectGroupModel.setImageSelected(false);
+                                // defectGroupModel.setPhotoNeeded(tempListLt.get(i).getDefects().get(0).getAI().equalsIgnoreCase("N"));
+                                // defectGroupModel.setPhotoNeeded(defectGroupModel.getDefects().get(0).getAI().equalsIgnoreCase("N"));
+
+                                for (int j = 0; j < tempListLt.get(i).getDefects().size(); j++) {
+                                    if (tempListLt.get(i).getDefects().get(j).getAI().equalsIgnoreCase("N")) {
+                                        defectGroupModel.setPhotoNeeded(true);
+                                        break;
+                                    }
+                                }
+                                defectsGroupListLT.add(defectGroupModel);
+                            }
+
+                            ArrayList<DefectGroupModel> tempList11 = prepareGroupedDefects(temp11DefectsList);
+                            for (int i = 0; i < tempList11.size(); i++) {
+                                DefectGroupModel defectGroupModel = new DefectGroupModel(tempList11.get(i).getDefectGroup(), tempList11.get(i).getDefects());
+                                defectGroupModel.setImage("");
+                                defectGroupModel.setImageSelected(false);
+                                // defectGroupModel.setPhotoNeeded(tempList11.get(i).getDefects().get(0).getAI().equalsIgnoreCase("N"));
+                                for (int j = 0; j < tempList11.get(i).getDefects().size(); j++) {
+                                    if (tempList11.get(i).getDefects().get(j).getAI().equalsIgnoreCase("N")) {
+                                        defectGroupModel.setPhotoNeeded(true);
+                                        break;
+                                    }
+                                }
+                                defectsGroupList11.add(defectGroupModel);
+                            }
+
+                            ArrayList<DefectGroupModel> tempList33 = prepareGroupedDefects(temp33DefectsList);
+                            for (int i = 0; i < tempList33.size(); i++) {
+                                DefectGroupModel defectGroupModel = new DefectGroupModel(tempList33.get(i).getDefectGroup(), tempList33.get(i).getDefects());
+                                defectGroupModel.setImage("");
+                                defectGroupModel.setImageSelected(false);
+                                //defectGroupModel.setPhotoNeeded(tempList33.get(i).getDefects().get(0).getAI().equalsIgnoreCase("N"));
+                                for (int j = 0; j < tempList33.get(i).getDefects().size(); j++) {
+                                    if (tempList33.get(i).getDefects().get(j).getAI().equalsIgnoreCase("N")) {
+                                        defectGroupModel.setPhotoNeeded(true);
+                                        break;
+                                    }
+                                }
+                                defectsGroupList33.add(defectGroupModel);
+                            }
+
+                            /*Gson gson = new Gson();
+                            String json = gson.toJson(defectsGroupList);
+                            Log.v("PMI DATA===>>", "" + json);*/
+
+
+                            defectsTypeList = new ArrayList<>(new LinkedHashSet<>(list));
+                            // System.out.println("DEFECT TYPES : " + defectsTypeList);
+                            for (int i = 0; i < defectsTypeList.size(); i++) {
+                                DefectRVModel rvModel = new DefectRVModel();
+                                rvModel.setDefect(defectsTypeList.get(i));
+                                rvModel.setDefectSelected(false);
+                                rvModel.setSelectedRadioButtonId(-1);
+                                ArrayList<DefectsModel> listDefectsModels = new ArrayList<>();
+                                for (int j = 0; j < allDefectsList.size(); j++) {
+                                    if (defectsTypeList.get(i).equalsIgnoreCase(allDefectsList.get(j).getDEFECT_TYPE())) {
+                                        DefectsModel defectsModel = new DefectsModel();
+                                        defectsModel.setDEFECT_ID(allDefectsList.get(j).getDEFECT_ID());
+                                        defectsModel.setDEFECT_TYPE(allDefectsList.get(j).getDEFECT_TYPE());
+                                        defectsModel.setDEFECT_SUB_TYPE(allDefectsList.get(j).getDEFECT_SUB_TYPE());
+                                        defectsModel.setDEFECT_SUB_TYPE_ID(allDefectsList.get(j).getDEFECT_SUB_TYPE_ID());
+                                        defectsModel.setVOLTAGE_LEVEL(allDefectsList.get(j).getVOLTAGE_LEVEL());
+                                        defectsModel.setImagePath("");
+                                        defectsModel.setImage("N");
+                                        defectsModel.setImageSelected(false);
+                                        defectsModel.setSelected(false);
+                                        listDefectsModels.add(defectsModel);
+                                    }
+                                }
+                                rvModel.setDefectsModelArrayList(listDefectsModels);
+                                defectRVList.add(rvModel);
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        if ("11KV".equalsIgnoreCase(voltageLevel)){
+                            postingList.clear();
+                            postingList = pmiDatabase.getPmiPostingData();
+
+                            if (!postingList.isEmpty()) {
+                                int poles_count_11 = 0;
+
+                                for (int i = 0; i < postingList.size(); i++) {
+                                    if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("11 KV")) {
+                                        poles_count_11++;
+                                    }
+                                }
+
+                                if (poles_count_11 > 0) {
+                                    Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+
+                                } else {
+                                    check11KVDataForRectify();
+
+                                }
+
+                            } else {
+                                check11KVDataForRectify();
+
+                            }
                         }
                     } else {
                         openAlertDialog(surveyedResponseVo.get("ERR_MSG").toString());

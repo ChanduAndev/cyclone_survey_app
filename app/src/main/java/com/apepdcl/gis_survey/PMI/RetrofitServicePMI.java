@@ -40,6 +40,9 @@ public interface RetrofitServicePMI {
     @POST("saveDefectsSurvyedAfterCyclone")
     Call<JsonObject> transmitDataNew(@Body JsonArray jsonArray);
 
+    @POST("saveDefectsAndRectificationDetails")
+    Call<JsonObject> transmitDataNewRect(@Body JsonArray jsonArray);
+
 //    @GET("defectsmaster")
 //    Call<JsonObject> getDefectMaster();
 
@@ -77,6 +80,9 @@ public interface RetrofitServicePMI {
 
     @POST("defectsmasterNew")
     Call<JsonObject> getDefectMasterNew(@Body JsonObject jsonObject);
+
+    @POST("defectsmasterNew/rect")
+    Call<JsonObject> getRectifyMaster(@Body JsonObject jsonObject);
 
     @POST("feederWiseSurvyedPoles")
     Call<JsonObject> getFeederWisePoleNo(@Body JsonObject jsonObject);

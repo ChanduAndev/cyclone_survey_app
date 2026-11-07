@@ -92,6 +92,8 @@ import com.apepdcl.gis_survey.PMI.new_screens.Select33KVFeeder;
 import com.apepdcl.gis_survey.PMI.new_screens.SelectLTCircuit;
 import com.apepdcl.gis_survey.PMI.new_screens.TFLiteObjectDetector;
 import com.apepdcl.gis_survey.PMI.new_screens.YoloTFLiteDetector;
+import com.apepdcl.gis_survey.PMI.rectification.Select11KVFeederRectify;
+import com.apepdcl.gis_survey.PMI.rectification.Select33KVFeederRectify;
 import com.apepdcl.gis_survey.PMI.rectification.TransmitLoadingBottomSheet;
 import com.apepdcl.gis_survey.estimates.sou.SpinnerAdapter;
 import com.apepdcl.gis_survey.runtimeperimissions.ConnectivityChecking;
@@ -189,6 +191,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
     LinearLayout typeLayout;
     int warning = 0;
     int warning_1 = 0;
+    private TextView tv_question;
 
 
     private HashMap<CheckBox, ArrayList<CheckBox>> typeToSubTypeMap = new HashMap<>();
@@ -217,7 +220,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
     private static final String IMAGE_PREFIX = "PMI_IMG_";
     private static final String IMAGE_EXTENSION = ".jpg";
 
-    String SELECTED_VOLTAGE;
+    String SELECTED_VOLTAGE, FROM;
 
     TFLiteObjectDetector detector;
     private HashMap<Integer, TextView> requestCodeToTextViewMap = new HashMap<>();
@@ -342,6 +345,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         ID = getIntent().getStringExtra("ID");
         NAME = getIntent().getStringExtra("NAME");
         SELECTED_VOLTAGE = getIntent().getStringExtra("SELECTED_VOLTAGE");
+        FROM = getIntent().getStringExtra("FROM");
 
 
         filteredPolesList33 = new ArrayList<>();
@@ -587,6 +591,8 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         });
 
 
+
+
     }
 
     @Override
@@ -803,11 +809,79 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         mHandler.post(uiUpdateRunnable);
     }
 
+//    private void process11KVDataWithHandler() {
+//        // Similar pattern for 11KV
+//        mHandler.post(new Runnable() {
+//            private int currentIndex = 0;
+//            private List<PoleModel11KV> tempFilteredList = new ArrayList<>();
+//            private GpsTraker tempGpsTracker = new GpsTraker(PmiMap.this);
+//            private double currentLat = tempGpsTracker.getLatitude();
+//            private double currentLon = tempGpsTracker.getLongitude();
+//
+//            @Override
+//            public void run() {
+//                try {
+//                    int chunkSize = 50;
+//                    int endIndex = Math.min(currentIndex + chunkSize, Select11KVFeeder.polesList11.size());
+//
+//                    for (int i = currentIndex; i < endIndex; i++) {
+//                        double distance = getDistanceBetweenPoles11(
+//                                Select11KVFeeder.polesList11.get(i).getGLONG(),
+//                                Select11KVFeeder.polesList11.get(i).getGLAT(),
+//                                currentLat, currentLon
+//                        );
+//                        int radius = 0;
+//                        if (ConnectivityChecking.checkConnection(PmiMap.this)) {
+//                            // ONLINE
+//                            radius = ONLINE_DISTANCE;   // 500 meters
+//                        } else {
+//                            // OFFLINE
+//                            radius = OFFLINE_DISTANCE;  // 1000 meters
+//                        }
+//
+//                        if (distance <= radius) {
+//                            tempFilteredList.add(Select11KVFeeder.polesList11.get(i));
+//                        }
+//
+
+    /// /                        if (distance <= 2000) {
+    /// /                            tempFilteredList.add(Select11KVFeeder.polesList11.get(i));
+    /// /                        }
+//                    }
+//
+//                    currentIndex = endIndex;
+//
+//                    if (currentIndex < Select11KVFeeder.polesList11.size()) {
+//                        mHandler.post(this);
+//                    } else {
+//                        updateUIWithFiltered11KVData(tempFilteredList);
+//                    }
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+//    }
     private void process11KVDataWithHandler() {
-        // Similar pattern for 11KV
+
+        // Select list based on FROM
+        List<PoleModel11KV> polesList;
+
+        if ("SURVEY".equalsIgnoreCase(FROM)) {
+            polesList = Select11KVFeeder.polesList11;
+
+        } else if ("RECT".equalsIgnoreCase(FROM)) {
+            polesList = Select11KVFeederRectify.polesList11;
+
+        } else {
+            return;
+        }
+
         mHandler.post(new Runnable() {
+
             private int currentIndex = 0;
             private List<PoleModel11KV> tempFilteredList = new ArrayList<>();
+
             private GpsTraker tempGpsTracker = new GpsTraker(PmiMap.this);
             private double currentLat = tempGpsTracker.getLatitude();
             private double currentLon = tempGpsTracker.getLongitude();
@@ -815,40 +889,44 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             @Override
             public void run() {
                 try {
+
                     int chunkSize = 50;
-                    int endIndex = Math.min(currentIndex + chunkSize, Select11KVFeeder.polesList11.size());
+
+                    int endIndex = Math.min(
+                            currentIndex + chunkSize,
+                            polesList.size()
+                    );
 
                     for (int i = currentIndex; i < endIndex; i++) {
+
                         double distance = getDistanceBetweenPoles11(
-                                Select11KVFeeder.polesList11.get(i).getGLONG(),
-                                Select11KVFeeder.polesList11.get(i).getGLAT(),
-                                currentLat, currentLon
+                                polesList.get(i).getGLONG(),
+                                polesList.get(i).getGLAT(),
+                                currentLat,
+                                currentLon
                         );
-                        int radius = 0;
+
+                        int radius;
+
                         if (ConnectivityChecking.checkConnection(PmiMap.this)) {
-                            // ONLINE
-                            radius = ONLINE_DISTANCE;   // 500 meters
+                            radius = ONLINE_DISTANCE;
                         } else {
-                            // OFFLINE
-                            radius = OFFLINE_DISTANCE;  // 1000 meters
+                            radius = OFFLINE_DISTANCE;
                         }
 
                         if (distance <= radius) {
-                            tempFilteredList.add(Select11KVFeeder.polesList11.get(i));
+                            tempFilteredList.add(polesList.get(i));
                         }
-
-//                        if (distance <= 2000) {
-//                            tempFilteredList.add(Select11KVFeeder.polesList11.get(i));
-//                        }
                     }
 
                     currentIndex = endIndex;
 
-                    if (currentIndex < Select11KVFeeder.polesList11.size()) {
+                    if (currentIndex < polesList.size()) {
                         mHandler.post(this);
                     } else {
                         updateUIWithFiltered11KVData(tempFilteredList);
                     }
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -1318,6 +1396,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         TextView pole_height = newDefectDialog.findViewById(R.id.pole_height);
         TextView pole_support = newDefectDialog.findViewById(R.id.pole_support);
         TextView home_heading = newDefectDialog.findViewById(R.id.home_heading);
+        TextView tv_question=newDefectDialog.findViewById(R.id.tv_question);
 
         TextView tv_youtube_view = newDefectDialog.findViewById(R.id.tv_youtube_view);
         TextView tv_dtr_pic_info = newDefectDialog.findViewById(R.id.tv_dtr_pic_info);
@@ -1376,6 +1455,12 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             home_heading.setText("11kV Cyclone Damage Inspection");
         } else if (SELECTED_VOLTAGE.equalsIgnoreCase("LT")) {
             home_heading.setText("LT Cyclone Damage Inspection");
+        }
+
+        if ("SURVEY".equalsIgnoreCase(FROM)){
+            tv_question.setText("Is the selected location damaged?");
+        }else {
+
         }
 
         iv_pole_demo.setOnClickListener(new View.OnClickListener() {
@@ -1455,74 +1540,146 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                 boolean poleFound = false;
 
                 if ("11 KV".equalsIgnoreCase(SELECTED_VOLTAGE)) {
+                    if ("SURVEY".equalsIgnoreCase(FROM)) {
+                        for (int i = 0; i < Select11KVFeeder.polesList11.size(); i++) {
 
-                    for (int i = 0; i < Select11KVFeeder.polesList11.size(); i++) {
+                            if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
+                                    .equalsIgnoreCase(
+                                            String.valueOf(
+                                                    Select11KVFeeder.polesList11
+                                                            .get(i).getPOLE_NO()
+                                            )
+                                    )) {
 
-                        if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
-                                .equalsIgnoreCase(
-                                        String.valueOf(
-                                                Select11KVFeeder.polesList11
-                                                        .get(i).getPOLE_NO()
-                                        )
-                                )) {
+                                distance = getDistanceBetweenPoles11(
+                                        Select11KVFeeder.polesList11.get(i).getGLONG(),
+                                        Select11KVFeeder.polesList11.get(i).getGLAT(),
+                                        currentLat,
+                                        currentLon
+                                );
 
-                            distance = getDistanceBetweenPoles11(
-                                    Select11KVFeeder.polesList11.get(i).getGLONG(),
-                                    Select11KVFeeder.polesList11.get(i).getGLAT(),
-                                    currentLat,
-                                    currentLon
-                            );
+                                poleFound = true;
+                                break;
+                            }
+                        }
+                    } else if ("RECT".equalsIgnoreCase(FROM)) {
+                        for (int i = 0; i < Select11KVFeederRectify.polesList11.size(); i++) {
 
-                            poleFound = true;
-                            break;
+                            if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
+                                    .equalsIgnoreCase(
+                                            String.valueOf(
+                                                    Select11KVFeederRectify.polesList11
+                                                            .get(i).getPOLE_NO()
+                                            )
+                                    )) {
+
+                                distance = getDistanceBetweenPoles11(
+                                        Select11KVFeederRectify.polesList11.get(i).getGLONG(),
+                                        Select11KVFeederRectify.polesList11.get(i).getGLAT(),
+                                        currentLat,
+                                        currentLon
+                                );
+
+                                poleFound = true;
+                                break;
+                            }
                         }
                     }
 
+
                 } else if ("33KV".equalsIgnoreCase(SELECTED_VOLTAGE)) {
 
-                    for (int i = 0; i < Select33KVFeeder.polesList33.size(); i++) {
+                    if ("SURVEY".equalsIgnoreCase(FROM)) {
+                        for (int i = 0; i < Select33KVFeeder.polesList33.size(); i++) {
 
-                        if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
-                                .equalsIgnoreCase(
-                                        String.valueOf(
-                                                Select33KVFeeder.polesList33
-                                                        .get(i).getPOLE_NO()
-                                        )
-                                )) {
+                            if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
+                                    .equalsIgnoreCase(
+                                            String.valueOf(
+                                                    Select33KVFeeder.polesList33
+                                                            .get(i).getPOLE_NO()
+                                            )
+                                    )) {
 
-                            distance = getDistanceBetweenPoles33(
-                                    Select33KVFeeder.polesList33.get(i).getGLONG(),
-                                    Select33KVFeeder.polesList33.get(i).getGLAT(),
-                                    currentLat,
-                                    currentLon
-                            );
+                                distance = getDistanceBetweenPoles33(
+                                        Select33KVFeeder.polesList33.get(i).getGLONG(),
+                                        Select33KVFeeder.polesList33.get(i).getGLAT(),
+                                        currentLat,
+                                        currentLon
+                                );
 
-                            poleFound = true;
-                            break;
+                                poleFound = true;
+                                break;
+                            }
+                        }
+                    } else {
+                        for (int i = 0; i < Select33KVFeederRectify.polesList33.size(); i++) {
+
+                            if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
+                                    .equalsIgnoreCase(
+                                            String.valueOf(
+                                                    Select33KVFeeder.polesList33
+                                                            .get(i).getPOLE_NO()
+                                            )
+                                    )) {
+
+                                distance = getDistanceBetweenPoles33(
+                                        Select33KVFeederRectify.polesList33.get(i).getGLONG(),
+                                        Select33KVFeederRectify.polesList33.get(i).getGLAT(),
+                                        currentLat,
+                                        currentLon
+                                );
+
+                                poleFound = true;
+                                break;
+                            }
                         }
                     }
 
                 } else {
 
-                    for (int i = 0; i < SelectLTCircuit.polesListLT.size(); i++) {
+                    if ("SURVEY".equalsIgnoreCase(FROM)) {
+                        for (int i = 0; i < SelectLTCircuit.polesListLT.size(); i++) {
 
-                        if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
-                                .equalsIgnoreCase(
-                                        String.valueOf(
-                                                SelectLTCircuit.polesListLT
-                                                        .get(i).getPOLE_NO()
-                                        )
-                                )) {
+                            if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
+                                    .equalsIgnoreCase(
+                                            String.valueOf(
+                                                    SelectLTCircuit.polesListLT
+                                                            .get(i).getPOLE_NO()
+                                            )
+                                    )) {
 
-                            distance = getDistanceBetweenPolesLT(
-                                    SelectLTCircuit.polesListLT.get(i).getGLONG(),
-                                    SelectLTCircuit.polesListLT.get(i).getGLAT(),
-                                    currentLat,
-                                    currentLon
-                            );
+                                distance = getDistanceBetweenPolesLT(
+                                        SelectLTCircuit.polesListLT.get(i).getGLONG(),
+                                        SelectLTCircuit.polesListLT.get(i).getGLAT(),
+                                        currentLat,
+                                        currentLon
+                                );
 
-                            poleFound = true;
-                            break;
+                                poleFound = true;
+                                break;
+                            }
+                        }
+                    } else {
+                        for (int i = 0; i < SelectLTCircuit.polesListLT.size(); i++) {
+
+                            if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
+                                    .equalsIgnoreCase(
+                                            String.valueOf(
+                                                    SelectLTCircuit.polesListLT
+                                                            .get(i).getPOLE_NO()
+                                            )
+                                    )) {
+
+                                distance = getDistanceBetweenPolesLT(
+                                        SelectLTCircuit.polesListLT.get(i).getGLONG(),
+                                        SelectLTCircuit.polesListLT.get(i).getGLAT(),
+                                        currentLat,
+                                        currentLon
+                                );
+
+                                poleFound = true;
+                                break;
+                            }
                         }
                     }
                 }
@@ -3542,6 +3699,11 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             return;
         }
 
+        if (!isImageCapturedPMI1 && "RECT".equalsIgnoreCase(FROM)){
+            Toast.makeText(this, "Please Capture Image", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         ArrayList<DefectsModel> selectedList = new ArrayList<>();
 
         for (DefectsModel defect : selectedChipDefects) {
@@ -4909,7 +5071,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         String userId = preferences.getString(MobileConstants.SESSION_ID, "");
         String device_id = preferences.getString(MobileConstants.DEVICE_ID, "");
         String mobile_no = preferences.getString(MobileConstants.MOBILE_NUMBER, "");
-        System.out.println("GGSGGSGSG::::"+preferences.getString(MobileConstants.SESSION_ID, "") +" "+loginDataResponses.get(0).getNAME());
+        System.out.println("GGSGGSGSG::::" + preferences.getString(MobileConstants.SESSION_ID, "") + " " + loginDataResponses.get(0).getNAME());
         JsonArray array = new JsonArray();
         for (int i = 0; i < transmitList.size(); i++) {
 
@@ -4929,6 +5091,9 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             requestObject.addProperty("FEEDER_ID", model.getFEEDER_ID());
             requestObject.addProperty("DEFECT_BY_USER", model.getDEFECT_BY_USER());
             requestObject.addProperty("POLE_CONFIG", model.getPOLE_CONFIG());
+            if ("RECT".equalsIgnoreCase(FROM)) {
+                requestObject.addProperty("RECTIFIED", "Y");
+            }
 
 
             requestObject.addProperty("DEFECT_TYPE", model.getDEFECT_TYPE());
@@ -4983,16 +5148,16 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             //requestObject.addProperty("IMAGE", ConvertImage.convertBase64(model.getIMAGE()));
             // requestObject.addProperty("IMAGE", "N");
             requestObject.addProperty("RECT_REMARKS", model.getRECT_REMARKS());
-            if (loginDataResponses.get(0).getROLE().equalsIgnoreCase("AEOP")){
+            if (loginDataResponses.get(0).getROLE().equalsIgnoreCase("AEOP")) {
                 requestObject.addProperty("USERID", loginDataResponses.get(0).getUSERID());
-            }else {
+            } else {
                 requestObject.addProperty("USERID", userId);
             }
 
 
-            if (loginDataResponses.get(0).getROLE().equalsIgnoreCase("AEOP")){
+            if (loginDataResponses.get(0).getROLE().equalsIgnoreCase("AEOP")) {
                 requestObject.addProperty("USERNAME", loginDataResponses.get(0).getROLE());
-            }else {
+            } else {
                 requestObject.addProperty("USERNAME", loginDataResponses.get(0).getNAME());
             }
             //requestObject.addProperty("USERNAME", loginDataResponses.get(0).getROLE());
@@ -5044,7 +5209,12 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
 
         retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
         // Call<JsonObject> responseVoCall = retrofitServicePmi.transmitData(array);
-        Call<JsonObject> responseVoCall = retrofitServicePmi.transmitDataNew(array);
+        Call<JsonObject> responseVoCall;
+        if ("RECT".equalsIgnoreCase(FROM)) {
+            responseVoCall = retrofitServicePmi.transmitDataNewRect(array);
+        } else {
+            responseVoCall = retrofitServicePmi.transmitDataNew(array);
+        }
 
 
         responseVoCall.enqueue(new Callback<JsonObject>() {
