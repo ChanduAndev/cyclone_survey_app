@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,22 +24,31 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.apepdcl.gis.app.R;
 import com.apepdcl.gis_survey.Constants.MobileConstants;
 import com.apepdcl.gis_survey.PMI.PmiDatabase;
+import com.apepdcl.gis_survey.PMI.PmiMap;
 import com.apepdcl.gis_survey.PMI.RetrofitClientInstancePMI;
 import com.apepdcl.gis_survey.PMI.RetrofitServicePMI;
 import com.apepdcl.gis_survey.PMI.models.FEEDER_MASTER_33KV;
+import com.apepdcl.gis_survey.PMI.models.Feeder33Model;
 import com.apepdcl.gis_survey.PMI.models.OfflineDataFor11;
 import com.apepdcl.gis_survey.PMI.models.PoleModel11KV;
 import com.apepdcl.gis_survey.PMI.models.PoleModel33KV;
 import com.apepdcl.gis_survey.PMI.new_screens.PMINewHome;
+import com.apepdcl.gis_survey.PMI.new_screens.Select33KVFeeder;
 import com.apepdcl.gis_survey.PMI.rectification.offline.OfflineRectifySurvey;
 import com.apepdcl.gis_survey.runtimeperimissions.ConnectivityChecking;
 import com.apepdcl.gis_survey.utilits.CommanUtilits;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.tabs.TabLayout;
+import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
+import com.leo.searchablespinner.SearchableSpinner;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -65,6 +75,17 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
 
     private BottomSheetDialog poleFeederBottomSheet;
     PmiDatabase pmiDatabase;
+    TabLayout tabLayout;
+    ScrollView directRectification;
+
+    private List<Feeder33Model> feederList = new ArrayList<>();
+    private Map<String, String> sectionMap = new LinkedHashMap<>();
+    private Map<String, String> subStationMap = new LinkedHashMap<>();
+    private Map<String, String> feederMap = new LinkedHashMap<>();
+    TextView tv_section,feeder_name,ss_name,proceed_button;
+    private String selectedSecId = "";
+    private String selectedSubStationId = "";
+    private String selectedFeederId = "";
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -85,6 +106,38 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
         aiPoleList33 = new ArrayList<>();
         nonAiPoleList33 = new ArrayList<>();
         poleNoList33 = new ArrayList<>();
+        directRectification =findViewById(R.id.direct_rectification_scroll_33kv);
+        tabLayout = findViewById(R.id.tab_layout_33kv);
+        tv_section = findViewById(R.id.tv_section);
+        ss_name = findViewById(R.id.ss_name);
+        feeder_name = findViewById(R.id.feeder_name);
+        proceed_button = findViewById(R.id.proceed_button);
+        tabLayout.addTab(tabLayout.newTab().setText("Surveyed Locations Rectification"));
+        tabLayout.addTab(tabLayout.newTab().setText("Direct Rectification Update"));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+
+                if (tab.getPosition() == 0) {
+
+                    rv_33.setVisibility(View.VISIBLE);
+                    directRectification.setVisibility(View.GONE);
+
+                } else if (tab.getPosition() == 1) {
+                    rv_33.setVisibility(View.GONE);
+                    directRectification.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
+        });
 
         RecyclerView.LayoutManager layoutManager1 = new LinearLayoutManager(Select33KVFeederRectify.this);
         rv_33.setLayoutManager(layoutManager1);
@@ -106,6 +159,14 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
                 onBackPressed();
             }
         });
+
+        getFeederMasterData();
+
+        proceed_button.setOnClickListener(v -> {
+            get33KVPolesDataOther();
+        });
+
+
     }
 
     @Override
@@ -129,6 +190,200 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
                 startActivity(intent);
             }
         }
+
+    }
+
+    private void parseFeederResponse(JsonArray response) {
+
+        Gson gson = new Gson();
+
+        Type listType = new TypeToken<ArrayList<Feeder33Model>>() {}.getType();
+
+        feederList = gson.fromJson(response, listType);
+
+        if (feederList == null) {
+            feederList = new ArrayList<>();
+        }
+
+
+        loadSections();
+    }
+
+    private void loadSections() {
+
+        sectionMap.clear();
+
+        for (Feeder33Model model : feederList) {
+
+            if (model.getDIVISION_NAME()!= null && model.getDev_id() != null) {
+
+                sectionMap.putIfAbsent(
+                        model.getDIVISION_NAME(),
+                        model.getDev_id()
+                );
+            }
+        }
+
+        ArrayList<String> sectionNames = new ArrayList<>(sectionMap.keySet());
+
+        tv_section.setOnClickListener(v -> {
+
+            SearchableSpinner searchableSpinner = new SearchableSpinner(Select33KVFeederRectify.this);
+            searchableSpinner.setWindowTitle("Select Section");
+
+            searchableSpinner.setSpinnerListItems(sectionNames);
+            searchableSpinner.show();
+            searchableSpinner.setOnItemSelectListener((position, selectedString) -> {
+                selectedSecId = sectionMap.get(selectedString);
+                tv_section.setText(selectedString);
+                selectedSubStationId = "";
+                selectedFeederId = "";
+                loadSubStations();
+            });
+
+        });
+    }
+
+    private void loadSubStations() {
+
+        subStationMap.clear();
+
+        for (Feeder33Model model : feederList) {
+
+            if (selectedSecId.equals(model.getDev_id())
+                    && model.getEHT_SS_NAME() != null
+                    && model.getEHT_SS_CODE() != null) {
+
+                subStationMap.putIfAbsent(
+                        model.getEHT_SS_NAME(),
+                        model.getEHT_SS_CODE()
+                );
+            }
+        }
+
+        ArrayList<String> subStationNames = new ArrayList<>(subStationMap.keySet());
+
+        ss_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SearchableSpinner searchableSpinner = new SearchableSpinner(Select33KVFeederRectify.this);
+                searchableSpinner.setWindowTitle("Select 33/11KV SS");
+
+                searchableSpinner.setSpinnerListItems(subStationNames);
+                searchableSpinner.show();
+
+                searchableSpinner.setOnItemSelectListener((position, selectedString) -> {
+                    selectedSubStationId = subStationMap.get(selectedString);
+                    ss_name.setText(selectedString);
+                    selectedFeederId = "";
+                    loadFeeders();
+                });
+            }
+        });
+
+    }
+
+    private void loadFeeders() {
+
+        feederMap.clear();
+
+        for (Feeder33Model model : feederList) {
+
+            if (selectedSecId.equals(model.getDev_id())
+                    && selectedSubStationId.equals(model.getEHT_SS_CODE())
+                    && model.getFEEDER_NAME_33KV() != null
+                    && model.getFEEDER_CODE_33KV() != null) {
+
+                feederMap.putIfAbsent(
+                        model.getFEEDER_NAME_33KV(),
+                        model.getFEEDER_CODE_33KV()
+                );
+            }
+        }
+
+        ArrayList<String> feederNames = new ArrayList<>(feederMap.keySet());
+
+        feeder_name.setOnClickListener(v -> {
+
+            SearchableSpinner searchableSpinner = new SearchableSpinner(Select33KVFeederRectify.this);
+            searchableSpinner.setWindowTitle("Select 33KV Feeder");
+
+            searchableSpinner.setSpinnerListItems(feederNames);
+            searchableSpinner.show();
+
+            searchableSpinner.setOnItemSelectListener((position, selectedString) -> {
+                selectedFeederId = feederMap.get(selectedString);
+                selectedFeederName33=selectedString;
+                feeder_name.setText(selectedString);
+
+            });
+
+
+        });
+    }
+
+    private void getFeederMasterData() {
+        polesList33.clear();
+        progressDialog.show();
+        JsonObject requestObject = new JsonObject();
+        requestObject.addProperty("DTR_STRUCTURE", "123");
+        requestObject.addProperty("LT_CKTCODE", "321");
+        requestObject.addProperty("VERSION", getResources().getString(R.string.displayVersion));
+        retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
+        Call<JsonObject> responseVoCall = retrofitServicePmi.getArnabFeederMasterData(requestObject);
+
+
+        responseVoCall.enqueue(new Callback<JsonObject>() {
+            @Override
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+
+                progressDialog.dismiss();
+                if (response.body() != null) {
+
+                    JsonObject surveyedResponseVo = response.body();
+
+                    if (surveyedResponseVo.has("STATUS") && !surveyedResponseVo.get("STATUS").isJsonNull()) {
+                        String status = surveyedResponseVo.get("STATUS").getAsString();
+
+
+
+
+                        if (MobileConstants.TRUE.equalsIgnoreCase(status)) {
+                            JsonObject object = surveyedResponseVo.getAsJsonObject("DATA");
+
+
+                            //JsonArray dtr_array = object.getAsJsonArray("DTR");
+
+                            JsonArray EHT_SS_MASTER = object.getAsJsonArray("33KV_FEEDER_MASTER");
+
+                            parseFeederResponse(EHT_SS_MASTER);
+
+//
+
+                        } else {
+                            progressDialog.cancel();
+                            String errorMessage = surveyedResponseVo.has("ERR_MSG") && !surveyedResponseVo.get("ERR_MSG").isJsonNull()
+                                    ? surveyedResponseVo.get("ERR_MSG").getAsString()
+                                    : "Unknown error occurred";
+                            Toast.makeText(Select33KVFeederRectify.this, errorMessage, Toast.LENGTH_SHORT).show();
+                        }
+
+                    } else {
+                        // Handle case where STATUS is missing or null
+                        Toast.makeText(Select33KVFeederRectify.this, "Invalid response from server: STATUS is missing or null", Toast.LENGTH_SHORT).show();
+                    }
+
+                } else {
+                    Toast.makeText(Select33KVFeederRectify.this, "Server Busy. Try Again.", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JsonObject> call, Throwable t) {
+                progressDialog.dismiss();
+                Toast.makeText(Select33KVFeederRectify.this, "Try Again" + t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
@@ -601,6 +856,77 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
         }
 
         return defaultValue;
+    }
+
+    private void get33KVPolesDataOther() {
+        polesList33.clear();
+        progressDialog.show();
+        JsonObject requestObject = new JsonObject();
+        requestObject.addProperty("FEEDER_ID", selectedFeederId);
+        requestObject.addProperty("VERSION", getResources().getString(R.string.displayVersion));
+        retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
+        Call<JsonObject> responseVoCall = retrofitServicePmi.getPoles33(requestObject);
+
+
+        responseVoCall.enqueue(new Callback<JsonObject>() {
+            @Override
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+
+                if (response.body() != null) {
+
+                    JsonObject surveyedResponseVo = response.body();
+                    // Log.v("FEEDER==", "" + surveyedResponseVo);
+                    if (MobileConstants.TRUE.equalsIgnoreCase(surveyedResponseVo.get("STATUS").getAsString())) {
+                        try {
+
+
+                            JsonArray array33 = surveyedResponseVo.getAsJsonArray("RESPONSE");
+                            for (int i = 0; i < array33.size(); i++) {
+                                PoleModel33KV model = new PoleModel33KV();
+                                model.setFEEDER_ID(array33.get(i).getAsJsonObject().get("FEEDER_ID").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("FEEDER_ID").getAsString());
+                                model.setGLAT(array33.get(i).getAsJsonObject().get("GLAT").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("GLAT").getAsString());
+                                model.setPOLE_ID(array33.get(i).getAsJsonObject().get("REF_ID").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("REF_ID").getAsString());
+                                model.setPOLE_NO(array33.get(i).getAsJsonObject().get("POLE_NO").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("POLE_NO").getAsString());
+                                model.setGLONG(array33.get(i).getAsJsonObject().get("GLONG").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("GLONG").getAsString());
+                                model.setPOLE_CONFIG(array33.get(i).getAsJsonObject().get("POLE_CONFIG").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("POLE_CONFIG").getAsString());
+                                model.setPOLE_HEIGHT(array33.get(i).getAsJsonObject().get("POLE_HEIGHT").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("POLE_HEIGHT").getAsString());
+                                model.setPOLE_SUPPORT(array33.get(i).getAsJsonObject().get("POLE_SUPPORT").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("POLE_SUPPORT").getAsString());
+                                model.setPOLE_TYPE(array33.get(i).getAsJsonObject().get("POLE_TYPE").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("POLE_TYPE").getAsString());
+                                model.setPOLE_STRUCTURE(array33.get(i).getAsJsonObject().get("POLE_STRUCTURE").isJsonNull() ? "" : array33.get(i).getAsJsonObject().get("POLE_STRUCTURE").getAsString());
+                                polesList33.add(model);
+                            }
+                            progressDialog.dismiss();
+                            Intent intent = new Intent(Select33KVFeederRectify.this, PmiMap.class);
+                            intent.putExtra("ID", selectedFeederId);
+                            intent.putExtra("NAME", selectedFeederName33);
+                            intent.putExtra("SELECTED_VOLTAGE", "33KV");
+                            intent.putExtra("FROM", "RECT");
+                            startActivity(intent);
+
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        progressDialog.dismiss();
+                        Toast.makeText(Select33KVFeederRectify.this, surveyedResponseVo.get("ERR_MSG").toString(), Toast.LENGTH_SHORT).show();
+                    }
+
+
+                } else {
+                    progressDialog.dismiss();
+                    Toast.makeText(Select33KVFeederRectify.this, "Server Busy Try Again", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JsonObject> call, Throwable t) {
+                progressDialog.dismiss();
+                CommanUtilits.netWorkError(Select33KVFeederRectify.this);
+                //Toast.makeText(Select33KVFeeder.this, "Try Again" + t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
     private void get33KVPolesData() {
         polesList33.clear();

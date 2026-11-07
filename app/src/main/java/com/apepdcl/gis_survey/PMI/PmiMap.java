@@ -591,8 +591,6 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         });
 
 
-
-
     }
 
     @Override
@@ -636,65 +634,90 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         }
     }
 
+
     private void process33KVDataWithHandler() {
 
-        // Show loading indicator if needed
-        // showLoading(true);
+        // Select list based on FROM
+        List<PoleModel33KV> polesList;
 
-        // Use Handler to break the work into chunks
+        if ("SURVEY".equalsIgnoreCase(FROM)) {
+
+            polesList = Select33KVFeeder.polesList33;
+
+        } else if ("RECT".equalsIgnoreCase(FROM)) {
+
+            polesList = Select33KVFeederRectify.polesList33;
+
+        } else {
+            return;
+        }
+        Log.d("POLE_DEBUG====", "FROM: " + FROM);
+        Log.d("POLE_DEBUG====", "Poles list is null: " + (polesList == null));
+        Log.d("POLE_DEBUG====", "Poles list size: " +
+                (polesList == null ? 0 : polesList.size()));
         mHandler.post(new Runnable() {
+
             private int currentIndex = 0;
+
             private List<PoleModel33KV> tempFilteredList = new ArrayList<>();
-            private PointCollection tempPolylinePoints = new PointCollection(SpatialReferences.getWgs84());
+
+            private PointCollection tempPolylinePoints =
+                    new PointCollection(SpatialReferences.getWgs84());
+
             private GpsTraker tempGpsTracker = new GpsTraker(PmiMap.this);
+
             private double currentLat = tempGpsTracker.getLatitude();
             private double currentLon = tempGpsTracker.getLongitude();
 
+            // Check connectivity only once
+            private int radius = ConnectivityChecking.checkConnection(PmiMap.this)
+                    ? ONLINE_DISTANCE
+                    : OFFLINE_DISTANCE;
+
             @Override
             public void run() {
+
                 try {
-                    // Process in chunks to avoid blocking UI
-                    int chunkSize = 50; // Process 50 poles at a time
-                    int endIndex = Math.min(currentIndex + chunkSize, Select33KVFeeder.polesList33.size());
+
+                    int chunkSize = 50;
+
+                    int endIndex = Math.min(
+                            currentIndex + chunkSize,
+                            polesList.size()
+                    );
 
                     for (int i = currentIndex; i < endIndex; i++) {
+
                         double distance = getDistanceBetweenPoles33(
-                                Select33KVFeeder.polesList33.get(i).getGLONG(),
-                                Select33KVFeeder.polesList33.get(i).getGLAT(),
-                                currentLat, currentLon
+                                polesList.get(i).getGLONG(),
+                                polesList.get(i).getGLAT(),
+                                currentLat,
+                                currentLon
                         );
-                        int radius = 0;
-                        if (ConnectivityChecking.checkConnection(PmiMap.this)) {
-                            // ONLINE
-                            radius = ONLINE_DISTANCE;   // 500 meters
-                        } else {
-                            // OFFLINE
-                            radius = OFFLINE_DISTANCE;  // 1000 meters
-                        }
 
                         if (distance <= radius) {
-                            tempFilteredList.add(Select33KVFeeder.polesList33.get(i));
+                            tempFilteredList.add(polesList.get(i));
                         }
-//                        if (distance <= 2000) {
-//                            tempFilteredList.add(Select33KVFeeder.polesList33.get(i));
-//                        }
                     }
 
                     currentIndex = endIndex;
 
-                    if (currentIndex < Select33KVFeeder.polesList33.size()) {
-                        // Continue processing next chunk
+                    if (currentIndex < polesList.size()) {
+
                         mHandler.post(this);
+
                     } else {
-                        // All processing done, update UI
+
                         updateUIWithFiltered33KVData(tempFilteredList);
                     }
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         });
     }
+
 
     private void updateUIWithFiltered33KVData(List<PoleModel33KV> filteredList) {
         // Clear existing data
@@ -876,7 +899,10 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         } else {
             return;
         }
-
+        Log.d("POLE_DEBUG", "FROM: " + FROM);
+        Log.d("POLE_DEBUG", "Poles list is null: " + (polesList == null));
+        Log.d("POLE_DEBUG", "Poles list size: " +
+                (polesList == null ? 0 : polesList.size()));
         mHandler.post(new Runnable() {
 
             private int currentIndex = 0;
@@ -1396,7 +1422,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         TextView pole_height = newDefectDialog.findViewById(R.id.pole_height);
         TextView pole_support = newDefectDialog.findViewById(R.id.pole_support);
         TextView home_heading = newDefectDialog.findViewById(R.id.home_heading);
-        TextView tv_question=newDefectDialog.findViewById(R.id.tv_question);
+        TextView tv_question = newDefectDialog.findViewById(R.id.tv_question);
 
         TextView tv_youtube_view = newDefectDialog.findViewById(R.id.tv_youtube_view);
         TextView tv_dtr_pic_info = newDefectDialog.findViewById(R.id.tv_dtr_pic_info);
@@ -1457,9 +1483,9 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             home_heading.setText("LT Cyclone Damage Inspection");
         }
 
-        if ("SURVEY".equalsIgnoreCase(FROM)){
+        if ("SURVEY".equalsIgnoreCase(FROM)) {
             tv_question.setText("Is the selected location damaged?");
-        }else {
+        } else {
 
         }
 
@@ -1562,7 +1588,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                                 break;
                             }
                         }
-                    } else if ("RECT".equalsIgnoreCase(FROM)) {
+                    } else {
                         for (int i = 0; i < Select11KVFeederRectify.polesList11.size(); i++) {
 
                             if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
@@ -1617,7 +1643,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                             if (String.valueOf(CURRENT_SELECTED_POLE_NUMBER)
                                     .equalsIgnoreCase(
                                             String.valueOf(
-                                                    Select33KVFeeder.polesList33
+                                                    Select33KVFeederRectify.polesList33
                                                             .get(i).getPOLE_NO()
                                             )
                                     )) {
@@ -3699,7 +3725,9 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             return;
         }
 
-        if (!isImageCapturedPMI1 && "RECT".equalsIgnoreCase(FROM)){
+        if ("RECT".equalsIgnoreCase(FROM) &&
+                (mainImageBitmapPMI == null || mainImageBitmapPMI.isRecycled())) {
+
             Toast.makeText(this, "Please Capture Image", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -4840,9 +4868,11 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         });
 
         builder.setNegativeButton("Cancel", (dialog, which) -> {
+            mainImageBitmapPMI=null;
             dialog.dismiss();
             // ❌ Stop here – do nothing
-            isMainImagePMICaptured = false;
+            //isMainImagePMICaptured = false;
+
         });
 
         builder.setCancelable(false);

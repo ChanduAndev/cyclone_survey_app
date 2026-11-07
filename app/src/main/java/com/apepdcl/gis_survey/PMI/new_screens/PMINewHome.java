@@ -244,26 +244,7 @@ public class PMINewHome extends AppCompatActivity {
         tt_rectify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                postingList.clear();
-                postingList = pmiDatabase.getPmiPostingData();
-                if (!postingList.isEmpty()) {
-                    int poles_count_33 = 0;
-
-                    for (int i = 0; i < postingList.size(); i++) {
-                        if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("33KV")) {
-                            poles_count_33++;
-                        }
-                    }
-
-                    if (poles_count_33 > 0) {
-                        Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
-                    } else {
-                        check33KVDataForRectify();
-                    }
-
-                } else {
-                    check33KVDataForRectify();
-                }
+               loadRectifyMaster("33KV");
             }
         });
 
@@ -1098,6 +1079,28 @@ public class PMINewHome extends AppCompatActivity {
                             } else {
                                 check11KVDataForRectify();
 
+                            }
+                        }
+                        else if ("33KV".equalsIgnoreCase(voltageLevel)){
+                            postingList.clear();
+                            postingList = pmiDatabase.getPmiPostingData();
+                            if (!postingList.isEmpty()) {
+                                int poles_count_33 = 0;
+
+                                for (int i = 0; i < postingList.size(); i++) {
+                                    if (postingList.get(i).getVOLTAGE_LEVEL().equalsIgnoreCase("33KV")) {
+                                        poles_count_33++;
+                                    }
+                                }
+
+                                if (poles_count_33 > 0) {
+                                    Toast.makeText(PMINewHome.this, "PLEASE TRANSMIT PENDING DATA", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    check33KVDataForRectify();
+                                }
+
+                            } else {
+                                check33KVDataForRectify();
                             }
                         }
                     } else {

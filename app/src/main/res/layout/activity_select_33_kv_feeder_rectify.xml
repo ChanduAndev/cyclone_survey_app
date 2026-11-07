@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
     android:background="#E6E5E5"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/header_layout"
@@ -82,10 +82,46 @@
 
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_33"
+    <!-- Tabs -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout_33kv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/new_color"
+        app:tabSelectedTextColor="@color/new_color"
+        app:tabTextColor="@color/black" />
 
+    <!-- Tab Content -->
+    <FrameLayout
+        android:id="@+id/tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- First Tab -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
+
+        <!-- Second Tab -->
+        <!-- Second Tab: Direct Rectification Update -->
+        <ScrollView
+            android:id="@+id/direct_rectification_scroll_33kv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="gone">
+
+            <include
+                layout="@layout/layout_direct_rectification_33kv" />
+
+        </ScrollView>
+
+    </FrameLayout>
 </LinearLayout>

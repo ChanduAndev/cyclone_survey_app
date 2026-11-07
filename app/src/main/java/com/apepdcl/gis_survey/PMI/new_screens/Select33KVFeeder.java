@@ -366,6 +366,8 @@ public class Select33KVFeeder extends AppCompatActivity implements RV33KVAdapter
                             intent.putExtra("ID", selectedFeederId);
                             intent.putExtra("NAME", selectedFeederName33);
                             intent.putExtra("SELECTED_VOLTAGE", "33KV");
+                            intent.putExtra("FROM", "SURVEY");
+
                             startActivity(intent);
 
 
