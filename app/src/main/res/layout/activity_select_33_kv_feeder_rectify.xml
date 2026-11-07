@@ -90,9 +90,8 @@
         android:paddingHorizontal="5dp"
         app:tabBackground="@drawable/tab_background_selector"
         app:tabGravity="fill"
-        app:tabIndicatorColor="@color/new_color"
         app:tabMode="fixed"
-        app:tabTextColor="@color/white" />
+        app:tabTextColor="@color/black" />
 
     <!-- Tab Content -->
     <FrameLayout

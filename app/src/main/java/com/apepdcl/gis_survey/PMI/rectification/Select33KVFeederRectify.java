@@ -115,6 +115,7 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
         tabLayout.addTab(tabLayout.newTab().setText("Surveyed Locations Rectification"));
         tabLayout.addTab(tabLayout.newTab().setText("Direct Rectification Update"));
         tabLayout.selectTab(tabLayout.getTabAt(0));
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
@@ -147,7 +148,7 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
                 TextView tabText = (TextView) tab.view.getChildAt(1);
                 if (tabText != null) {
                     tabText.setTextColor(ContextCompat.getColor(
-                            Select33KVFeederRectify.this, R.color.new_color));
+                            Select33KVFeederRectify.this, R.color.black));
                 }
             }
 
@@ -225,6 +226,8 @@ public class Select33KVFeederRectify extends AppCompatActivity implements RV33KV
         proceed_button.setOnClickListener(v -> {
             get33KVPolesDataOther();
         });
+
+
 
 
     }
