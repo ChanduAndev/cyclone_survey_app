@@ -231,7 +231,7 @@ public class SelectLTCircuitRectify extends AppCompatActivity implements RVLTAda
         new_dtr_code_lt_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openDTRNearByDialog(new_dtr_code_lt_1, "1");
+                getDTRDetails();
 
 
 

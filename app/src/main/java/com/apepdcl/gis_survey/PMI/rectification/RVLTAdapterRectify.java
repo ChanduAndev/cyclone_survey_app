@@ -47,10 +47,10 @@ public class RVLTAdapterRectify extends RecyclerView.Adapter<RVLTAdapterRectify.
     @Override
     public void onBindViewHolder(@NonNull RVLTAdapterRectify.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         int dtr_no = position + 1;
-        holder.dtr_heading.setText("LT Ckt " + dtr_no + " Details");
+        holder.dtr_heading.setText("DTR Code:- " +dtrMaster.get(position).getDTR_STRUCTURE_CODE());
         holder.ss_name.setText(dtrMaster.get(position).getDTR_LOCATION());
         holder.feeder_name.setText(dtrMaster.get(position).getDTR_STRUCTURE_CODE());
-        holder.feeder_id.setText(dtrMaster.get(position).getFEEDER_ID());
+        holder.feeder_id.setText(dtrMaster.get(position).getDTR_STRUCTURE_CODE());
 
         holder.continue_survey.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -48,7 +48,7 @@ public class RV11KVAdapterRectify extends RecyclerView.Adapter<RV11KVAdapterRect
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         int dtr_no = position + 1;
-        holder.dtr_heading.setText("Feeder " + dtr_no + " Details");
+        holder.dtr_heading.setText("Feeder ID:- " + feederMaster11.get(position).getFEEDER_ID());
         holder.ss_name.setText(feederMaster11.get(position).getSUB_STATION_NAME());
         holder.feeder_name.setText(feederMaster11.get(position).getFEEDER_NAME());
        // holder.feeder_id.setText(feederMaster11.get(position).getFEEDER_ID());
