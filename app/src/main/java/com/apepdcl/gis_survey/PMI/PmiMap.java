@@ -162,6 +162,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
     ArcGISMap map;
 
     Uri imageUri;
+    String POLE_ID="";
 
     TextView name_tv, name_value;
     TextView id_tv, id_value;
@@ -1510,6 +1511,8 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         view_cross_arm = newDefectDialog.findViewById(R.id.view_cross_arm);
         view_top_cleat = newDefectDialog.findViewById(R.id.view_top_cleat);
         view_others = newDefectDialog.findViewById(R.id.view_others);
+
+        setPoleID();
 
 
         if ("SURVEY".equalsIgnoreCase(FROM)) {
@@ -3760,6 +3763,15 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
 
     }
 
+
+    private String setPoleID(){
+        if (CURRENT_SELECTED_POLE_NUMBER.startsWith("C")){
+            POLE_ID= UUID.randomUUID().toString();
+        }
+        return POLE_ID;
+
+    }
+
     //New Pmi changes
     private void validateAndSubmit() {
 //        if (IS_DTR_POLE && !IS_DTR_AI_IMAGE_VERIFIED) {
@@ -3879,7 +3891,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                 postingModel.setDEFECT_BY_USER("N");
                 postingModel.setVOLTAGE_LEVEL(SELECTED_VOLTAGE);
                 postingModel.setPOLE_NO(CURRENT_SELECTED_POLE_NUMBER);
-                postingModel.setPOLE_ID(CURRENT_SELECTED_POLE_NUMBER.startsWith("C") ? UUID.randomUUID().toString() : CURRENT_SELECTED_POLE_ID);
+                postingModel.setPOLE_ID(CURRENT_SELECTED_POLE_NUMBER.startsWith("C") ? POLE_ID : CURRENT_SELECTED_POLE_ID);
                 postingModel.setFEEDER_ID(SELECTED_VOLTAGE.equalsIgnoreCase("LT") ? "" : ID);
                 postingModel.setDTR_CODE(SELECTED_VOLTAGE.equalsIgnoreCase("LT") ? NAME : "");
                 postingModel.setLT_CKT_CODE(SELECTED_VOLTAGE.equalsIgnoreCase("LT") ? ID : "");
@@ -3918,7 +3930,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                 postingModel.setDEFECT_SUB_TYPE(defect.getDEFECT_SUB_TYPE());
                 postingModel.setVOLTAGE_LEVEL(SELECTED_VOLTAGE);
                 postingModel.setPOLE_NO(CURRENT_SELECTED_POLE_NUMBER);
-                postingModel.setPOLE_ID(CURRENT_SELECTED_POLE_NUMBER.startsWith("C") ? UUID.randomUUID().toString() : CURRENT_SELECTED_POLE_ID);
+                postingModel.setPOLE_ID(CURRENT_SELECTED_POLE_NUMBER.startsWith("C") ? POLE_ID : CURRENT_SELECTED_POLE_ID);
                 postingModel.setFEEDER_ID(SELECTED_VOLTAGE.equalsIgnoreCase("LT") ? "" : ID);
                 postingModel.setDTR_CODE(SELECTED_VOLTAGE.equalsIgnoreCase("LT") ? NAME : "");
                 postingModel.setLT_CKT_CODE(SELECTED_VOLTAGE.equalsIgnoreCase("LT") ? ID : "");
@@ -4001,7 +4013,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                 postingModel.setPOLE_NO(CURRENT_SELECTED_POLE_NUMBER);
 
                 // postingModel.setPOLE_ID(CURRENT_SELECTED_POLE_ID);
-                postingModel.setPOLE_ID(CURRENT_SELECTED_POLE_NUMBER.startsWith("C") ? UUID.randomUUID().toString() : CURRENT_SELECTED_POLE_ID);
+                postingModel.setPOLE_ID(CURRENT_SELECTED_POLE_NUMBER.startsWith("C") ? POLE_ID: CURRENT_SELECTED_POLE_ID);
 
 
                 postingModel.setFEEDER_ID(SELECTED_VOLTAGE.equalsIgnoreCase("LT") ? "" : ID);
@@ -5175,11 +5187,9 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             requestObject.addProperty("DEFECT_TYPE", model.getDEFECT_TYPE());
             String commonImage;
 
-            if ("DTR related".equalsIgnoreCase(model.getDEFECT_GROUP())
-                    || "DTR Mounting / Structure Damaged"
-                    .equalsIgnoreCase(model.getDEFECT_TYPE())) {
+            if ("DTR related".equalsIgnoreCase(model.getDEFECT_GROUP()) || "DTR Mounting / Structure Damaged".equalsIgnoreCase(model.getDEFECT_TYPE())) {
 
-                commonImage = model.getDTR_IMAGE();
+                commonImage = model.getIMAGE();
 
                 Log.d(
                         "FINAL_SHORT_PATH",
