@@ -1200,7 +1200,12 @@ public class PMINewHome extends AppCompatActivity {
         String userId = preferences.getString(MobileConstants.USERNAME, "");
         JsonObject dtrDetailsReqestVo = new JsonObject();
         dtrDetailsReqestVo.addProperty("OFFICE_ID", loginDataResponses.get(0).getSEC_CODE());
-        dtrDetailsReqestVo.addProperty("USERID", userId);
+        if (loginDataResponses.get(0).getROLE().equalsIgnoreCase("AEOP")) {
+            dtrDetailsReqestVo.addProperty("USERID", loginDataResponses.get(0).getUSERID());
+        } else {
+            String user = preferences.getString(MobileConstants.SESSION_ID, "");
+            dtrDetailsReqestVo.addProperty("USERID", user);
+        }
         // dtrDetailsReqestVo.addProperty("USERID", "1073477");
 
         retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);

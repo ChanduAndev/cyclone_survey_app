@@ -195,9 +195,11 @@
             android:layout_height="wrap_content"
             android:background="@color/background_color"
             android:paddingHorizontal="10dp"
+
             android:paddingVertical="4dp">
 
             <TextView
+                android:id="@+id/tv_damage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abeezee"
@@ -210,11 +212,12 @@
 
             <TextView
                 android:id="@+id/damaged_type"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:fontFamily="@font/abeezee"
                 android:gravity="center"
+                android:layout_toEndOf="@+id/tv_damage"
                 android:text=""
                 android:textColor="@color/colorPrimary"
                 android:textSize="14sp"

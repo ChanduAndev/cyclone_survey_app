@@ -753,17 +753,22 @@ public class RectifyMap11 extends AppCompatActivity {
 
         builder.setPositiveButton("Proceed", (dialog, which) -> {
             dialog.dismiss();
-            processCapturedImage(bitmap);   // ✅ continue
+            processCapturedImage(bitmap);
         });
 
         builder.setNegativeButton("Cancel", (dialog, which) -> {
             dialog.dismiss();
-            // ❌ Stop here – do nothing
             isImageCapturedPMI1 = false;
         });
 
         builder.setCancelable(false);
-        builder.show();
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        // Disable ALL CAPS
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setAllCaps(false);
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setAllCaps(false);
     }
 
     private void processCapturedImage(Bitmap bitmap) {

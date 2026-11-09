@@ -3961,6 +3961,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                     if (defect.getDEFECT_GROUP().equalsIgnoreCase("DTR related") &&
                             defect.getVOLTAGE_LEVEL().equalsIgnoreCase("11 KV") && IS_DTR_POLE) {
                         postingModel.setDTR_IMAGE(DTR_MAIN_IMAGE_PATH);
+                        postingModel.setIMAGE(MAIN_IMAGE_PATH);
                         postingModel.setAiResponseModel(aiListMainDTR);
                         postingModel.setDEFECT_BY_USER("Y");
                     } else {
