@@ -2346,8 +2346,8 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
         // Show only OK button
         okBtn.setVisibility(View.VISIBLE);
         cancelBtn.setVisibility(View.VISIBLE);
-        okBtn.setText("Yes");
-        cancelBtn.setText("No");
+        okBtn.setText("Not Surveyed");
+        cancelBtn.setText("Surveyed");
         cancelBtn.setOnClickListener(v -> {
             dialog.dismiss();
         });

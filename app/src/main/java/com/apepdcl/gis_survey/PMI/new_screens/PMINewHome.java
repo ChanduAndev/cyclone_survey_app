@@ -1048,7 +1048,7 @@ public class PMINewHome extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         System.out.println("ALLOW_RECTIFICATION : " + ALLOW_RECTIFICATION);
-                        if (ALLOW_RECTIFICATION.equalsIgnoreCase("N")){
+                        if (ALLOW_RECTIFICATION.equalsIgnoreCase("Y")){
                             if ("11KV".equalsIgnoreCase(voltageLevel)) {
                                 postingList.clear();
                                 postingList = pmiDatabase.getPmiPostingData();
