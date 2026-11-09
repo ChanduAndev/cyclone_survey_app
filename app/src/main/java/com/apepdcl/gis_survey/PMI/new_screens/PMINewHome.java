@@ -645,6 +645,9 @@ public class PMINewHome extends AppCompatActivity {
         allDefectsList.clear();
         defectsTypeList.clear();
         defectRVList.clear();
+        defectsGroupListLT.clear();
+        defectsGroupList11.clear();
+        defectsGroupList33.clear();
         retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
         Map<String, String> map = new HashMap<>();
         map.put("VERSION", getResources().getString(R.string.displayVersion));
@@ -900,6 +903,9 @@ public class PMINewHome extends AppCompatActivity {
         allDefectsList.clear();
         defectsTypeList.clear();
         defectRVList.clear();
+        defectsGroupListLT.clear();
+        defectsGroupList11.clear();
+        defectsGroupList33.clear();
         retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
         Map<String, String> map = new HashMap<>();
         map.put("VERSION", getResources().getString(R.string.displayVersion));
@@ -1115,6 +1121,7 @@ public class PMINewHome extends AppCompatActivity {
                                 }
                             }
                         }else {
+                            openAlertDialogAllow("Rectification App is Under Development.");
 
                         }
 
@@ -1166,6 +1173,43 @@ public class PMINewHome extends AppCompatActivity {
         // Click action
         okBtn.setOnClickListener(v -> {
             onBackPressed();
+            dialog.dismiss();
+        });
+
+        dialog.setCancelable(false);
+
+        // Transparent background
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        }
+
+        dialog.show();
+    }
+    private void openAlertDialogAllow(String message) {
+        Dialog dialog = new Dialog(this);
+        View view = getLayoutInflater().inflate(R.layout.customized_dialog, null);
+        dialog.setContentView(view);
+
+        // Views
+        TextView title = view.findViewById(R.id.title);
+        TextView msg = view.findViewById(R.id.message);
+        TextView okBtn = view.findViewById(R.id.okBtn);
+        TextView cancelBtn = view.findViewById(R.id.cancelBtn);
+        TextView tv_est_no = view.findViewById(R.id.tv_est_no);
+        TextView tv_gis_id = view.findViewById(R.id.tv_gis_id);
+        ImageView iv_icon = view.findViewById(R.id.iv_icon);
+        iv_icon.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.warning));
+        // Set Data
+        title.setText("Pay Attention!!");
+        msg.setText(message);
+
+        // Show only OK button
+        okBtn.setVisibility(View.VISIBLE);
+        cancelBtn.setVisibility(View.GONE);
+        okBtn.setText("Okay");
+
+        // Click action
+        okBtn.setOnClickListener(v -> {
             dialog.dismiss();
         });
 
@@ -1358,7 +1402,12 @@ public class PMINewHome extends AppCompatActivity {
         String userId = preferences.getString(MobileConstants.USERNAME, "");
         JsonObject dtrDetailsReqestVo = new JsonObject();
         dtrDetailsReqestVo.addProperty("OFFICE_ID", loginDataResponses.get(0).getSEC_CODE());
-        dtrDetailsReqestVo.addProperty("USERID", userId);
+        if (loginDataResponses.get(0).getROLE().equalsIgnoreCase("AEOP")) {
+            dtrDetailsReqestVo.addProperty("USERID", loginDataResponses.get(0).getUSERID());
+        } else {
+            String user = preferences.getString(MobileConstants.SESSION_ID, "");
+            dtrDetailsReqestVo.addProperty("USERID", user);
+        }
 
         retrofitServicePmi = RetrofitClientInstancePMI.getRetrofitInstance().create(RetrofitServicePMI.class);
         Call<JsonObject> responseVoCall = retrofitServicePmi.userWiseDefectListRectify(dtrDetailsReqestVo);
