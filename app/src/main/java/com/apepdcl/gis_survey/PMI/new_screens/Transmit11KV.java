@@ -1931,7 +1931,7 @@ public class Transmit11KV extends AppCompatActivity {
             requestObject.addProperty("DEFECT_GROUP", posting.getDEFECT_GROUP());
 
             String commonImage;
-            if ("DTR related".equalsIgnoreCase(posting.getDEFECT_GROUP()) || "DTR Mounting / Structure Defects".equalsIgnoreCase(posting.getDEFECT_TYPE())) {
+            if ("DTR related".equalsIgnoreCase(posting.getDEFECT_GROUP()) || "DTR Mounting / Structure Damaged".equalsIgnoreCase(posting.getDEFECT_TYPE())) {
                 commonImage = posting.getDTR_IMAGE();
                 Log.d("FINAL_SHORT_PATH", "DTR" + " | TYPE=" + posting.getDEFECT_TYPE() + " | DTR_IMAGE=" + commonImage);
             } else {

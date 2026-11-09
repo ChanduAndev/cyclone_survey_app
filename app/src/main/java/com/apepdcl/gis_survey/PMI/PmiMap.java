@@ -3874,7 +3874,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                 postingModel.setID(Long.toString(createRandomUID()));
                 postingModel.setDEFECT_SUB_TYPE_ID("141");
                 postingModel.setDEFECT_ID("141");
-                postingModel.setDEFECT_TYPE("DTR Mounting / Structure Defects");
+                postingModel.setDEFECT_TYPE("DTR Mounting / Structure Damaged");
                 postingModel.setDEFECT_SUB_TYPE("PLINTH HEIGHT NOT SUFFICIENT");
                 postingModel.setDEFECT_BY_USER("N");
                 postingModel.setVOLTAGE_LEVEL(SELECTED_VOLTAGE);
