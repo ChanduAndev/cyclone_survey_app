@@ -1031,7 +1031,7 @@ public class Select11PoleRectify extends AppCompatActivity implements RVPolesAda
 
     @Override
     public void onBackPressed() {
-        Intent playIntent = new Intent(Select11PoleRectify.this, PMINewHome.class); //Intent.ACTION_VIEW);
+        Intent playIntent = new Intent(Select11PoleRectify.this, Select11KVFeederRectify.class); //Intent.ACTION_VIEW);
         startActivity(playIntent);
         finish();
     }
