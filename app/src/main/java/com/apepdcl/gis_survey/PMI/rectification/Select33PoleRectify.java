@@ -565,7 +565,7 @@ public class Select33PoleRectify extends AppCompatActivity implements RVPolesAda
             } else {
 
                 // Single defect subtype
-                proceedWithPoleClick(model);
+                proceedWithPoleClick(model,defectSubType);
             }
         } else {
 
@@ -702,7 +702,7 @@ public class Select33PoleRectify extends AppCompatActivity implements RVPolesAda
             } else {
 
                 // Single defect subtype
-                proceedWithPoleClick(model);
+                proceedWithPoleClick(model,defectSubType);
             }
         } else {
 
@@ -787,7 +787,6 @@ public class Select33PoleRectify extends AppCompatActivity implements RVPolesAda
             intent.putExtra("FEEDER_NAME", selectedFeederName11);
             intent.putExtra("SS_CODE", selectedSSCode11);
             intent.putExtra("MODEL", model);
-
             // Selected defect sub-types
             intent.putStringArrayListExtra(
                     "SELECTED_SUB_DEFECT_TYPE",
@@ -803,7 +802,7 @@ public class Select33PoleRectify extends AppCompatActivity implements RVPolesAda
         bottomSheetDialog.show();
     }
 
-    private void proceedWithPoleClick(PoleModel33KV model) {
+    private void proceedWithPoleClick(PoleModel33KV model,String defectSubType) {
 
         if (ConnectivityChecking.checkConnection(
                 Select33PoleRectify.this)) {
@@ -817,6 +816,8 @@ public class Select33PoleRectify extends AppCompatActivity implements RVPolesAda
             intent.putExtra("FEEDER_NAME", selectedFeederName11);
             intent.putExtra("SS_CODE", selectedSSCode11);
             intent.putExtra("MODEL", model);
+            intent.putExtra("MODEL", model);
+            intent.putExtra("SELECTED_SUB_DEFECT_TYPE", defectSubType);
             startActivity(intent);
 
         } else {

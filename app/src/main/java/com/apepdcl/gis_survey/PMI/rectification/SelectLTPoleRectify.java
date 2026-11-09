@@ -743,7 +743,7 @@ public class SelectLTPoleRectify extends AppCompatActivity implements RVPolesAda
             } else {
 
                 // Single defect subtype
-                proceedWithPoleClick(model);
+                proceedWithPoleClick(model,defectSubType);
             }
         } else {
 
@@ -844,7 +844,7 @@ public class SelectLTPoleRectify extends AppCompatActivity implements RVPolesAda
         bottomSheetDialog.show();
     }
 
-    private void proceedWithPoleClick(PoleModelLT model) {
+    private void proceedWithPoleClick(PoleModelLT model,String defectSubType) {
 
 
         if (ConnectivityChecking.checkConnection(
@@ -859,7 +859,7 @@ public class SelectLTPoleRectify extends AppCompatActivity implements RVPolesAda
             intent.putExtra("DTR_CODE", selectedDtrCode);
             intent.putExtra("MODEL", model);
             intent.putExtra("MODEL", model);
-
+            intent.putExtra("SELECTED_SUB_DEFECT_TYPE", defectSubType);
             startActivity(intent);
 
         } else {

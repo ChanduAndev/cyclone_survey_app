@@ -136,7 +136,7 @@ public class RectifyMap33 extends AppCompatActivity {
     private ArrayList<String> selectedSubDefectTypes;
     String subDefectType = "";
     PmiDatabase pmiDatabase;
-    int OFFLINE_DISTANCE=150,ONLINE_DISTANCE=50;
+    int OFFLINE_DISTANCE=150000,ONLINE_DISTANCE=500000000;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -157,10 +157,13 @@ public class RectifyMap33 extends AppCompatActivity {
         model = (PoleModel33KV) getIntent().getSerializableExtra("MODEL");
         selectedSubDefectTypes=getIntent().getStringArrayListExtra("SELECTED_SUB_DEFECT_TYPE");
 
+
         System.out.println("SELECTED_SUB_DEFECT_TYPE    :"+selectedSubDefectTypes);
 
         if (selectedSubDefectTypes != null && !selectedSubDefectTypes.isEmpty()) {
             subDefectType = TextUtils.join(", ", selectedSubDefectTypes);
+        }else {
+            subDefectType=getIntent().getStringExtra("SELECTED_SUB_DEFECT_TYPE");
         }
         System.out.println("SELECTED_SUB_DEFECT_TYPE______    :"+subDefectType);
 

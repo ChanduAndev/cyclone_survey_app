@@ -3875,7 +3875,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
                 postingModel.setDEFECT_SUB_TYPE_ID("141");
                 postingModel.setDEFECT_ID("141");
                 postingModel.setDEFECT_TYPE("DTR Mounting / Structure Damaged");
-                postingModel.setDEFECT_SUB_TYPE("PLINTH HEIGHT NOT SUFFICIENT");
+               // postingModel.setDEFECT_SUB_TYPE("PLINTH HEIGHT NOT SUFFICIENT");
                 postingModel.setDEFECT_BY_USER("N");
                 postingModel.setVOLTAGE_LEVEL(SELECTED_VOLTAGE);
                 postingModel.setPOLE_NO(CURRENT_SELECTED_POLE_NUMBER);
@@ -5221,6 +5221,7 @@ public class PmiMap extends AppCompatActivity implements OnImageActionListener {
             requestObject.addProperty("CURRENT_LONG", model.getCURRENT_LONG());
             requestObject.addProperty("POLE_LAT", model.getPOLE_LAT());
             requestObject.addProperty("POLE_LONG", model.getPOLE_LONG());
+
 
             //  requestObject.addProperty("IMAGE", postingList.get(i).getIMAGE());
             // Log.v("PMI DATA IMAGE", postingList.get(i).getIMAGE());

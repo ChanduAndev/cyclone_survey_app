@@ -908,7 +908,7 @@ public class Select11PoleRectify extends AppCompatActivity implements RVPolesAda
             } else {
 
                 // Single defect subtype
-                proceedWithPoleClick(model);
+                proceedWithPoleClick(model,defectSubType);
             }
         } else {
             modelLT = model;
@@ -1130,7 +1130,7 @@ public class Select11PoleRectify extends AppCompatActivity implements RVPolesAda
         bottomSheetDialog.show();
     }
 
-    private void proceedWithPoleClick(PoleModel11KV model) {
+    private void proceedWithPoleClick(PoleModel11KV model,String defectSubType) {
 
         if (ConnectivityChecking.checkConnection(
                 Select11PoleRectify.this)) {
@@ -1144,6 +1144,7 @@ public class Select11PoleRectify extends AppCompatActivity implements RVPolesAda
             intent.putExtra("FEEDER_NAME", selectedFeederName11);
             intent.putExtra("SS_CODE", selectedSSCode11);
             intent.putExtra("MODEL", model);
+            intent.putExtra("SELECTED_SUB_DEFECT_TYPE", defectSubType);
 
             startActivity(intent);
 
@@ -1174,7 +1175,7 @@ public class Select11PoleRectify extends AppCompatActivity implements RVPolesAda
             } else {
 
                 // Single defect subtype
-                proceedWithPoleClick(model);
+                proceedWithPoleClick(model,defectSubType);
             }
         } else {
             modelLT = model;

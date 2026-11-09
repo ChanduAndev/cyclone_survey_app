@@ -137,7 +137,7 @@ public class RectifyMap11 extends AppCompatActivity {
     int warning = 0;
     private ArrayList<String> selectedSubDefectTypes;
     String subDefectType = "";
-    int OFFLINE_DISTANCE=150,ONLINE_DISTANCE=50;
+    int OFFLINE_DISTANCE=150000,ONLINE_DISTANCE=500000000;
 
 
     @SuppressLint("MissingInflatedId")
@@ -160,6 +160,8 @@ public class RectifyMap11 extends AppCompatActivity {
         selectedSubDefectTypes=getIntent().getStringArrayListExtra("SELECTED_SUB_DEFECT_TYPE");
         if (selectedSubDefectTypes != null && !selectedSubDefectTypes.isEmpty()) {
             subDefectType = TextUtils.join(", ", selectedSubDefectTypes);
+        }else {
+            subDefectType=getIntent().getStringExtra("SELECTED_SUB_DEFECT_TYPE");
         }
         System.out.println("SELECTED_SUB_DEFECT_TYPE______    :"+subDefectType);
         detector = new TFLiteObjectDetector(this);
